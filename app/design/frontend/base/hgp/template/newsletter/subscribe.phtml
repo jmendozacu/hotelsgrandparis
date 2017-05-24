@@ -1,0 +1,27 @@
+ <div class="hgpnewsletter"> 
+	 <div id="newsletter_content">
+	    <form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail">
+		    <fieldset class="hgpcontent">
+		            <legend><?php echo $this->__('Newsletter'); ?></legend>
+		            <h3 class="hgp_h2_newsletter"><?php echo $this->__('Newsletter'); ?></h3>
+		            <p id="baseline-newsletter"><?php echo $this->__('To be informed of our last news'); ?></p>
+		            <!--
+		            <?php if( $message = $this->getErrorMessage() ): ?>
+		                <p class="error"><?php echo $message ?></p>
+		            <?php endif; ?>
+		            <?php if( $message = $this->getSuccessMessage() ): ?>
+		                <p class="success"><?php echo $message ?></p>
+		            <?php endif; ?>
+		            -->
+		            <label for="newsletter"><?php echo $this->__('Your e-mail'); ?></label>
+		            <input name="email" type="text" id="newsletter" class="required-entry validate-email input-text hgp-text-input" value="<?php echo $this->__('Your e-mail'); ?>" onfocus="javascript:this.value='';" />
+		            <button type="submit" class="form-button-alt hgp-text-button"><span class="hgp-input-span"><?php echo $this->__('Subscribe'); ?></span></button>		            
+		    </fieldset>
+		</form>
+	<script type="text/javascript">
+	//<![CDATA[
+	    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+	//]]>
+	</script>
+	</div>
+</div>

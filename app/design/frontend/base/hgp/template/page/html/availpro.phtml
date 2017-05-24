@@ -1,0 +1,33 @@
+<div class="top-cadre-petit" style="margin-top: -15px;">&nbsp;</div>
+<div class="content-cadre-petit">
+	<h4 class=titre_table_cadre_petit>R&eacute;server votre h&ocirc;tel</h4>
+	<p id="sous-titre">Garantie du meilleur tarif</p>
+	<form action="http://www.secure-hotel-booking.com/France-Inn/233E/search" method="post" target="_blank" id="AVP">
+		<input type="hidden" value="FR" name="lang" />
+		<input type="hidden" value="" name="trackingId" />
+		<input type="hidden" value="" name="rate" />
+		<input type="hidden" value="" name="url" />
+		<input type="hidden" value="" name="arrivalDate" id="AVP_arrivalDate" />
+		<input type="hidden" value="" name="nights" id="AVP_nights" />
+	<table id="book" cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td colspan="2">Date d'arriv&eacute;e&nbsp;<select id="AVP_list_days" ></select>&nbsp;<select id="AVP_list_months" onchange="setDays();" ></select></td>
+			</tr>
+			<tr>
+				<td colspan="2">Nombre de nuit(s)&nbsp;<select id="AVP_list_nights" ></select></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="R&eacute;server" onclick="validate();" class="btn_availpro" /></td>
+				<td id="link "><a href="http://www.secure-hotel-booking.com/France-Inn/233E/retrieve" target="_blank">Annuler</a></td>
+			</tr>
+		</table>
+	</form>
+		
+	<script type="text/javascript">
+			var months = new Array("janvier","février","mars","avril","mai","juin","juillet","ao&ucirc;t","septembre","octobre","novembre","décembre");
+			var message='Date en dehors du planning';
+	</script>
+		
+	<script type="text/javascript" src="http://www.secure-hotel-booking.com/France-Inn/233E/scripts/base.js"></script>
+</div>
+<div class="bottom-cadre-petit">&nbsp;</div> 

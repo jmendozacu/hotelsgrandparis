@@ -1,0 +1,446 @@
+<?php
+	$urlJs     = Mage::getUrl ( 'skin' ) . 'frontend/hgp/default/js/';
+	$urlMedia  = Mage::getUrl ( 'media' ) . 'googlemap/map-quartier/';
+?>
+<div id="quartier_intro">
+	<div id="quartier_intro_left">
+		<h1><?php echo $this->__('Paris Hotels - Where to stay in Paris ?'); ?></h1>
+		<p><?php echo $this->__('intro Paris hotels by district'); ?></p>
+		<p><?php echo $this->__('intro quartiers'); ?></p>
+	</div>
+	<div id="quartier_intro_right">
+	
+		<script type="text/javascript">
+		jQuery(function() {
+			jQuery("map > area").tooltip({
+			delay: 0,
+			extraClass: "map > area",
+			left: -200,
+			top: 20,
+			track: true});
+		
+		});
+		</script>
+			<img src="<?php echo $urlMedia?>map.gif" alt="Map of Paris" border="0" id="mapParis" name="map" width="227" height="186" usemap="#Landkarte" />
+			<map name="Landkarte" id="map">
+				<area shape="poly" coords="125,94,95,78,95,71,89,59,103,58,118,59,140,52,154,77,141,72,136,84,130,85,124,94" title="<?php echo $this->__('1. Opera, Madeleine, St Lazare')?>" alt="<?php echo $this->__('Opera, Madeleine, St Lazare')?>" onMouseOver="map.src='<?php echo $urlMedia?>map1.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier1'; return false;" />
+			    <area shape="poly" coords="89,59,54,64,37,74,47,87,52,87,56,84,89,83,91,79,96,78,95,71,89,59" title="<?php echo $this->__('2. Champs Elysees, Etoile')?>" alt="<?php echo $this->__('Champs-Elysees, Arc de triomphe')?>" onMouseOver="map.src='<?php echo $urlMedia?>map2.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier2'; return false;" />
+				<area shape="poly" coords="75,88,75,109,77,126,87,147,77,157,100,168,117,140,117,134,127,107,118,99,90,87,75,87" title="<?php echo $this->__('3. Saint Germain des Pres, Montparnasse')?>" alt="<?php echo $this->__('Saint-Germain-des-Pres, Montparnasse')?>" onMouseOver="map.src='<?php echo $urlMedia?>map3.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier3'; return false;" />
+				<area shape="poly" coords="134,118,138,130,138,148,148,170,154,178,163,183,176,178,185,171,191,168,207,161,220,149,224,140,225,124,194,119,162,109,150,117,142,118,135,118" title="<?php echo $this->__('4. Gare de Lyon, Bastille, Vincennes')?>" alt="<?php echo $this->__('Gare de Lyon, Bastille, Vincennes')?>" onMouseOver="map.src='<?php echo $urlMedia?>map4.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier4'; return false;" />
+				<area shape="poly" coords="154,77,159,87,160,99,161,110,149,118,140,118,127,107,118,99,101,92,89,87,89,83,93,79,98,80,109,86,120,92,125,94,130,86,136,84,142,73,153,77" title="<?php echo $this->__('5. Louvre, Beaubourg, Marais')?>" alt="<?php echo $this->__('Louvre, Beaubourg, Marais')?>" onMouseOver="map.src='<?php echo $urlMedia?>map5.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier5'; return false;" />
+				<area shape="poly" coords="101,58,99,33,78,15,70,20,64,25,56,30,48,36,41,44,37,52,33,60,29,68,38,74,53,64,88,59,101,57" title="<?php echo $this->__('6. Wagram, Batignolles, Arc de Triomphe')?>" alt="<?php echo $this->__('Wagram, Batignolles, Porte Maillot')?>" onMouseOver="map.src='<?php echo $urlMedia?>map6.gif';" onMouseOut="map.src='<?php echo $urlMedia?>map.gif';" onclick="javascript:document.location.href='#quartier6'; return false;" />
+			</map>
+	</div>
+	<hr class="clear" />
+		<h2><?php echo $this->__('Paris districts and areas'); ?></h2>
+		<div class="content_gris_centre">
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-opera-paris.html" title="<?php echo $this->__('View Paris Opera Hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q1.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Paris Opera Hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-opera-paris.html" name="quartier1"><?php echo $this->__('1. Opera, Madeleine, St Lazare : Paris 8 & 9'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Business, shopping, classy'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Opera'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-opera-paris.html" title="<?php echo $this->__('View Paris Opera Hotels'); ?>">&#62; <?php echo $this->__('View Paris Opera Hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul>
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Take a daytime visit at Opera Garnier'); ?></li>
+		                			<li><?php echo $this->__('Plan ahead your reservation for Comedie Francaise and Opera as well'); ?></li>
+		                			<li><?php echo $this->__('Shop in the Japanese Brand store Uniqlo, rue Scribre'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="54" src="<?php echo $urlMedia?>1-a.jpg" alt="<?php echo $this->__('Gare Saint-Lazare'); ?>" title="<?php echo $this->__('Gare Saint-Lazare'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>1a-big.jpg" alt="<?php echo $this->__('Gare Saint-Lazare'); ?>" title="<?php echo $this->__('Gare Saint-Lazare'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>1-b.jpg" alt="<?php echo $this->__('Galeries Lafayette Haussmann'); ?>" title="<?php echo $this->__('Galeries Lafayette Haussmann'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>1b-big.jpg" alt="<?php echo $this->__('Galeries Lafayette Haussmann'); ?>" title="<?php echo $this->__('Galeries Lafayette Haussmann'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>1-c.jpg" alt="<?php echo $this->__('Printemps Haussmann'); ?>" title="<?php echo $this->__('Printemps Haussmann'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>1c-big.jpg" alt="<?php echo $this->__('Printemps Haussmann'); ?>" title="<?php echo $this->__('Printemps Haussmann'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>1-d.jpg" alt="<?php echo $this->__('Place de la Madeleine'); ?>" title="<?php echo $this->__('Place de la Madeleine'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>1d-big.jpg" alt="<?php echo $this->__('Place de la Madeleine'); ?>" title="<?php echo $this->__('Place de la Madeleine'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>1-e.jpg" alt="<?php echo $this->__('Opera Garnier'); ?>" title="<?php echo $this->__('Opera Garnier'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>1e-big.jpg" alt="<?php echo $this->__('Opera Garnier'); ?>" title="<?php echo $this->__('Opera Garnier'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+	
+
+		                
+				<div class="top_blanc_centre">&nbsp;</div>   
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html" title="<?php echo $this->__('View Paris Champs Elysees Hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q2.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Paris Champs Elysees Hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html" name="quartier2"><?php echo $this->__('2. Champs Elysees, Etoile : Paris 8, 16 & 17'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Luxurious, shopping and touristy'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Champs Elysees'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html" title="<?php echo $this->__('View Paris Champs Elysees Hotels'); ?>">&#62; <?php echo $this->__('View Paris Champs Elysees Hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul>
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Shop on Sunday and week evenings on the Champs Elysees Avenue'); ?></li>
+		                			<li><?php echo $this->__('Enjoy lighting of Champs Elysees during Christmas period'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>2-a.jpg" alt="<?php echo $this->__('The Champs Elysees'); ?>" title="<?php echo $this->__('The Champs Elysees'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>2a-big.jpg" alt="<?php echo $this->__('The Champs Elysees'); ?>" title="<?php echo $this->__('The Champs Elysees'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>2-b.jpg" alt="<?php echo $this->__('Arc de Triomphe'); ?>" title="<?php echo $this->__('Arc de Triomphe'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>2b-big.jpg" alt="<?php echo $this->__('Arc de Triomphe'); ?>" title="<?php echo $this->__('Arc de Triomphe'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>2-c.jpg" alt="<?php echo $this->__('Grand Palais'); ?>" title="<?php echo $this->__('Grand Palais'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>2c-big.jpg" alt="<?php echo $this->__('Grand Palais'); ?>" title="<?php echo $this->__('Grand Palais'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>2-d.jpg" alt="<?php echo $this->__('Pont Alexandre III'); ?>" title="<?php echo $this->__('Pont Alexandre III'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>2d-big.jpg" alt="<?php echo $this->__('Pont Alexandre III'); ?>" title="<?php echo $this->__('Pont Alexandre III'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>2-e.jpg" alt="<?php echo $this->__('Petit Palais'); ?>" title="<?php echo $this->__('Petit Palais'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>2e-big.jpg" alt="<?php echo $this->__('Petit Palais'); ?>" title="<?php echo $this->__('Petit Palais'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+		        
+
+		                
+		                
+		                
+				<div class="top_blanc_centre">&nbsp;</div>   
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html" title="<?php echo $this->__('View Saint Germain des Pres & Montparnasse hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q3.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Saint Germain des Pres & Montparnasse hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html" name="quartier3"><?php echo $this->__('3. Saint Germain des Pres, Montparnasse : Paris 6, 14 & 15'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Elegant, cultural, shopping'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Saint Germain des Pres'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html" title="<?php echo $this->__('View Saint Germain des Pres & Montparnasse hotels'); ?>">&#62; <?php echo $this->__('View Saint Germain des Pres & Montparnasse hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul>
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Take a drink at Café de Flore or Café des Deux Magots'); ?></li>
+		                			<li><?php echo $this->__('Visit the art galleries, rue de Seine'); ?></li>
+		                			<li><?php echo $this->__('For kids only, Ride a pony in the Luxembourg Gardens'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>3-a.jpg" alt="<?php echo $this->__('Eglise Saint Germain des Pres'); ?>" title="<?php echo $this->__('Eglise Saint Germain des Pres'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>3a-big.jpg" alt="<?php echo $this->__('Eglise Saint Germain des Pres'); ?>" title="<?php echo $this->__('Eglise Saint Germain des Pres'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>3-b.jpg" alt="<?php echo $this->__('Montparnasse Tower'); ?>" title="<?php echo $this->__('Montparnasse Tower'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>3b-big.jpg" alt="<?php echo $this->__('Montparnasse Tower'); ?>" title="<?php echo $this->__('Montparnasse Tower'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>3-c.jpg" alt="<?php echo $this->__('Luxembourg Gardens'); ?>" title="<?php echo $this->__('Luxembourg Gardens'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>3c-big.jpg" alt="<?php echo $this->__('Montparnasse Tower'); ?>" title="<?php echo $this->__('Montparnasse Tower'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>3-d.jpg" alt="<?php echo $this->__('Fondation Cartier'); ?>" title="<?php echo $this->__('Fondation Cartier'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>3d-big.jpg" alt="<?php echo $this->__('Fondation Cartier'); ?>" title="<?php echo $this->__('Fondation Cartier'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>3-e.jpg" alt="<?php echo $this->__('Pont des arts'); ?>" title="<?php echo $this->__('Pont des arts'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>3e-big.jpg" alt="<?php echo $this->__('Pont des arts'); ?>" title="<?php echo $this->__('Pont des arts'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+		 
+
+		                
+		                
+		                
+				<div class="top_blanc_centre">&nbsp;</div>   
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html" title="<?php echo $this->__('View Paris Gare de Lyon Hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q4.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Paris Gare de Lyon Hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html" name="quartier4"><?php echo $this->__('4. Gare de Lyon, Bastille, Vincennes : Paris 11 & 12'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Popular, lively, trendy'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Gare de Lyon'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html" title="<?php echo $this->__('View Paris Gare de Lyon Hotels'); ?>">&#62; <?php echo $this->__('View Paris Gare de Lyon Hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul>
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Explore the nice open-air Aligre market, closed on Monday'); ?></li>
+		                			<li><?php echo $this->__('Have a walk on the Promenade Plantee'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>4-a.jpg" alt="<?php echo $this->__('Gare de Lyon'); ?>" title="<?php echo $this->__('Gare de Lyon'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>4a-big.jpg" alt="<?php echo $this->__('Gare de Lyon'); ?>" title="<?php echo $this->__('Gare de Lyon'); ?>" />
+			                		</div>
+			                	</div>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>4-b.jpg" alt="<?php echo $this->__('Place de la Bastille'); ?>" title="<?php echo $this->__('Place de la Bastille'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>4b-big.jpg" alt="<?php echo $this->__('Place de la Bastille'); ?>" title="<?php echo $this->__('Place de la Bastille'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>4-c.jpg" alt="<?php echo $this->__('Opera Bastille'); ?>" title="<?php echo $this->__('Opera Bastille'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>4c-big.jpg" alt="<?php echo $this->__('Opera Bastille'); ?>" title="<?php echo $this->__('Opera Bastille'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>4-d.jpg" alt="<?php echo $this->__('Bibliotheque nationale'); ?>" title="<?php echo $this->__('Bibliotheque nationale'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>4d-big.jpg" alt="<?php echo $this->__('Bibliotheque nationale'); ?>" title="<?php echo $this->__('Bibliotheque nationale'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>4-e.jpg" alt="<?php echo $this->__('Chateau de Vincennes'); ?>" title="<?php echo $this->__('Chateau de Vincennes'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>4e-big.jpg" alt="<?php echo $this->__('Chateau de Vincennes'); ?>" title="<?php echo $this->__('Chateau de Vincennes'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+		       
+
+		                
+		                
+		                
+				<div class="top_blanc_centre">&nbsp;</div>   
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-louvre-paris.html" title="<?php echo $this->__('View Paris Louvre & Marais Hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q5.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Paris Louvre & Marais Hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-louvre-paris.html" name="quartier5"><?php echo $this->__('5. Louvre, Beaubourg, Marais : Paris 1, 2 & 3'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Historical, touristy & lively'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Louvre'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-louvre-paris.html" title="<?php echo $this->__('View Paris Louvre & Marais Hotels'); ?>">&#62; <?php echo $this->__('View Paris Louvre & Marais Hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul>
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Get free admission in Louvre Museum on the first Sunday of each month'); ?></li>
+		                			<li><?php echo $this->__('Shop in the Marais, on Sunday as well'); ?></li>
+		                			<li><?php echo $this->__('Please note that Picasso Museum is closed for renovation until 2012'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>5-a.jpg" alt="<?php echo $this->__('Louvre Museum'); ?>" title="<?php echo $this->__('Louvre Museum'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>5a-big.jpg" alt="<?php echo $this->__('Louvre Museum'); ?>" title="<?php echo $this->__('Louvre Museum'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>5-b.jpg" alt="<?php echo $this->__('Palais Royal Garden'); ?>" title="<?php echo $this->__('Palais Royal Garden'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>5b-big.jpg" alt="<?php echo $this->__('Palais Royal Garden'); ?>" title="<?php echo $this->__('Palais Royal Garden'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>5-c.jpg" alt="<?php echo $this->__('Beaubourg'); ?>" title="<?php echo $this->__('Beaubourg'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>5c-big.jpg" alt="<?php echo $this->__('Beaubourg'); ?>" title="<?php echo $this->__('Beaubourg'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>5-d.jpg" alt="<?php echo $this->__('Place des Vosges'); ?>" title="<?php echo $this->__('Place des Vosges'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>5d-big.jpg" alt="<?php echo $this->__('Place des Vosges'); ?>" title="<?php echo $this->__('Place des Vosges'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>5-e.jpg" alt="<?php echo $this->__('Tuileries Gardens'); ?>" title="<?php echo $this->__('Tuileries Gardens'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>5e-big.jpg" alt="<?php echo $this->__('Tuileries Gardens'); ?>" title="<?php echo $this->__('Tuileries Gardens'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+		  
+
+		                
+		                
+		                
+		                
+				<div class="top_blanc_centre">&nbsp;</div>   
+		                <div class="content_blanc_centre">
+		                	<a href="<?php echo $this->getUrl('');?>hotel-wagram-paris.html" title="<?php echo $this->__('View Paris Wagram & Batignolles Hotels'); ?>"><img class="map_qartier" width="164" height="134"  src="<?php echo $urlMedia?>map-list-q6.png" alt="<?php echo $this->__('Map of Paris'); ?>" title="<?php echo $this->__('View Paris Wagram & Batignolles Hotels'); ?>" /></a>
+		                	<div class="quartier_middle_content">
+		                		<h3><a class="quartier_middle_content_title" href="<?php echo $this->getUrl('');?>hotel-wagram-paris.html" name="quartier6"><?php echo $this->__('6. Wagram, Batignolles, Arc de Triomphe : Paris 17'); ?></a></h3>
+		                		<p><?php echo $this->__('Personality : '); ?><?php echo $this->__('Classy, peaceful, business'); ?></p>
+		                		<p>
+			                		<?php echo $this->__('description quartier Wagram'); ?>
+		                		</p>
+		                		<a class="view-hotel-quartier" href="<?php echo $this->getUrl('');?>hotel-wagram-paris.html" title="<?php echo $this->__('View Paris Wagram & Batignolles Hotels'); ?>">&#62; <?php echo $this->__('View Paris Wagram & Batignolles Hotels'); ?></a>
+		                	</div>
+		                	<div class="quartier_right_content">
+		                		<ul class="zoom-img">
+			                		<li class="quartier_li_first"><?php echo $this->__('Tips'); ?></li>
+		                			<li><?php echo $this->__('Get a brunch at the Jacquemart-Andre museum cafe'); ?></li>
+		                			<li><?php echo $this->__('Explore Rue Poncelet Market'); ?></li>
+		                			<li><?php echo $this->__('Have a walk in the Batignolles district'); ?></li>
+		                		</ul>
+		                		<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>6-a.jpg" alt="<?php echo $this->__('Monceau Park'); ?>" title="<?php echo $this->__('Monceau Park'); ?>" />
+			                		<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>6a-big.jpg" alt="<?php echo $this->__('Monceau Park'); ?>" title="<?php echo $this->__('Monceau Park'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>6-b.jpg" alt="<?php echo $this->__('Wagram Avenue'); ?>" title="<?php echo $this->__('Wagram Avenue'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>6b-big.jpg" alt="<?php echo $this->__('Wagram Avenue'); ?>" title="<?php echo $this->__('Wagram Avenue'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>6-c.jpg" alt="<?php echo $this->__('Rue Poncelet Market'); ?>" title="<?php echo $this->__('Rue Poncelet Market'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>6c-big.jpg" alt="<?php echo $this->__('Rue Poncelet Market'); ?>" title="<?php echo $this->__('Rue Poncelet Market'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier" width="56" height="55" src="<?php echo $urlMedia?>6-d.jpg" alt="<?php echo $this->__('Palais des congres'); ?>" title="<?php echo $this->__('Palais des congres'); ?>" />
+		                			<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>6d-big.jpg" alt="<?php echo $this->__('Palais des congres'); ?>" title="<?php echo $this->__('Palais des congres'); ?>" />
+			                		</div>
+			                	</div>
+			                	<div class="project-item">
+		                			<img class="vignette-quartier last" width="56" height="55" src="<?php echo $urlMedia?>6-e.jpg" alt="<?php echo $this->__('Jacquemart-Andre Museum'); ?>" title="<?php echo $this->__('Jacquemart-Andre Museum'); ?>" />
+	                				<div class="project-popup">
+			                			<img class="vignette-quartier-big" width="170" height="110" src="<?php echo $urlMedia?>6e-big.jpg" alt="<?php echo $this->__('Jacquemart-Andre Museum'); ?>" title="<?php echo $this->__('Jacquemart-Andre Museum'); ?>" />
+			                		</div>
+			                	</div>
+	                		</div>
+		                	<hr class="clear" />
+		                </div>
+		       
+
+		                
+		                
+				
+	        <div class="bottom_gris_centre">&nbsp;</div>
+	    </div>
+</div>
+<script type="text/javascript">
+<!-- ---------------JS ZOOM IMG-------------------------- -->
+	//<![CDATA[
+	(function($) {
+		  var cache = [];
+		  // Arguments are image paths relative to the current page.
+		  $.preLoadImages = function() {
+		    var args_len = arguments.length;
+		    for (var i = args_len; i--;) {
+		      var cacheImage = document.createElement('img');
+		      cacheImage.src = arguments[i];
+		      cache.push(cacheImage);
+		    }
+		  }
+		})(jQuery)
+		
+		jQuery.preLoadImages(
+				"<?php echo $urlMedia?>1a-big.jpg", 
+				"<?php echo $urlMedia?>1b-big.jpg", 
+				"<?php echo $urlMedia?>1c-big.jpg", 
+				"<?php echo $urlMedia?>1d-big.jpg", 
+				"<?php echo $urlMedia?>1e-big.jpg", 
+				"<?php echo $urlMedia?>2a-big.jpg", 
+				"<?php echo $urlMedia?>2b-big.jpg", 
+				"<?php echo $urlMedia?>2c-big.jpg", 
+				"<?php echo $urlMedia?>2d-big.jpg", 
+				"<?php echo $urlMedia?>2e-big.jpg", 
+				"<?php echo $urlMedia?>3a-big.jpg", 
+				"<?php echo $urlMedia?>3b-big.jpg", 
+				"<?php echo $urlMedia?>3c-big.jpg", 
+				"<?php echo $urlMedia?>3d-big.jpg", 
+				"<?php echo $urlMedia?>3e-big.jpg", 
+				"<?php echo $urlMedia?>4a-big.jpg", 
+				"<?php echo $urlMedia?>4b-big.jpg", 
+				"<?php echo $urlMedia?>4c-big.jpg", 
+				"<?php echo $urlMedia?>4d-big.jpg", 
+				"<?php echo $urlMedia?>4e-big.jpg", 
+				"<?php echo $urlMedia?>5a-big.jpg", 
+				"<?php echo $urlMedia?>5b-big.jpg", 
+				"<?php echo $urlMedia?>5c-big.jpg", 
+				"<?php echo $urlMedia?>5d-big.jpg", 
+				"<?php echo $urlMedia?>5e-big.jpg",
+				"<?php echo $urlMedia?>6a-big.jpg",
+				"<?php echo $urlMedia?>6b-big.jpg",
+				"<?php echo $urlMedia?>6c-big.jpg",
+				"<?php echo $urlMedia?>6d-big.jpg",
+				"<?php echo $urlMedia?>6e-big.jpg"
+				);
+
+		var $project_item = jQuery('div.project-item');		
+		$project_item.mouseenter(function(e) {
+			this_el = jQuery(this);
+
+			this_el.children("img.preview-thumb").fadeTo("fast", 1);			
+			move_thumb(this_el,e);
+			this_el.css('z-index','15').children("div.project-popup").css({'top': y + 10,'left': x +0,'display':'block'});
+		}).mousemove(function(e) {
+			move_thumb(this_el,e);	
+			this_el.children("div.project-popup").css({'top': y + 10,'left': x + 0});
+		}).mouseleave(function() {
+			this_el.css('z-index','1')
+				.children("img.preview-thumb")
+				.fadeTo("fast", 1)
+				.end()
+			.children("div.project-popup")
+			.animate({"opacity": "hide"}, "fast");
+		});
+		
+		function move_thumb(this_element,event_name){
+			x = event_name.pageX - this_element.offset().left;
+			y = event_name.pageY - this_element.offset().top;
+		};
+		
+	//]]>	
+	</script>

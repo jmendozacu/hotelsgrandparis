@@ -1,0 +1,73 @@
+<?php
+/**
+ * Product list template Home 100 HP
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<div class="categorie_accueil">
+	<?php
+	    // Gestion de l'affichage des infos de la cat�gorie
+		$_helper       = $this->helper('catalog/output');
+	    $_category     = Mage::getModel('catalog/category')->load($this->getCategoryId());
+
+	    //$_urlCategorie = $_category->getUrl(); //Comportement par defaut
+	    $_urlCategorie = Hgp_Lib_Tools::getUrlAccueilCategory($this->getCategoryId());
+	    
+	
+	    $_imgHtml   = '';
+	    if ($_imageUrl = $_category->getImageUrl()) {
+	        $_imgHtml = '<img src="'.$_imageUrl.'" alt="'.$this->htmlEscape($_category->getName()).'" />';
+	        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
+	 
+	    }
+	    
+	    $storeId = Mage::app()->getStore()->getId();
+	    $browser = Hgp_Lib_Tools::getBrowserInfo();
+	?>
+	<h2 class="hgp_h2" style="margin-left: 0;"><?php echo $_helper->categoryAttribute($_category, $this->htmlEscape($_category->getName()), 'name') ?></h2>
+	 
+	 <div class="categorie_image">
+	    <?php if($_imgHtml): ?>
+	    <p><?php echo $_imgHtml?></p>
+	    <?php endif; 
+	    // Fin Gestion de l'affichage des infos de la cat�gorie?>
+	</div>
+	<?php 
+	// Affichage des hotels MEA
+	$_productCollection = $this->getLoadedProductCollection();
+	?>
+	<?php if(!$_productCollection->count()): ?>
+	<div class="note-msg">
+	    <?php echo $this->__('There are no products matching the selection.') ?>
+	</div>
+	<?php else: ?>
+	<ul class="line-hotel">
+	<?php foreach ($_productCollection as $_product):     
+	        $_nb_etoile = Hgp_Lib_Tools::getNbStarsFromProductCollection($_product);?>   	            
+	       <li class="line-hotel">
+	         <h3 class="nodisplay"><?php echo $this->htmlEscape($_product->getName());?></h3><a class="liste_accueil_hgp" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" style="width:<?php 
+	         //Pour resoudre le bug d'affichage sous IE 6 pour les categories
+	         if ($browser == 'MSIE6.0'){
+	         	$_tailleMax = 29;
+	         	if ($storeId == 1) {
+		         	echo '198px';
+		         }else{
+		         	echo '175px;';
+		         }
+	         } else {
+		         $_tailleMax = 34;
+	         	if ($storeId == 1) {
+		         	echo '226px';
+		         }else{
+		         	echo '202px;';
+		         }
+	         }
+	         ?>"><?php echo $this->htmlEscape(Hgp_Lib_Tools::limiteAffichage($_product->getName(), $_tailleMax))?></a><span class="price_categories"><?php echo $this->__('from'); ?> <span class="prix_hgp"><?php echo Hgp_Lib_Tools::GetHtmlPrice($_product->getPrice()) ?></span></span>
+	       </li>
+	       <!--<li class="liste_accueil_hgp"><span class="stars_categories_accueil"><?php //echo (Hgp_Lib_Tools::drawStars($_nb_etoile));?></span></li> -->             
+	<?php endforeach; ?>
+	</ul>
+	<a class="link_categorie" href="<?php echo ($_urlCategorie)?>" rel="nofollow" title="See the complete list" style="float: right;">&gt;&nbsp;<?php echo $this->__('See the complete list'); ?></a>
+	<?php endif;?>
+</div>

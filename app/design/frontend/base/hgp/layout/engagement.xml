@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+	</default>
+	<engagement_index_index>
+		<reference name="content">
+			<block type="engagement/engagement" name="engagement"
+				template="hgp/engagement/engagement.phtml" />
+		</reference>
+	</engagement_index_index>
+</layout> 

@@ -1,0 +1,274 @@
+<?php 
+$storeId = Mage::app()->getStore()->getId();
+$lang = ($storeId == 2) ? 'fr':'en';
+$browser = Hgp_Lib_Tools::getBrowserInfo();
+$_objProduct = Mage::getModel('catalog/product');
+?> 
+<script type="text/javascript">
+		var liens = [	
+			     		"<?php echo $this->getUrl('');?>hotels-paris-1er-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-3eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-6eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-8eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-10eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-12eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-14eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-15eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-paris-17eme-arrondissement.html",
+						"<?php echo $this->getUrl('');?>hotel-vincennes.html",
+						"<?php echo $this->getUrl('');?>boutique-hotel-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-de-luxe-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-de-charme-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-romantique-paris.html",
+						"<?php echo $this->getUrl('');?>great-hotels-in-paris.html",
+						"<?php echo $this->getUrl('');?>budget-hotels-in-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-2-etoiles-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-3-etoiles-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-4-etoiles-paris.html",
+						"<?php echo $this->getUrl('');?>best-western-paris.html",
+						"<?php echo $this->getUrl('');?>best-western-premier-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-opera-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html",
+						"<?php echo $this->getUrl('');?>hotel-louvre-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html",
+						"<?php echo $this->getUrl('');?>hotel-wagram-paris.html"
+			  		];
+		
+
+  		jQuery(function(){
+			jQuery('#searchWrapper select').change(function(){				
+				document.location.href=liens[this.value];
+			})
+
+			/*================================= SlideShow Home =================================*/
+			jQuery('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: true,
+				play: 3000,
+				pause: 3500,
+				effect: 'fade',
+				crossfade: true,
+				hoverPause: true,
+				slideSpeed: 600,
+				generateNextPrev: false
+			});
+			
+		/*================================= Bloc Recherche Par Categorie =================================*/	
+			jQuery('.selecteurBy').click(function(){
+				jQuery(this).parent().find('.selectionList').show();
+			});
+			
+			jQuery('.selectionList').mouseleave(function(){
+				jQuery('.selectionList').hide();
+			});
+			
+			jQuery('.selectionList li a').click(function(){
+				var text = jQuery(this).text();
+				jQuery(this).parent().parent().parent().find('.selecteurBy').html(text);
+			});
+			
+			
+  	  	});
+</script>
+<div id="hgphomeslide">	
+	<?php 
+	$_arraySlide = Mage::getModel('homeslide/homeslide')->getItems($storeId, 6);
+	
+	if ($_arraySlide){
+	
+	/*
+	 * Emplacement des fichiers
+	 */
+	$ds = '/';
+	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds .'homeslide' . $ds;								
+	$_urlInterface  = $_moduleBaseUrl . 'images' . $ds;
+	$_urlPhoto      = $_moduleBaseUrl . 'photos' . $ds;
+	$_urlThumbs     = $_moduleBaseUrl . 'thumbnails' . $ds;
+	
+	$_moduleBaseDir =  Mage::getBaseDir('media') . DS .'homeslide' . DS;
+	$_pathInterface = $_moduleBaseDir . 'images' . DS;
+	$_pathPhoto     = $_moduleBaseDir . 'photos' . DS;
+	$_pathThumbs    = $_moduleBaseDir . 'thumbnails' . DS;
+	//exit('browser ==> '  . $browser);
+	?>
+	
+	<div id="searchWrapper">
+		<div id="searchBloc">
+				<p class="titleSearch">
+					<img src="<?php echo Mage::getBaseUrl('media') ?>loupe.png" alt="###"/><span><?php echo $this->__('Search an hotel in Paris By'); ?></span>
+				</p>
+				<p class="categorieSearch"><?php echo $this->__('Paris Arrondissements'); ?></p>
+				<div class="selecteurWrapper">
+					<?php 
+					if($browser!="MSIE7.0"){?>
+					<div class="selecteurBy"><?php echo $this->__('Choose an arrondissement'); ?></div>
+					<ul class="selectionList" >
+						<li><a href="<?php echo $this->getUrl('');?>hotels-paris-1er-arrondissement.html"><?php echo $this->__('Hôtels Paris 1er'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-3eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 3eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-6eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 6eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-8eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 8eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-10eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 10eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-12eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 12eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-14eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 14eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-15eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 15eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-paris-17eme-arrondissement.html"><?php echo $this->__('Hôtels Paris 17eme'); ?></a></li>
+						<li><a href="<?php echo $this->getUrl('');?>hotel-vincennes.html"><?php echo $this->__('hotel'); ?> <?php echo $this->__('Vincennes'); ?></a></li>
+					</ul>
+					<?php }else{?>
+					<select name="fonction" >
+						<option value="-1"><?php echo $this->__('Select Arrondissements'); ?></option>
+						<option value="0"><?php echo $this->__('Hôtels Paris 1er'); ?></option>
+						<option value="1"><?php echo $this->__('Hôtels Paris 3eme'); ?></option>
+						<option value="2"><?php echo $this->__('Hôtels Paris 6eme'); ?></option>
+						<option value="3"><?php echo $this->__('Hôtels Paris 8eme'); ?></option>
+						<option value="4"><?php echo $this->__('Hôtels Paris 10eme'); ?></option>
+						<option value="5"><?php echo $this->__('Hôtels Paris 12eme'); ?></option>
+						<option value="6"><?php echo $this->__('Hôtels Paris 14eme'); ?></option>
+						<option value="7"><?php echo $this->__('Hôtels Paris 15eme'); ?></option>
+						<option value="8"><?php echo $this->__('Hôtels Paris 17eme'); ?></option>
+						 <option value="9"><?php echo $this->__('Vincennes'); ?>	</option>
+					</select>
+					<?php } ?>
+				</div>
+								
+				
+							
+				<p class="categorieSearch"><?php echo $this->__('Styles'); ?></p>
+				<div class="selecteurWrapper">
+				<?php 
+					if($browser!="MSIE7.0"){?>
+					<div class="selecteurBy"><?php echo $this->__('Select a style'); ?></div>
+					<ul class="selectionList">
+							<li><a href="<?php echo $this->getUrl('');?>boutique-hotel-paris.html"><?php echo $this->__('Boutique Hôtel Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>hotel-de-luxe-paris.html"><?php echo $this->__('Hôtels de Luxe Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>hotel-de-charme-paris.html"><?php echo $this->__('Hôtels de charme Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>hotel-romantique-paris.html"><?php echo $this->__('Hôtels romantique Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>great-hotels-in-paris.html"><?php echo $this->__('Hôtels Sympa Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>budget-hotels-in-paris.html"><?php echo $this->__('Hôtels pas cher Paris'); ?></a></li>
+					</ul>
+					<?php }else{?>
+						<select name="fonction">
+							<option value="-1"><?php echo $this->__('Select Themes'); ?></option>
+							<option value="10"><?php echo $this->__('Boutique Hôtel Paris'); ?></option>
+							<option value="11"><?php echo $this->__('Hôtels de Luxe Paris'); ?></option>
+							<option value="12"><?php echo $this->__('Hôtels de charme Paris'); ?></option>
+							<option value="13"><?php echo $this->__('Hôtels romantique Paris'); ?></option>
+							<option value="14"><?php echo $this->__('Hôtels Sympa Paris'); ?></option>
+							<option value="15"><?php echo $this->__('Hôtels pas cher Paris'); ?></option>
+						</select>
+					<?php } ?>
+				</div>
+				
+					
+				
+				<p class="categorieSearch"><?php echo $this->__('Category'); ?></p>
+				<div class="selecteurWrapper">
+				<?php 
+					if($browser!="MSIE7.0"){?>
+					<div class="selecteurBy"><?php echo $this->__('Select Category'); ?></div>
+					<ul class="selectionList">
+						<li><a href="<?php echo $this->getUrl('');?>hotel-2-etoiles-paris.html"><?php echo $this->__('Hôtels 2 étoiles Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>hotel-3-etoiles-paris.html"><?php echo $this->__('Hôtels 3 étoiles Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>hotel-4-etoiles-paris.html"><?php echo $this->__('Hôtels 4 étoiles Paris'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>best-western-paris.html"><?php echo $this->__('Sélection de Best Western'); ?></a></li>
+							<li><a href="<?php echo $this->getUrl('');?>best-western-premier-paris.html"><?php echo $this->__('Sélection de Best Western Premier'); ?></a></li>
+					</ul>
+					<?php }else{?>
+						<select name="fonction">
+							<option value="-1"><?php echo $this->__('Select Category'); ?></option>
+							<option value="16"><?php echo $this->__('Hôtels 2 étoiles Paris'); ?></option>
+							<option value="17"><?php echo $this->__('Hôtels 3 étoiles Paris'); ?></option>
+							<option value="18"><?php echo $this->__('Hôtels 4 étoiles Paris'); ?></option>
+							<option value="19"><?php echo $this->__('Sélection de Best Western'); ?></option>
+							<option value="20"><?php echo $this->__('Sélection de Best Western Premier'); ?></option>
+						</select>
+					<?php } ?>
+				</div>
+				
+				
+				
+				
+				<p class="categorieSearch"><?php echo $this->__('Paris Districts'); ?></p>
+				<div class="selecteurWrapper">
+				<?php 
+					if($browser!="MSIE7.0"){?>
+					<div class="selecteurBy"><?php echo $this->__('Choose a district'); ?></div>
+					<ul class="selectionList">
+						<li><a href='<?php echo $this->getUrl('');?>hotel-opera-paris.html'><?php echo $this->__('Hôtels Opéra, Madeleine et Saint Lazare')?></a></li>
+						<li><a href='<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html'><?php echo $this->__('Hôtels Champs-Elysées et Arc de Triomphe')?></a></li>
+						<li><a href='<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html'><?php echo $this->__('Hôtels Saint Germain des Prés et Montparnasse')?></a></li>
+						<li><a href='<?php echo $this->getUrl('');?>hotel-louvre-paris.html'><?php echo $this->__('Hôtels Louvre & Marais')?></a></li>
+						<li><a href='<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html'><?php echo $this->__('Hôtels Gare de Lyon, & Nation Paris')?></a></li>
+						<li><a href='<?php echo $this->getUrl('');?>hotel-wagram-paris.html'><?php echo $this->__('Hôtels Wagram & Batignolles')?></a></li>
+					</ul>
+					<?php }else{?>
+						<select name="fonction">
+							<option value="-1"><?php echo $this->__('Select Disctricts'); ?></option>
+							<option value="21"><?php echo $this->__('Hôtels Opéra, Madeleine et Saint Lazare')?></option>
+							<option value="22"><?php echo $this->__('Hôtels Champs-Elysées et Arc de Triomphe')?></option>
+							<option value="23"><?php echo $this->__('Hôtels Saint Germain des Prés et Montparnasse')?></option>
+							<option value="24"><?php echo $this->__('Hôtels Louvre & Marais')?></option>
+							<option value="25"><?php echo $this->__('Hôtels Gare de Lyon, & Nation Paris')?></option>
+							<option value="26"><?php echo $this->__('Hôtels Wagram & Batignolles')?>	</option>	
+						</select>
+					<?php } ?>
+				</div>				
+				<p class="seeHotels"><a href="<?php echo $this->getUrl('');?>hotel.html"><?php echo $this->__('see all the hotels in Paris')?></a></p>
+			</div>
+		<!-- <div id="btClose">Hide</div> -->
+	</div>
+				
+	
+	
+	<div id="slides">
+	<div class="slides_container">
+			<?php 
+			$count = count($_arraySlide);
+			for($i=0; $i<$count; $i++){
+			$data = $_arraySlide[$i];
+			$_helper = $this->helper('catalog/output');
+			$_product = $_objProduct->load($data['hgp_homeslide_pdt_id']);
+			$_price = $_product->getPrice();
+			$_newPrice = Hgp_Lib_Tools::GetHtmlPrice($_price, $lang);
+			$nb_etoiles = Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'nb_etoile');
+			//Zend_Debug::dump($_product->getUrl_key());exit;
+			
+			// Bug pour le Saint-Louis à Vincennes, sans arrondissement 
+			$arrondissement = ($data['hgp_homeslide_pdt_id'] == 7) ? '' : Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'arrondissement');			
+			?>
+			<div class="slide">
+				<a href="<?php echo $this->htmlEscape($_product->getUrl_key())?>.html">
+					<img width="930" height="410" src="<?php echo $this->htmlEscape($_urlPhoto. $data['hgp_homeslide_img'])?>" alt="<?php echo $this->htmlEscape($_product->getName(). '-'.Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'ville'). ' '. $arrondissement)?>" title="<?php echo $this->htmlEscape($_product->getName(). '-'.Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'ville'). ' '.$arrondissement)?>" />
+				</a>
+				
+				<p class="InfoLinkHotel">
+					
+						<a class="link" href="<?php echo $this->htmlEscape($_product->getUrl_key())?>.html">
+						<?php 
+						echo '<span class="hotelName">'.$this->htmlEscape($_product->getName()).'</span>';
+						// Bug de redirection inopinee sur IE
+						echo (preg_match('/^MSIE/', $browser)) ?  ' '.Hgp_Lib_Tools::drawStarsHomeTxt($nb_etoiles).'  ': ' '.Hgp_Lib_Tools::drawStarsHome($nb_etoiles).'';
+						
+						?>						
+					</a>
+					<?php 
+						echo '<span class="quartier">'.$this->htmlEscape(Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'localisation')).'</span>';
+						?>
+					<span class="see_fiche"><a href="<?php echo ($this->htmlEscape($_product->getUrl_key()))?>.html">&gt;&nbsp;<?php echo $this->__("View hotel")?></a></span>
+					
+				</p>
+				<div class="bgTransparent"></div>
+			
+			</div>
+			<?php }?>
+	</div>
+	<?php 
+	} else {
+	?>
+	<p class="slide_vide">&nbsp;</p>
+	<?php }?>
+	</div>
+	<hr class="clearboth" />
+</div>

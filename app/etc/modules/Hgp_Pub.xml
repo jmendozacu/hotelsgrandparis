@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hgp_Pub>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hgp_Pub>
+    </modules>
+</config> 

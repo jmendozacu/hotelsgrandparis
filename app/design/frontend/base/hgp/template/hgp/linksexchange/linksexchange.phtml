@@ -1,0 +1,172 @@
+<?php 
+$message = (isset($_GET['status']) && (($_GET['status'] == 'OK') || ($_GET['status'] == 'NotOK'))) ? trim($_GET['status']):'';
+
+// On recupere dynamiquement l'id du store courant
+$storeId = Mage::app()->getStore()->getId();
+$extension_Track = ($storeId == 2) ? 'Fr':'En';
+//==================================
+$_model = Mage::getModel('linksexchange/linksexchange');
+$_adherents = $_model->getLinksexchangeByCategory($storeId);
+$count_adherents = count($_adherents);
+
+$linksExample = Hgp_Lib_Tools::getParamConfig('LinksExchange', 'lien')->$storeId;
+//Zend_Debug::dump($linksExample);exit;
+
+?>
+<!-- start middle -->
+        <div class="middle-container linksexchange">
+            <div class="middle col-1-layout">
+                <?php //echo $this->getChildHtml('breadcrumbs') ?>
+            <!-- start center -->
+                <div id="main" class="col-main">
+                <!-- start content -->
+                	<?php echo $this->getChildHtml('global_messages') ?> 
+                	<a class="link_top_static" href="<?php echo ($this->getUrl(''));?>" title="<?php echo $this->__('Back to home'); ?>">&gt;&nbsp;<?php echo $this->__('Back to home'); ?></a> 
+                	<div class="top_gris_centre">&nbsp;</div> 
+                	<div class="content_gris_centre">   
+                		<div class="top_blanc_centre">&nbsp;</div>   
+                		<div class="content_blanc_centre sitemap"> 
+                			<div id="contenu_static"> 
+								
+									<h1><?php echo $this->__('Links Exchange'); ?></h1>
+									<div id="container-intro">
+										<h2><?php echo $this->__('Les adresses authentiques, insolites et intimes Hotels Grand Paris'); ?></h2>
+										<p><?php echo $this->__('Le portail Hotels Grand Paris vous propose une s&eacute;lection d&acute;h&ocirc;tels ind&eacute;pendants authentiques, insolites et intimes &agrave; Paris.  Pour compl&eacute;ter cette exp&eacute;rience parisienne, nous vous proposons une s&eacute;lection d&acute;adresses ind&eacute;pendantes et non standardis&eacute;es en lien avec le voyage.
+Si vous partagez nos valeurs et souhaitez nous soumettre votre site pour figurer sur cette page, sachez que nous proc&eacute;dons &agrave; des &eacute;changes de liens avec des sites.'); ?></p>
+								</div>
+								<?php if($message != '') {?>
+								<div id="messages_product_view">
+								    <ul class="messages">
+								        <?php if($message == 'NotOK') {?>
+								        <li class="error-msg">
+								            <ul>
+								                <li><?php echo $this->__('Sorry, we are unable to submit your request. Please, try again later');?></li>
+								            </ul>
+								        </li>
+								        <?php } else {?>
+								        <li class="success-msg">
+    								        <ul>
+    								            <li><?php echo $this->__('Your inquiry was successfully submitted, thank you for your interest about HotelsGrandParis');?></li>
+    								        </ul>
+								        </li>
+								        <?php } ?>
+								   </ul>
+								</div>
+								<?php } ?>
+								<ul class="left-column">
+									<?php $_arrCategory = Mage::Helper('linksexchange')->getCategory();
+									//Zend_Debug::dump($_arrCategory);exit;
+									if($_arrCategory){
+									     foreach($_arrCategory as $key => $value){
+									?>
+									<li><h3><?php echo stripslashes($value); ?></h3></li>
+									<li>
+										<ul>
+										<?php 
+										if($count_adherents){
+										for($j=0;$j<$count_adherents;$j++){ 
+// 										    echo 'plop => '.$_adherents[$j]['hgp_linksexchange_category'] .'<br/>';
+										    if($key == $_adherents[$j]['hgp_linksexchange_category']){?>
+												<li><a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_adherents[$j]['hgp_linksexchange_site_url_link']) ?>', 'Site', 'PARTENAIRE-<?php echo $extension_Track?>', <?php echo '1'?>]);" href="http://<?php echo $_adherents[$j]['hgp_linksexchange_site_url_link']?>" target="_blank" title="<?php echo $_adherents[$j]['hgp_linksexchange_site_url_title']?>"><?php echo $_adherents[$j]['hgp_linksexchange_site_url_label']?></a></li>
+												<?php if (trim($_adherents[$j]['hgp_linksexchange_site_description']) != '' ){?>
+												<li class="grey-txt"><?php echo $_adherents[$j]['hgp_linksexchange_site_description']?><br/><br/></li>
+												<?php }?>
+										<?php }}} ?>
+										
+										</ul>
+									</li>
+                                    <?php }}?>
+								</ul>
+							
+								<script type="text/javascript">
+									jQuery(document).ready(function() {
+										jQuery("#linksexchange").validate();
+										
+									});
+								</script>
+								
+								<script type="text/javascript">
+									jQuery(document).ready(function() {
+										jQuery("#hgp_linksexchange_site_description").textLimit(200,function(length, limit, reached){
+											var nb = limit - length;
+											
+											if (length == 0)
+												jQuery("#desc").text(" (limit: 200)");
+											if (reached){
+												jQuery("#desc").text("");
+											}
+									        if (!reached && length > 0)
+									        	jQuery("#desc").text(" (limit: "+nb+")");
+								        	
+									        if (!reached && length > 200)
+									        	jQuery("#desc").hide();
+									    });
+										
+									});
+								</script>
+								
+								
+								<ul class="right-column"> 
+			
+								<form class="cmxform" id="linksexchange" method="post" action="<?php echo Mage::getUrl('linksexchange/index/post') ?>">
+									<input id="hgp_linksexchange_id" name="hgp_linksexchange_id" value="" type="hidden"/>
+									<input id="hgp_linksexchange_user_modif" name="hgp_linksexchange_user_modif" value="" type="hidden"/>
+									<input id="hgp_linksexchange_ordre" name="hgp_linksexchange_ordre" value="1" type="hidden"/>
+									<p>
+										<label for="hgp_linksexchange_site_name"><?php echo $this->__('Name site') ?><span class="required">*</span></label>
+										<input  type="text" id="hgp_linksexchange_site_name" name="hgp_linksexchange_site_name" class="required" minlength="2" />
+									</p>
+									<p>
+									<label for="hgp_linksexchange_site_description">Description<span id="desc" > <?php echo $this->__('200 char min') ?></span><span class="required">*</span></label>
+										<textarea id="hgp_linksexchange_site_description" name="hgp_linksexchange_site_description" style="min-height:100px" class="required" maxlength="200"></textarea>
+									</p>
+									<p>
+										<label for="hgp_linksexchange_site_juurl_link"><?php echo $this->__('URL of your site') ?><span class="required">*</span></label>
+										<input type="text" id="hgp_linksexchange_site_url_link" name="hgp_linksexchange_site_url_link" class="required hgp_linksexchange_site_url_link" value="" />
+									</p>
+									<p>													
+    					                <label for="hgp_linksexchange_contact_email" ><?php echo $this->__('your mail address') ?><span class="required">*</span></label>
+    					                <input  type="text" id="hgp_linksexchange_contact_email" name="hgp_linksexchange_contact_email" class="required hgp_linksexchange_contact_email" />
+					                </p>
+					                
+									<p>
+										<label for="hgp_linksexchange_contact_tel"><?php echo $this->__('phone') ?><span class="required">*</span></label>
+										<input  type="text" id="hgp_linksexchange_contact_tel" name="hgp_linksexchange_contact_tel" class="required hgp_linksexchange_contact_tel" />
+									</p>
+									
+									<p>													
+    					                <label for="hgp_linksexchange_site_page_cible" ><?php echo $this->__('exemple of links to cpy and paste in your site') ?></label>
+    					                <textarea name="hgp_linksexchange_site_page_cible" id="hgp_linksexchange_site_page_cible" readonly><?php echo $linksExample?></textarea>
+					                </p>
+					                
+					            	<p>
+				                    <label for="page" ><?php echo $this->__('page of your site where the link will appear') ?><span class="required">*</span></label>
+				                        <input name="page" id="page"  class="required" />
+				                    </p>
+									
+									<p>
+									
+										<input class="submit button" type="submit" value="<?php echo $this->__('Submit1') ?>"/>
+									</p>
+									 <p class="required required-line"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+								</form>
+							</ul>
+								
+								
+                    		</div>
+                    		
+                    		<div class="clear"></div>
+                    	</div>
+                    	<div class="bottom_blanc_centre">&nbsp;</div>
+                    	<div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bottom_gris_centre">&nbsp;</div>
+                <!-- end content -->
+
+                </div>
+            <!-- end center -->
+
+            </div>
+        </div>
+        <!-- end middle -->

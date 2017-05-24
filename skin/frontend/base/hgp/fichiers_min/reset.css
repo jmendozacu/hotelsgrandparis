@@ -1,0 +1,32 @@
+*{margin:0;padding:0}
+body{color:#4C4C4B;font:12px/1.55em 'Open Sans';border:0;background:#e2d8cf url(../images/bgHGP.jpg) repeat-y top center}
+strong{font-weight:600}
+a{color:#111;text-decoration:none;cursor:pointer}
+a:hover{color:#FF7717;text-decoration:underline}
+a img{border:0}
+:focus{outline:0}
+h1,h2,h3,h4,h5,h6,.head{margin-bottom:2px;line-height:1.3em;color:#111}
+h1{font-size:2em;line-height:1.17}
+h2{font-size:1.5em}
+h3{font-size:14px;font-weight:600}
+h6{font-size:.95em}
+input{cursor:pointer}
+th{text-align:left;vertical-align:top;padding:0}
+td{vertical-align:top;padding:0}
+p{margin-bottom:0}
+address{margin-bottom:.4em;font-style:normal;line-height:1.4em}
+cite{font-style:normal;font-size:10px}
+q:before,q:after{content:''}
+form{display:inline}
+fieldset{border:none}
+legend{display:none}
+label{color:#666;font-weight:600}
+input,select,button{vertical-align:middle}
+dt{display:block;font-weight:700}
+ul,ol{list-style:none}
+small{font-size:.92em}
+big{font-size:1.1em}
+hr{height:0;overflow:hidden;visibility:hidden;margin:8px 0}
+.nowrap{white-space:nowrap}
+.bold{font-weight:700}
+h4,h5{font-size:1.05em}

@@ -1,0 +1,198 @@
+<markers>
+
+	<marker name="BEST WESTERN PREMIER Opéra Diamond 4*" ad="BEST WESTERN PREMIER, Adhérent Office du tourisme (OTCP)" label="09" address="4, rue de la Pépinière" cp="75008" ville="Paris" lat="48.8752253708394" lng="2.32339741927679" url="hotel-opera-diamond.html" css="bleu"  ref="002" type="hotel"/>
+	<marker name="BEST WESTERN PREMIER Louvre Saint Honoré 4*" ad="BEST WESTERN PREMIER, Adhérent Office du tourisme (OTCP)" label="10" address="141, rue Saint-Honoré" cp="75001" ville="Paris" lat="48.8618270237518" lng="2.34063953954926" url="hotel-louvre-saint-honore.html" css="bleu" ref="008" type="hotel"/>
+	<marker name="BEST WESTERN PREMIER Opéra Opal 4*" ad="BEST WESTERN PREMIER, Adhérent Office du tourisme (OTCP)" label="11" address="19, rue Tronchet" cp="75008" ville="Paris" lat="48.8722026306003" lng="2.32587342513122" url="hotel-opal.html" css="bleu" ref="010" type="hotel"/>
+	<marker name="Hôtel Mathis Elysées 4*" ad="Exclusive Hotels" label="06" address="3, rue de Ponthieu" cp="75008" ville="Paris" lat="48.87004734900758" lng="2.311486449999993" url="hotel-mathi-s-elysees.html" css="bleu" ref="011" type="hotel"/>
+	<marker name="BEST WESTERN Ducs de Bourgogne 4*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="02" address="19, rue du Pont Neuf" cp="75001" ville="Paris" lat="48.86007414897281" lng="2.3437126000000097" url="hotel-aux-ducs-de-bourgogne.html" css="bleu" ref="021" type="hotel"/>
+	<marker name="BEST WESTERN Hôtel de Neuville 4*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="05" address="3, rue Verniquet" cp="75017" ville="Paris" lat="48.8868417056151" lng="2.30054478250618" url="hotel-de-neuville.html" css="bleu" ref="006" type="hotel"/>
+	<!--<marker name="BEST WESTERN Mercedes 4*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="07" address="128, avenue de Wagram" cp="75017" ville="Paris" lat="48.88503797450295" lng="2.3032749609367187" url="hotel-mercedes.html" css="bleu" ref="019" type="hotel"/>-->
+	<marker name="BEST WESTERN Bretagne Montparnasse 4*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)"  label="12" address="33 rue Raymond Losserand" cp="75014" ville="Paris" lat="48.8355121202056" lng="2.32095862928316" url="hotel-bretagne-montparnasse.html" css="bleu" ref="005" type="hotel"/>
+
+	<marker name="BEST WESTERN PREMIER Elysée Secret" ad="" label="13" address="5, rue de Ponthieu" cp="75008" ville="Paris" lat="48.87014169900476" lng="2.3112057499999894" url="hotel-elysee-secret-paris.html" css="bleu" ref="013" type="hotel"/>
+	<marker name="Hôtel Champs Elysees Mac Mahon 4*" ad="Exclusive Hotels, Adhérent Office du tourisme (OTCP)" label="07" address="3, avenue Mac Mahon" cp="75017" ville="Paris" lat="48.87591327837445" lng="2.294557173278795" url="hotel-mac-mahon.html" css="bleu" ref="024" type="hotel"/>
+	<marker name="BEST WESTERN Opéra des Batignolles 4*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="08" address="165, rue de Rome" cp="75017" ville="Paris" lat="48.88712019906399" lng="2.314392499999993" url="opera-batignolles.html" css="bleu" ref="030" type="hotel"/>
+	<marker name="Holiday Inn Paris Gare Montparnasse 4*" ad="" label="14" address="79 - 81 avenue du Maine" cp="75014" ville="Paris" lat="48.8382900181644" lng="2.3229649999999537" url="holiday-inn-paris-gare-montparnasse.html" css="bleu" ref="034" type="hotel"/>
+	<marker name="BEST WESTERN Saint Louis 4*" ad="BEST WESTERN" label="01" address="2, Bis rue Robert Giraudineau" cp="94300" ville="Vincennes" lat="48.8450226489203" lng="2.43513124999999" url="hotel-saint-louis.html" css="bleu" ref="007" type="hotel"/>
+	<marker name="Mercure Paris Terminus Nord 4*" ad="Mercure" label="03" address="12 Boulevard de Denain" cp="75010" ville="Paris" lat="48.87983616819101" lng="2.354701500000033" url="mercure-paris-terminus-nord.html" css="bleu" ref="043" type="hotel"/>
+
+	
+	
+	
+	<marker name="Hôtel Alexandrie 3*" ad="Adhérent Office du tourisme (OTCP)" label="20" address="19, Rue d'Austerlitz" cp="75012" ville="Paris" lat="48.847352372798795" lng="2.3711644466964854" url="hotel-alexandrie.html" css="bleu" ref="012" type="hotel"/>	
+    <marker name="BEST WESTERN Hôtel Folkestone Opéra 3*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="21" address="9, rue de Castellane" cp="75008" ville="Paris" lat="48.872226949015186" lng="2.3252365499999916" url="hotel-folkestone-opera.html" css="bleu" ref="015" type="hotel"/>
+	<marker name="BEST WESTERN Hôtel Sydney Opéra 3*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="22" address="50, Rue des Mathurins" cp="75008" ville="Paris" lat="48.873292849018895" lng="2.3240892499999877" url="hotel-sydney-opera.html" css="bleu" ref="018" type="hotel"/>
+	<marker name="BEST WESTERN Sèvres Montparnasse 3*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="23" address="153, rue de Vaugirard" cp="75015" ville="Paris" lat="48.8439019" lng="2.3158407" url="hotel-sevres-montparnasse.html" css="bleu" ref="029" type="hotel"/>
+
+	<marker name="BEST WESTERN France Europe 3*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="24" address="112, Boulevard de Sébastopol" cp="75003" ville="Paris" lat="48.868784899000026" lng="2.354028549999998" url="hotel-france-europe.html" css="bleu" ref="025" type="hotel"/>
+	<marker name="BEST WESTERN Aramis Saint-Germain 3*" ad="BEST WESTERN, Adhérent Office du tourisme (OTCP)" label="25" address="124, Rue de Rennes" cp="75006" ville="Paris" lat="48.8467808781697" lng="2.32655344629516" url="hotel-aramis-saint-germain.html" css="bleu" ref="026" type="hotel"/>
+	<marker name="Hôtel Pas-de-Calais 3*" ad="" label="26" address="59, rue des Saints-pères" cp="75006" ville="Paris" lat="48.85390739894816" lng="2.330096300000011" url="hotel-pas-de-calais.html" css="bleu" ref="027" type="hotel"/>
+	
+	<marker name="Odéon Hôtel 3*" ad="Adhérent Office du tourisme (OTCP)" label="27" address="3, rue de l'Odéon" cp="75006" ville="Paris" lat="48.851668396477" lng="2.33868918280323" url="odeon-hotel-paris.html" css="bleu" ref="031" type="hotel"/>
+	<marker name="BEST WESTERN PREMIER 61 Paris Nation Hôtel 4*" ad="" label="15" address="61, rue de la Voûte" cp="75012" ville="Paris" lat="48.846522518169664" lng="2.4102986999999985" url="61-paris-nation-hotel.html" css="bleu" ref="035" type="hotel"/>
+	<marker name="Hôtel Royal Opéra 3*" ad="Adhérent Office du tourisme (OTCP)" label="31" address="5, Rue de Castellane" cp="75008" ville="Paris" lat="48.87213494901488" lng="2.325556000000004" url="hotel-royal-opera.html" css="bleu" ref="016" type="hotel"/>
+	
+	<marker name="L'Ouest Hôtel 3*" ad="" label="29" address="3, rue du Rocher" cp="75008" ville="Paris" lat="48.87564779902396" lng="2.323428800000018" url="l-ouest-hotel.html" css="bleu" ref="017" type="hotel"/>
+	<marker name="BEST WESTERN Aulivia Opera 3*" ad="BEST WESTERN, Member of Paris Tourism Board (OTCP)" label="28" address="4, rue des Petites Ecuries" cp="75010" ville="Paris" lat="48.87297729229575" lng="2.3539432570083685" url="best-western-aulivia-opera.html" css="bleu" ref="036" type="hotel"/>
+	<marker name="Hôtel Wallace 3*" ad="Member of Paris Tourism Board (OTCP)" label="30" address="89, rue Fondary" cp="75015" ville="Paris" lat="48.8461201181694" lng="2.298528899999951" url="hotel-wallace-paris.html" css="bleu" ref="038" type="hotel"/>
+	
+	<marker name="BEST WESTERN PLUS Paris Vélizy 4*" ad="BEST WESTERN Plus" label="19" address="1 Place de l'Europe " cp="78140" ville="Vélizy-Villacoublay" lat="448.77941626129397" lng="2.2054518945189816" url="best-western-plus-paris-velizy.html" css="bleu" ref="042" type="hotel"/>
+	<marker name="Holiday Inn Paris Gare de L'Est 4*" ad="Holiday Inn" label="18" address="5 rue du 8 Mai 1845" cp="75010" ville="Paris" lat="48.87603791818857" lng="2.358685199999968" url="holiday-inn-paris-gare-de-l-est.html" css="bleu" ref="041" type="hotel"/>
+	<marker name="Hôtel Beauchamps 4*" ad="Worldhotels" label="17" address="29 rue de Ponthieu" cp="75008" ville="Paris" lat="48.87086641818526" lng="2.3092000000000325" url="hotel-beauchamps-paris.html" css="bleu" ref="040" type="hotel"/>
+
+	<marker name="Royal Opera Hôtel 3*" ad="Member of Paris Tourism Board (OTCP)" label="30" address="5 rue de Castellane" cp="75008" ville="Paris" lat="48.87213" lng="2.32555" url="hotel-royal-opera-paris.html" css="bleu" ref="016" type="hotel"/>
+	
+
+	
+	<marker name="Cathédrale Notre Dame de Paris" label="01" address="Place du Parvis Notre Dame" cp="75008" ville="Paris" lat="48.8532166909919" lng="2.34852311401673" url="#" css="rouge" type="poi"/>
+	<marker name="Ile-Saint-Louis" label="02" address="Ile-Saint-Louis" cp="75004" ville="Paris" lat="48.8517266709535" lng="2.355618255542" url="#" css="rouge" type="poi"/>
+	<marker name="La Sainte Chapelle" label="03" address="4, Boulevard du Palais" cp="75001" ville="Paris" lat="48.855459142398544" lng="2.3446669452300917" url="#" css="rouge" type="poi"/>
+	<marker name="Université de la Sorbonne" label="04" address="18, Rue de la Sorbonne" cp="75005" ville="Paris" lat="48.8484507876441" lng="2.34312989325407" url="#" css="rouge" type="poi"/>
+	<marker name="L'Institut du Monde Arabe" label="05" address="1, Rue des Fossés-Saint-Bernard" cp="75005" ville="Paris" lat="48.8491739883419" lng="2.35670725396727" url="#" css="rouge" type="poi"/>
+	<marker name="Le square du Vert-Galant" label="06" address="Square Vert Galant" cp="75001" ville="Paris" lat="48.857275868815" lng="2.34062897801397" url="#" css="rouge" type="poi"/>
+	<marker name="Centre Georges Pompidou, Beaubourg" label="07" address="Place Georges Pompidou" cp="75004" ville="Paris" lat="48.8606360556128" lng="2.35244819079206" url="#" css="rouge" type="poi"/>
+	<marker name="Musée Carnavalet" label="08" address="23, rue de Sévigné" cp="75003" ville="Paris" lat="48.857372928568" lng="2.36223292883606" url="#" css="rouge" type="poi"/>
+	<marker name="Place des Vosges" label="09" address="10-22, Place des Vosges" cp="75004" ville="Paris" lat="48.8556087652931" lng="2.36527503491822" url="#" css="rouge" type="poi"/>
+	<marker name="Hôtel de Ville" label="10" address="2-6, Rue du Renard" cp="75004" ville="Paris" lat="48.8565740912468" lng="2.3517693300247" url="#" css="rouge" type="poi"/>
+	<marker name="Tour Saint-Jacques" label="11" address="13, Avenue Victoria" cp="75004" ville="Paris" lat="48.8577670475133" lng="2.34864723873136" url="#" css="rouge" type="poi"/>
+	<marker name="Fontaine Stravinsky" label="12" address="Place Igor Stravinsky" cp="75004" ville="Paris" lat="48.8594540791448" lng="2.3512650747299" url="#" css="rouge" type="poi"/>
+	<marker name="Musée Picasso (fermé jusqu'en 2012)" label="13" address="1 Rue des Coutures Saint-Gervais" cp="75003" ville="Paris" lat="48.8596517192972" lng="2.36227286052701" url="#" css="rouge" type="poi"/>
+	<marker name="Musée du Louvre" label="14" address="34, Rue du Louvre" cp="75001" ville="Paris" lat="48.8617551268535" lng="2.33695280742643" url="#" css="rouge" type="poi"/>
+	<marker name="Pyramide du Louvre" label="15" address="7, Place du Carrousel" cp="75001" ville="Paris" lat="48.8610034158471" lng="2.33581555080411" url="#" css="rouge" type="poi"/>
+	<marker name="Cour carrée du Louvre" label="16" address="Quai François Mitterrand" cp="75001" ville="Paris" lat="48.8603681583074" lng="2.33850312423704" url="#" css="rouge" type="poi"/>
+	<marker name="Jardin des Tuileries" label="17" address="Rue de Rivoli" cp="75001" ville="Paris" lat="48.8637596343419" lng="2.32652974319456" url="#" css="rouge" type="poi"/>
+	<marker name="Les Champs-Elysées" label="18" address="Avenue des Champs-Elysées" cp="75008" ville="Paris" lat="48.869769753217" lng="2.30756620581967" url="#" css="rouge" type="poi"/>
+	<marker name="Pont Alexandre-III" label="19" address="Pont Alexandre III" cp="75007" ville="Paris" lat="48.8635502656412" lng="2.31349120553357" url="#" css="rouge" type="poi"/>
+	<marker name="Arc de Triomphe, place de l'Etoile" label="20" address="Place de l'Etoile" cp="75008" ville="Paris" lat="48.8738380267011" lng="2.29488472159726" url="#" css="rouge" type="poi"/>
+	<marker name="Grand Palais" label="21" address="21, Avenue Franklin Delano Roosevelt" cp="75008" ville="Paris" lat="48.8661404894307" lng="2.31250415261609" url="#" css="rouge" type="poi"/>
+	<marker name="Musée d'Orsay" label="22" address="62, Rue de Lille" cp="75007" ville="Paris" lat="48.8602142473046" lng="2.3257240147846" url="#" css="rouge" type="poi"/>
+	<marker name="Musée Rodin" label="23" address="33, Boulevard des Invalides" cp="75007" ville="Paris" lat="48.855310152077" lng="2.31584773988115" url="#" css="rouge" type="poi"/>
+	<marker name="Jardin du Luxembourg" label="24" address="15, Rue de Vaugirard" cp="75006" ville="Paris" lat="48.8468739564426" lng="2.33707398545836" url="#" css="rouge" type="poi"/>
+	<marker name="Eglise Saint-Germain-des-Prés" label="25" address="1-7, Place Saint-Germain des Prés" cp="75006" ville="Paris" lat="48.8540624553175" lng="2.3337818773155" url="#" css="rouge" type="poi"/>
+	<marker name="Tour Montparnasse" label="26" address="26-28, Rue du Départ" cp="75015" ville="Paris" lat="48.8421472591809" lng="2.3221476226845" url="#" css="rouge" type="poi"/>
+	<marker name="Tour Eiffel" label="27" address="Parc du Champ de Mars" cp="75007" ville="Paris" lat="48.8584802794765" lng="2.29450383928681" url="#" css="rouge" type="poi"/>
+	<marker name="Musée du Quai Branly" label="28" address="39-61, Quai Branly" cp="75007" ville="Paris" lat="48.8608024361137" lng="2.2969217301983" url="#" css="rouge" type="poi"/>
+	<marker name="Place du Trocadéro" label="29" address="Place du Trocadéro" cp="75016" ville="Paris" lat="48.8623974430149" lng="2.28804282649343" url="#" css="rouge" type="poi"/>
+	<marker name="Les Invalides" label="30" address="129, Avenue de Tourville" cp="75007" ville="Paris" lat="48.8576188299417" lng="2.31279425128286" url="#" css="rouge" type="poi"/>
+	<marker name="Palais de Tokyo" label="31" address="13, Place de Tokyo" cp="75016" ville="Paris" lat="48.8642089303847" lng="2.29657704166414" url="#" css="rouge" type="poi"/>
+	<marker name="Basilique du Sacré Cœur de Montmartre" label="32" address="Parvis du Sacré Coeur" cp="75018" ville="Paris" lat="48.8863340192022" lng="2.34303698032188" url="#" css="rouge" type="poi"/>
+	<marker name="Place du Tertre" label="33" address="13-19, Place du Tertre" cp="75018" ville="Paris" lat="48.8865070799699" lng="2.34068117605742" url="#" css="rouge" type="poi"/>
+	<marker name="Square Louise Michel" label="34" address="3-7, Rue Foyatier" cp="75018" ville="Paris" lat="48.8850564281129" lng="2.34330647790985" url="#" css="rouge" type="poi"/>
+	<marker name="Pigalle" label="35" address="11, Place Pigalle" cp="75009" ville="Paris" lat="48.8821975393733" lng="2.33702145767212" url="#" css="rouge" type="poi"/>
+	<marker name="Les Abbesses" label="36" address="Place des Abbesses" cp="75018" ville="Paris" lat="48.884360199054356" lng="2.3384620499999897" url="#" css="rouge" type="poi"/>
+	<marker name="Jardin du Palais Royal" label="37" address="Jardin du Palais Royal" cp="75001" ville="Paris" lat="48.8648971303311" lng="2.33773877513123" url="#" css="rouge" type="poi"/>
+	<marker name="Opéra Garnier" label="38" address="17-27, Boulevard des Capucines" cp="75002" ville="Paris" lat="48.8716778208038" lng="2.33177504047548" url="#" css="rouge" type="poi"/>
+	<marker name="Printemps Haussmann" label="39" address="58, Boulevard Haussmann" cp="75009" ville="Paris" lat="48.8739141850189" lng="2.32898080727082" url="#" css="rouge" type="poi"/>
+	<marker name="Galeries Lafayette Haussmann" label="40" address="40, Boulevard Haussmann" cp="75009" ville="Paris" lat="48.8734113404101" lng="2.33182539879759" url="#" css="rouge" type="poi"/>
+	<marker name="Musée Grévin" label="41" address="10, Boulevard Montmartre" cp="75009" ville="Paris" lat="48.8716808020193" lng="2.34210418280333" url="#" css="rouge" type="poi"/>
+	<marker name="Musée Jacquemart-André" label="42" address="158, Boulevard  Haussmann" cp="75008" ville="Paris" lat="48.8752793901464" lng="2.31041413121338" url="#" css="rouge" type="poi"/>
+	<marker name="Parc Monceau" label="43" address="Parc Monceau" cp="75008" ville="Paris" lat="48.8793648990369" lng="2.3092211" url="#" css="rouge" type="poi"/>
+	<marker name="Cité des Sciences et de l'Industrie" label="44" address="30, Avenue Corentin Cariou" cp="75019" ville="Paris" lat="48.8957467227202" lng="2.38756085436707" url="#" css="rouge" type="poi"/>
+	<marker name="Cité de la Musique" label="45" address="219, Avenue Jean Jaurès" cp="75019" ville="Paris" lat="48.8905877008487" lng="2.39416789339296" url="#" css="rouge" type="poi"/>
+	<marker name="La Géode" label="46" address="26, Avenue Corentin Cariou" cp="75019" ville="Paris" lat="48.8945943255004" lng="2.38839577959291" url="#" css="rouge" type="poi"/>
+	<marker name="Canal Saint Martin" label="47" address="Passerelle du Port de Plaisance de Paris Arsenal" cp="75004" ville="Paris" lat="48.8731607925328" lng="2.36367654131166" url="#" css="rouge" type="poi"/>
+	<marker name="Cimetière du Père Lachaise" label="48" address="Cimetière du Père Lachaise." cp="75011" ville="Paris" lat="48.8609906208441" lng="2.39258460527954" url="#" css="rouge" type="poi"/>
+	<marker name="Opéra Bastille" label="49" address="1-5, Place de l'Hôtel de Ville" cp="75004" ville="Paris" lat="48.8529151894883" lng="2.36945323473511" url="#" css="rouge" type="poi"/>
+	<marker name="Place de la Bastille" label="50" address="164, Place de la Bastille" cp="75012" ville="Paris" lat="48.853197569207" lng="2.36889533526001" url="#" css="rouge" type="poi"/>
+	<marker name="Colonne de Juillet" label="51" address="1-3, Place de la Bastille" cp="75004" ville="Paris" lat="48.853197569207" lng="2.36889533526001" url="#" css="rouge" type="poi"/>
+	<marker name="Bibliothèque Nationale de France (BnF)" label="52" address="Quai François-Mauriac " cp="75013" ville="Paris" lat="48.8327209114084" lng="2.37689904696045" url="#" css="rouge" type="poi"/>
+	<marker name="Les jardins de Bagatelle" label="53" address="Parc de Bagatelle" cp="75016" ville="Paris" lat="48.86794887541" lng="2.24304593223268" url="#" css="rouge" type="poi"/>
+	<marker name="Les catacombes de Paris" label="54" address="1, Place Denfert-Rochereau" cp="75014" ville="Paris" lat="48.8341601843807" lng="2.33246139570085" url="#" css="rouge" type="poi"/>
+	<marker name="Le Panthéon" label="01" address="11-19, Place du Panthéon" cp="75005" ville="Paris" lat="48.84572598834987" lng="2.3456570000000188" url="#" css="noir" type="see"/>
+	<marker name="Mosquée de Paris" label="02" address="39-59, Rue Geoffroy Saint-Hilaire" cp="75005" ville="Paris" lat="48.84250052480783" lng="2.3554818970977864" url="#" css="noir" type="see"/>
+	<marker name="Jardin des plantes" label="03" address="6-26, Rue Buffon" cp="75005" ville="Paris" lat="48.843645788354394" lng="2.359115999999992" url="#" css="noir" type="see"/>
+	<marker name="Musée national du Moyen Age, Cluny" label="04" address="2-8, Place Paul Painlevé" cp="75005" ville="Paris" lat="48.85025698833313" lng="2.344115000000011" url="#" css="noir" type="see"/>
+	<marker name="Muséum National d'Histoire Naturelle - Galerie de l'évolution" label="05" address="57, Rue Cuvier" cp="75005" ville="Paris" lat="48.84178415287348" lng="2.3562656873412946" url="#" css="noir" type="see"/>
+	<marker name="Conciergerie" label="06" address="2, Boulevard du Palais" cp="75001" ville="Paris" lat="48.85586598832218" lng="2.3462179999999933" url="#" css="noir" type="see"/>
+	<marker name="Collège des Bernardins" label="07" address="9-31, Rue de Poissy" cp="75005" ville="Paris" lat="48.848983988338325" lng="2.352510000000012" url="#" css="noir" type="see"/>
+	<marker name="Arènes de Lutèce" label="08" address="33-57, Rue Monge" cp="75005" ville="Paris" lat="48.845142988353466" lng="2.3522189999999954" url="#" css="noir" type="see"/>
+	<marker name="Fontaine Saint-Michel" label="09" address="3, Place Saint-Michel" cp="75005" ville="Paris" lat="48.85345598833514" lng="2.3441600000000173" url="#" css="noir" type="see"/>
+	<marker name="Bibliothèque Sainte-Geneviève" label="10" address="10, Place du Panthéon" cp="75005" ville="Paris" lat="48.8468209883413" lng="2.3459420000000186" url="#" css="noir" type="see"/>
+	<marker name="Musée des arts et métiers" label="11" address="60, Square du Général Morin" cp="75003" ville="Paris" lat="48.86571218830355" lng="2.3554208000000054" url="#" css="noir" type="see"/>
+	<marker name="Archives nationales" label="12" address="87, Rue des Archives" cp="75003" ville="Paris" lat="48.863661048985314" lng="2.3610042499999917" url="#" css="noir" type="see"/>
+	<marker name="Musée d'art et d'histoire du judaisme" label="13" address="71-77, Rue du Temple" cp="75003" ville="Paris" lat="48.86094494897585" lng="2.355647199999993" url="#" css="noir" type="see"/>
+	<marker name="Hôtel de Sully" label="14" address="38-60, Rue Saint-Antoine" cp="75004" ville="Paris" lat="48.854157038326434" lng="2.3642629999999976" url="#" css="noir" type="see"/>
+	<marker name="Maison Européenne de la photographie" label="15" address="1-11, Rue de Fourcy" cp="75004" ville="Paris" lat="48.854888648954734" lng="2.3591485500000076" url="#" css="noir" type="see"/>
+	<marker name="Musée Cognacq-Jay" label="16" address="2-10, Rue Elzévir" cp="75003" ville="Paris" lat="48.85811938832092" lng="2.361486100000012" url="#" css="noir" type="see"/>
+	<marker name="Mémorial de La Shoah" label="17" address="17, Rue Geoffroy l'Asnier" cp="75004" ville="Paris" lat="48.85483298833191" lng="2.3563959999999984" url="#" css="noir" type="see"/>
+	<marker name="Maison de Victor Hugo" label="18" address="2-8, Place des Vosges" cp="75004" ville="Paris" lat="48.854909738326036" lng="2.365894699999993" url="#" css="noir" type="see"/>
+	<marker name="Quartier et marché des Enfants-Rouges" label="19" address="Marché des Enfants Rouges" cp="75003" ville="Paris" lat="48.86289674898263" lng="2.3620710000000056" url="#" css="noir" type="see"/>
+	<marker name="Synagogue de la rue Pavée" label="20" address="10, Rue Pavée" cp="75004" ville="Paris" lat="48.856061098955664" lng="2.360548000000011" url="#" css="noir" type="see"/>
+	<marker name="Eglise Saint-Eustache" label="21" address="2, Impasse Saint-Eustache" cp="75001" ville="Paris" lat="48.86377959898256" lng="2.3455168500000134" url="#" css="noir" type="see"/>
+	<marker name="Pavillon de l'Arsenal" label="22" address="19-23, Boulevard Morland" cp="75004" ville="Paris" lat="48.85072279893706" lng="2.3625479999999843" url="#" css="noir" type="see"/>
+	<marker name="Jardin des Halles" label="23" address="Allée Jules Supervielle" cp="75001" ville="Paris" lat="48.86233239897753" lng="2.3448367000000125" url="#" css="noir" type="see"/>
+	<marker name="Galerie nationale du Jeu de Paume" label="24" address="5, Rue de l'Hôtel Saint-Paul" cp="75004" ville="Paris" lat="48.85430400330216" lng="2.3636700000000133" url="#" css="noir" type="see"/>
+	<marker name="Petit Palais" label="25" address="Avenue Winston Churchill" cp="75008" ville="Paris" lat="48.866050888295305" lng="2.314331099999989" url="#" css="noir" type="see"/>
+	<marker name="Espace culturel Louis-Vuitton" label="26" address="56, Rue de Bassano" cp="75008" ville="Paris" lat="48.871304399008835" lng="2.2999215000000195" url="#" css="noir" type="see"/>
+	<marker name="Place de la Concorde" label="27" address="3, Place de la Concorde" cp="75008" ville="Paris" lat="48.86542364899145" lng="2.3209300999999893" url="#" css="noir" type="see"/>
+	<marker name="Palais de L'Elysée" label="28" address="12-16, Rue des Saussaies" cp="75008" ville="Paris" lat="48.871335749012076" lng="2.3178514000000128" url="#" css="noir" type="see"/>
+	<marker name="Eglise Saint-Germain-l'Auxerrois" label="29" address="2-12, Quai du Louvre" cp="75001" ville="Paris" lat="48.858505348967334" lng="2.342401899999995" url="#" css="noir" type="see"/>
+	<marker name="Palais de la Découverte" label="30" address="7, Avenue Franklin Delano Roosevelt" cp="75008" ville="Paris" lat="48.86617498829767" lng="2.310400999999991" url="#" css="noir" type="see"/>
+	<marker name="Musée des égouts" label="31" address="Quai d'Orsay" cp="75007" ville="Paris" lat="48.8626099883034" lng="2.302528000000015" url="#" css="noir" type="see"/>
+	<marker name="Musée de l'Orangerie" label="32" address="Place de la Concorde" cp="75008" ville="Paris" lat="48.86424745132879" lng="2.322526550415054" url="#" css="noir" type="see"/>
+	<marker name="Musée Guimet des arts asiatiques" label="33" address="Place d'Iéna" cp="75116" ville="Paris" lat="48.86480298830097" lng="2.2939129999999963" url="#" css="noir" type="see"/>
+	<marker name="Fondation Cartier pour l'art contemporain" label="34" address="257-267, Boulevard Raspail" cp="75014" ville="Paris" lat="48.83742404889386" lng="2.331303500000015" url="#" css="noir" type="see"/>
+	<marker name="Musée Zadkine" label="35" address="88 Rue d'Assas" cp="75006" ville="Paris" lat="48.843086988358465" lng="2.334075999999996" url="#" css="noir" type="see"/>
+	<marker name="Pont Neuf" label="36" address="Pont Neuf" cp="75001" ville="Paris" lat="48.85726459895988" lng="2.341373849999986" url="#" css="noir" type="see"/>
+	<marker name="Pont des Arts" label="37" address="Pont des Arts" cp="75001" ville="Paris" lat="48.858445798963984" lng="2.3375515999999985" url="#" css="noir" type="see"/>
+	<marker name="Cimetière Montparnasse" label="38" address="3, Boulevard Edgar Quinet" cp="75014" ville="Paris" lat="48.83977519889893" lng="2.3287602999999812" url="#" css="noir" type="see"/>
+	<marker name="Eglise et place Saint-Sulpice" label="39" address="Allée Père Michel Riquet" cp="75006" ville="Paris" lat="48.850878248940745" lng="2.3335968499999993" url="#" css="noir" type="see"/>
+	<marker name="Ecole nationale supérieure des beaux-arts" label="40" address="14, Rue Bonaparte" cp="75006" ville="Paris" lat="48.85659998832141" lng="2.334645999999996" url="#" css="noir" type="see"/>
+	<marker name="Eglise Notre Dame des Champs" label="41" address="91, Boulevard du Montparnasse" cp="75006" ville="Paris" lat="48.8429766489132" lng="2.326634449999987" url="#" css="noir" type="see"/>
+	<marker name="Musée Eugène Delacroix" label="42" address="6, Rue de Furstemberg" cp="75006" ville="Paris" lat="48.85440758832385" lng="2.3356897999999893" url="#" css="noir" type="see"/>
+	<marker name="La Pagode" label="43" address="11, Rue de Babylone" cp="75007" ville="Paris" lat="48.851694988331076" lng="2.320190999999987" url="#" css="noir" type="see"/>
+	<marker name="Musée Bourdelle" label="44" address="14 Rue Antoine Bourdelle" cp="75015" ville="Paris" lat="48.8429879883566" lng="2.317713999999995" url="#" css="noir" type="see"/>
+	<marker name="Chapelle Notre Dame de la Médaille Miraculeuse" label="45" address="130-150, Rue du Bac" cp="75007" ville="Paris" lat="48.850955798937854" lng="2.3238394999999867" url="#" css="noir" type="see"/>
+	<marker name="Fondation d'entreprise Ricard pour l'art contemporain" label="46" address="1-15, Rue Royale" cp="75008" ville="Paris" lat="48.86803474900055" lng="2.3229861500000037" url="#" css="noir" type="see"/>
+	<marker name="Musée d'art moderne (Ville de Paris)" label="47" address="11, Avenue du Président Wilson" cp="75116" ville="Paris" lat="48.86513109898728" lng="2.2988999999999926" url="#" css="noir" type="see"/>
+	<marker name="Cité de l'architecture et du patrimoine" label="48" address="1-5 Square du Trocadéro" cp="75116" ville="Paris" lat="48.862319348980634" lng="2.2819621499999876" url="#" css="noir" type="see"/>
+	<marker name="Maison de la culture du Japon à Paris" label="49" address="101, Quai Branly" cp="75015" ville="Paris" lat="48.85488049895155" lng="2.2891997499999883" url="#" css="noir" type="see"/>
+	<marker name="Musée de l'Armée" label="50" address="129, Rue de Grenelle" cp="75007" ville="Paris" lat="48.858432198963946" lng="2.31184664999998" url="#" css="noir" type="see"/>
+	<marker name="Musée Maillol" label="51" address="65, Rue de Grenelle" cp="75007" ville="Paris" lat="48.85473834895419" lng="2.3252425500000085" url="#" css="noir" type="see"/>
+	<marker name="Réplique de la Statue de la Liberté" label="52" address="Allée des Cygnes" cp="75015" ville="Paris" lat="48.85271351552792" lng="2.2834383481689313" url="#" css="noir" type="see"/>
+	<marker name="Parc du Champ-de-Mars" label="53" address="Place Jacques Rueff" cp="75007" ville="Paris" lat="48.85579630422291" lng="2.298326049999986" url="#" css="noir" type="see"/>
+	<marker name="Pont des Invalides" label="54" address="Pont des Invalides" cp="75007" ville="Paris" lat="48.8630970383053" lng="2.310399700000003" url="#" css="noir" type="see"/>
+	<marker name="Pont de l'Alma" label="55" address="Voie sur Berge Rive Gauche" cp="75007" ville="Paris" lat="48.862871179329765" lng="2.301644969775394" url="#" css="noir" type="see"/>
+	<marker name="Halle Saint-Pierre" label="56" address="2, Rue Ronsard" cp="75018" ville="Paris" lat="48.88512239905703" lng="2.3442326499999933" url="#" css="noir" type="see"/>
+	<marker name="Espace Dali" label="57" address="1-13, Rue Poulbot" cp="75018" ville="Paris" lat="48.88728898824328" lng="2.3397189999999934" url="#" css="noir" type="see"/>
+	<marker name="Le Moulin de la Galette" label="58" address="77-83, Rue Lepic" cp="75018" ville="Paris" lat="48.88728898824328" lng="2.337090999999978" url="#" css="noir" type="see"/>
+	<marker name="Musée de la vie romantique" label="59" address="16, Rue Chaptal" cp="75009" ville="Paris" lat="48.8808370382603" lng="2.333372999999983" url="#" css="noir" type="see"/>
+	<marker name="Cimetière de Montmartre" label="60" address="20, Avenue Rachel" cp="75018" ville="Paris" lat="48.88525229905747" lng="2.330994549999992" url="#" css="noir" type="see"/>
+	<marker name="Musée de Montmartre" label="61" address="2-22, Rue Cortot" cp="75018" ville="Paris" lat="48.88768473824344" lng="2.3406945999999795" url="#" css="noir" type="see"/>
+	<marker name="Barbès" label="62" address="50-62 Boulevard Barbès" cp="75018" ville="Paris" lat="48.88757345813616" lng="2.3497174000000065" url="#" css="noir" type="see"/>
+	<marker name="Eglise de la Sainte-Trinité" label="63" address="3, Rue de la Trinité" cp="75009" ville="Paris" lat="48.8775910490339" lng="2.3307150500000073" url="#" css="noir" type="see"/>
+	<marker name="Palais de la Bourse" label="64" address="29, Rue Vivienne" cp="75002" ville="Paris" lat="48.869168038288414" lng="2.340828099999994" url="#" css="noir" type="see"/>
+	<marker name="Eglise et place de la Madeleine" label="65" address="17, Place de la Madeleine" cp="75008" ville="Paris" lat="48.87009859900459" lng="2.3244736499999785" url="#" css="noir" type="see"/>
+	<marker name="Place et basilique Notre Dame des Victoires" label="66" address="4-12 Place des Victoires" cp="75002" ville="Paris" lat="48.86590839898999" lng="2.3409998999999804" url="#" css="noir" type="see"/>
+	<marker name="Galerie Vivienne" label="67" address="26, Galerie Vivienne" cp="75002" ville="Paris" lat="48.866660298992606" lng="2.3396617000000086" url="#" css="noir" type="see"/>
+	<marker name="Colonne et place Vendôme" label="68" address="26, Place Vendôme" cp="75001" ville="Paris" lat="48.86788834900003" lng="2.330004450000005" url="#" css="noir" type="see"/>
+	<marker name="Musée Cernuschi" label="69" address="7, Avenue Vélasquez" cp="75008" ville="Paris" lat="48.87977298826213" lng="2.3123350000000187" url="#" css="noir" type="see"/>
+	<marker name="Musée Nissim de Camondo" label="70" address="61-67, Rue de Monceau" cp="75008" ville="Paris" lat="48.878743038264595" lng="2.312742000000001" url="#" css="noir" type="see"/>
+	<marker name="Grande halle de la Villette" label="71" address="2, Galerie de la Villette" cp="75019" ville="Paris" lat="48.890833288237104" lng="2.3911110999999963" url="#" css="noir" type="see"/>
+	<marker name="Couvent des Recollets" label="72" address="154, Rue du Faubourg Saint-Martin" cp="75010" ville="Paris" lat="48.875931149028126" lng="2.360435350000003" url="#" css="noir" type="see"/>
+	<marker name="Parc des Buttes-Chaumont" label="73" address="Avenue de la Grotte" cp="75019" ville="Paris" lat="48.88000058826645" lng="2.3822970999999793" url="#" css="noir" type="see"/>
+	<marker name="CENTQUATRE" label="74" address="5, Rue Curial" cp="75019" ville="Paris" lat="48.89022079907481" lng="2.371697850000012" url="#" css="noir" type="see"/>
+	<marker name="Parc de la Villette" label="75" address="Parc de la Villette" cp="75019" ville="Paris" lat="48.89273388822913" lng="2.3907591000000084" url="#" css="noir" type="see"/>
+	<marker name="Parc de Belleville" label="76" address="11, Parc de Belleville" cp="75020" ville="Paris" lat="48.87095079900757" lng="2.386502799999999" url="#" css="noir" type="see"/>
+	<marker name="Jardins d'Eole" label="77" address="9, Rue Jacques Kablé" cp="75018" ville="Paris" lat="48.886181999060696" lng="2.3627106000000087" url="#" css="noir" type="see"/>
+	<marker name="La coulée verte (Promenade Plantée)" label="78" address="30, Boulevard Diderot" cp="75012" ville="Paris" lat="48.84612694892418" lng="2.3760856499999905" url="#" css="noir" type="see"/>
+	<marker name="La Maison Rouge, Fondation Antoine de Galbert" label="79" address="8-16, Boulevard de la Bastille" cp="75006" ville="Paris" lat="48.847304098925136" lng="2.3673301499999777" url="#" css="noir" type="see"/>
+	<marker name="Marché d'Aligre" label="80" address="1-5, Place d'Aligre" cp="75012" ville="Paris" lat="48.84925270492489" lng="2.378187732092263" url="#" css="noir" type="see"/>
+	<marker name="Manufacture des Gobelins" label="81" address="17, Rue Gustave Geffroy" cp="75013" ville="Paris" lat="48.83479598837718" lng="2.3509670000000016" url="#" css="noir" type="see"/>
+	<marker name="Cinémathèque française" label="82" address="51, Rue de Bercy" cp="75012" ville="Paris" lat="48.83781459889208" lng="2.382192600000006" url="#" css="noir" type="see"/>
+	<marker name="Quartier asiatique de Paris" label="83" address="31, Villa d'Este" cp="75013" ville="Paris" lat="48.82222223840995" lng="2.3652777999999897" url="#" css="noir" type="see"/>
+	<marker name="Parc de Bercy" label="84" address="1-15, Parc de Bercy" cp="75012" ville="Paris" lat="48.83390429887846" lng="2.3853525999999947" url="#" css="noir" type="see"/>
+	<marker name="Parc Georges Brassens" label="85" address="Parc Georges Brassens" cp="75115" ville="Paris" lat="48.83161664887363" lng="2.2987007000000093" url="#" css="noir" type="see"/>
+	<marker name="Parc André Citroën" label="86" address="15-31, Rue de la Montagne de l'Espérou" cp="75116" ville="Paris" lat="48.84200469890666" lng="2.2760127999999824" url="#" css="noir" type="see"/>
+	<marker name="Jardin d'acclimation" label="87" address="Jardin d'Acclimatation" cp="75116" ville="Paris" lat="48.877692549441605" lng="2.26942079370116" url="#" css="noir" type="see"/>
+	<marker name="Bois de Boulogne" label="88" address="Allée de la Reine Marguerite" cp="75016" ville="Paris" lat="48.860687603258405" lng="2.246559800000001" url="#" css="noir" type="see"/>
+	<marker name="Musée Marmottan-Claude Monet" label="89" address="2, Rue Louis Boilly" cp="75016" ville="Paris" lat="48.859075938317034" lng="2.267706000000005" url="#" css="noir" type="see"/>
+	<marker name="Maison de la radio" label="90" address="Rue de Boulainvilliers" cp="75014" ville="Paris" lat="48.852499988331665" lng="2.278333300000015" url="#" css="noir" type="see"/>
+	<marker name="Fondation le Corbusier" label="91" address="2-10 Square du Docteur Blanche" cp="75016" ville="Paris" lat="48.85208598833847" lng="2.2651390000000005" url="#" css="noir" type="see"/>
+	<marker name="Place Denfert-Rochereau" label="92" address="2, Place Denfert-Rochereau" cp="75014" ville="Paris" lat="48.83411974888238" lng="2.3321876999999924" url="#" css="noir" type="see"/>
+	<marker name="Parc Montsouris" label="93" address="Parc de Montsouris" cp="75014" ville="Paris" lat="48.82228374884115" lng="2.3380308500000035" url="#" css="noir" type="see"/>
+	<marker name="Cité Internationale Universitaire de Paris" label="94" address="15, Boulevard Jourdan" cp="75014" ville="Paris" lat="48.8202599884094" lng="2.3388199999999904" url="#" css="noir" type="see"/>
+	
+
+	
+</markers>

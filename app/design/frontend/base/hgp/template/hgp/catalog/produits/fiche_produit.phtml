@@ -1,0 +1,87 @@
+<?php
+	$_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+    $ds = '/';
+	$_baseUrl = Mage::getBaseUrl ( 'media' ) . $ds;	
+	$_No = $this->__('No');
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-info-box">
+    <div class="product-essential">
+	    <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+			
+			<div class="product-img-box">
+	            <p><?php echo $this->getChildHtml('media') ?></p>	           
+	        </div>
+	        <div class="clear"></div>     
+			<span class="titre_product_description"><?php echo $this->__('About the hotel')?></span> 
+			<div class="short-description">
+				<?php if ((int) $_product->getAttributeText('bloc_mea') == 1) {?>
+				
+	            <div class="promo">			
+					<?php echo $_product->getContent_bloc_mea();?>				
+				</div>
+				
+				<div class="clear">&nbsp;</div>
+				<?php } ?>  
+			<?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description') ?></div>
+			<!--  <a class="link_categorie" href="#" style="float: right;">&gt;&nbsp;En savoir plus</a> -->
+			<div id="localisation">			
+				<table cellspacing="0" cellpadding="0" border="0" width="600px" class="localisation_table">
+				
+				<tr class="tab-color">
+					<td class="one_c" valign="top" colspan="3"><?php echo $this->__('Location1')?></td>
+				</tr>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation_intro')) != $_No) {?>
+				<tr class="tab-color">
+					<td class="one_c loc" valign="top" colspan="3"><span style="color: #FF7717;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('localisation_intro'))); ?></span></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation_acote')) != $_No) {?>
+				<tr class="tab-color">
+					<td class="lefte" valign="top"><?php echo $this->__('localisation_acote'); ?></td>
+					<td class="middlee" align="center" valign="top"><p><img src="<?php echo ($_baseUrl . 'b1.gif'); ?>" alt="point map" /></p></td>
+					<td class="righte"><?php echo $this->htmlEscape($_product->getLocalisation_acote()); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation_500m')) != $_No) {?>
+				<tr class="tab-color">
+					<td class="lefte" valign="top"><?php echo $this->__('localisation_500m'); ?></td>
+					<td class="middlee" align="center" valign="top"><p><img src="<?php echo ($_baseUrl . 'b2.gif'); ?>" alt="point map" /></p></td>
+					<td class="righte"><?php echo $this->htmlEscape($_product->getLocalisation_500m()); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation_1000m')) != $_No) {?>
+				<tr class="tab-color">
+					<td class="lefte" valign="top"><?php echo $this->__('localisation_1000m'); ?></td>
+					<td class="middlee" align="center" valign="top"><img src="<?php echo ($_baseUrl . 'b3.gif'); ?>" alt="point map" /></td>
+					<td class="righte"><?php echo $this->htmlEscape($_product->getLocalisation_1000m()); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation_1500m')) != $_No) {?>
+				<tr class="tab-color">
+					<td class="lefte" valign="top"><?php echo $this->__('localisation_1500m'); ?></td>
+					<td class="middlee" align="center" valign="top"><p><img src="<?php echo ($_baseUrl . 'b4.gif'); ?>" alt="point map" /></p></td>
+					<td class="righte"><?php echo $this->htmlEscape($_product->getLocalisation_1500m()); ?></td>
+				</tr>
+				<?php } ?>
+				<tr>
+					<td class="leftee">&nbsp;</td>
+					<td class="bottome">&nbsp;</td>
+					<td class="rightee">&nbsp;</td>
+				</tr>
+			</table>
+			</div>
+			<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('guide_presse')) != $_No) {?>
+				<span class="titre_product_description_bottom"><?php echo $this->__('References and Press')?></span>
+				<div><?php echo (htmlspecialchars_decode(Hgp_Lib_Tools::getProductAttributeValue('guide_presse'))); ?></div>	
+			<?php } ?>
+			<span id="dashline">&nbsp;</span>
+
+	    </form>
+	    
+    </div>
+</div>

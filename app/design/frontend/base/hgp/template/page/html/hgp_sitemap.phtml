@@ -1,0 +1,28 @@
+<?php 
+$_hgpConfig    = Hgp_Lib_Tools::loadConfig('categorie');
+$_idCategorie  = 0;
+if ($_hgpConfig) $_idCategorie = $_hgpConfig->hotel;
+
+$_helper       = $this->helper('catalog/output');
+$_category     = Mage::getModel('catalog/category')->load($_idCategorie);
+$_arrList      = $_category->getProductCollection();
+$_count        = $_arrList->getSize();
+?>
+<div id="all_footer_categories">
+	<ul class="all_footer_categories_ul">
+	<?php if($_count): 
+		foreach($_arrList->getAllIds() as $productId)
+		{
+			$_product = Mage::getModel('catalog/product')->load($productId);
+			$nom_hotel = $_product->getName().' '.$_product->getAttributeText('ville').' '.$_product->getAttributeText('arrondissement');
+			print "<li class='all_footer_categories_li'><a class='all_footer_categories_a' href='".$_product->getProductUrl()."' title='".$_product->getName()."'>".$nom_hotel."</a>|</li>";		
+			
+		}?>				
+	</ul>
+	<?php else:?>
+	    <div class="note-msg">
+	        <?php echo $this->__('There are no %s available.', $this->getItemsTitle()); ?>
+	    </div>
+	<?php endif;?>
+	<div class="clear"></div>
+</div>

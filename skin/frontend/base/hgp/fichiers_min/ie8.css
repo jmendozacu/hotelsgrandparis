@@ -1,0 +1,10 @@
+#css pour IE8
+#tripadvisor-block-home{padding-top:15px;margin-top:0}
+#searchBloc{background:#fff}
+.pager .amount{margin-right:0}
+#information{position:absolute;bottom:0;width:911px;height:0;background:#f0f4f6;color:#000;overflow:hidden;z-index:200;opacity:0.7;filter:alpha(opacity=70);margin:0 0 3px 4px}
+#productslide #information{position:absolute;bottom:0;width:600px;height:0;background:#f0f4f6;color:#000;overflow:hidden;z-index:200;opacity:.7;filter:alpha(opacity=70);margin:0 0 3px}
+#imglink{position:absolute;height:210px;width:100%;z-index:100;background-color:green;filter:alpha(opacity=0)}
+ul.all_footer_categories_ul li.all_footer_categories_li a.all_footer_categories_a{padding-right:3px}
+.short-description{width:609px;padding-right:1px}
+span.white_bkg{display:block;background-color:#fff;width:287px;height:38px;margin:0 0 0 2px}

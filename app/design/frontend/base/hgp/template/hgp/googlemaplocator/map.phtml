@@ -1,0 +1,1032 @@
+<?php
+/**
+ * Hgp_GooglemapLocator extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * @category   Hgp
+ * @package    Hgp_GooglemapLocator
+ * @copyright  Copyright (c) 2009 Hotels Grand Paris 
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * @category   HotelsGrandParis
+ * @package    Hgp_GooglemapLocator
+ * @author     Brice POTE <brice.pote@hotelsgrandparis.com>
+ */
+?>
+<?php
+$storeId = Mage::app()->getStore()->getId();
+
+$_apiKey          = Mage::getStoreConfig ( 'googlemaplocator/general/google_api_key');
+$_showMap         = Mage::getStoreConfig ( 'googlemaplocator/general/show_map');
+$_showSearch      = Mage::getStoreConfig ( 'googlemaplocator/general/show_search');
+$_defaultLocation = Mage::getStoreConfig ( 'googlemaplocator/general/default_location');
+$_defaultRadius   = Mage::getStoreConfig ( 'googlemaplocator/general/default_radius');
+
+$viewCode = Mage::app()->getStore()->getCode();
+
+$paramQuartier = $this->getRequest()->getParam('quartier', 0);
+
+if (!Hgp_Lib_Tools::getParamConfig('mapParis', 'map')->$paramQuartier) $paramQuartier = 0;
+
+$_latitude  = Hgp_Lib_Tools::getParamConfig('mapParis', 'map')->$paramQuartier->latitude;
+$_longitude = Hgp_Lib_Tools::getParamConfig('mapParis', 'map')->$paramQuartier->longitude;
+$_zoom      = Hgp_Lib_Tools::getParamConfig('mapParis', 'map')->$paramQuartier->zoom;
+
+$urlMedia  = Mage::getUrl ('media') . 'googlemap/';
+$urlJs     = Mage::getUrl ('skin') . 'frontend/base/hgp/js/google/';
+
+if ($viewCode != 'default'){
+	$pattern = ($viewCode != 'default') ? '#/'.$viewCode.'/#': '';
+	$replace = '/';
+	$moduleBaseJs = preg_replace($pattern, $replace, $urlJs);
+	$mediaPath    = preg_replace($pattern, $replace, $urlMedia);
+} else {
+	$moduleBaseJs  = $urlJs;
+	$mediaPath     = $urlMedia;
+}
+?>
+
+<script
+	src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<?php echo $_apiKey?>&amp;sensor=false&amp;&amp;oe=utf-8;&amp;hl=<?php echo Hgp_Lib_Tools::getStoreLanguage($storeId)?>" type="text/javascript"></script>
+<script type="text/javascript">
+    //<![CDATA[
+
+    var map;
+    var geoXml; 
+
+    var iconBlue = new GIcon(); 
+    iconBlue.image = 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/greencirclemarker.png';
+    iconBlue.shadow = '';
+    iconBlue.iconSize = new GSize(32, 32);
+    iconBlue.shadowSize = new GSize(22, 20);
+    iconBlue.iconAnchor = new GPoint(16, 16);
+    iconBlue.infoWindowAnchor = new GPoint(23, 9);
+
+    var iconRed = new GIcon(); 
+    iconRed.image = 'http://gmaps-samples.googlecode.com/svn/trunk/markers/circular/bluecirclemarker.png';
+    iconRed.shadow = '';
+    iconRed.iconSize = new GSize(32, 32);
+    iconRed.shadowSize = new GSize(22, 20);
+    iconRed.iconAnchor = new GPoint(16, 16);
+    iconRed.infoWindowAnchor = new GPoint(23, 9);
+
+    var iconHotel = new GIcon(); 
+    iconHotel.image = '<?php echo $mediaPath . 'picto_hotels.png'?>';
+    iconHotel.shadow = '';
+    iconHotel.iconSize = new GSize(23, 25);
+    iconHotel.shadowSize = new GSize(23, 25);
+    iconHotel.iconAnchor = new GPoint(9, 20);
+    iconHotel.infoWindowAnchor = new GPoint(23, 9);
+    
+    var iconPoi = new GIcon(); 
+    iconPoi.image = '<?php echo $mediaPath . 'picto_a_pas_manquer.png'?>';
+    iconPoi.shadow = '';
+    iconPoi.iconSize = new GSize(23, 25);
+    iconPoi.shadowSize = new GSize(23, 25);
+    iconPoi.iconAnchor = new GPoint(14, 18);
+    iconPoi.infoWindowAnchor = new GPoint(23, 9);
+
+    var iconSee = new GIcon(); 
+    iconSee.image = '<?php echo $mediaPath . 'picto_avoir.png'?>';
+    iconSee.shadow = '';
+    iconSee.iconSize = new GSize(23, 25);
+    iconSee.shadowSize = new GSize(23, 25);
+    iconSee.iconAnchor = new GPoint(14, 18);
+    iconSee.infoWindowAnchor = new GPoint(23, 9);
+
+    var iconDrink = new GIcon(); 
+    iconDrink.image = '<?php echo $mediaPath . 'picto_sortir.png'?>';
+    iconDrink.shadow = '';
+    iconDrink.iconSize = new GSize(23, 25);
+    iconDrink.shadowSize = new GSize(23, 25);
+    iconDrink.iconAnchor = new GPoint(14, 15);
+    iconDrink.infoWindowAnchor = new GPoint(23, 9);
+
+    var iconNight = new GIcon(); 
+    iconNight.image = '<?php echo $mediaPath . 'picto_nocturne.png'?>';
+    iconNight.shadow = '';
+    iconNight.iconSize = new GSize(23, 25);
+    iconNight.shadowSize = new GSize(23, 25);
+    iconNight.iconAnchor = new GPoint(15, 18);
+    iconNight.infoWindowAnchor = new GPoint(23, 9);
+    
+    var iconMonument = new GIcon(); 
+    iconMonument.image = '<?php echo $mediaPath . 'icon_tour_effeil.png'?>';
+    iconMonument.shadow = '';
+    iconMonument.iconSize = new GSize(28, 26);
+    iconMonument.shadowSize = new GSize(22, 20);
+    iconMonument.iconAnchor = new GPoint(16, 16);
+    iconMonument.infoWindowAnchor = new GPoint(23, 9);
+
+    var customIcons = [];
+    customIcons["restaurant"] = iconBlue;
+    customIcons["bar"] = iconRed;
+    customIcons["hotel"] = iconHotel;
+    customIcons["poi"] = iconPoi;
+    customIcons["see"] = iconSee;
+    customIcons["drink"] = iconDrink;
+    customIcons["night"] = iconNight;
+    var markerGroups = { "restaurant": [], "bar": [], "hotel": [], "poi": [], "see": [], "drink": [], "night": [] };
+
+    <?php //print_r($mediaPath . 'markerdata_'.$storeId .'.xml');exit;?>
+    
+    function load() {
+        if (GBrowserIsCompatible()) {
+      	map = new GMap2(document.getElementById("map"));
+      	
+      	map.setCenter(new GLatLng(<?php echo $_latitude;?>, <?php echo $_longitude;?>), <?php echo $_zoom;?>);
+
+          map.addControl(new GMapTypeControl()); // Differentes vues (plan, satellite, mixte)
+          map.addMapType(G_PHYSICAL_MAP);        // Ajout de la vue en "Relief"
+          map.setMapType(G_NORMAL_MAP);          // Forcer sur vue "mixte": G_HYBRID_MAP
+          map.addControl(new GLargeMapControl3D());  // Zoom large 3D
+          /*map.enableScrollWheelZoom();           // Activation du zoom avec la souris*/
+          map.addControl(new GScaleControl());   // Echelle      
+
+         GDownloadUrl("<?php echo $mediaPath . 'markerdata_'.$storeId .'.xml'?>", function(data) { 
+            var xml = GXml.parse(data);
+            console.log("XML =>", xml);
+            var markers = xml.documentElement.getElementsByTagName("marker");
+            for (var i = 0; i < markers.length; i++) {
+              var name = markers[i].getAttribute("name");
+              var label = markers[i].getAttribute("label");
+              var address = markers[i].getAttribute("address");
+              var cp = markers[i].getAttribute("cp");
+              var ville = markers[i].getAttribute("ville");
+              var type = markers[i].getAttribute("type");
+              var url = markers[i].getAttribute("url");
+              var css = markers[i].getAttribute("css");
+              var ref = markers[i].getAttribute("ref");
+              var ad = markers[i].getAttribute("ad");
+              var point = new GLatLng(parseFloat(markers[i].getAttribute("lat")), parseFloat(markers[i].getAttribute("lng")));
+              var marker = createMarker(point, name, label, address, cp, ville, type, url, css, ref, ad);
+             
+              map.addOverlay(marker);
+              initCheckbox();
+            }
+          });    
+        }
+      }
+
+  	function initCheckbox(){
+  		//document.getElementById("restaurantCheckbox").checked = true;
+          //document.getElementById("barCheckbox").checked = true;
+          //document.getElementById("labelsCheckbox").checked = true;
+  		unCheckPOI();
+  		unCheckSEE();
+  		unCheckDRINK();
+  		unCheckNIGHT();
+          document.getElementById("hotelCheckbox").checked = true;
+          document.getElementById("poiCheckbox").checked = false;
+          document.getElementById("seeCheckbox").checked = false;
+          document.getElementById("drinkCheckbox").checked = false;
+          document.getElementById("nightCheckbox").checked = false;
+  	}
+
+      function createMarker(point, name, label, address, cp, ville, type, url, css, ref, ad) {
+  		
+          var marker = new LabeledMarker(point, {icon: customIcons[type], labelText: label, labelOffset: new GSize(-11, -17), labelClass: css});
+        markerGroups[type].push(marker);
+        if (url != '#'){
+        	var html = "<img width='100' height='100' class='pict-map' src='<?php echo ($mediaPath . 'visuels_hotels/') ; ?>" + ref + ".jpg' alt=''/><div id='info_bulle_global'><span id='name_infobulle'>" + name + "</span><span id='ad_infobulle'>" + ad + "</span><span id='adress_infobulle'>" + address + "</span> <br/> <span id='cp_infobulle'>" + cp + " " + ville + "</span> <br/><a href='"+ url +"' class='link'><?php echo $this->__('See this hotel')?></a></div>";
+        } else {
+        	var html = "<span>" + name + "</span> <br/> <span id='adress_infobulle'>" + address + "</span> <br/><span id='cp_infobulle'>" + cp + " " + ville + "</span> <br/>";
+        }
+        GEvent.addListener(marker, 'mouseover', function() {
+          marker.openInfoWindowHtml(html);
+        });
+        return marker;
+      }
+ 
+    function toggleGroup(type) {
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+        if (marker.isHidden()) {
+          marker.show();
+        } else {
+          marker.hide();
+        }
+      } 
+    }
+    
+    function unCheckPOI() {
+    	var type = 'poi';
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+		marker.hide();
+      } 
+    }
+
+    function unCheckSEE() {
+    	var type = 'see';
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+		marker.hide();
+      } 
+    }
+
+    function unCheckDRINK() {
+    	var type = 'drink';
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+		marker.hide();
+      } 
+    }
+
+    function unCheckNIGHT() {
+    	var type = 'night';
+        for (var i = 0; i < markerGroups[type].length; i++) {
+        var marker = markerGroups[type][i];
+		marker.hide();
+      } 
+    }
+
+    function toggleLabels() {
+      var showLabels = document.getElementById("labelsCheckbox").checked;
+      for (groupName in markerGroups) {
+        for (var i = 0; i < markerGroups[groupName].length; i++) {
+          var marker = markerGroups[groupName][i];
+          marker.setLabelVisibility(showLabels);
+        }
+      }
+    }   
+
+	function setMap(e) {
+
+		if (map.currentMarker){
+			map.removeOverlay(map.currentMarker);
+		}
+		var point = new GLatLng(e.y,e.x) ;
+	 	map.setCenter( point, 15);
+		var iconCurrentAddress = new GIcon(G_DEFAULT_ICON);
+		markerOptions = { icon:iconCurrentAddress };
+		
+		map.currentMarker = new GMarker(point, markerOptions)
+		map.addOverlay(map.currentMarker);
+		var infoWindowCurrentAddress = map.openInfoWindowHtml(point,'Votre recherche : ' + queryAddress.value);
+		
+		 GEvent.addListener(map.currentMarker, "click", function(){map.openInfoWindowHtml(point,'Votre recherche : ' + queryAddress.value)});
+				
+	}
+	
+    function search(){
+		geoCoder = new GClientGeocoder();
+		queryAddress = document.getElementById('queryInput');
+		geoCoder.getLatLng(queryAddress.value, setMap)
+		return false;
+	};
+
+    //]]>
+  </script>
+<script type="text/javascript" src="<?php echo $moduleBaseJs . 'labeledmarker.js'; ?>"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery(".gmnoprint").width(jQuery(".gmnoprint").width() + "555px")
+
+		
+	});
+</script>
+
+
+
+
+<a class="link_top" href="<?php echo ($this->getUrl(''));?>" title="<?php echo $this->__('Back to home')?>">&gt;&nbsp;<?php echo $this->__('Back to home')?></a>
+
+<div class="hgp_map_grand">
+<h1 class="title-google-map"><?php echo $this->__('Find your Hotel')?></h1>
+	<div id="hgp_map">
+		<div id="col_gauche">
+			<div id="map"></div>
+			<div class="clear"></div>
+		</div>
+		<div id="col_droite">
+			<div class="top_right_google_filter">&nbsp;</div>
+			<div id="sidebar">
+				<div id="search_form">
+					<h2><?php echo $this->__('Enter a location')?></h2>
+					<form action="#" onsubmit="return search();">
+						<p><input id="queryInput" type="text" value="" /></p>
+						<p><input type="submit" id="search_button" value="<?php echo $this->__('Search')?>" /></p>
+						<p><a href="<?php echo $this->getBaseUrl() . 'map.html?quartier=0';?>" onclick="javascript:load();" class="link_simple">&gt;&nbsp;<?php echo $this->__('Back to overview')?></a></p>
+					</form>
+				</div>
+				<div id="filter_section">
+					<h3><?php echo $this->__('Select your points of interest')?></h3>
+					<div id="more_type_checkbox">
+						<input type="checkbox" id="labelsCheckbox" onclick="toggleLabels()" checked="checked" /> Show Labels <br />
+						<input type="checkbox" id="restaurantCheckbox" onclick="toggleGroup('restaurant')" checked="checked" />Restaurants <br />
+						<input type="checkbox" id="barCheckbox" onclick="toggleGroup('bar')" checked="checked" />Bars <br />
+						<input type="checkbox" id="drinkCheckbox" onclick="toggleGroup('drink')" /><p id="select_type_drink"><?php echo $this->__('Going out')?></p>
+						<input type="checkbox" id="nightCheckbox" onclick="toggleGroup('night')" /><p id="select_type_night"><?php echo $this->__('By night')?></p>
+					</div>
+					<input type="checkbox" id="hotelCheckbox" onclick="toggleGroup('hotel')" checked="checked" /><p id="select_type_hotel"><?php echo $this->__('Hotel')?></p>
+					<input type="checkbox" id="poiCheckbox" onclick="toggleGroup('poi')" /><p id="select_type_pas_manquer"><?php echo $this->__('Do not miss')?></p>
+					<input type="checkbox" id="seeCheckbox" onclick="toggleGroup('see')" /><p id="select_type_see"><?php echo $this->__('To see')?></p>
+				</div>
+				<div class="bottom_right_google_filter">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hgp_map_bottom">&nbsp;</div>
+
+<!-- Debut Accordeon -->
+<div id="main_accordeon">
+	
+	<ul id="navigation">
+    <li><a class="heade"><?php echo $this->__('Hotel')?></a>
+      <ul>
+		<!--  Debut Hotel -->
+        <li>
+			<div class="conteneur_quartier">
+		<div class="quartier_item">
+			
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_hotels"><?php echo $this->__('Hotels cinq etoiles *****')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>01. <?php echo $this->__('Hotel Mac Mahon')?><br /><span class="info-hotels-map"><?php echo $this->__('exclusive17')?></span></li>
+						<li>02. <?php echo $this->__('BEST WESTERN PREMIER Opera Liege')?><br /><span class="info-hotels-map"><?php echo $this->__('BW09')?></span></li>
+					</ul>
+				</div>
+				<h4 class="content_cadre_quartier_h4_hotels"><?php echo $this->__('Hotels quatre etoiles ***')?></h4>
+				<div class="emplacementDeLaListe">
+				<ul>
+						<li>03. <?php echo $this->__('Hotel Opéra Diamond')?><br /><span class="info-hotels-map"><?php echo $this->__('beauchamps8')?></span></li>
+						<li>04. <?php echo $this->__('Holiday Inn Paris Gare Montparnasse')?><br /><span class="info-hotels-map"><?php echo $this->__('BW14')?></span></li>
+						<li>05. <?php echo $this->__('Aulivia Opéra')?><br /><span class="info-hotels-map"><?php echo $this->__('paris10')?></span></li>
+						<li>06. <?php echo $this->__('BEST WESTERN PLUS Suitcase Paris - La Defense')?><br /><span class="info-hotels-map"><?php echo $this->__('BWboiscolombes')?></span></li>
+						<li>07. <?php echo $this->__('61 Paris Nation Hotel')?><br /><span class="info-hotels-map"><?php echo $this->__('BW16')?></span></li>
+						<li>08. <?php echo $this->__('Hotel BEST WESTERN Opera Batignolles')?><br /><span class="info-hotels-map"><?php echo $this->__('OB7')?></span></li>
+						<li>09. <?php echo $this->__('Hotel Sevres Montparnasse')?><br /><span class="info-hotels-map"><?php echo $this->__('BW15')?></span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>			
+		</div>
+		<!-- 
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<div class="emplacementDeLaListe">
+						<ul>
+							
+							<li>11. <?php //echo $this->__('Hotel Opal')?><br /><span class="info-hotels-map"><?php //echo $this->__('beauchamps8')?></span></li>
+							
+							<li>20. <?php //echo $this->__('Mercure Paris Terminus Nord')?><br /><span class="info-hotels-map"><?php //echo $this->__('HI10')?></span></li>
+						</ul>
+					</div>
+				
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			
+		</div>
+		
+		-->
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<div class="emplacementDeLaListe">
+				
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>10. <?php echo $this->__('Hotel de Neuville')?><br /><span class="info-hotels-map"><?php echo $this->__('BW17')?></span></li>
+						<li>11. <?php echo $this->__('Hotel Opal')?><br /><span class="info-hotels-map"><?php echo $this->__('beauchamps8')?></span></li>				
+						<li>12. <?php echo $this->__('Hotel Jules')?><br /><span class="info-hotels-map"><?php echo $this->__('jules9999')?></span></li>
+						<li>13. <?php echo $this->__('Hotel France Europe2')?><br /><span class="info-hotels-map"><?php echo $this->__('BW3')?></span></li>
+						<li>14. <?php echo $this->__('Holiday Inn Paris Gare de L_Est')?><br /><span class="info-hotels-map"><?php echo $this->__('HI10')?></span></li>
+						<li>15. <?php echo $this->__('Hotel Beauchamps')?><br /><span class="info-hotels-map"><?php echo $this->__('beauchamps8')?></span></li>
+						<li>16. <?php echo $this->__('Ouest Hotel')?><br /><span class="info-hotels-map"><?php echo $this->__('RO8A')?></span></li>
+						<li>17. <?php echo $this->__('Hotel Elysee Secret')?><br /><span class="info-hotels-map"><?php echo $this->__('beauchamps8')?></span></li>
+						<li>18. <?php echo $this->__('Hotel Louvre Saint Honore')?><br /><span class="info-hotels-map"><?php echo $this->__('BW1')?></span></li>
+						<li>19. <?php echo $this->__('Hotel Saint-Louis')?><br /><span class="info-hotels-map"><?php echo $this->__('BW')?></span></li>	
+						<li>20. <?php echo $this->__('Hotel aux Ducs de Bourgogne')?><br /><span class="info-hotels-map"><?php echo $this->__('BW1')?></span></li>
+					</ul>
+				</div>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+		
+		</div>
+						
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<div class="emplacementDeLaListe">
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>21. <?php echo $this->__('BEST WESTERN Bretagne Montparnasse')?><br /><span class="info-hotels-map"><?php echo $this->__('BW14')?></span></li>
+						<li>22. <?php echo $this->__('BEST WESTERN PLUS Paris Vélizy')?><br /><span class="info-hotels-map"><?php echo $this->__('velizy')?></span></li>
+						<li>23. <?php echo $this->__('BEST WESTERN PREMIER Faubourg 88')?><br /><span class="info-hotels-map"><?php echo $this->__('HI10')?></span></li>
+						
+					</ul>
+				</div>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+		
+		</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div> 
+		<div class="clear"></div>     
+        </li>
+        <!--  Fin Hotel -->
+      </ul>
+
+    </li>
+    
+    <li><a class="heade"><?php echo $this->__('Do not miss')?></a>
+      <ul>
+      <!-- Line Do not miss -->
+        <li class="line3">
+        		<div class="conteneur_quartier">
+
+
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Notre dame, Quartier Latin, Ile Saint Louis')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>01. <?php echo $this->__('Cathedrale Notre Dame de Paris')?></li>
+						<li>02. <?php echo $this->__('Ile-Saint-Louis')?></li>
+						<li>03. <?php echo $this->__('La Sainte-Chapelle')?></li>
+						<li>04. <?php echo $this->__('Universite de la Sorbonne')?></li>
+						<li>05. <?php echo $this->__('Institut du Monde Arabe')?></li>
+						<li>06. <?php echo $this->__('Le square du Vert-Galant')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Marais, les Halles, Beaubourg')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>07. <?php echo $this->__('Centre Georges Pompidou, Beaubourg')?></li>
+						<li>08. <?php echo $this->__('Musee Carnavalet')?></li>
+						<li>09. <?php echo $this->__('Place des Vosges')?></li>
+						<li>10. <?php echo $this->__('Hotel de Ville')?></li>
+						<li>11. <?php echo $this->__('Tour Saint-Jacques')?></li>
+						<li>12. <?php echo $this->__('Fontaine Stravinsky')?></li>
+						<li>13. <?php echo $this->__('Musee Picasso ferme jusquen 2012')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Louvre, Champs-Elysees, Etoile')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>14. <?php echo $this->__('Musee du Louvre')?></li>
+						<li>15. <?php echo $this->__('Pyramide du Louvre')?></li>
+						<li>16. <?php echo $this->__('Cour carree du Louvre')?></li>
+						<li>17  <?php echo $this->__('Jardin des Tuileries')?></li>
+						<li>18. <?php echo $this->__('Les Champs-Elysees')?></li>
+						<li>19. <?php echo $this->__('Pont Alexandre-III')?></li>
+						<li>20. <?php echo $this->__('Arc de Triomphe, place de lEtoile')?></li>
+						<li>21. <?php echo $this->__('Grand Palais')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Saint-Germain-des-Pres, Musee dOrsay, Montparnasse')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>22. <?php echo $this->__('Musee dOrsay')?></li>
+						<li>23. <?php echo $this->__('Musee Rodin')?></li>
+						<li>24. <?php echo $this->__('Jardin du Luxembourg')?></li>
+						<li>25. <?php echo $this->__('Eglise Saint-Germain-des-Pres')?></li>
+						<li>26. <?php echo $this->__('Tour Montparnasse')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+			
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Tour Eiffel, Trocadero, Invalides')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>27. <?php echo $this->__('Tour Eiffel')?></li>
+						<li>28. <?php echo $this->__('Musee du Quai Branly')?></li>
+						<li>29. <?php echo $this->__('Place du Trocadero')?></li>
+						<li>30. <?php echo $this->__('Les Invalides')?></li>
+						<li>31. <?php echo $this->__('Palais de Tokyo')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Montmartre, Pigalle, Trinite')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>32. <?php echo $this->__('Basilique du Sacre Coeur de Montmartre')?></li>
+						<li>33. <?php echo $this->__('Place du Tertre')?></li>
+						<li>34. <?php echo $this->__('Square Louise Michel')?></li>
+						<li>35. <?php echo $this->__('Pigalle')?></li>
+						<li>36. <?php echo $this->__('Les Abesses')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Opera, Grands Boulevards, Bourse')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>37. <?php echo $this->__('Jardin du Palais Royal')?></li>
+						<li>38. <?php echo $this->__('Opera Garnier')?></li>
+						<li>39. <?php echo $this->__('Printemps Haussmann')?></li>
+						<li>40. <?php echo $this->__('Galerie Lafayette Haussmann')?></li>
+						<li>41. <?php echo $this->__('Musee Grevin')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Porte Maillot, Monceau , Wagram, Champerret')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>42. <?php echo $this->__('Musee Jacquemart-Andre')?></li>
+						<li>43. <?php echo $this->__('Parc Monceau')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Canal Saint-Martin, Belleville, La Villette')?></h4>
+					<ul>
+						<li>44. <?php echo $this->__('Cite des sciences et de lindustrie')?></li>
+						<li>45. <?php echo $this->__('Cite de la Musique')?></li>
+						<li>46. <?php echo $this->__('La Geode')?></li>
+						<li>47. <?php echo $this->__('Canal Saint Martin')?></li>
+					</ul>
+				</div>
+			</div>
+				
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Republique, Bastille, Nation')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>48. <?php echo $this->__('Cimetiere du Pere Lachaise')?></li>
+						<li>49. <?php echo $this->__('Opera Bastille')?></li>
+						<li>50. <?php echo $this->__('Place de la Bastille')?></li>
+						<li>51. <?php echo $this->__('Colonne de Juillet')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item">
+				<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Bercy, Bois de Vincennes, BnF, Place dItalie')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>52. <?php echo $this->__('Bibliotheque Nationale de France (BnF)')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Passy, Auteuil, Bois de Boulogne')?></h4>
+					<ul>
+						<li>53. <?php echo $this->__('Les jardins de Bagatelle')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_anepasmanquer"><?php echo $this->__('Denfert Rochereau, Alesia, Cite universitaire')?></h4>
+					<ul>
+						<li>54. <?php echo $this->__('Les catacombes de Paris')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>		
+		<div class="clear"></div>
+		</div>
+		</li>
+	  <!-- Fin Line Do not miss -->
+      </ul>
+      </li>
+      
+    <li><a class="heade" id="last-heade"><?php echo $this->__('To see')?></a>
+      <ul>
+      <!-- Line Sights -->
+        <li class="line3">
+        		<div class="conteneur_quartier">
+
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Notre dame, Quartier Latin, Ile Saint Louis')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>01. <?php echo $this->__('Le Panthéon')?></li>
+						<li>02. <?php echo $this->__('Mosquée de Paris')?></li>
+						<li>03. <?php echo $this->__('Jardin des plantes')?></li>
+						<li>04. <?php echo $this->__('Musée national du Moyen Age, Cluny')?></li>
+						<li>05. <?php echo $this->__('Histoire Naturelle')?></li>
+						<li>06. <?php echo $this->__('Conciergerie')?></li>
+						<li>07. <?php echo $this->__('Collège des Bernardins')?></li>
+						<li>08. <?php echo $this->__('Arènes de Lutèce')?></li>
+						<li>09. <?php echo $this->__('Fontaine Saint-Michel')?></li>
+						<li>10. <?php echo $this->__('Bibliothèque Sainte-Geneviève')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<div class="emplacementDeLaListe">
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Marais, les Halles, Beaubourg')?></h4>
+					<ul>
+						<li>11. <?php echo $this->__('Musée des arts et métiers')?></li>
+						<li>12. <?php echo $this->__('Archives nationales')?></li>
+						<li>13. <?php echo $this->__('Musée art et histoire du judaisme')?></li>
+						<li>14. <?php echo $this->__('Hôtel de Sully')?></li>
+						<li>15. <?php echo $this->__('Maison Européenne de la photographie (MEP)')?></li>
+						<li>16. <?php echo $this->__('Musée Cognacq-Jay')?></li>
+						<li>17. <?php echo $this->__('Mémorial de La Shoah')?></li>
+						<li>18. <?php echo $this->__('Maison de Victor Hugo')?></li>
+						<li>19. <?php echo $this->__('Quartier et marché des Enfants-Rouges')?></li>
+						<li>20. <?php echo $this->__('Synagogue de la rue Pavée')?></li>
+						<li>21. <?php echo $this->__('Eglise Saint-Eustache')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>22. <?php echo $this->__('Pavillon Arsenal')?></li>
+						<li>23. <?php echo $this->__('Jardin des Halles')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Louvre, Champs-Elysees, Etoile')?></h4>
+					<ul>
+						<li>24. <?php echo $this->__('Galerie nationale du Jeu de Paume')?></li>
+						<li>25. <?php echo $this->__('Petit Palais')?></li>
+						<li>26. <?php echo $this->__('Espace culturel Louis-Vuitton')?></li>
+						<li>27  <?php echo $this->__('Place de la Concorde')?></li>
+						<li>28. <?php echo $this->__('Palais Elysée')?></li>
+						<li>29. <?php echo $this->__('Eglise Saint-Germain-lAuxerrois')?></li>
+						<li>30. <?php echo $this->__('Palais de la Découverte')?></li>
+						<li>31. <?php echo $this->__('Musée des égouts')?></li>
+						<li>32. <?php echo $this->__('Musée de lOrangerie')?></li>
+						<li>33. <?php echo $this->__('Musée Guimet des arts asiatiques')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<div class="emplacementDeLaListe">
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Saint-Germain-des-Pres, Musee dOrsay, Montparnasse')?></h4>
+					<ul>
+						<li>34. <?php echo $this->__('Fondation Cartier pour lart contemporain')?></li>
+						<li>35. <?php echo $this->__('Zadkine Museum')?></li>
+						<li>36. <?php echo $this->__('Pont Neuf')?></li>
+						<li>37. <?php echo $this->__('Pont des Arts')?></li>
+						<li>38. <?php echo $this->__('Cimetière Montparnasse')?></li>
+						<li>39. <?php echo $this->__('Eglise et place Saint-Sulpice')?></li>
+						<li>40. <?php echo $this->__('Ecole nationale supérieure des beaux-arts')?></li>
+						<li>41. <?php echo $this->__('Eglise Notre Dame des Champs')?></li>
+						<li>42. <?php echo $this->__('Musée Eugène Delacroix')?></li>
+						<li>43. <?php echo $this->__('La Pagode')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+			
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>44. <?php echo $this->__('Musée Bourdelle')?></li>
+						<li>45. <?php echo $this->__('Chapelle Notre Dame de la Médaille Miraculeuse')?></li>
+						<li>46. <?php echo $this->__('Fondation dentreprise Ricard pour lart contemporain')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Tour Eiffel, Trocadero, Invalides')?></h4>
+					<ul>
+						<li>47. <?php echo $this->__('Musée dart moderne (Ville de Paris)')?></li>
+						<li>48. <?php echo $this->__('Cité de larchitecture et du patrimoine')?></li>
+						<li>49. <?php echo $this->__('Maison de la culture du Japon à Paris')?></li>
+						<li>50. <?php echo $this->__('Musée de lArmée')?></li>
+						<li>51. <?php echo $this->__('Musée Maillol')?></li>
+						<li>52. <?php echo $this->__('Réplique de la Statue de la Liberté')?></li>
+						<li>53. <?php echo $this->__('Parc du Champ-de-Mars')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+					
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>54. <?php echo $this->__('Pont des Invalides')?></li>
+						<li>55. <?php echo $this->__('Pont de lAlma')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Montmartre, Pigalle, Trinite')?></h4>
+					<ul>
+						<li>56. <?php echo $this->__('Halle Saint-Pierre')?></li>
+						<li>57. <?php echo $this->__('Espace Dali')?></li>
+						<li>58. <?php echo $this->__('Le Moulin de la Galette')?></li>
+						<li>59. <?php echo $this->__('Musée de la vie romantique')?></li>
+						<li>60. <?php echo $this->__('Cimetière de Montmartre')?></li>
+						<li>61. <?php echo $this->__('Musée de Montmartre')?></li>
+						<li>62. <?php echo $this->__('Barbès')?></li>
+						<li>63. <?php echo $this->__('Eglise de la Sainte-Trinité')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<div class="emplacementDeLaListe">
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Opera, Grands Boulevards, Bourse')?></h4>
+					<ul>
+						<li>64. <?php echo $this->__('Palais de la Bourse')?></li>
+						<li>65. <?php echo $this->__('Eglise et place de la Madeleine')?></li>
+						<li>66. <?php echo $this->__('Place et basilique Notre Dame des Victoires')?></li>
+						<li>67. <?php echo $this->__('Galerie Vivienne')?></li>
+						<li>68. <?php echo $this->__('Colonne et place Vendôme')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Porte Maillot, Monceau , Wagram, Champerret')?></h4>
+					<ul>
+						<li>69. <?php echo $this->__('Musée Cernuschi')?></li>
+						<li>70. <?php echo $this->__('Musée Nissim de Camondo')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Canal Saint-Martin, Belleville, La Villette')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>71. <?php echo $this->__('Grande halle de la Villette')?></li>
+						<li>72. <?php echo $this->__('Couvent des Recollets')?></li>
+						<li>73. <?php echo $this->__('Parc des Buttes-Chaumont')?></li>
+						<li>74. <?php echo $this->__('CENTQUATRE')?></li>
+						<li>75. <?php echo $this->__('Parc de la Villette')?></li>
+						<li>76. <?php echo $this->__('Parc de Belleville')?></li>
+						<li>77. <?php echo $this->__('Jardins dEole')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Republique, Bastille, Nation')?></h4>
+					<ul>
+						<li>78. <?php echo $this->__('La coulée verte (Promenade Plantée)')?></li>
+						<li>79. <?php echo $this->__('Fondation Antoine de Galbert Maison Rouge')?></li>
+						<li>80. <?php echo $this->__('Marché dAligre')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Bercy, Bois de Vincennes, BnF, Place dItalie')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>81. <?php echo $this->__('Manufacture des Gobelins')?></li>
+						<li>82. <?php echo $this->__('Cinémathèque française')?></li>
+						<li>83. <?php echo $this->__('Quartier asiatique de Paris')?></li>
+						<li>84. <?php echo $this->__('Parc de Bercy')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Porte de Versailles, Lecourbe, Andre Citroen')?></h4>
+					<ul>
+						<li>85. <?php echo $this->__('Parc Georges Brassens')?></li>
+						<li>86. <?php echo $this->__('Parc André Citroën')?></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+		
+		<div class="quartier_item">
+		
+			<div class="top_cadre_quartier_item">&nbsp;</div>
+			
+			<div class="content_cadre_quartier_item_sights">
+				<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Passy, Auteuil, Bois de Boulogne')?></h4>
+				<div class="emplacementDeLaListe">
+					<ul>
+						<li>87. <?php echo $this->__('Jardin dacclimatation')?></li>
+						<li>88. <?php echo $this->__('Bois de Boulogne')?></li>
+						<li>89. <?php echo $this->__('Musée Marmottan-Claude Monet')?></li>
+						<li>90. <?php echo $this->__('Maison de la radio')?></li>
+						<li>91. <?php echo $this->__('Fondation le Corbusier')?></li>
+					</ul>
+					<h4 class="content_cadre_quartier_h4_avoir"><?php echo $this->__('Denfert Rochereau, Alesia, Cite universitaire')?></h4>
+					<ul>
+						<li>92. <?php echo $this->__('Place Denfert-Rochereau')?></li>
+						<li>93. <?php echo $this->__('Parc Montsouris')?></li>
+						<li>94. <?php echo $this->__('Cité Internationale Universitaire de Paris')?></li>	
+						
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bottom_cadre_quartier_item">&nbsp;</div>
+			<div class="clear"></div>
+			
+		</div>
+
+		
+		<div class="clear"></div>
+	</div>
+	</li>
+	  <!-- Fin Sights -->
+    </ul>
+   </li>
+       
+      
+      
+   </ul>
+
+</div>  
+<!-- Fin Accordeon -->
+<script type="text/javascript">
+    Event.observe(window, 'load', load);    
+    /*Event.observe(window, 'load', document.getElementById("queryInput").focus);*/    
+    Event.observe(window, 'unload', GUnload);
+</script>
+ 

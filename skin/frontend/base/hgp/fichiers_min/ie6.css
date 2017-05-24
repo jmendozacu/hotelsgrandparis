@@ -1,0 +1,128 @@
+#css pour IE6
+body{color:#4C4C4B;font:12px/1.55em arial, helvetica, sans-serif;width:980px;border:0;background:#e2d8cf url(../images/bkg-hgp.gif) repeat-y top center;margin:0 auto}
+.wrapper{width:1024px;background-color:#fff;display:block}
+.header-top-container{width:960px}
+.header-top{width:960px;position:relative;z-index:1;margin:0 auto}
+.language-switcher{position:absolute;top:0;right:0;width:119px;z-index:12}
+.language-switcher a.lang_switch{color:#fff;font-size:11px}
+a#logo{float:left;margin-left:15px}
+.quick-access{width:809px;float:right;text-align:right;color:#fff;margin:-65px 0 0;padding:0}
+.baseline{width:50px;height:35px;text-align:left;border-left:2px solid #FF7717;padding-left:3px;color:#ff7717;font-size:10px;line-height:12px;margin:17px 720px 0 0}
+p.baseline{display:block}
+#hgphomeslide{height:200px;border:1px solid red;margin:0 0 0 10px;padding:0}
+.pikachoose{width:580px;height:208px;margin:5px 0 0 5px;padding:0}
+#pikame_user{height:50px}
+.pika-image .caption{background:url(../images/pikachoose/black.gif)}
+.pika-imgnav a.previous{top:70px;left:0;cursor:pointer}
+.pika-imgnav a.next{top:70px;right:-19px;cursor:pointer}
+#home-line1,#home-line2{width:980px;position:relative}
+#bloc_resa{width:322px;height:278px;float:right;margin-right:15px}
+hr#separateur-bloc-resa{margin:5px}
+table.set-date-home{margin-bottom:12px}
+#quartiers-centre{padding-bottom:0;height:635px}
+.liste-quartier-home-first{float:left;width:265px;margin-bottom:10px}
+.liste-quartier-home{float:left;width:265px;margin-bottom:5px}
+.bloc-left-mini-quartier{float:left;width:134px}
+.bloc-right-mini-quartier{float:left;width:120px;margin-left:0}
+#modules-right{margin-left:20px}
+#col1{width:300px;position:relative;margin-top:-15px}
+#hgppresentation{width:300px;height:131px;float:left;margin:0 0 0 8px;padding:2px}
+#tripadvisor-block-home{bottom:0}
+.hgpnewsletter{width:305px;height:100px;margin:10px 0 0;padding:0}
+.hgpnewsletter input#newsletter{margin-left:8px}
+h2.hgp_h2_newsletter{font-size:12px;color:#515151;margin:0;padding:0}
+#hgppub{margin:0 0 0 4px}
+#hgppub #hgppub-img{position:relative;margin:0;padding:0}
+fieldset.hgpcontent{font-size:10px;display:block;width:302px}
+.hgpnewsletter #newsletter_bottom{width:302px;height:13px;background:#fff url(../images/fond_newsletter_bottom.gif) no-repeat 0 0}
+#col2{width:603px;height:432px;background-color:#fff;float:right;margin:-20px 4px 0 14px;padding:0}
+#col2 #col2_bg{height:425px;width:6px;float:left;background:transparent url(../images/bord_gauche_col2.png) no-repeat 0 0}
+#col2 #col2_c{float:left;height:425px;width:587px;background-color:#d9d9d9;overflow:hidden}
+#col2 #col2_c #col2_gauche{float:left;width:275px;height:419px;margin-right:7px;margin-top:2px;padding:0}
+#col2 #col2_c #col2_gauche #top_gauche{width:270px;height:235px;background:transparent url(../images/fond_top_gauche.png) no-repeat 0 0;margin:5px 0 0 1px;padding:5px}
+#col2 #col2_c #col2_gauche #bas_gauche{background:transparent url(../images/fond_bas_gauche.png) no-repeat 0 0;margin:5px 0 0;padding:5px}
+#col2 #col2_c #col2_droit{float:right;height:416px;width:309px;padding-left:0;overflow:hidden;margin:-450px 0 0}
+#col2 #col2_c #col2_droit #top_droit{width:307px;height:246px;background:transparent url(../images/fond_top_droit.png) no-repeat 0 0;margin:10px 0 0;padding:5px}
+#col2 #col2_c #col2_droit #bas_droit{width:307px;height:154px;overflow:hidden;background:#fff url(../images/fond_bas_droit.png) no-repeat 0 0;margin:-3px 0 0;padding:0}
+.hgp-text-button-search{margin-right:13px;float:right;background:#fff url(../images/fond_button_fd_blancie6.gif) no-repeat 0 0;width:72px;height:18px}
+#search_mini_form .hgp-see-hotels{position:absolute;left:4px;margin:0}
+.mini-search-hgp .input-text{width:183px;height:15px;border:1px solid #b4b4b4;background-image:none;margin:0 4px 4px 5px}
+.hgp-text-button{float:right;background:#fff url(../images/fond_button_fd_blancie6.gif) no-repeat 0 0;width:72px;height:18px;margin:0 13px 0 0}
+#tooltip{position:absolute;z-index:3000;opacity:0.85;height:32px;background:#f7f7f7;border:1px solid #959595;width:310px;margin:0;padding:2px 10px}
+#tooltip h3{font-size:12px;font-weight:400;text-align:center;line-height:32px;height:32px}
+#meteo p.current{width:220px;height:53px;margin:-52px 0 0 70px}
+#meteo .nextdays{width:290px;height:30px;margin:-30px 0 0;padding:2px 0 0}
+#meteo .forecast{margin-top:-10px;float:left;text-align:center;width:70px}
+#meteo .temperature{font-size:10px;font-weight:700;color:#8F8F8F;margin-top:-3px;margin-left:15px;margin-bottom:0}
+#engagement{margin:0;padding:0 0 0 10px}
+#engagement p.notice{font-size:9px;font-style:italic;margin:3px 0 0 -10px}
+#AVP{display:block;width:271px;height:100px;position:relative;margin:0}
+input.btn_availpro{background:transparent url(../images/btn-dispo-tarif-home.gif) no-repeat 0 0;color:#fff;display:block;width:170px;height:19px;border:0;font-size:11px;font-weight:400;text-align:center;position:absolute;right:5px;bottom:-8px}
+td.button_valid_availpro{padding:0 0 15px}
+input.btn_availpro_fiche{background:transparent url(../images/fond_button2.gif) no-repeat 0 0;color:#fff;display:block;width:138px;height:19px;border:0;font-size:11px;font-weight:400;text-align:center}
+#fore_category{background-color:#fff;width:922px;height:200px;margin:-50px 0 0 18px;padding:5px}
+#fore_category #fore_category_g{width:8px;height:193px;float:left;background:transparent url(../images/categorie_bord_gauche.gif) no-repeat 0 0;margin:7px 0 0}
+#fore_category #fore_category_c{width:906px;height:193px;float:left;background:#FFF url(../images/categorie_fond_centre.gif) repeat-x 0 10%;margin:7px 0 0;padding:0}
+#fore_category #fore_category_d{width:8px;height:193px;float:right;background:transparent url(../images/categorie_bord_droit.gif) no-repeat 0 0;margin:7px 0 0}
+.categorie_accueil{width:290px;height:180px;overflow:hidden;margin:0 0 0 6px;padding:5px 0 0}
+ul.line-hotel{width:287px;margin:0}
+li.line-hotel{color:#656565;height:20px;font-size:11px;width:287px;overflow:visible}
+.line-hotel .stars{margin-top:-15px}
+span.liste_accueil_hgp{margin-left:40px;margin-right:0;margin-top:-20px;width:100px;float:right}
+a.liste_accueil_hgp{width:130px;height:20px;white-space:nowrap}
+a.link_categorie{clear:left;display:block;color:#52a8a8;font-size:10px;text-align:right;margin-right:0}
+.footer-container{border:0;margin-top:20px}
+.footer{width:910px;overflow:hidden;background-color:#fff;border-top:1px solid #c9c9c9;margin:0 auto;padding:0}
+input.btn_availpro_list,a.btn_availpro_list{background:transparent url(../images/btn_voir_dispo.gif) no-repeat 0 0;color:#fff;display:block;width:157px;height:18px;line-height:18px;border:0;font-size:11px;font-weight:400;text-align:center;float:right;margin-top:-19px}
+a.btn_availpro_list:hover{color:#fff}
+input.btn_availpro_list[type=button]:hover,a.btn_availpro_list:hover{background:transparent url(../images/btn_voir_dispo.gif) no-repeat scroll 0 100%;text-decoration:none}
+.layered-nav .actions{overflow:hidden;margin:-1px 0 10px 8px}
+.col-left{float:left;width:305px;margin-left:0}
+#top-right{width:305px;height:11px;background:#fff url(../images/top_right_col.gif) no-repeat 0 0;overflow:hidden;padding:0}
+.top-cadre-petit{width:289px;height:11px;overflow:hidden;background:#fff url(../images/top_cadre.gif) no-repeat 0 0;margin:0 auto}
+.col-2-left-layout .col-main{float:right;width:614px}
+.listing-type-list .product-shop{float:left;width:255px;height:100px}
+.catalog-listing h5{margin-bottom:0;padding:0}
+a.link_list{bottom:0;right:0;position:relative;background:#FF7717 url(../images/btn_voir_hotel.gif) no-repeat 0 0;width:69px;height:18px;color:#fff;font-size:11px;text-indent:5px;margin:0}
+a.link_list:hover{background:#FF7717 url(../images/btn_voir_hotel.gif) no-repeat 0 0;text-decoration:none;color:#fff}
+div#content-left div.content-cadre-petit{padding-left:0;width:287px}
+#productslide{margin:0 0 -35px}
+#productslide #fullsize{margin:3px 0 0 -2px;padding:2px 0 0}
+td.middlee{background:#f2f2f2 url(../images/line.gif) repeat-y 50% 50%}
+.product-base ul.content-cadre-petit{margin-top:-10px}
+div.content-cadre-petit{padding-left:4px;width:276px}
+table#book2{width:304px;margin:0}
+.product-base img.stars{margin:-17px 0 0}
+#productslide #information h3{padding:2px 4px 0 0}
+.product-shop .stars_fhe img.stars{vertical-align:top;margin:0}
+#productslide #slideleft{float:left;width:11px;height:58px;display:block;cursor:pointer;background:url(../images/homeslide/fleche_gauche.gif) no-repeat 0 0}
+#productslide #slideleft:hover{background:url(../images/homeslide/fleche_gauche.gif) no-repeat 0 100%}
+#productslide #slideright{float:right;width:11px;height:58px;display:block;cursor:pointer;background:#fff url(../images/homeslide/fleche_droite.gif) no-repeat 0 0}
+#productslide #slideright:hover{background:url(../images/homeslide/fleche_droite.gif) no-repeat 0 100%}
+a.link_top_static{margin:-5px 0 0 6px}
+#contenu_static{position:relative;top:15px;padding:0 15px 10px}
+#col_droite{width:162px}
+a.link_simple{width:140px;margin:2px 0 1px 6px}
+input#queryInput{width:140px;height:15px;padding-left:2px;padding-right:5px;font-size:10px;color:#333;font-style:italic;border:1px solid #b4b4b4;background-image:none;margin:0 0 15px 5px}
+#sidebar{width:162px;overflow:hidden}
+.top_right_google_filter{overflow:hidden;margin:0;padding:0}
+.conteneur_quartier{width:918px}
+.quartier_item{width:277px;margin:20px 5px 0 8px}
+p#select_type_hotel{position:absolute;top:46px;right:0}
+p#select_type_pas_manquer{position:absolute;top:83px;right:0}
+p#select_type_see{position:absolute;top:125px;right:0}
+p#select_type_drink{position:absolute;top:165px;right:0}
+p#select_type_night{position:absolute;top:200px;right:0}
+#info_bulle_global{position:absolute;top:10px;left:110px;width:250px;margin:0;padding:0}
+img.pict-map{margin-right:280px}
+#ad_infobulle{width:280px}
+.quartier_right_content{width:320px;float:left;margin-left:15px}
+#quartier_intro h2{margin-left:3px}
+.product-shop .stars_fhe{display:block;float:right;height:5px;position:absolute;right:5px;top:-10px;width:50px;margin:0 0 0 5px}
+#slide_gauche,#slide_centre,#slide_droit{height:200px}
+#quartiers-top,#top-cadre-petit-selection,.bottom-cadre-petit,.top_blanc_centre,.bottom_blanc_centre,.hgp_map_bottom,.bottom_right_google_filter,.bottom_cadre_quartier_item,.top_cadre_quartier_item{overflow:hidden}
+#quartiers,.product-essential{margin-left:10px}
+#search_mini_form,#mapParis{position:relative}
+.middle-container,.middle{width:960px;margin:0 auto;padding:0}
+hr,.description_list,#productslide #information{margin:0}
+.top_gris_centre,.bottom_gris_centre{margin:0 auto}

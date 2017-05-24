@@ -1,0 +1,93 @@
+.baseline{border-left:2px solid #FF7717;bottom:0;color:#FF7717;font-size:10px;height:35px;left:-27px;line-height:12px;padding-left:3px;position:absolute;text-align:left;width:80px}
+#hgp-top-links{float:left;width:660px;height:33px;display:block;margin:-40px 0 0 70px}
+#hgp-top-links ul{float:right;padding-right:30px}
+#hgp-top-links li{padding-left:5px}
+#hgp-top-links li.li_last{background:none;padding-left:2px}
+a.lang_link{color:#4c4c4b;font-size:14px;text-decoration:none;font-weight:400;cursor:auto}
+a.lang_link:hover{color:#EC7223}
+#hgphomeslide{height:276px}
+#pikame_user{height:50px}
+#tripadvisor-block-home{padding-top:5px;margin-top:0}
+#meteo{width:290px;height:113px;margin:45px 0 0}
+#meteo .current .icon{width:60px;height:50px;float:left;padding:4px 0 0 8px}
+#meteo div.current{margin:0 0 5px}
+#meteo p.current{width:210px;height:65px;line-height:11px;color:#8F8F8F;font-size:10px}
+#meteo .nextdays{height:65px;width:290px;margin:20px 0 0}
+a.liste_accueil_hgp{float:left;border:1px solid #fff;font-size:11px;color:#656565;text-decoration:none;font-weight:700;width:145px;margin:0;padding:0}
+#information{position:absolute;bottom:0;width:911px;height:0;background:#f0f4f6;color:#000;overflow:hidden;z-index:200;opacity:.7;filter:alpha(opacity=70);margin:0 0 3px 4px}
+#imglink{position:absolute;height:210px;width:100%;z-index:100;background-color:green;filter:alpha(opacity=0)}
+#productslide #information{position:absolute;bottom:0;width:600px;height:0;background:#f0f4f6;color:#000;overflow:hidden;z-index:200;opacity:.7;filter:alpha(opacity=70);margin:0 0 3px}
+.quick-access{width:699px;float:right;margin-top:28px;text-align:left;color:#fff;padding:0}
+#all_footer_categories{border:0}
+#all_footer_categories ul.all_footer_categories_ul{line-height:12px;width:930px;text-align:center;margin:0 auto;padding:0}
+#all_footer_categories li.all_footer_categories_li,#all_footer_categories span.all_footer_categories_li{color:#b4b4b4;line-height:14px;text-align:center;margin:0;padding:0}
+.hgpnewsletter #newsletter_content{border:0 none;width:304px}
+#modules-right .hgpnewsletter h2.hgp_h2_newsletter{font-size:12px;color:#515151;margin:27px 0 0 15px}
+#modules-right .hgpnewsletter p#baseline-newsletter{font-size:11px;line-height:14px;font-weight:400;margin:5px 0 10px}
+.hgpnewsletter p{font-size:10px;width:295px;line-height:14px;margin:-10px 0 10px 15px}
+input.hgp-text-input[type=text]{width:172px;height:15px;float:left;border:1px solid #b4b4b4;background-color:#fff;background-image:none;margin:0 0 0 15px}
+.mini-search-hgp .input-text{width:160px;border:1px solid #b4b4b4;background-image:none;margin:0 4px 4px 5px}
+.hgp-text-input-search{width:195px;height:20px;float:left;margin:0 0 0 15px}
+.stars{float:left;margin-top:3px}
+.product-base .stars{float:right;margin-top:-16px}
+ul.content-cadre-petit{position:relative}
+.stars_fh{position:absolute;top:20px;right:0}
+.cms-home .middle{width:930px}
+.listing-type-list .product-shop{float:left;width:295px;line-height:12px}
+.listing-type-list .product-shop h5{margin-bottom:10px;width:210px}
+.hgp_affiliation{font-weight:400;font-size:10px;color:#717171;width:260px;float:left;margin-bottom:2px}
+.categorie_accueil{width:300px;height:200px;overflow:hidden;display:block;float:left;margin:2px 1px 0}
+ul.line-hotel{clear:both;margin:8px 7px -3px -1px}
+li.line-hotel{color:#656565;font-size:11px;width:300px}
+a.liste_accueil_hgp:hover{clear:both;display:block;text-align:left;color:#ED7628;text-decoration:none;margin:0;padding:0}
+a.link_categorie{clear:both;text-align:right}
+span.liste_accueil_hgp{margin-right:5px;margin-top:-19px;float:right}
+h3.liste_accueil_hgp{margin-bottom:0}
+.liste_accueil_hgp h6{font-size:10px}
+.categorie_accueil .stars{float:left;margin-top:-15px}
+span.prix_hgp{font-weight:700;color:#EC7223}
+span.prix_hgp_big{font-weight:700;font-size:14px;color:#ED7628}
+td.middlee{background:url(../images/line.gif) repeat-y 50% 50%;width:59px}
+.layered-nav .narrowed-category li{background-color:#ece9e6;border-right:1px solid #FFF;border-left:1px solid #FFF}
+ul.all_footer_categories_ul li.all_footer_categories_li a.all_footer_categories_a{padding-right:2px;padding-left:5px}
+a.link_simple{width:140px;margin:0 0 1px 6px}
+#info_bulle_global{position:absolute;top:10px;left:110px;width:250px;margin:0;padding:0}
+img.pict-map{margin-right:280px}
+#ad_infobulle{width:280px}
+.content_cadre_quartier_item{height:230px}
+.firstitem .content_cadre_quartier_item{height:440px}
+#map_canvas{width:600px;height:250px}
+#productslide{margin-top:0;margin-left:2px}
+.product-base img.stars{margin:-17px 0 0}
+.short-description{width:609px;padding-right:1px}
+.product-shop .stars_fhe{margin-top:-10px}
+.content-cadre-petit{margin-top:-8px}
+span.white_bkg{display:block;background-color:#fff;width:283px;height:55px;margin:0}
+input.btn_availpro_fiche[type=button]{background:transparent url(../images/btn_voir_dispo4.gif) no-repeat 0 0;color:#fff;display:block;width:180px;height:18px;border:0;font-size:13px;font-weight:400;text-align:center;margin:11px 0 -3px}
+input.btn_availpro_fiche[type=button]:hover{background:transparent url(../images/btn_voir_dispo4.gif) no-repeat 0 100%}
+#tooltip{width:310px}
+.fond_bleu{background:transparent url(../images/fond_bleu.jpg) no-repeat 0 100%;width:605px;height:250px}
+.fond_blanc{background:transparent url(../images/fond_blanc.jpg) no-repeat 0 100%;width:605px;height:250px}
+.fond_rouge{background:transparent url(../images/fond_rouge.jpg) no-repeat 0 100%;width:605px;height:250px}
+legend{color:#F2F2F2}
+#banner{background-color:#7B68EE;height:80px}
+.panel{clear:both;display:none;background-color:#3e3e3e;padding:1em}
+.panel.active-tab-body{display:block}
+.bar{background-color:#3e3e3e;padding:5px}
+#tabs{position:absolute;top:55px;height:28px;list-style:none}
+#tabs li{float:left}
+#tabs a{float:left;margin-left:6px;background-color:#DCDCDC;text-decoration:none;color:#999;padding:5px 8px}
+#tabs a.active-tab{background-color:#3e3e3e;border-top:3px solid #666;padding-top:3px;color:#ccc}
+.sorter{line-height:35px;padding-top:0}
+.pages{line-height:30px}
+.hgp_localisation{margin-bottom:5px}
+#searchWrapper{background:#fff}
+#search_mini_form fieldset,fieldset{padding:0}
+#home-line2{height:680px;float:left}
+a.liste-quartier-home-title{font-size:12px}
+#home-line1{height:410px}
+.pager .limiter{width:160px}
+#content-left{border-top-width:19px}
+#AVP{display:inline}
+Paste the CSS source code you want to compress here#css pour IE7
+body,hr#separateur-bloc-resa{margin:0;padding:0}

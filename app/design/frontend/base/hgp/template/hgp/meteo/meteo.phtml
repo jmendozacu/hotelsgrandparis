@@ -1,0 +1,71 @@
+	<?php 
+	//Zend_Debug::dump($gweather);exit;
+	//var_dump(http_response_code());exit;
+	// On recupere dynamiquement l'id du store courant
+	$storeId = Mage::app()->getStore()->getId(); 
+	$_tempU = ($storeId == 1) ? 'temp_f':'temp_c';
+
+	/*
+	 * Emplacement des fichiers
+	 */
+	$ds = '/';
+	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds .'meteo' . $ds;								
+	$_urlInterface  = $_moduleBaseUrl . 'images' . $ds;
+	
+	$_moduleBaseDir =  Mage::getBaseDir('media') . DS .'meteo' . DS;
+	$_pathInterface = $_moduleBaseDir . 'images' . DS;
+	
+	$_objMeteo   = Mage::getModel('meteo/meteo');
+	$_unobjMeteo = $_objMeteo
+	               ->getCollection()
+	               ->addFilter('hgp_meteo_id', $storeId)
+	               ->getLastItem();
+	
+	//Zend_Debug::dump($_unobjMeteo);exit;
+	$gweather = new Hgp_Meteo_Model_GoogleWeatherCache($_unobjMeteo->hgp_meteo_city, $_unobjMeteo->hgp_meteo_lang, $_urlInterface);
+	//Zend_Debug::dump(count($gweather));exit;
+
+	$date = Hgp_Lib_Tools::GetCurrentDate($storeId);
+
+	if($gweather->isFound()) {
+		$city         = $gweather->getCity();
+		$currentTemp  = $gweather->getCurrent();
+		$forecastTemp = $gweather->getForecast();
+		$cityCode     = $gweather->getCityCode();
+		$probleme = false;
+	}else{
+		$probleme = true;
+	}
+	//Zend_Debug::dump($probleme);exit;
+?>
+<div id="meteo">
+<?php if($gweather->isFound()) {?>
+		<h3><?php echo ($this->htmlEscape($_unobjMeteo->hgp_meteo_intro . ' ' . ucfirst($cityCode) . ', ' . $_unobjMeteo->hgp_meteo_particule. ' ' . $date));?></h3>
+		<div class="current">
+			<div class="icon"><img src="<?php echo ($currentTemp['icon']);?>" alt="<?php echo ($this->htmlEscape($currentTemp['condition']));?>" title="<?php echo ($this->htmlEscape($currentTemp['condition']));?>" /></div>		
+				<p class="current">
+					<strong><?php echo ($this->htmlEscape($currentTemp[$_tempU]).' '.$_unobjMeteo->hgp_meteo_unite)?></strong><br />
+					<?php echo ($this->htmlEscape($_unobjMeteo->hgp_meteo_today));?> : <?php echo ($this->htmlEscape($currentTemp['condition']));?><br />
+					<?php echo ($this->htmlEscape($currentTemp['wind_condition']));?><br />
+					<?php echo ($this->htmlEscape($currentTemp['humidity']));?><br />
+				</p>
+			<p class="clearboth">&nbsp;</p>
+		</div>
+		<div class="nextdays">
+			<?php foreach($forecastTemp as $temp) {?>
+			<div class="forecast">
+				<p class="day"><?php echo (htmlentities($this->htmlEscape($temp['day_of_week'])));?></p>
+				<img class="forecastimg" src="<?php echo ($temp['icon']);?>" alt="<?php echo ($this->htmlEscape($temp['condition']));?>" title="<?php echo ($this->htmlEscape($temp['condition']));?>" /><br/>
+				<p class="temperature"><?php echo ($temp['low']. ' ' . $_unobjMeteo->hgp_meteo_unite);?>|<?php echo ($temp['high']. ' ' . $_unobjMeteo->hgp_meteo_unite);?></p>
+			</div>
+			<?php } ?>
+			<p class="clearboth">&nbsp;</p>
+		</div>	
+<?php } else {?>
+	
+	<div class="forecast">
+		<img id="meteo-fixe" src="<?php echo Mage::getBaseUrl('media') ?>meteo-fixe.jpg" title="<?php echo ($this->htmlEscape($temp['condition']));?>" /><br/>
+	</div>
+<?php }?>
+	<p class="clearboth">&nbsp;</p>
+</div>

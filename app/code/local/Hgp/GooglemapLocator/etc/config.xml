@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+	<!--
+		/** * Hgp_GooglemapLocator extension * * NOTICE OF LICENSE * * This
+		source file is subject to the Open Software License (OSL 3.0) * that
+		is bundled with this package in the file LICENSE.txt. * It is also
+		available through the world-wide-web at this URL: *
+		http://opensource.org/licenses/osl-3.0.php * * @category Hgp *
+		@package Hgp_GooglemapLocator * @copyright Copyright (c) 2009 Hotels
+		Grand Paris * @license http://opensource.org/licenses/osl-3.0.php Open
+		Software License (OSL 3.0) */ /** * @category HotelsGrandParis *
+		@package Hgp_GooglemapLocator * @author Brice POTE
+		<brice.pote@hotelsgrandparis.com> */
+	-->
+<config>
+	<modules>
+		<Hgp_GooglemapLocator>
+			<version>0.0.1</version>
+		</Hgp_GooglemapLocator>
+	</modules>
+	<global>
+		<models>
+			<googlemaplocator>
+				<class>Hgp_GooglemapLocator_Model</class>
+				<resourceModel>googlemaplocator_mysql4</resourceModel>
+			</googlemaplocator>
+			<googlemaplocator_mysql4>
+				<class>Hgp_GooglemapLocator_Model_Mysql4</class>
+				<entities>
+					<location>
+						<table>hgp_googlemaplocator</table>
+					</location>
+				</entities>
+			</googlemaplocator_mysql4>
+		</models>
+		<resources>
+			<googlemaplocator_setup>
+				<setup>
+					<module>Hgp_GooglemapLocator</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</googlemaplocator_setup>
+			<googlemaplocator_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</googlemaplocator_write>
+			<googlemaplocator_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</googlemaplocator_read>
+		</resources>
+		<helpers>
+			<googlemaplocator>
+				<class>Hgp_GooglemapLocator_Helper</class>
+			</googlemaplocator>
+		</helpers>
+		<blocks>
+			<googlemaplocator>
+				<class>Hgp_GooglemapLocator_Block</class>
+			</googlemaplocator>
+		</blocks>
+		<googlemaplocator>
+			<private_fields></private_fields>
+		</googlemaplocator>
+	</global>
+	<frontend>
+		<routers>
+			<googlemaplocator>
+				<use>standard</use>
+				<args>
+					<module>Hgp_GooglemapLocator</module>
+					<frontName>googlemaplocator</frontName>
+				</args>
+			</googlemaplocator>
+		</routers>
+		<translate>
+			<modules>
+				<Hgp_GooglemapLocator>
+					<files>
+						<default>Hgp_GooglemapLocator.csv</default>
+					</files>
+				</Hgp_GooglemapLocator>
+			</modules>
+		</translate>
+		<layout>
+			<updates>
+				<googlemaplocator module="Hgp_GooglemapLocator">
+					<file>googlemaplocator.xml</file>
+				</googlemaplocator>
+			</updates>
+		</layout>
+	</frontend>
+	<admin>
+		<routers>
+			<googlemaplocator>
+				<use>admin</use>
+				<args>
+					<module>Hgp_GooglemapLocator</module>
+					<frontName>googlemaplocator</frontName>
+				</args>
+			</googlemaplocator>
+		</routers>
+	</admin>
+	<adminhtml>
+		<menu>
+			<hgp translate="title">
+				<children>
+					<googlemaplocator translate="title" module="googlemaplocator">
+						<title>Item Googlemap Locations</title>
+						<sort_order>6</sort_order>
+						<action>googlemaplocator/adminhtml_location/</action>
+					</googlemaplocator>
+				</children>
+			</hgp>
+		</menu>
+		<acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <googlemaplocator>
+                                            <title>Items Googlemap Locations</title>
+                                        </googlemaplocator>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+		<layout>
+			<updates>
+				<googlemaplocator module="Hgp_GooglemapLocator">
+					<file>googlemaplocator.xml</file>
+				</googlemaplocator>
+			</updates>
+		</layout>
+	</adminhtml>
+	<default>
+		<googlemaplocator>
+			<general>
+				<google_geo_url><![CDATA[http://maps.google.com/maps/geo]]></google_geo_url>
+				<distance_units>mi</distance_units>
+				<num_results>20</num_results>
+				<show_search>1</show_search>
+				<show_map>0</show_map>
+			</general>
+		</googlemaplocator>
+	</default>
+</config>

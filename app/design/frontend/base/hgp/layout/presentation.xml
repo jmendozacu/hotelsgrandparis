@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+	</default>
+	<presentation_index_index>
+		<reference name="content">
+			<block type="presentation/presentation" name="presentation"
+				template="presentation/presentation.phtml" />
+		</reference>
+	</presentation_index_index>
+</layout> 

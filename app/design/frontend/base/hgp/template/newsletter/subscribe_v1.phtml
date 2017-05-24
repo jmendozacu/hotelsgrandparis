@@ -1,0 +1,31 @@
+ <div class="hgpnewsletter"> 
+	 <div id="newsletter_top">&nbsp;</div> 
+	 <div id="newsletter_content">
+	    <form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail">
+		    <fieldset class="hgpcontent">
+		            <legend>Newsletter</legend>
+		            <h2 class="hgp_h2_newsletter">Lettre d'information</h2>
+		             <p><div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div></p>
+		            <p>Pour conna&icirc;tre nos derni&egrave;res actualit&eacute;s,<br />nouveaut&eacute;s et promotions, abonnez-vous !</p>
+		            <!--
+		            <?php if( $message = $this->getErrorMessage() ): ?>
+		                <p class="error"><?php echo $message ?></p>
+		            <?php endif; ?>
+		            <?php if( $message = $this->getSuccessMessage() ): ?>
+		                <p class="success"><?php echo $message ?></p>
+		            <?php endif; ?>
+		            -->
+		            <label for="newsletter">Votre e-mail</label>
+		            <input name="email" type="text" id="newsletter" class="required-entry validate-email input-text hgp-text-input" value="Votre e-mail" onfocus="javascript:this.value='';" />
+		            <button type="submit" class="form-button-alt hgp-text-button"><span class="hgp-input-span">S'inscrire</span></button>
+		            <p class="hgp-last-edition"><a href="<?php echo ($this->htmlEscape(utf8_encode(Hgp_Lib_Tools::getParamConfig('newsletter', 'last')->url))); ?>" onclick="window.open('<?php echo ($this->htmlEscape(utf8_encode(Hgp_Lib_Tools::getParamConfig('newsletter', 'last')->url))); ?>'); return false;" title="<?php echo ($this->htmlEscape(utf8_encode(Hgp_Lib_Tools::getParamConfig('newsletter', 'last')->title))); ?>"class="link" />&gt;&nbsp;Voir notre derni&egrave;re &eacute;dition</a></p>
+		    </fieldset>
+		</form>
+	<script type="text/javascript">
+	//<![CDATA[
+	    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+	//]]>
+	</script>
+	</div>
+	<div id="newsletter_bottom">&nbsp;</div>
+</div>

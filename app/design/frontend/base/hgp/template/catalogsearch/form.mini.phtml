@@ -1,0 +1,43 @@
+<script type="text/javascript">
+<!--
+function trim(myString)
+{
+	return myString.replace(/^\s+/g,'').replace(/\s+$/g,'');
+} 
+
+function verifform()
+{
+	/*alert(trim(document.search_mini_form.search.value));
+	return false;*/
+	
+	if ((trim(document.search_mini_form.search.value)) == ""){
+		alert("<?php echo $this->__('Fill this area') ?>");
+		return false;
+	}
+
+	if ((document.search_mini_form.search.value) == "<?php echo $this->__('Your search') ?>"){
+		alert("<?php echo $this->__('Fill this area') ?>");
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+<span class="hgp_h2"><?php echo $this->__('Browse our selection') ?></span>
+<form id="search_mini_form" name="search_mini_form" action="<?php echo $this->helper('catalogSearch')->getResultUrl() ?>" method="get" onsubmit="javascript:return verifform();">    
+    <fieldset>
+        <legend><?php echo $this->__('Search Site') ?></legend>
+        <div class="mini-search-hgp">
+            <input id="search" type="text" class="input-text hgp-text-input-search" name="<?php echo $this->helper('catalogSearch')->getQueryParamName() ?>" value="<?php echo (trim($this->helper('catalogSearch')->getEscapedQueryText()) != '') ? trim($this->helper('catalogSearch')->getEscapedQueryText()) : $this->__('Your search'); ?>" onfocus="javascript:this.value='';" />
+            <button type="submit" class="form-button-alt hgp-text-button-search"><span class="hgp-input-span"><?php echo $this->__('Search') ?></span></button>
+            <div id="search_autocomplete" class="search-autocomplete"></div>
+            <script type="text/javascript">
+            //<![CDATA[
+                var searchForm = new Varien.searchForm('search_mini_form', 'search', '<?php echo $this->__('Your search') ?>');
+                searchForm.initAutocomplete('<?php echo $this->helper('catalogSearch')->getSuggestUrl() ?>', 'search_autocomplete');
+            //]]>
+            </script>
+        </div> 
+        <a href="<?php echo (Mage::getModel('catalog/category')->load(Hgp_Lib_Tools::getParamConfig('categorie', 'hotel'))->getUrl());?>" title="Hotels"  class="link">&gt;&nbsp;<?php echo $this->__('See all hotels in Paris'); ?></a>       
+    </fieldset>
+</form>

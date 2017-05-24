@@ -1,0 +1,35 @@
+<div class="top-cadre-petit">&nbsp;</div>
+	<ul class="content-cadre-petit">
+		<li class="nom-produit-hgp"><?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getName()), 'name') ?>&nbsp;</li><?php echo (Hgp_Lib_Tools::drawStars($_nb_etoile, true)); ?>	 	
+	 	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('adherent')) != '') {?>
+	 		<li class="detail-cadre-petit"><?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getAdherent()), 'adherent') ?></li>
+	 	<?php } ?>
+	 	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('nb_chambre')) != '') {?>
+	 		<li class="detail-cadre-petit">Nombre de chambres : <?php echo $_helper->productAttribute($_product, $this->htmlEscape($_product->getNbChambre()), 'nb_chambre') ?></li>
+	 	<?php } ?>
+	 	<li class="detail-cadre-petit">Prix : &agrave; partir de <span class="prix_hgp"><?php echo Hgp_Lib_Tools::GetHtmlPrice($_product->getPrice()) ?></span> &euro;</li>
+	 	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('a_proximite')) != '') {?>
+	    	<li class="detail-cadre-petit" style="margin-top: 10px;">A proximit&eacute; : <?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('a_proximite'))); ?></li>	    		
+	    <?php } ?>
+	    <li class="detail-cadre-petit" style="margin-top: -18px;"><a href="#" class="link_cadre_petit" title="Voir le plan">&gt;&nbsp;Voir plan</a> </li>    		
+		<li class="hr_style">&nbsp;</li>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('adresse')) != '') {?>
+			<li class="detail-cadre-petit" style="margin-top: 10px;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('adresse'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('telephone')) != '') {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">T&Eacute;L : <?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('telephone'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('email')) != '') {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">Mail : <span style="color:#ff7717;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('email'))); ?></span></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('metro')) != '') {?>
+			<li class="detail-cadre-petit-metro" style="margin-top: 10px;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('metro'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('rer')) != '') {?>
+			<li class="detail-cadre-petit-rer" style="margin-top: 0;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('rer'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('tramway')) != '') {?>
+			<li class="detail-cadre-petit-tramway" style="margin-top: 0;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('tramway'))); ?></li>
+		<?php } ?>
+	</ul>
+<div class="bottom-cadre-petit">&nbsp;</div>

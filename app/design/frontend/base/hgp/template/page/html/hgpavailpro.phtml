@@ -1,0 +1,40 @@
+    <?php 
+    $ds = '/';
+	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds;
+	?>
+    <div  id="hgp-bloc-resa">
+		<p>&nbsp;</p>
+		<h4 class="hgp_h2">R&eacute;server votre h&ocirc;tel</h4>
+				<form action="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/233E/search" method="post" onclick="this.target='_blank'" id="AVP">
+			<p><input type="hidden" value="FR" name="lang" /></p>
+			<p><input type="hidden" value="" name="trackingId" /></p>
+			<p><input type="hidden" value="" name="rate" /></p>
+			<p><input type="hidden" value="" name="url" /></p>
+			<p><input type="hidden" value="" name="arrivalDate" id="AVP_arrivalDate" /></p>
+			<p><input type="hidden" value="" name="nights" id="AVP_nights" /></p>
+		<table id="book" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td colspan="2">Date d'arriv&eacute;e&nbsp;<span><script type="text/javascript">
+					<!--
+					document.write('<select id="AVP_list_days" ></select>&nbsp;<select id="AVP_list_months" onchange="setDays();" ></select>') //-->
+					</script></span></td>
+				</tr>
+				<tr>
+					<td colspan="2">Nombre de nuit(s)&nbsp;<span><script type="text/javascript">
+					<!--
+					document.write('<select id="AVP_list_nights" ></select>') //-->
+					</script></span></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" class="button_valid_availpro_home"><input type="button" value="R&eacute;server" onclick="validate();" class="btn_availpro" /></td>
+				</tr>
+			</table>
+		</form>
+			
+		<script type="text/javascript">
+				var months = new Array("janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre");
+				var message='Date en dehors du planning';
+		</script>
+			
+		<script type="text/javascript" src="http://www.secure-hotel-booking.com/France-Inn/233E/scripts/base.js"></script>
+   </div>

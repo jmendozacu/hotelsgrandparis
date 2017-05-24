@@ -1,0 +1,345 @@
+<?php 
+$storeId = Mage::app()->getStore()->getId();
+
+$urlMedia       = Mage::getUrl ('media') . 'googlemap/';
+$urlMediaVideo  = Mage::getUrl ('media') . 'homeslide/photos_videos/';
+$urlImgVideo    = Mage::getUrl ('media') . 'videos/photos_videos/';
+$urlJs          = Mage::getUrl ('skin') . 'frontend/hgp/default/js/google/';
+
+$browser = Hgp_Lib_Tools::getBrowserInfo();
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+    
+    //Zend_Debug::dump((int) $_product->getAttributeText('new_image'));exit;
+    //Zend_Debug::dump((int) $_product->getNew_image());exit;
+    //Zend_Debug::dump($_product->getVirtual_tour());exit;
+    
+    $hasVirtualTour = (strlen($_product->getVirtual_tour()) > 0) ? true : false;
+    $extension_Track = ($storeId == 2) ? 'Fr':'En';
+    $storeId = Mage::app()->getStore()->getId();
+
+	$_apiKey          = Mage::getStoreConfig ('googlemaplocator/general/google_api_key');
+	$_showMap         = Mage::getStoreConfig ('googlemaplocator/general/show_map');
+	$_showSearch      = Mage::getStoreConfig ('googlemaplocator/general/show_search');
+	$_defaultLocation = Mage::getStoreConfig ('googlemaplocator/general/default_location');
+	$_defaultRadius   = Mage::getStoreConfig ('googlemaplocator/general/default_radius');
+	
+	$viewCode = Mage::app()->getStore()->getCode();
+    
+    // Recuperation des images du produit
+    $_arraySlide = $this->getGalleryImages();
+    
+    $urlMedia  = Mage::getUrl ('media') . 'googlemap/';
+    $urlVideo  = Mage::getUrl ('media') . 'videos/';
+    $urlImgVideo  = Mage::getUrl ('media') . 'videos/photos_videos/';
+	$urlJs     = Mage::getUrl ('skin') . 'frontend/hgp/default/js/google/';
+	
+	if ($viewCode != 'default'){
+		$pattern = ($viewCode != 'default') ? '#/'.$viewCode.'/#': '';
+		$replace = '/';
+		$moduleBaseJs = preg_replace($pattern, $replace, $urlJs);
+		$mediaPath    = preg_replace($pattern, $replace, $urlMedia);
+	} else {
+		$moduleBaseJs  = $urlJs;
+		$mediaPath     = $urlMedia;
+	}
+
+	if ($_arraySlide){
+	
+	/*
+	 * Emplacement des fichiers
+	 */
+	
+	$moduleJsPath   = Mage::getUrl('skin') . 'frontend/base/hgp/js/';
+	$moduleBaseJs   = Mage::getUrl('skin') . 'frontend/hgp/default/js/homeslide/';
+	$moduleVideos   = Mage::getUrl('skin') . 'frontend/base/hgp/js/flvplayer/';
+	?>
+	<script type="text/javascript">
+	// ONGLET FIRST ACTIF
+	jQuery("li.navigation_btn_ah a:first").addClass("testeBrice"); //Activate first tab
+	 
+	</script>
+	
+	<script type="text/javascript"
+	    src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;language=fr">
+	</script>
+	<script type="text/javascript">
+		//<![CDATA[
+	
+	  function  initGmap() {
+		var placeIcon = new google.maps.LatLng(<?php echo Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'gps_latitude')?>, <?php echo Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'gps_longitude')?>);
+	    var parliament = new google.maps.LatLng(<?php echo Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'gps_latitude')?>, <?php echo Hgp_Lib_Tools::getProductAttributeLabelValue($_product, 'gps_longitude')?>);
+	    var marker;
+	    var map;
+	    var image = '<?php echo $urlMedia . '/new_picto_map.png'?>';
+	    var infoWindow = new google.maps.InfoWindow;
+
+	    var onMarkerClick = function() {
+	        infoWindow.setContent('<div id="infoBulle"><span class="infobulle_name_societe"><?php echo addslashes($_product->getName())?></span><br /><?php echo addslashes($_product->getAdresse())?><br /><?php echo $_product->getCode_postal()?>&nbsp;<?php echo $this->htmlEscape(addslashes($_product->getAttributeText('ville')))?><br /><?php echo $this->__('Tel') . ': ' . $_product->getTelephone()?><br /><?php echo $this->__('Email') . ': ' . $_product->getEmail()?></div>');
+		    infoWindow.open(map, marker);
+	      };
+
+	    var myOptions = {
+	      zoom: 15,
+	      center: placeIcon,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    
+	    
+	    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+	
+	    marker = new google.maps.Marker({
+	        map:map,
+	        draggable: true,
+	        animation: google.maps.Animation.DROP,
+	        position: parliament,
+	        title:"<?php echo addslashes($_product->getName())?>",
+	        icon: image
+	      });
+
+	    google.maps.event.addListener(marker, 'click', onMarkerClick);
+
+	  }
+
+	  
+	
+	  function toggleBounce() {
+	
+		  if (marker.getAnimation() != null) {
+		    marker.setAnimation(null);
+		  } else {
+		    marker.setAnimation(google.maps.Animation.BOUNCE);
+		  }
+		}
+		//]]>
+		</script>
+	<?php if ((int) $_product->getNew_image() == 1) {?>
+	<div id="wrapperSliderhotelGrand"> 
+	<?php } else { ?>
+	<div id="wrapperSliderhotel"> 
+	<?php } ?>
+            
+         
+                <?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('have_video')) == $this->__('Yes')){?>
+	        	<!--  Test -->
+				<div class="padder">
+					<div id="product_tabs_description_tabbed_contents">
+					
+						<!-- Debut Div Slide -->
+						<?php if ((int) $_product->getAttributeText('img_fixe') == 1) {?>
+							<div class="imgfixe"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'img_fixe_media')->resize(600, 250); ?>" width="600" height="250" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" /></div>
+						<?php } else { ?>
+						
+						<div id="slidesFicheHotel">
+							<div class="slides_container">
+								<?php 
+									$count = count($_arraySlide);									
+									foreach ($_arraySlide as $_image){	
+									?>
+									<?php if ((int) $_product->getNew_image() == 1) {?>
+										<div class="slide_grand">
+											<img alt="<?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?>"  src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(600,300); ?>" />
+											<p class="caption"><?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?></p>
+										</div>
+										<?php } else { ?>
+										<div class="slide">
+											<img alt="<?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?>"  src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(600,200); ?>" />
+											<p class="caption"><?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?></p>
+										</div>
+										<?php } ?>
+									<?php } ?>		
+							</div>
+						</div>
+						<?php } ?>
+						<!-- Fin Div Slide -->
+						
+						
+					</div>
+					<div id="product_tabs_additional_tabbed_contents">
+						<!-- Debut Div Googlemap -->                                      	
+                    		<div id="map_canvas" style="width: 600px; height:247px;"></div>
+					 	<!-- Fin Div Googlemap -->
+					 	<p class="clearP">&nbsp;</p>
+					</div>
+					<?php if ($hasVirtualTour){?>  
+					<div id="product_tabs_virtual_products_tabbed_contents">
+						<!-- Debut Div Virtual Tour -->    
+						<?php if ((int) $_product->getNew_image() == 1) {?>                                  	
+                    		<div id="map_canvas_virtual" style="width: 600px; height:328px;">
+                    			<iframe width="600" height="328" id="iframeVisit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo trim($_product->getVirtual_tour())?>"></iframe><br /><small></small>
+                    		</div>
+                    		 <?php } else { ?>
+                    		<div id="map_canvas_virtual" style="width: 600px; height:247px;">
+                    			<iframe width="600" height="247" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo trim($_product->getVirtual_tour())?>"></iframe><br /><small></small>
+                    		</div>
+                    		<?php } ?>
+					 	<!-- Fin Div Virtual Tour -->
+					 	<p class="clearP">&nbsp;</p>
+					</div>
+					<?php } ?>
+					<div id="product_tabs_upsell_products_tabbed_contents" style="<?php echo(('Opera' == $browser) ? 'display: none;' : '') ?>">
+                        <!-- Debut Div Video --> 
+                        <?php if ((int) $_product->getNew_image() == 1) {?>                                     	
+						<object type="application/x-shockwave-flash" data="<?php echo $moduleVideos ?>player_flv_maxi.swf" width="600" height="328">
+						     <param name="movie" value="<?php echo $moduleVideos ?>player_flv_maxi.swf" />
+						     <param name="flashvars" value="flv=<?php echo $urlVideo . $_product->getSku() . '.flv'?>&startimage=<?php echo $urlImgVideo . $_product->getSku() . '.jpg' ?>&width=600&height=328&autoload=1&showstop=1&showvolume=0&volume=0&showfullscreen=1&showlayer=always" />
+						     <param name="allowFullScreen" value="true" />
+						     <param name="wmode" value="transparent" />
+						</object>
+ 	                    <!-- Fin Div Video -->
+ 	                    <?php } else { ?>
+                        <!-- Debut Div Video -->                                      	
+						<object type="application/x-shockwave-flash" data="<?php echo $moduleVideos ?>player_flv_maxi.swf" width="600" height="245">
+						     <param name="movie" value="<?php echo $moduleVideos ?>player_flv_maxi.swf" />
+						     <param name="flashvars" value="flv=<?php echo $urlVideo . $_product->getSku() . '.flv'?>&startimage=<?php echo $urlImgVideo . $_product->getSku() . '.jpg' ?>&width=600&height=245&autoload=1&showstop=1&showvolume=0&volume=0&showfullscreen=1&showlayer=always" />
+						     <param name="allowFullScreen" value="true" />
+						     <param name="wmode" value="transparent" />
+						</object>
+						<?php } ?>
+ 	                    <!-- Fin Div Video -->
+					</div>
+		        </div>        
+                <?php } else { ?>               
+		        <!--  Fin Test -->
+				<div class="padder">
+					<div id="product_tabs_description_tabbed_contents">
+					
+						<!-- Debut Div Slide -->
+						<?php if ((int) $_product->getAttributeText('img_fixe') == 1) {?>
+							<div class="imgfixe"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'img_fixe_media')->resize(600, 250); ?>" width="600" height="250" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" /></div>
+						<?php } else { ?>
+						<div id="slidesFicheHotel">
+							<div class="slides_container">
+								<?php 
+									$count = count($_arraySlide);									
+									foreach ($_arraySlide as $_image){	
+									?>
+									<?php if ((int) $_product->getNew_image() == 1) {?>
+										<div class="slide_grand">
+											<img alt="<?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?>"  src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(600,300); ?>" />
+											<p class="caption"><?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?></p>
+										</div>
+										<?php } else { ?>
+										<div class="slide">
+											<img alt="<?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?>"  src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(600,200); ?>" />
+											<p class="caption"><?php echo $this->htmlEscape($_product->getName(). ' - ' . $_image->getLabel()) ?></p>
+										</div>
+										<?php } ?>
+									<?php } ?>		
+							</div>
+						</div>
+						<?php } ?>
+						<!-- Fin Div Slide -->
+						
+						<p class="clearP">&nbsp;</p>
+					</div>
+					<div id="product_tabs_additional_tabbed_contents">
+						<!-- Debut Div Googlemap -->  
+						<?php if ($_product->getNew_image() !== ''){?>                                     	
+                    		<div id="map_canvas" style="width: 600px; height:328px;"></div>
+                    	<?php }else{?>
+                    		<div id="map_canvas" style="width: 600px; height:247px;"></div>
+                    	<?php }?>
+					 	<!-- Fin Div Googlemap -->
+					 	<p class="clearP">&nbsp;</p>
+					</div>
+					<?php if ($hasVirtualTour){?>  
+					<div id="product_tabs_virtual_products_tabbed_contents">
+						<!-- Debut Div Virtual Tour -->  
+						<?php if ((int) $_product->getNew_image() == 1) {?>                                    	
+                    		<div id="map_canvas_virtual" style="width: 600px; height:328px;">
+                    			<iframe width="600" height="328" id="iframeVisit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo trim($_product->getVirtual_tour())?>"></iframe>
+                    		</div>
+                    	<?php }else{?>
+                    		<div id="map_canvas_virtual" style="width: 600px; height:247px;">
+                    			<iframe width="600" height="247" id="iframeVisit" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo trim($_product->getVirtual_tour())?>"></iframe>
+                    		</div>
+                    	<?php }?>
+					 	<!-- Fin Div Virtual Tour -->
+					 	<p class="clearP">&nbsp;</p>
+					</div>
+					<?php } ?>
+		        </div>        
+		        <!--  Fin Test -->
+             <?php } ?>   
+           
+	            <?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('have_video')) == $this->__('Yes')){?>
+		            <ul class="navigation_btn_ah tabs" id="with_video">                    
+	                    <li id="product_tabs_description_tabbed" class="current"><a href="#"><?php echo $this->__('Photos')?></a></li> 
+	                    <li id="product_tabs_additional_tabbed" class="current2"><a href="#" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Carte', 'Fiche-<?php echo $extension_Track?>', <?php echo '0'?>]);"><?php echo $this->__('Map')?></a></li>	                                       
+	                    <li id="product_tabs_upsell_products_tabbed" class="current3"><a href="#" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Video', 'Fiche-<?php echo $extension_Track?>', <?php echo '0'?>]);"><?php echo $this->__('Video')?></a></li>  
+	                    <?php if ($_product->getVirtual_tour() !== ''){?>               
+	                    <li id="product_tabs_virtual_products_tabbed" class="current3"><a href="#" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Visite', 'Fiche-<?php echo $extension_Track?>', <?php echo '0'?>]);"><?php echo $this->__('Virtual tour')?></a></li>   
+	                    <?php } ?>              
+		            </ul>
+	            <?php } else { ?>
+		            <ul class="navigation_btn_ah tabs" id="without_video">                    	                    
+	                    <li id="product_tabs_description_tabbed" class="current4"><a href="#"><?php echo $this->__('Photos')?></a></li>
+	                    <li id="product_tabs_additional_tabbed" class="current5"><a href="#" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Carte', 'Fiche-<?php echo $extension_Track?>', <?php echo '0'?>]);"><?php echo $this->__('Map')?></a></li>  
+	                    <?php if ($hasVirtualTour){?>               
+	                    <li id="product_tabs_virtual_products_tabbed" class="current5"><a href="#" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Visite', 'Fiche-<?php echo $extension_Track?>', <?php echo '0'?>]);"><?php echo $this->__('Virtual tour')?></a></li>   
+	                    <?php } ?>                                    
+		            </ul>
+				<?php } ?>							
+            <?php } else {?>
+            	<p>&nbsp;</p>
+            <?php } ?>
+            <div style="clear:both;"></div><br />
+        </div>
+        
+<p class="clearP">&nbsp;</p>
+<script type="text/javascript">
+	jQuery('#product_tabs_additional_tabbed').click(function(){
+		 initGmap();
+	});
+	
+	// Tabs
+    Varien.Tabs = Class.create();
+    Varien.Tabs.prototype = {
+      initialize: function(selector) {
+        var self=this;
+        $$(selector+' a').each(self.initTab.bind(this));
+      },
+
+      initTab: function(el) {
+          el.href = 'javascript:void(0)';
+          if ($(el.parentNode).hasClassName('active')) {
+            this.showContent(el);
+          }
+          el.observe('click', this.showContent.bind(this, el));
+      },
+
+      showContent: function(a) {
+        var li = $(a.parentNode), ul = $(li.parentNode);
+        ul.getElementsBySelector('li').each(function(el){
+          var contents = $(el.id+'_contents');
+          if(contents != null){
+	          if (el==li) {
+	            el.addClassName('active');
+	
+	            if ((!jQuery.browser.msie) || ("product_tabs_upsell_products_tabbed_contents" != contents.id && jQuery.browser.msie)) {
+	                contents.show();
+	            }
+	          } else {
+	            el.removeClassName('active');
+	            
+	            if ((!jQuery.browser.msie) || ("product_tabs_upsell_products_tabbed_contents" != contents.id && jQuery.browser.msie)) {
+	                contents.hide();
+	            }
+	          }
+          }
+        });
+      }
+    }
+
+    Event.observe(window, 'load', load);
+    
+    function load() {
+                
+        var tabs = new Varien.Tabs('.tabs');
+
+        if (!jQuery.browser.msie) {
+            tabs.showContent(jQuery('#product_tabs_description_tabbed a:first')[0]);
+        }
+    }
+</script>

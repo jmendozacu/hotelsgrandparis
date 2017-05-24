@@ -1,0 +1,140 @@
+<?php
+$storeId = Mage::app()->getStore()->getId();
+$script_tripadvisor=($storeId==2) ? '<script type="text/javascript" src="http://www.jscache.com/weimg?itype=langs/fr/tripadvisor_logo_132x24-13984-0.gif&amp;lang=fr"></script>':'<script type="text/javascript" src="http://www.jscache.com/weimg?itype=langs/en_UK/tripadvisor_logo_132x24-13984-0.gif&amp;lang=en_UK"></script>';
+$_nbItem = 3;
+$urlMedia  = Mage::getUrl ( 'media' );
+
+//Objet Category
+$_category = Mage::getModel('catalog/category');
+$_product  = Mage::getModel('catalog/product');
+
+$mediaPath  = Mage::getUrl ('media') . 'quartiers/';
+$_arrCategories = array();
+
+//Categorie Paris Opera, Madeleine, Saint Lazare hotels => 10
+$_category->load(10);
+$_collection1 = $_category->getProductCollection();
+$_arrCategories[1] = $_category->getUrl();
+
+//Categorie Paris Champs Elysees, Arc de Triomphe hotels => 18
+$_category->load(18);
+$_collection2 = $_category->getProductCollection();
+$_arrCategories[2] = $_category->getUrl();
+
+//Paris Saint Germain des Pres, Montparnasse hotels => 12
+$_category->load(12);
+$_collection3 = $_category->getProductCollection();
+$_arrCategories[3] = $_category->getUrl();
+
+//Paris Gare de Lyon Hotels, Vincennes hotels => 17
+$_category->load(17);
+$_collection4 = $_category->getProductCollection();
+$_arrCategories[4] = $_category->getUrl();
+
+//Paris Louvre, Marais, Beaubourg hotels => 19
+$_category->load(19);
+$_collection5 = $_category->getProductCollection();
+$_arrCategories[5] = $_category->getUrl();
+
+//Paris Wagram, Batignolles, Porte Maillot hotels => 16
+$_category->load(16);
+$_collection6 = $_category->getProductCollection();
+$_arrCategories[6] = $_category->getUrl();
+
+//Affectation des listes dynamiques
+for($i=1;$i<=6;$i++){
+	$_col       = "_collection$i";
+	$_res       = "result$i";
+	$_resShort  = "resultShort$i";
+	foreach (${$_col} as $_product){
+		${$_res}[] = $_product->getId();		
+	}
+	//Tire au hasard nbItem ID
+	${$_resShort} = Hgp_Lib_Tools::getShortCollectionByRand(${$_res}, $_nbItem);
+}
+
+?>
+
+<div id="quartiers">			
+						<div id="quartiers-centre">
+							<h1><?php echo $this->__('hotel paris centre') ?></h1>
+							
+							<div class="liste-quartier-home-first">
+								<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[1];?>"><?php echo $this->__('Hotels Opera, Madeleine, St Lazare')?></a></h2>
+								<div class="bloc-left-mini-quartier">				
+										<a href="<?php echo $_arrCategories[1];?>" title="<?php echo $this->__('Hotels Opera, Madeleine, St Lazare')?>">
+											<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-opera-madelaine-saint-lazare-paris.jpg')?>" alt="<?php echo $this->__('Hotels Opera, Madeleine, St Lazare')?>" title="<?php echo $this->__('Hotels Opera, Madeleine, St Lazare')?>"  />
+											<span class="corner"></span>
+										</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+							
+							<div class="liste-quartier-home">
+										<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[2];?>"><?php echo $this->__('Hotels Paris Champs Elysees, Etoile')?></a></h2>
+										<div class="bloc-left-mini-quartier">
+										<a href="<?php echo $_arrCategories[2];?>" title="<?php echo $this->__('Hotels Paris Champs Elysees, Etoile')?>">
+											<span class="corner"></span>
+											<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-arc-de-triomphe-paris.jpg')?>" alt="<?php echo $this->__('Hotels Paris Champs Elysees, Etoile')?>" title="<?php echo $this->__('Hotels Paris Champs Elysees, Etoile')?>"  />
+										</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+							<div class="liste-quartier-home-first">
+								<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[3];?>"><?php echo $this->__('Hotels Montparnasse, Saint Germain')?></a></h2>
+								<div class="bloc-left-mini-quartier">
+									<a href="<?php echo $_arrCategories[3];?>" title="<?php echo $this->__('Hotels Montparnasse, Saint Germain')?>">
+										<span class="corner"></span>
+										<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-montparnasse-saint-germain-paris.jpg')?>" alt="<?php echo $this->__('Hotels Montparnasse, Saint Germain')?>" title="<?php echo $this->__('Hotels Montparnasse, Saint Germain')?>"  />
+									</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+							
+							<div class="liste-quartier-home">
+								<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[4];?>"><?php echo $this->__('Hotels Gare de Lyon, Vincennes')?></a></h2>
+								<div class="bloc-left-mini-quartier">
+									<a href="<?php echo $_arrCategories[4];?>" title="<?php echo $this->__('Hotels Gare de Lyon, Vincennes')?>">
+										<span class="corner"></span>
+										<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-chateau-vincennes-paris.jpg')?>" alt="<?php echo $this->__('Hotels Gare de Lyon, Vincennes')?>" title="<?php echo $this->__('Hotels Gare de Lyon, Vincennes')?>"  />
+									</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+							
+							<div class="liste-quartier-home-first">
+								<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[5];?>"><?php echo $this->__('Hotels Louvre, Marais, Beaubourg')?></a></h2>
+								<div class="bloc-left-mini-quartier">
+									<a href="<?php echo $_arrCategories[5];?>" title="<?php echo $this->__('Hotels Louvre, Marais, Beaubourg')?>">
+										<span class="corner"></span>
+										<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-beaubourg-louvre-paris.jpg')?>" alt="<?php echo $this->__('Hotels Louvre, Marais, Beaubourg')?>" title="<?php echo $this->__('Hotels Louvre, Marais, Beaubourg')?>"  />
+									</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+							
+							<div class="liste-quartier-home">
+								<h2><a class="liste-quartier-home-title" href="<?php echo $_arrCategories[6];?>"><?php echo $this->__('Hotels Wagram, Arc de Triomphe')?></a></h2>
+								<div class="bloc-left-mini-quartier">
+									<a href="<?php echo $_arrCategories[6];?>" title="<?php echo $this->__('Hotels Wagram, Arc de Triomphe')?>">
+										<span class="corner"></span>
+										<img class="img_quartier" width="250" height="145" src="<?php echo ($mediaPath . 'quartier-wagram-arc-de-triomphe-paris.jpg')?>" alt="<?php echo $this->__('Hotels Wagram, Arc de Triomphe')?>" title="<?php echo $this->__('Hotels Wagram, Arc de Triomphe')?>"  />
+									</a>
+								</div>						
+								<hr class="clear" />
+							</div>
+							
+						</div>
+						<hr class="clear" />
+						
+						<div id="tripadvisor-block-home">
+							<p><?php echo $this->__('Read unbiased travellers reviews of our hotels with')?></p>
+							<script type="text/javascript" src="http://www.jscache.com/weimg?itype=langs/en_UK/tripadvisor_logo_132x24-13984-0.gif&amp;amp;lang=en_UK"></script>		
+						</div>
+				 	</div>
+				 	

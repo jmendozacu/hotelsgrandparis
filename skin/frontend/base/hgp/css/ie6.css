@@ -1,0 +1,1013 @@
+#css pour IE6
+
+body { 
+	margin: 0 auto;
+	color:#4C4C4B; 
+	font:12px/1.55em arial, helvetica, sans-serif; 
+	width:980px;
+	border: 0;
+	background:#e2d8cf url(../images/bkg-hgp.gif) repeat-y top center;
+}
+
+.wrapper {
+    width:1024px;
+    background-color: #fff;
+    display: block;
+}
+
+
+/*----------------- HEADER ---------------*/
+
+
+.header-top-container {
+	width: 960px;
+}
+
+.header-top {
+	width:960px;
+	margin:0 auto;
+	position: relative;
+	z-index: 1;
+	}
+
+.language-switcher {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 119px;
+	z-index: 12;
+}
+
+.language-switcher a.lang_switch {
+	color:#fff;
+	font-size: 11px;
+	
+}
+
+/* Logo */
+a#logo {
+    float:left;
+    margin-left:15px;
+	}
+
+.quick-access {
+    width:809px;
+    float:right;
+    margin:-65px 0 0 0;
+    text-align:right;
+    padding:0;
+    color:#fff;
+    }
+
+
+.baseline {
+    width: 50px;
+    height: 35px;
+    text-align: left;
+    border-left: 2px solid #FF7717;
+    padding-left: 3px;
+    margin: 17px 720px 0 0;
+    color: #ff7717;
+    font-size: 10px;
+    line-height: 12px;
+	}
+
+p.baseline {
+	   display: block;
+	}
+
+
+/*-------------------------FIN HEADER--------------------------*/
+
+/*-------------------------home slide--------------------------*/
+
+#hgphomeslide { height:200px; border:1px solid red; }
+#slide_gauche{ height:200px; }
+#slide_centre{ height:200px; }
+#slide_droit{ height:200px; }
+.pikachoose { height:200px; }
+#pikame_user { height:50px; }
+/*
+ #hgphomeslide{
+	width:933px;
+	height: 290px;
+	margin: 5px 0 0 15px;
+	padding: 0;
+}
+
+#slide_gauche{
+	float: left;
+	width: 6px;
+	height: 291px;
+	margin:0;
+	padding:0;
+	background: transparent url(../images/slide_bord_gauche.png) no-repeat 0 0;
+}
+
+#wrapper {
+	width:910px;
+	margin:-35px 0 -38px -25px;
+	display:none;
+}
+
+#slide_centre{
+	width: 910px;
+	height: 0;
+	float: left;
+	margin-top:0;
+	padding:0;
+	display: inline;
+	background-color: white;
+}
+
+#slidearea {
+	float:left;
+	position:relative;
+	width:920px;
+	height:65px;
+	overflow:hidden;
+}
+
+
+#slide_droit{
+	width: 6px;
+	height: 291px;
+	margin:0;
+	float: right;
+	background: transparent url(../images/slide_bord_droit.png) no-repeat 0 0;
+}
+
+#information {
+	margin:0 0 0 4px;
+}
+
+#information h3{
+	padding:2px 4px 0 0;
+}*/
+
+.pikachoose{
+	width:580px;
+	height: 208px;
+	margin: 5px 0 0 5px;
+	padding: 0;
+}
+
+.pika-image .caption {background: url(../images/pikachoose/black.gif);}
+.pika-imgnav a.previous{ top: 70px; left: 0px;cursor:pointer;}
+.pika-imgnav a.next {top: 70px; right: -19px;cursor:pointer;}
+/*----------------------FIN HOMESLIDE-------------------------------*/
+
+#home-line1,#home-line2 {
+	width:980px;
+	position:relative;
+}
+
+#hgphomeslide {
+    margin: 0 0 0 10px;
+    padding:0;
+}
+
+#bloc_resa {
+	width: 322px;
+	height: 278px;
+	float:right;
+	margin-right:15px;
+}
+
+hr#separateur-bloc-resa {
+	margin:5px;
+}
+
+table.set-date-home {
+	margin-bottom:12px;
+}
+
+#quartiers-top {
+	overflow:hidden;
+}
+
+#quartiers {
+	margin-left:10px;
+}
+
+#quartiers-centre {
+	height: 535px;
+	padding-bottom:0;
+}
+
+.liste-quartier-home-first {
+	float:left;
+	width: 265px;
+	margin-bottom: 10px;
+}
+.liste-quartier-home {
+	float:left;
+	width: 265px;
+	margin-bottom: 5px;
+}
+
+.bloc-left-mini-quartier {
+	float:left;
+	width:134px;
+}
+
+.bloc-right-mini-quartier {
+	float:left;
+	width:120px;
+	margin-left: 0;
+}
+
+#modules-right {
+    margin-left: 20px;
+}
+/*----------------------MAIN-----------------------------------------*/
+
+/*COL1*/
+
+#col1{
+	width: 300px;
+	position:relative;
+	margin-top: -15px;
+}
+
+#hgppresentation {
+	width: 300px;
+	height: 131px;
+	float: left;
+	margin: 0 0 0 8px;
+	padding: 2px;
+}
+
+#quartiers-centre {
+	height: 635px;
+}
+
+#tripadvisor-block-home {
+	bottom: 0;
+}
+
+.hgpnewsletter{
+	width: 305px;
+	margin: 10px 0 0 0;
+	padding:0;
+	height: 100px;
+	/*border: 1px solid red;*/
+}
+
+.hgpnewsletter input#newsletter {
+	margin-left:8px;
+}
+
+h2.hgp_h2_newsletter {
+	font-size: 12px;
+	color: #515151;
+	margin: 0;
+	padding: 0;
+}
+
+
+#hgppub {
+	margin: 0 0 0 4px;
+	}
+
+#hgppub #hgppub-img {
+	margin:0;
+	padding:0;
+	position: relative;
+	/*top:267px;
+	left:9px;*/
+	/*border: 1px solid red;*/
+}
+
+fieldset.hgpcontent {
+	font-size:10px;
+	display: block;
+	width: 302px;
+}
+
+.hgpnewsletter #newsletter_bottom{
+	width: 302px;
+	height: 13px;
+	background: #fff url(../images/fond_newsletter_bottom.gif) no-repeat 0 0;
+}
+
+
+
+
+
+/*COL2*/
+
+#col2{
+	width: 603px;
+	height: 432px;
+	background-color: #fff;
+	margin: -20px 4px 0 14px;
+	padding: 0;
+	float: right;
+	}
+
+#col2 #col2_bg{
+	height: 425px;
+	width: 6px;
+	float: left;
+	background: transparent url(../images/bord_gauche_col2.png) no-repeat 0 0;
+}
+
+#col2 #col2_c{
+	float: left;
+	height: 425px;
+	width: 587px;
+	background-color: #d9d9d9;
+	overflow: hidden;
+}
+
+#col2 #col2_c #col2_gauche{
+		float: left;
+		width: 275px;
+		height: 419px;
+		margin-right: 7px;
+		margin-top: 2px;
+		padding: 0;
+	}
+
+#col2 #col2_c #col2_gauche #top_gauche{
+			width: 270px;
+			height: 235px;
+			padding: 5px;
+	       margin: 5px 0px 0 1px;
+			background: transparent url(../images/fond_top_gauche.png) no-repeat 0 0;
+		}
+
+#col2 #col2_c #col2_gauche #bas_gauche{
+			padding: 5px;
+			margin: 5px 0 0 0;
+			background: transparent url(../images/fond_bas_gauche.png) no-repeat 0 0;
+		}
+
+#col2 #col2_c #col2_droit{
+		float: right;
+		height: 416px;
+		width: 309px;
+		margin: -450px 0 0 0;
+		padding-left: 0;
+		overflow:hidden;
+	}
+
+#col2 #col2_c #col2_droit #top_droit{
+			width: 307px;
+			height: 246px;
+			padding: 5px;
+	      margin: 10px 0 0 0;
+			background: transparent url(../images/fond_top_droit.png) no-repeat 0 0;
+		}
+
+#col2 #col2_c #col2_droit #bas_droit{
+			width: 307px;
+			height: 154px;
+			padding: 0;
+		    margin: -3px 0 0 0;
+		    overflow:hidden;
+			background: #fff url(../images/fond_bas_droit.png) no-repeat 0 0;
+		}
+
+/*---------------------------Bloc EXPLORER SELECTION----------------------*/
+
+#search_mini_form {
+	position:relative;
+}
+
+
+.hgp-text-button-search {
+	margin-right:13px;
+	float:right;
+	background: #fff url(../images/fond_button_fd_blancie6.gif) no-repeat 0 0;
+	width: 72px;
+	height: 18px;
+	}
+
+#search_mini_form .hgp-see-hotels {
+	margin:0;
+	position:absolute;
+	left:4px;
+}
+
+.mini-search-hgp .input-text {
+	width:183px;
+	height: 15px;
+	margin:0 4px 4px 5px;
+	border: 1px solid #b4b4b4;
+	background-image: none;
+}
+
+.hgp-text-button {
+	margin:0 13px 0 0;
+	float:right;
+	background: #fff url(../images/fond_button_fd_blancie6.gif) no-repeat 0 0;
+	width: 72px;
+	height: 18px;
+	}
+
+/*---------------------------FIN Bloc EXPLORER SELECTION----------------------*/
+
+#mapParis {
+	position: relative;
+}
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	opacity: 0.85;
+	height: 32px;
+	background: #f7f7f7;
+	padding: 2px 10px;
+	margin: 0;
+	border: 1px solid #959595;
+	width: 310px;
+}
+
+#tooltip h3{
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 32px;
+	height: 32px;
+}
+/*-------------------------------BLOC METEO---------------------*/
+
+
+
+#meteo p.current{
+	width: 220px;
+	height: 53px;
+	margin: -52px 0 0 70px;
+}
+
+#meteo .nextdays{
+	width: 290px;
+	height: 30px;
+	margin: -30px 0 0 0;
+	padding:2px 0 0 0;
+}
+
+#meteo .forecast {
+	margin-top: -10px;
+	float: left;
+	text-align: center;
+	width: 70px;
+}
+
+#meteo .temperature {
+	font-size: 10px;
+	font-weight: bold;
+	color: #8F8F8F;
+	margin-top: -3px;
+	margin-left: 15px;
+	margin-bottom:0;
+}
+/*-------------------------------FIN BLOC METEO----------------------*/
+
+/*------------------------------BLOC ENGAGEMENTS---------------------*/
+
+#engagement {
+	margin: 0;
+	padding: 0 0 0 10px;
+	}
+
+#engagement p.notice {
+	margin: 3px 0 0 -10px;
+	font-size: 9px;
+	font-style: italic;
+}
+
+/*------------------------------FIN BLOC ENGAGEMENT---------------------*/
+
+
+
+/*-----------------------------BLOC RESERVATION--------------------------*/
+
+
+#AVP{
+	display: block;
+	width: 271px;
+	height: 100px;
+	margin: 0;
+	position:relative;
+}
+
+
+input.btn_availpro {
+	background:transparent url(../images/btn-dispo-tarif-home.gif) no-repeat 0 0;
+	color:#fff;
+	display:block;
+	width:170px;
+	height:19px;
+	border:0;
+	font-size:11px;
+	font-weight:normal;
+	text-align:center;
+	position:absolute;
+	right:5px;
+	bottom: -8px;
+}
+
+
+
+td.button_valid_availpro {
+	padding: 0 0 15px 0;
+}
+
+input.btn_availpro_fiche {
+	background: transparent url(../images/fond_button2.gif) no-repeat
+		 0 0;
+	color: #fff;
+	display: block;
+	width: 138px;
+	height: 19px;
+	border: 0;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+}
+
+
+
+/*-----------------------------FIN BLOC RESERVATION--------------------------*/
+
+/*-----------------------------BLOC BAS--------------------------*/
+
+#fore_category{
+	background-color: #fff;
+	width: 922px;
+	height: 200px;
+	padding: 5px;
+	margin: -50px 0 0 18px;
+}
+
+#fore_category #fore_category_g{
+		width: 8px;
+		height: 193px;
+		float: left;
+		margin: 7px 0 0 0;
+		background: transparent url(../images/categorie_bord_gauche.gif) no-repeat 0 0;
+	}
+
+
+#fore_category #fore_category_c{
+		width: 906px;
+		height: 193px;
+		float:left;
+		margin: 7px 0 0 0;
+		padding: 0;
+		background: white url(../images/categorie_fond_centre.gif) repeat-x 0 10%;
+	}
+
+
+#fore_category #fore_category_d{
+		width: 8px;
+		height: 193px;
+		float: right;
+		margin: 7px 0 0 0;
+		background: transparent url(../images/categorie_bord_droit.gif) no-repeat 0 0;
+	}
+
+.categorie_accueil{
+	width: 290px;
+	height: 180px;
+	overflow: hidden;
+	margin: 0 0 0 6px;
+	padding:5px 0 0 0;
+}
+
+ul.line-hotel {
+	margin:0;
+	width: 287px;
+}
+
+li.line-hotel {
+	color: #656565;
+	/*float: left;*/
+	height: 20px;
+	font-size:11px;
+	width: 287px;
+	overflow: visible;
+}
+
+.line-hotel .stars{
+	margin-top: -15px;
+}
+
+span.liste_accueil_hgp {
+	margin-left: 40px;
+	margin-right: 0;
+	margin-top: -20px;
+	width: 100px;
+	float: right;
+}
+
+a.liste_accueil_hgp {
+	width: 130px;
+	height:20px;
+	white-space: nowrap;
+}
+
+a.link_categorie{
+	clear: left;
+	display: block;
+	color: #52a8a8;
+	font-size: 10px;
+	/*float: right;*/
+	text-align: right;
+	margin-right: 0;
+	}
+
+.footer-container {border: 0; margin-top: 20px;}
+.footer {
+    width:910px;
+    margin:0 auto;
+    overflow: hidden;
+    padding:0;
+    background-color:#fff;
+    border-top:1px solid #c9c9c9;
+}
+
+/*---------------------------------------LIST PROD------------------------*/
+input.btn_availpro_list, a.btn_availpro_list {
+	background:transparent url(../images/btn_voir_dispo.gif) no-repeat 0 0;
+	color:#fff;
+	display:block;
+	width:157px;
+	height:18px;
+	line-height: 18px;
+	border:0;
+	font-size:11px;
+	font-weight:normal;
+	text-align:center;
+	float: right;
+	margin-top: -19px;
+}
+
+a.btn_availpro_list:hover {
+	color:#fff;
+}
+
+input.btn_availpro_list[type="button"]:hover, a.btn_availpro_list:hover {
+	background: transparent url(../images/btn_voir_dispo.gif) no-repeat	scroll 0 100%;
+	text-decoration: none;
+}
+
+.layered-nav .actions {
+    margin: -1px 0 10px 8px;
+    overflow:hidden;
+    }
+
+#top-cadre-petit-selection{
+	overflow:hidden;
+}
+
+/*-----------------------------------COL LEFT--------------------------------*/
+
+.middle-container {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	}
+
+.middle { width: 960px; margin: 0 auto; padding: 0;}
+
+.col-left {
+	float:left;
+	width:305px;
+	margin-left: 0;
+}
+
+#top-right{
+	width: 305px;
+	height: 11px;
+	background: #fff url(../images/top_right_col.gif) no-repeat 0 0;
+	overflow:hidden;
+	padding:0;
+}
+
+.top-cadre-petit{
+	width: 289px;
+	height: 11px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: #fff url(../images/top_cadre.gif) no-repeat 0 0;
+}
+
+.bottom-cadre-petit{
+	overflow: hidden;
+}
+
+.col-2-left-layout .col-main {
+	float:right;
+	width:614px;
+}
+
+/*-----------------------------------FIN COL LEFT--------------------------------*/
+
+/*-----------------------------------SHOP LIST--------------------------------*/
+
+.listing-type-list .product-shop {
+	float:left;
+	width:255px;
+	height: 100px
+}
+
+.catalog-listing h5 {
+	margin-bottom:0;
+	padding:0;
+	}
+
+hr{
+	margin:0;
+}
+
+.description_list{
+	margin: 0;
+}
+
+a.link_list{
+	margin: 0;
+	bottom:0;
+	right:0;
+	position:relative;
+	/*float:left;*/
+	background:#FF7717 url(../images/btn_voir_hotel.gif) no-repeat 0 0;
+	width: 69px;
+	height: 18px;
+	color: #fff;
+	font-size: 11px;
+	text-indent: 5px;
+}
+
+a.link_list:hover {
+	background:#FF7717 url(../images/btn_voir_hotel.gif) no-repeat 0 0;
+	text-decoration:none;
+	color:#fff;	
+}
+
+div#content-left div.content-cadre-petit{
+	padding-left:0;
+	width:287px;
+}
+
+/*-----------------------------------FIN SHOP LIST--------------------------------*/
+
+
+/*-----------------------------------FICHE PRODUIT--------------------------------*/
+
+.product-essential {
+	margin-left: 10px;
+}
+
+#productslide{
+	margin: 0 0 -35px 0;
+	
+}
+
+#productslide #fullsize {
+	margin: 3px 0 0 -2px;
+	padding: 2px 0 0 0;
+}
+
+td.middlee {
+	background: #f2f2f2 url(../images/line.gif) repeat-y 50% 50%;
+	}
+
+.product-base ul.content-cadre-petit {
+	margin-top:-10px;
+}
+div.content-cadre-petit {
+	padding-left:4px;
+	width: 276px;
+}
+
+table#book2 {
+	margin: 0;
+	width:304px;
+}
+
+
+.product-base img.stars {
+	margin:-17px 0 0 0;
+}
+
+#productslide #information {
+	margin:0 0 0 0;
+}
+
+#productslide #information h3 {
+	padding:2px 4px 0 0;
+}
+
+
+.product-shop .stars_fhe img.stars {
+	vertical-align: top;
+	margin: 0;
+}
+
+#productslide #slideleft {
+	float: left;
+	width: 11px;
+	height: 58px;
+	display: block;
+	cursor: pointer;
+	background: url(../images/homeslide/fleche_gauche.gif) no-repeat 0 0;
+}
+
+#productslide #slideleft:hover {
+	background: url(../images/homeslide/fleche_gauche.gif) no-repeat 0 100%;
+}
+
+#productslide #slideright {
+	float: right;
+	width: 11px;
+	height: 58px;
+	display: block;
+	cursor: pointer;
+	background: #fff url(../images/homeslide/fleche_droite.gif) no-repeat 0 0;
+}
+
+#productslide #slideright:hover {
+	background: url(../images/homeslide/fleche_droite.gif) no-repeat 0 100%;
+}
+/*-----------------------------------FIN FICHE PRODUIT--------------------------------*/
+
+/*-----------------------------------STATIC--------------------------------*/
+
+.top_gris_centre{
+	margin: 0 auto;
+}
+
+.top_blanc_centre{
+	overflow: hidden;
+	}
+
+.bottom_blanc_centre{
+	overflow: hidden;
+	}
+
+.bottom_gris_centre {
+	margin: 0 auto;
+}
+
+a.link_top_static{
+	margin: -5px 0 0 6px;
+	}
+
+
+#contenu_static {
+	position:relative;
+	top: 15px;
+	padding:0 15px 10px 15px;
+}
+
+/*-----------------------------------FIN STATIC--------------------------------*/
+
+/*----------------------------------PAGE CARTE----------------------------------*/
+
+.hgp_map_bottom {
+	overflow:hidden;
+}
+
+#col_droite {
+	width:162px;
+}
+
+a.link_simple {
+	margin: 2px 0 1px 6px;
+	width:140px;
+}
+
+input#queryInput {
+	width: 140px;
+	height: 15px;
+	padding-left: 2px;
+	padding-right: 5px;
+	margin: 0 0 15px 5px;
+	font-size: 10px;
+	color: #333;
+	font-style: italic;
+	border: 0;
+	border: 1px solid #b4b4b4;
+	background-image:none;
+	/*background: url(../../images/fond_input_google.gif) no-repeat 0 0;*/
+}
+
+#sidebar {
+	width:162px;
+	overflow:hidden;
+}
+
+.top_right_google_filter {
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+
+.bottom_right_google_filter {
+	overflow:hidden;
+}
+
+.conteneur_quartier {
+	width:918px;
+}
+
+.quartier_item {
+	margin:20px 5px 0 8px;
+	width:277px;
+}
+
+.bottom_cadre_quartier_item {
+	overflow:hidden;
+}
+
+.top_cadre_quartier_item {
+	overflow:hidden;
+}
+
+p#select_type_hotel{
+	position:absolute;
+	top:46px;
+	right:0;
+}
+
+p#select_type_pas_manquer{
+	position:absolute;
+	top:83px;
+	right:0;
+}
+
+p#select_type_see{
+	position:absolute;
+	top:125px;
+	right:0;
+}
+
+p#select_type_drink{
+	position:absolute;
+	top:165px;
+	right:0;
+}
+
+p#select_type_night{
+	position:absolute;
+	top:200px;
+	right:0;
+}
+/*----------------------------------FIN PAGE CARTE----------------------------------*/
+
+
+
+/*-------------INFO BULLE GOOGLE MAP-------------------*/
+
+#info_bulle_global {
+	position: absolute;
+	top: 10px;
+	left: 110px;
+	margin: 0;
+	padding: 0;
+	width: 250px;
+}
+
+img.pict-map {
+	margin-right: 280px;
+}
+
+#ad_infobulle {
+	width: 280px;
+
+}
+
+
+
+
+/*-------------FIN INFO BULLE GOOGLE MAP-------------------*/
+
+/*-------------PAGE QUARTIER-------------------*/
+
+
+.quartier_right_content {
+	width:320px;
+	float:left;
+	margin-left: 15px;
+}
+
+#quartier_intro h2 {
+	margin-left: 3px;
+}
+
+/*-------------FIN PAGE QUARTIER-------------------*/
+
+
+.product-shop .stars_fhe {
+    display: block;
+    float: right;
+    height: 5px;
+    margin: 0 0 0 5px;
+    position: absolute;
+    right: 5px;
+    top: -10px;
+    width: 50px;
+}

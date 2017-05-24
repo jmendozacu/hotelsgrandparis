@@ -1,0 +1,46 @@
+.col_gauche_googlemap li.li_hotel_map a {
+font-size: 11px;
+}
+#bloc_hotel #ul_last_home_hotels {
+		margin-bottom: 20px;
+	}
+
+/*MENU BIF*/
+#lava a {
+	font-size:11px;
+}
+	
+	/*BLOC ACTUS*/
+#col_droite #bloc_actus {
+	height:275px;
+}
+	
+#col_droite #bloc_actus div.ColumnLeft {
+	padding-bottom:10px;
+}
+
+/*MAP INFO BULLE*/
+#name_infobulle {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+img.pict-map {
+    border: 1px solid #B9B9B9;
+    float: left;
+    height: 100px;
+    margin-top: 5px;
+    width: 100px;
+	margin-right:10px;
+}
+
+#info_bulle_global {
+    float: none;
+}
+.footer .informational a {
+	padding-right: 0px !important
+}
+.footer .informational li.last {
+    background: none repeat scroll 0 0 transparent;
+    margin: 0 auto 0 -1px;
+}

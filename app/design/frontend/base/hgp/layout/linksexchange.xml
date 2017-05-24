@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default></default>
+	<linksexchange_index_index>
+		<reference name="root">
+                <action method="setTemplate"><template>1column_hgp.phtml</template></action>
+                <action method="setHeaderTitle" translate="title" module="linksexchange"><title>Links Exchange</title></action>
+        </reference>
+		<reference name="content">
+			<block type="hgp/linksexchange" name="linksexchange" template="hgp/linksexchange/linksexchange.phtml" />
+		</reference>
+	</linksexchange_index_index>
+</layout> 

@@ -1,0 +1,2076 @@
+@CHARSET "UTF-8";
+
+...
+.loading ....
+Firebug a atteint sa limite d 'enregistrements.  %S entrées ne sont pas montrées
+	.		Préférences	 
+GET http: //www.paris-inn.com /includes/php/getallpio.xml.php
+GET http: //www.paris-inn.com /includes/php/getallpio.xml.php
+	
+ 200 OK
+		 3.77s	main.js  (ligne  504) Firebug a atteint sa limite d
+	'enregistrements.  %S entrées ne sont pas montrées .		Préférences	 
+Panneau Réseau activé . Quand le panneau est désactivé,aucune requête n
+	'est affichée .
+GET fr-index.html#0
+http: //www.paris-inn.com /fr-index.html#0
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 8 KB
+	
+ 
+ 386ms
+GET imports.css
+http: //www.paris-inn.com /skins/css/imports.css
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 107 B
+	
+ 
+ 51ms
+GET prototype.js
+http: //www.paris-inn.com /skins/js/prototype.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 123 KB
+	
+ 
+ 4.8s
+GET Axis.js
+http: //www.paris-inn.com /skins/js/lib/Axis.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 73ms
+GET PopHtml.js
+http: //www.paris-inn.com /skins/js/lib/PopHtml.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 3 KB
+	
+ 
+ 798ms
+GET general.js
+http: //www.paris-inn.com /skins/js/general.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 11 KB
+	
+ 
+ 1.42s
+GET swfobject.js
+http: //www.paris-inn.com /skins/js/swfobject.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 6 KB
+	
+ 
+ 898ms
+GET fastbooking.class.js
+http: //www.paris-inn.com /skins/js/fastbooking.class.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 5 KB
+	
+ 
+ 595ms
+GET googlemap.class.js
+http: //www.paris-inn.com /skins/js/googlemap.class.js
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 16 KB
+	
+ 
+ 1.12s
+GET maps
+	?file=api&v=2&key=ABQIAAAABfCfVJ6YRX7801uApvUPDRS9yp1s5KssOGHN2IWe00qAuE6XKRRxf9zxkm5QCdaaJyxjwAUf1J2vgA
+http: //maps.google.com
+	/maps?file=api&v=2&key=ABQIAAAABfCfVJ6YRX7801uApvUPDRS9yp1s5KssOGHN2IWe00qAuE6XKRRxf9zxkm5QCdaaJyxjwAUf1J2vgA
+	
+ 200 OK
+	
+maps.google.com
+	
+ 4 KB
+	
+ 
+ 1.19s
+GET skeleton.css
+http: //www.paris-inn.com /skins/css/skeleton.css
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 496 B
+	
+ 
+ 597ms
+GET home.css
+http: //www.paris-inn.com /skins/css/home.css
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 14 KB
+	
+ 
+ 1.75s
+GET common.css
+http: //www.paris-inn.com /skins/css/common.css
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 38 KB
+	
+ 
+ 3.02s
+GET button.css
+http: //www.paris-inn.com /skins/css/button.css
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 468ms
+GET invalides.jpg
+http: //www.paris-inn.com
+	/data/galeries/bandeaux/lieux/230x230/invalides.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 15 KB
+	
+ 
+ 1.23s
+GET invalides.jpg
+http: //www.paris-inn.com
+	/data/galeries/bandeaux/lieux/190x190/invalides.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 13 KB
+	
+ 
+ 1.63s
+GET invalides.jpg
+http: //www.paris-inn.com
+	/data/galeries/bandeaux/lieux/120x120/invalides.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 5 KB
+	
+ 
+ 2.81s
+GET main.js
+http: //maps.gstatic.com /intl/fr_ALL/mapfiles/193c/maps2.api /main.js
+	
+ 200 OK
+	
+maps.gstatic.com
+	
+ 67 KB
+	
+ 
+ 1.2s
+GET transparent.png
+http: //maps.gstatic.com /intl/fr_ALL/mapfiles/transparent.png
+	
+ 200 OK
+	
+maps.gstatic.com
+	
+ 95 B
+	
+ 
+ 93ms
+GET ga.js
+http: //www.google-analytics.com /ga.js
+	
+ 200 OK
+	
+google-analytics.com
+	
+ 9 KB
+	
+ 
+ 159ms
+GET bg_site.gif
+http: //www.paris-inn.com /skins/img/bg_site.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 543 B
+	
+ 
+ 199ms
+GET spacer.gif
+http: //www.paris-inn.com /skins/img/spacer.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 151 B
+	
+ 
+ 11ms
+GET bg_header.jpg
+http: //www.paris-inn.com /skins/img/bg_header.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 3 KB
+	
+ 
+ 323ms
+GET h1_logo.gif
+http: //www.paris-inn.com /skins/img/h1_logo.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 2 KB
+	
+ 
+ 38ms
+GET fr_on.gif
+http: //www.paris-inn.com /skins/img/flags/fr_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 595 B
+	
+ 
+ 66ms
+GET fr_off.gif
+http: //www.paris-inn.com /skins/img/flags/fr_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 595 B
+	
+ 
+ 271ms
+GET us_on.gif
+http: //www.paris-inn.com /skins/img/flags/us_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 285ms
+GET us_off.gif
+http: //www.paris-inn.com /skins/img/flags/us_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 270ms
+GET uk_on.gif
+http: //www.paris-inn.com /skins/img/flags/uk_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 529ms
+GET uk_off.gif
+http: //www.paris-inn.com /skins/img/flags/uk_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 421ms
+GET it_on.gif
+http: //www.paris-inn.com /skins/img/flags/it_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 450ms
+GET it_off.gif
+http: //www.paris-inn.com /skins/img/flags/it_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 449ms
+GET de_on.gif
+http: //www.paris-inn.com /skins/img/flags/de_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 118 B
+	
+ 
+ 423ms
+GET de_off.gif
+http: //www.paris-inn.com /skins/img/flags/de_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 118 B
+	
+ 
+ 480ms
+GET spain_on.gif
+http: //www.paris-inn.com /skins/img/flags/spain_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 596 B
+	
+ 
+ 175ms
+GET spain_off.gif
+http: //www.paris-inn.com /skins/img/flags/spain_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 596 B
+	
+ 
+ 212ms
+GET btn7_on.gif
+http: //www.paris-inn.com /skins/img/btn7_on.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 110ms
+GET btn7_off.gif
+http: //www.paris-inn.com /skins/img/btn7_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 846 B
+	
+ 
+ 173ms
+GET space_google_menu.gif
+http: //www.paris-inn.com /skins/img/space_google_menu.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 152 B
+	
+ 
+ 70ms
+GET zoom_moins.gif
+http: //www.paris-inn.com /skins/img/zoom_moins.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 90 B
+	
+ 
+ 120ms
+GET zoom_plus.gif
+http: //www.paris-inn.com /skins/img/zoom_plus.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 123 B
+	
+ 
+ 127ms
+GET _tpm_plan.gif
+http: //www.paris-inn.com /skins/img/_tpm_plan.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 2 KB
+	
+ 
+ 94ms
+GET nav_map.gif
+http: //www.paris-inn.com /skins/img/nav_map.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 2 KB
+	
+ 
+ 109ms
+GET _map_btn_hov.gif
+http: //www.paris-inn.com /skins/img/_map_btn_hov.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 134ms
+GET _map_btn_off.gif
+http: //www.paris-inn.com /skins/img/_map_btn_off.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 139ms
+GET border_zoom_left.png
+http: //www.paris-inn.com /skins/img/border_zoom_left.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 364 B
+	
+ 
+ 167ms
+GET bg_mid_zoom.gif
+http: //www.paris-inn.com /skins/img/bg_mid_zoom.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 181 B
+	
+ 
+ 149ms
+GET emptybars.gif
+http: //www.paris-inn.com /skins/img/emptybars.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 176 B
+	
+ 
+ 153ms
+GET maskbars.png
+http: //www.paris-inn.com /skins/img/maskbars.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 307 B
+	
+ 
+ 152ms
+GET mid_bg_btn_zoom.gif
+http: //www.paris-inn.com /skins/img/mid_bg_btn_zoom.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 150 B
+	
+ 
+ 62ms
+GET left_bg_btn_zoom.gif
+http: //www.paris-inn.com /skins/img/left_bg_btn_zoom.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 580 B
+	
+ 
+ 37ms
+GET border_bg_btn_zoom.gif
+http: //www.paris-inn.com /skins/img/border_bg_btn_zoom.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 149 B
+	
+ 
+ 405ms
+GET right_bg_btn_zoom.gif
+http: //www.paris-inn.com /skins/img/right_bg_btn_zoom.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 570 B
+	
+ 
+ 393ms
+GET zoom_left_reset.gif
+http: //www.paris-inn.com /skins/img/zoom_left_reset.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 337 B
+	
+ 
+ 430ms
+GET zoom_bgmid_reset.gif
+http: //www.paris-inn.com /skins/img/zoom_bgmid_reset.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 98 B
+	
+ 
+ 420ms
+GET zoom_right_reset.gif
+http: //www.paris-inn.com /skins/img/zoom_right_reset.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 940 B
+	
+ 
+ 429ms
+GET border_zoom_right.png
+http: //www.paris-inn.com /skins/img/border_zoom_right.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 404 B
+	
+ 
+ 428ms
+GET nav_bottom_map.gif
+http: //www.paris-inn.com /skins/img/nav_bottom_map.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 57ms
+GET bottom_btn1.png
+http: //www.paris-inn.com /skins/img/bottom_btn1.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 2 KB
+	
+ 
+ 37ms
+GET bottom_btn4.png
+http: //www.paris-inn.com /skins/img/bottom_btn4.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 39ms
+GET bottom_btn5.png
+http: //www.paris-inn.com /skins/img/bottom_btn5.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 662 B
+	
+ 
+ 88ms
+GET bottom_btn2.png
+http: //www.paris-inn.com /skins/img/bottom_btn2.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 93ms
+GET bottom_btn3.png
+http: //www.paris-inn.com /skins/img/bottom_btn3.png
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 619 B
+	
+ 
+ 90ms
+GET bg_form_hostel.gif
+http: //www.paris-inn.com /skins/img/bg_form_hostel.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 1 KB
+	
+ 
+ 91ms
+GET visu.gif
+http: //www.paris-inn.com /skins/img/visu.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 2 KB
+	
+ 
+ 95ms
+GET selectbox2.gif
+http: //www.paris-inn.com /skins/img/selectbox2.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 754 B
+	
+ 
+ 44ms
+GET bg_input.gif
+http: //www.paris-inn.com /skins/img/bg_input.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 290 B
+	
+ 
+ 38ms
+GET selectbox3.gif
+http: //www.paris-inn.com /skins/img/selectbox3.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 451 B
+	
+ 
+ 37ms
+GET btn_blue_mid.gif
+http: //www.paris-inn.com /skins/img/btn_blue_mid.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 102 B
+	
+ 
+ 42ms
+GET btn_blue_left.gif
+http: //www.paris-inn.com /skins/img/btn_blue_left.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 164 B
+	
+ 
+ 43ms
+GET btn_blue_right.gif
+http: //www.paris-inn.com /skins/img/btn_blue_right.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 176 B
+	
+ 
+ 32ms
+GET noel-gourmand-2009.jpg
+http: //www.paris-inn.com /data/now-in-paris/noel-gourmand-2009.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 35 KB
+	
+ 
+ 645ms
+GET puce.gif
+http: //www.paris-inn.com /skins/img/puce.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 658 B
+	
+ 
+ 61ms
+GET fr-index.html
+http: //www.paris-inn.com /fr-index.html
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 8 KB
+	
+ 
+ 295ms
+GET my-genie-in-paris.jpg
+http: //www.paris-inn.com /skins/img/my-genie-in-paris.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 6 KB
+	
+ 
+ 101ms
+GET bg_footer.gif
+http: //www.paris-inn.com /skins/img/bg_footer.gif
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 752 B
+	
+ 
+ 115ms
+GET __utm.gif ?utmwv=4.6.5 &utmn=414089246&utmhn=www.paris-inn.com
+	&utmcs=UTF-8&utmsr=1920x1080&utmsc=32-bit&utmul=fr&utmje=1&utmfl=10.0
+	%20r42&utmdt=HOTELS%20PARIS%20INN%20%E2%80%93%20Vacances%2C%20voyage%20ou%20tourisme%20%E2%80%93%20Hotel%20de%20charme%20a%20Paris%20France&utmhid=1989635821&utmr=-&utmp=%2Ffr-index.html
+	&utmac=UA-5741171-1&utmcc=__utma%3D8282035.1734665716.1261427986.1261766745.1261781078.7
+	%3B%2B__utmz%3D8282035.1261427986.1.1.utmcsr
+	%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dparis%2520inn%3B
+http: //www.google-analytics.com /__utm.gif ?utmwv=4.6.5
+	&utmn=414089246&utmhn=www.paris-inn.com
+	&utmcs=UTF-8&utmsr=1920x1080&utmsc=32-bit&utmul=fr&utmje=1&utmfl=10.0
+	%20r42&utmdt=HOTELS%20PARIS%20INN%20%E2%80%93%20Vacances%2C%20voyage%20ou%20tourisme%20%E2%80%93%20Hotel%20de%20charme%20a%20Paris%20France&utmhid=1989635821&utmr=-&utmp=%2Ffr-index.html
+	&utmac=UA-5741171-1&utmcc=__utma%3D8282035.1734665716.1261427986.1261766745.1261781078.7
+	%3B%2B__utmz%3D8282035.1261427986.1.1.utmcsr
+	%3Dgoogle%7Cutmccn%3D(organic)%7Cutmcmd%3Dorganic%7Cutmctr%3Dparis%2520inn%3B
+	
+ 200 OK
+	
+google-analytics.com
+	
+ 35 B
+	
+ 
+ 173ms
+GET discover.swf
+http: //www.paris-inn.com /skins/swf/discover.swf
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 279 KB
+	
+ 
+ 5.2s
+GET opspe.swf
+http: //www.paris-inn.com /skins/swf/opspe.swf
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 29 KB
+	
+ 
+ 1.74s
+GET opspecial.xml.php
+http: //www.paris-inn.com /includes/php/opspecial.xml.php
+	
+ 200 OK
+	
+paris-inn.com
+	
+ ? 674ms
+GET opeSpeciale_opal.jpg
+http: //www.paris-inn.com /data/specialoffers/opeSpeciale_opal.jpg
+	
+ 200 OK
+	
+paris-inn.com
+	
+ 23 KB
+	
+ 
+ 3.52s
+GET transparent.png
+http: //maps.gstatic.com /intl/fr_ALL/mapfiles/transparent.png
+	
+ 200 OK
+	
+maps.gstatic.com
+	
+ 95 B
+	
+ 
+ 48ms
+GET lyrs =m@115&hl=fr&src=api&x=2074&y=1409&z=12&s=Galileo
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2074&y=1409&z=12&s=Galileo
+	
+ 200 OK
+	
+mt0.google.com
+	
+ 34 KB
+	
+ 
+ 1.49s
+GET lyrs =m@115&hl=fr&src=api&x=2074&y=1408&z=12&s=Galile
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2074&y=1408&z=12&s=Galile
+	
+ 200 OK
+	
+mt0.google.com
+	
+ 35 KB
+	
+ 
+ 2.79s
+GET lyrs =m@115&hl=fr&src=api&x=2075&y=1409&z=12&s=Ga
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2075&y=1409&z=12&s=Ga
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 32 KB
+	
+ 
+ 3.01s
+GET lyrs =m@115&hl=fr&src=api&x=2075&y=1408&z=12&s=G
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2075&y=1408&z=12&s=G
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 33 KB
+	
+ 
+ 3.09s
+GET vp ?spn=0.109324, 0.20771
+	&z=12&key=ABQIAAAABfCfVJ6YRX7801uApvUPDRS9yp1s5KssOGHN2IWe00qAuE6XKRRxf9zxkm5QCdaaJyxjwAUf1J2vgA&mapclient=jsapi&vp=48.859181,
+	2.343736
+http: //maps.google.com /maps/vp?spn=0.109324, 0.20771
+	&z=12&key=ABQIAAAABfCfVJ6YRX7801uApvUPDRS9yp1s5KssOGHN2IWe00qAuE6XKRRxf9zxkm5QCdaaJyxjwAUf1J2vgA&mapclient=jsapi&vp=48.859181,
+	2.343736
+	
+ 200 OK
+	
+maps.google.com
+	
+ 4 KB
+	
+ 
+ 34ms
+GET getallpio.xml.php
+http: //www.paris-inn.com /includes/php/getallpio.xml.php
+	
+	
+paris-inn.com
+	
+ ? _
+GET bandeauhome.xml.php ?select=home
+http: //www.paris-inn.com /includes/php/bandeauhome.xml.php ?select=home
+	
+ 200 OK
+	
+paris-inn.com
+	
+ ? 452ms
+GET lyrs =m@115&hl=fr&src=api&x=2073&y=1409&z=12&s=Gali
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2073&y=1409&z=12&s=Gali
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 32 KB
+	
+ 
+ 2.38s
+GET lyrs =m@115&hl=fr&src=api&x=2073&y=1408&z=12&s=Gal
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2073&y=1408&z=12&s=Gal
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 34 KB
+	
+ 
+ 2.64s
+GET  %7Bmod_drag,mod_ctrapi,mod_api_gc,mod_apidir %7D.js
+http: //maps.gstatic.com /cat_js/intl/fr_ALL/mapfiles/193c/maps2.api
+	/%7Bmod_drag,mod_ctrapi,mod_api_gc,mod_apidir %7D.js
+	
+ 200 OK
+	
+maps.gstatic.com
+	
+ 2 KB
+	
+ 
+ 2.07s
+GET lyrs =m@115&hl=fr&src=api&x=2074&y=1410&z=12&s=
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2074&y=1410&z=12&s=
+	
+	
+mt0.google.com
+	
+ ? GET lyrs =m@115&hl=fr&src=api&x=2074&y=1407&z=12&s=Galil
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2074&y=1407&z=12&s=Galil
+	
+	
+mt0.google.com
+	
+ ? GET lyrs =m@115&hl=fr&src=api&x=2075&y=1410&z=12&s=Gal
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2075&y=1410&z=12&s=Gal
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 33 KB
+	
+ 
+ 1.2s
+GET lyrs =m@115&hl=fr&src=api&x=2075&y=1407&z=12&s=
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2075&y=1407&z=12&s=
+	
+ 200 OK
+	
+mt1.google.com
+	
+ 30 KB
+	
+ 
+ 2.33s
+GET lyrs =m@115&hl=fr&src=api&x=2073&y=1410&z=12&s=Galil
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2073&y=1410&z=12&s=Galil
+	
+	
+mt1.google.com
+	
+ ? _
+GET lyrs =m@115&hl=fr&src=api&x=2076&y=1409&z=12&s=Galil
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2076&y=1409&z=12&s=Galil
+	
+	
+mt0.google.com
+	
+ ? _
+GET lyrs =m@115&hl=fr&src=api&x=2076&y=1408&z=12&s=Gali
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2076&y=1408&z=12&s=Gali
+	
+	
+mt0.google.com
+	
+ ? _
+GET lyrs =m@115&hl=fr&src=api&x=2073&y=1407&z=12&s=Ga
+http: //mt1.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2073&y=1407&z=12&s=Ga
+	
+	
+mt1.google.com
+	
+ ? _
+GET lyrs =m@115&hl=fr&src=api&x=2076&y=1410&z=12&s=Galile
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2076&y=1410&z=12&s=Galile
+	
+	
+mt0.google.com
+	
+ ? _
+GET lyrs =m@115&hl=fr&src=api&x=2076&y=1407&z=12&s=Gal
+http: //mt0.google.com
+	/vt/lyrs=m@115&hl=fr&src=api&x=2076&y=1407&z=12&s=Gal
+	
+	
+mt0.google.com
+	
+ ? _
+GET arc.jpg
+http: //www.paris-inn.com /data/galeries/bandeaux/lieux/230x230/arc.jpg
+	
+	
+paris-inn.com
+	
+ ? _
+GET arc.jpg
+http: //www.paris-inn.com /data/galeries/bandeaux/lieux/190x190/arc.jpg
+	
+	
+paris-inn.com
+	
+ ? _
+GET arc.jpg
+http: //www.paris-inn.com /data/galeries/bandeaux/lieux/120x120/arc.jpg
+	
+	
+paris-inn.com
+	
+ ? _
+ 5 requêtes
+			
+ 55 KB
+	
+ (0 B à partir du cache )
+ 4.01s
+ <html xmlns ="http: //www.w3.org /1999/xhtml" xml:lang ="fr"> <head> </head>
+	<div id ="_firebugConsole" style ="display: none ;" FirebugVersion ="1.4.5
+	"/> <body> <div id ="Site"> <div class ="header"> </div> <div class
+	="nav"> </div> <div id ="Central" class ="home"> <div class ="col-left">
+	<div class ="anim"> </div> <div class ="map-hotels" style ="margin-top: 
+	0px ;"> <h3>Choisissez votre hôtel à Paris </h3> <div class ="map"> <ul class
+	="top"> <li class ="titre"> </li> <li> </li> <li class ="btn1"> </li> <li class
+	="btn2"> </li> <li class ="btn3"> </li> <li class ="btn4"> </li> <li class
+	="btn5"> </li> </ul> <div id ="googleMapEdit" class ="googlemap" style
+	="position: relative ; background-color: rgb (229, 227, 223);"> </div>
+	<ul class ="hide"> </ul> <div class ="zoom"> </div> <div id
+	="resultdiv" class ="result" style ="display: none ;"> </div> <ul class
+	="bottom"> </ul> </div> </div> <div id ="trip" style ="display: none ;" dir
+	="ltr"/> <script type ="text/javascript"> </script> </div> <div class
+	="col-right"> </div> </div> <div class ="footer"> </div> </div> <div id
+	="myHtmlPop"/> <script type ="text/javascript"> </script> </body> </html>.anim
+	{
+	display: inline;
+	float: left;
+	height: 295px;
+	margin: 0;
+	width: 651px;
+}
+
+.map-hotels {
+	display: inline;
+	float: left;
+	margin: 0;
+	padding-left: 13px;
+	width: 638px;
+}
+
+.map-hotels h3 {
+	position: relative !important;
+}
+
+.map-hotels .map {
+	background-image: url(../img/_tpm_plan.gif);
+	display: block;
+	height: 546px;
+	margin: 0;
+	padding: 8px 0 0 7px;
+	width: 616px;
+}
+
+#Central #googleMapEdit span {
+	font-size: 10px !important;
+	font-weight: normal;
+	text-align: center;
+	white-space: normal;
+}
+
+.map .top {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/nav_map.gif) no-repeat scroll 0 0;
+	display: block;
+	height: 31px;
+	margin: 0;
+	padding: 0 0 0 9px;
+	position: relative;
+	top: 0;
+	width: 600px;
+}
+
+.map .hide {
+	clear: both;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 38px;
+	z-index: 99;
+}
+
+.map .top li,.map .top li a {
+	background-position: right center;
+	background-repeat: no-repeat;
+	display: inline;
+	float: left;
+	height: 31px;
+	margin: 0;
+	padding: 0;
+}
+
+.map .top li.titre {
+	height: 19px;
+	padding-right: 16px;
+	padding-top: 8px;
+}
+
+.map .top li a {
+	height: 21px;
+	padding-left: 10px;
+	padding-right: 24px;
+	padding-top: 10px;
+}
+
+.map .top li.btn1 {
+	background-image: url(../img/_map_btn_hov.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn1 a {
+	background-image: url(../img/_map_btn_off.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn2 {
+	background-image: url(../img/_map_btn_hov.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn2 a {
+	background-image: url(../img/_map_btn_off.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn3 {
+	background-image: url(../img/_map_btn_hov.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn3 a {
+	background-image: url(../img/_map_btn_off.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn4 {
+	background-image: url(../img/_map_btn_hov.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn4 a {
+	background-image: url(../img/_map_btn_off.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn5 {
+	background-image: url(../img/_map_btn_hov.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li.btn5 a {
+	background-image: url(../img/_map_btn_off.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.map .top li a {
+	color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 11px;
+	text-align: right;
+}
+
+.map .top li a:hover,.map .top li a.on {
+	-moz-background-clip: border !important;
+	-moz-background-inline-policy: continuous !important;
+	-moz-background-origin: padding !important;
+	background: transparent none repeat scroll 0 0 !important;
+	text-decoration: none;
+}
+
+.map .googlemap {
+	display: block;
+	height: 484px;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0;
+	width: 605px;
+}
+
+.map .bottom {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/nav_bottom_map.gif) no-repeat scroll
+		0 0;
+	display: block;
+	height: 23px !important;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 524px;
+	width: 609px;
+}
+
+.map .bottom li {
+	float: left;
+	position: relative;
+}
+
+.map .bottom li {
+	cursor: pointer;
+}
+
+.map .bottom li {
+	height: 16px;
+	margin-left: 6px;
+	padding-left: 22px;
+	padding-right: 5px;
+	padding-top: 6px;
+	top: -3px;
+}
+
+.map .bottom li {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.map .bottom .btn6 {
+	height: 18px;
+	padding-left: 33px;
+	padding-top: 12px;
+	top: -10px;
+}
+
+.map .bottom .btn6 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/bottom_btn1.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottom .btn9 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/bottom_btn4.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottom .btna {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/bottom_btn5.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottom .btn7 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/bottom_btn2.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottom .btn8 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/bottom_btn3.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottomaccess {
+	background-image: url(../img/nav_bottomaccess_map.gif);
+	background-repeat: no-repeat;
+	color: white;
+	display: block;
+	font-size: 8px;
+	font-weight: normal;
+	height: 23px !important;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 392px;
+	width: 395px;
+}
+
+.map .bottomaccess li {
+	float: left;
+	position: relative;
+}
+
+.map .bottomaccess li {
+	height: 16px;
+	margin-left: 2px;
+	padding-left: 16px;
+	padding-right: 1px;
+	padding-top: 6px;
+	top: -3px;
+}
+
+.map .bottomaccess li.btn6 {
+	height: 18px;
+	padding-left: 28px;
+	padding-right: 2px;
+	padding-top: 12px;
+	top: -10px;
+}
+
+.map .bottomaccess li.btn6 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/access_btn1.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottomaccess li.btn7 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/access_btn4.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottomaccess li.btn8 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/access_btn5.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottomaccess li.btn9 {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/access_btn2.png) no-repeat scroll 0 0
+		;
+}
+
+.map .bottomaccess li.btna {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/access_btn3.png) no-repeat scroll 0 0
+		;
+}
+
+.map .ssrub {
+	-moz-background-clip: border !important;
+	-moz-background-inline-policy: continuous !important;
+	-moz-background-origin: padding !important;
+	background: #66A5CF none repeat scroll 0 0 !important;
+	border: 1px solid #4E83A7;
+	clear: both !important;
+	display: inline !important;
+	float: left !important;
+	height: auto !important;
+	margin: 0;
+	padding: 0 !important;
+	position: absolute;
+	visibility: hidden;
+	width: 180px !important;
+}
+
+.map .ssrub a {
+	background-color: #66A5CF;
+	clear: both;
+	color: #FFFFFF;
+	display: inline;
+	float: left;
+	height: 100%;
+	margin: 0;
+	padding: 3px !important;
+	width: 174px !important;
+}
+
+.map .ssrub a:hover {
+	background-color: #FFFFFF;
+	color: #353F47;
+	width: 174px !important;
+}
+
+.map #SSrub1 {
+	left: 71px;
+}
+
+.map #SSrub2 {
+	left: 157px;
+}
+
+.map #SSrub3 {
+	left: 249px;
+}
+
+.map #SSrub4 {
+	left: 324px;
+}
+
+.map #SSrub5 {
+	left: 368px;
+}
+
+.map-hotels .map {
+	position: relative !important;
+}
+
+.map .zoom {
+	bottom: 45px;
+	clear: both;
+	display: inline;
+	float: left;
+	height: 85px;
+	margin: 0;
+	position: absolute;
+	right: 15px;
+	width: 165px;
+	z-index: 1;
+}
+
+:first-child+html .map .zoom {
+	width: auto !important;
+}
+
+.map .zoom h4 {
+	color: #28495F;
+	display: inline;
+	float: left;
+	font-size: 14px;
+	margin: 0 4px 0 0;
+	padding: 0;
+}
+
+.zoom .process {
+	display: inline;
+	float: left;
+	height: 20px;
+	margin: 0 2px 0 0;
+	padding: 0;
+	position: relative;
+}
+
+.zoom .process {
+	margin-left: 20px;
+}
+
+.zoom .process .less,.zoom .process .more {
+	float: left;
+	height: 10px;
+	margin-top: 2px;
+	width: 10px;
+}
+
+.zoom .process .more {
+	margin-left: 2px;
+}
+
+.zoom .process .emptybars {
+	display: inline;
+	float: left;
+	height: 12px;
+	margin-left: 5px;
+	margin-top: 2px;
+	position: relative;
+	width: 53px;
+}
+
+.zoom .process .jauge,.zoom .process .maskbars {
+	font-size: 1px;
+	height: 12px;
+	line-height: 1px;
+	margin: 0;
+	position: absolute;
+}
+
+.zoom .process .jauge {
+	background-color: #28495F;
+	z-index: 1;
+}
+
+.zoom .process .emptybars .maskbars {
+	width: 53px;
+	z-index: 2 !important;
+}
+
+.zoom .process .emptybars .maskbars {
+	background-image: url(../img/maskbars.png);
+}
+
+.zoom .process .emptybars {
+	background-image: url(../img/emptybars.gif);
+}
+
+.zoom #btns-map {
+	background-image: url(../img/mid_bg_btn_zoom.gif);
+	background-repeat: repeat-x;
+	clear: both;
+	display: inline;
+	float: left;
+	height: 23px;
+	margin-left: 5px;
+	margin-top: 5px;
+	padding: 0;
+	width: auto !important;
+}
+
+.zoom #btns-map li,.zoom #btns-map li a {
+	color: #FFFFFF;
+	display: inline;
+	float: left;
+	height: 21px;
+	margin: 0;
+	padding: 2px 0 0;
+	width: auto;
+}
+
+.zoom #btns-map li a:hover {
+	text-decoration: underline;
+}
+
+.zoom #btns-map li.left {
+	background-image: url(../img/left_bg_btn_zoom.gif) !important;
+	background-position: left center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.zoom #btns-map li.right {
+	background-image: url(../img/right_bg_btn_zoom.gif) !important;
+	background-position: right center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.zoom #btns-map li.plan {
+	background-image: url(../img/border_bg_btn_zoom.gif) !important;
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.zoom #btns-map li.satellite {
+	background-image: url(../img/border_bg_btn_zoom.gif) !important;
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.zoom #btns-map li.relief {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.zoom #btns-reset {
+	background-repeat: repeat-x;
+	clear: both;
+	display: inline;
+	float: left;
+	height: 23px;
+	margin-left: 5px;
+	margin-top: -10px !important;
+	padding: 0;
+	width: auto !important;
+}
+
+:first-child+html .zoom #btns-reset {
+	margin-top: 2px !important;
+}
+
+.zoom #btns-reset span,.zoom #btns-reset span a {
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	font-weight: bold;
+	height: 21px;
+	margin: 0;
+	padding: 2px 0 0;
+	width: auto;
+}
+
+.zoom #btns-reset span a:hover {
+	
+}
+
+.zoom #btns-reset span.left {
+	background-image: url(../img/zoom_left_reset.gif) !important;
+	background-position: left center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.zoom #btns-reset span.right {
+	background-image: url(../img/zoom_right_reset.gif) !important;
+	background-position: right center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.zoom #btns-reset span.reset {
+	background-image: url(../img/zoom_bgmid_reset.gif);
+	background-repeat: repeat-x;
+	font-size: 11px;
+	width: 130px;
+}
+
+.map .zoom .left {
+	background-image: url(../img/border_zoom_left.png);
+	display: inline;
+	float: left;
+	height: 85px;
+	width: 6px;
+}
+
+.map .zoom .mid {
+	background-image: url(../img/bg_mid_zoom.gif);
+	background-repeat: repeat-x;
+	display: inline;
+	float: left;
+	height: 80px;
+	margin: 0;
+	padding-top: 5px;
+	width: auto;
+}
+
+.map .zoom .right {
+	background-image: url(../img/border_zoom_right.png);
+	display: inline;
+	float: left;
+	height: 85px;
+	width: 6px;
+}
+
+.map .result {
+	clear: both;
+	display: inline;
+	float: left;
+	height: 118px;
+	left: 14px;
+	margin: 0;
+	position: absolute;
+	top: 45px;
+	width: auto !important;
+	z-index: 1;
+}
+
+.map .result h4 {
+	color: #28495F;
+	display: inline;
+	float: left;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+.map .result p {
+	clear: both;
+	color: #000000;
+	display: inline;
+	float: left;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+}
+
+.map .result .left {
+	background-image: url(../img/border_result_left.png);
+	display: inline;
+	float: left;
+	height: 118px;
+	width: 6px;
+}
+
+.map .result .mid {
+	background-image: url(../img/mid_bg_result.gif);
+	background-repeat: repeat-x;
+	display: inline;
+	float: left;
+	height: 113px;
+	margin: 0;
+	padding-top: 5px;
+	width: auto;
+}
+
+.map .result .right {
+	background-image: url(../img/border_result_right.png);
+	display: inline;
+	float: left;
+	height: 118px;
+	width: 6px;
+}
+
+#contentSubSwitch .map {
+	
+}
+
+.result #print {
+	background-image: url(../img/mid_bg_btn_zoom.gif);
+	background-repeat: repeat-x;
+	clear: both;
+	display: inline;
+	float: left;
+	height: 23px;
+	margin-left: 0;
+	margin-top: 2px;
+	padding: 0;
+	width: auto !important;
+}
+
+.result #print li,.result #print li a {
+	color: #FFFFFF;
+	display: inline;
+	float: left;
+	height: 21px;
+	margin: 0;
+	padding: 2px 0 0;
+	width: auto;
+}
+
+.result #print li a:hover {
+	text-decoration: none;
+}
+
+.result #print li.left {
+	background-image: url(../img/left_bg_btn_zoom.gif) !important;
+	background-position: left center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.result #print li.right {
+	background-image: url(../img/right_bg_btn_zoom.gif) !important;
+	background-position: right center;
+	background-repeat: no-repeat;
+	filter: none !important;
+	width: 7px !important;
+}
+
+.result #print li.itineraire {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ope {
+	display: inline;
+	float: left;
+	margin: 0;
+	width: 303px;
+}
+
+.push {
+	display: block;
+	margin: 0;
+	width: 303px;
+}
+
+.event {
+	padding-bottom: 9px !important;
+	padding-top: 6px !important;
+}
+
+.push .item {
+	display: block;
+	height: 224px;
+	margin: 0;
+	padding: 11px 14px 14px;
+	position: relative;
+	top: -7px;
+	width: 275px;
+}
+
+.push .item h4 {
+	color: #4F8DB7;
+	display: block;
+	font-size: 18px;
+	margin: 0;
+}
+
+.push .item em {
+	color: #27485D;
+	display: block;
+	font-size: 11px;
+	font-style: normal;
+	margin: 0;
+	padding-bottom: 6px;
+	padding-top: 6px;
+}
+
+.push .item p {
+	color: #27485D;
+	display: block;
+	font-size: 11px;
+	font-style: normal;
+	line-height: 11px;
+	margin: 0;
+	padding: 0;
+}
+
+.push .link {
+	background-image: url(../img/puce.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: #27485D;
+	display: block;
+	font-weight: bold;
+	height: 20px;
+	margin: 5px 0 0;
+	padding-left: 20px;
+	padding-top: 1px;
+	width: 240px;
+}
+
+.push .hover {
+	left: 0;
+	margin: 0;
+	position: absolute;
+	top: 172px;
+}
+
+.blocnews {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: transparent url(../img/my-genie-in-paris.jpg) no-repeat
+		scroll 0 0;
+	display: block;
+	height: 66px;
+	margin: 9px 0 0;
+	padding: 0 0 0 80px;
+	width: 303px;
+}
+
+.blocnews h3 {
+	display: block;
+	margin: 0;
+}
+
+.blocnews h3 a {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+.newsletter {
+	background-color: #FFFFFF;
+	color: #27485D;
+	display: block;
+	font-weight: bold;
+	height: 62px;
+	margin: 9px 0 0;
+	padding-left: 11px;
+	padding-top: 4px;
+	width: 292px;
+}
+
+.newsletter h5 {
+	display: block;
+	font-size: 11px;
+	margin: 0;
+}
+
+.newsletter form,.newsletter fieldset {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.newsletter fieldset {
+	height: 22px;
+	margin-top: 3px;
+}
+
+#newsletter .bg {
+	display: inline;
+	float: left;
+	height: 19px;
+	margin: 0;
+	padding: 0;
+	width: 251px;
+}
+
+#newsletter .bg .text {
+	background-color: #EEF0F7;
+	border: 1px solid #DFDFDF;
+	color: #4A4A4A;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	height: 14px;
+	margin: 0;
+	padding: 2px;
+	width: 247px;
+}
+
+#newsletter .button {
+	display: inline;
+	float: left;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	width: 27px;
+}
+
+#newsletter .button {
+	display: inline;
+	float: left;
+	height: 25px;
+	margin: 0 0 0 5px;
+	padding: 0;
+	width: 27px;
+}
+
+#newsletter p {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}

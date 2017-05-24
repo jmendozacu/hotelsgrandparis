@@ -1,0 +1,37 @@
+	<?php 
+	// On recupere dynamiquement l'id du store courant
+	$storeId = Mage::app()->getStore()->getId(); 
+	//exit('store => ' . $storeId);
+	//$storeId = 1;
+	
+	$_objPub   = Mage::getModel('pub/pub');
+	
+	$_unobjPub = $_objPub
+	               ->getCollection()
+	               ->addFilter('hgp_pub_store', $storeId)
+	               ->getLastItem();
+	
+	if ($_unobjPub){
+	
+	/*
+	 * Emplacement des fichiers
+	 */
+	$ds = '/';
+	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds .'pub' . $ds;								
+	$_urlInterface  = $_moduleBaseUrl . 'images' . $ds;
+	
+	$_moduleBaseDir =  Mage::getBaseDir('media') . DS .'pub' . DS;
+	$_pathInterface = $_moduleBaseDir . 'images' . DS;
+
+	?>
+	<div id="hgppub">
+		<div id="hgppub-img">
+			<a href="<?php echo ( $this->htmlEscape($_unobjPub->hgp_pub_url))?>"><img src="<?php echo ($this->htmlEscape($_urlInterface . $_unobjPub->hgp_pub_img))?>" alt="<?php echo ( $this->htmlEscape($_unobjPub->hgp_pub_title))?>" title="<?php echo ( $this->htmlEscape($_unobjPub->hgp_pub_title))?>" /></a>
+		</div>
+		
+	</div>
+	<?php 
+	} else {
+	?>
+	<p>&nbsp;</p>
+	<?php }?>

@@ -1,0 +1,212 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php 
+$_category = Mage::getModel('catalog/category');
+$_category->load(6);
+$_collection = $_category->getProductCollection();
+$_arrProducts = array();
+$_helper = $this->helper('catalog/output');
+
+// On recupere dynamiquement l'id du store courant
+	$storeId = Mage::app()->getStore()->getId();
+
+foreach ($_collection as $_product){
+	$result[] = $_product->getId();
+}
+$i=0; 
+foreach ($result as $_product_id){ 
+    $i++;
+    $_product = Mage::getModel('catalog/product');
+    $_product->load($_product_id);
+    $_arrProducts[] = array(
+    						'id' => $_product_id, 
+    						'name' => $_helper->productAttribute($_product, $_product->getName(), 'name'),
+    						'adresse' => $_helper->productAttribute($_product, $_product->getAdresse(), 'adresse'),
+    						'code_postal' => $_helper->productAttribute($_product, $_product->getCode_postal(), 'code_postal'),
+    						'ville' => Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'ville'),
+    						'telephone' => $_helper->productAttribute($_product, $_product->getTelephone(), 'telephone'),
+    						'fax' => $_helper->productAttribute($_product, $_product->getFax(), 'fax '),
+    						'email' => $_helper->productAttribute($_product, $_product->getEmail(), 'email'),
+    						'fastbooking_id' => $_helper->productAttribute($_product, $_product->getFastbooking_id(), 'availpro_id')
+    					);
+}
+$_countArrProduct = count($_arrProducts);
+//print_r($_arrProducts);exit;
+?>
+<script langage="text/javascript">
+<?php 
+	  $separateur = "====";
+	  echo 'var listHotels = new Array('."\n";
+      
+	  for($i=0;$i<$_countArrProduct;$i++){
+	    if ($i != ($_countArrProduct-1)){
+	      	echo '"'.$_arrProducts[$i]['name'].$separateur.
+		    	 $_arrProducts[$i]['adresse'].$separateur.
+		    	 $_arrProducts[$i]['code_postal'].$separateur.
+		    	 $_arrProducts[$i]['ville'].$separateur.
+		    	 $_arrProducts[$i]['telephone'].$separateur.
+		    	 $_arrProducts[$i]['fax'].$separateur.
+		    	 $_arrProducts[$i]['email'].$separateur.
+		    	 $_arrProducts[$i]['fastbooking_id'].$separateur.'"'.
+		    	 ','.
+		    	 "\n";
+	    } else {
+	    	echo '"'.$_arrProducts[$i]['name'].$separateur.
+	    	 $_arrProducts[$i]['adresse'].$separateur.
+	    	 $_arrProducts[$i]['code_postal'].$separateur.
+	    	 $_arrProducts[$i]['ville'].$separateur.
+	    	 $_arrProducts[$i]['telephone'].$separateur.
+	    	 $_arrProducts[$i]['fax'].$separateur.
+	    	 $_arrProducts[$i]['email'].$separateur.
+	    	 $_arrProducts[$i]['fastbooking_id'].$separateur.'"'.
+	    	 "\n";
+	    }
+	  }
+	  
+	  echo ');'."\n"."\n"."\n";
+?>	
+function createTableau(){
+	aux = document.contactForm.select_hotel.selectedIndex;
+	if (aux == 0) return false;
+	var  reg=new  RegExp("[====]+", "g");
+	var tableau = listHotels[aux-1].split(reg);	
+	return tableau;
+}
+
+function updateDiv(){
+	var tab = createTableau();
+	if (tab != 0){
+		var html = '';
+		html0 = '<h2 class="contact_hotel"><?php echo $this->__('Hotel contacts')?></h2>';
+		html1 = '<h3 class="titre_hotel_contact">'+tab[0]+'</h3>';
+		html2 = '<adress>'+tab[1]+'<br />'+tab[2]+' '+tab[3]+'</adress>';
+		html3 = '<ul>';
+		html4 = '	<li><?php echo $this->__('Tel :')?>'+tab[4]+'</li>';
+		html5 = '	<li><?php echo $this->__('Fax :')?>'+tab[5]+'</li>';
+		html6 = '	<li class=contact_email><?php echo $this->__('Email : ')?>'+tab[6]+'</li>';
+		//html7 = '	<li><a href="mailto:'+tab[6]+'" class="link-more" onclick="_gaq.push([\'_trackEvent\', \'Email\', \'Contact\', \''+ tab[0] +'\', <?php echo $storeId ?>]);"><?php echo $this->__('Contact your hotel')?></a></li>';
+		html8 = '</ul>';
+		document.getElementById("target_div").style.backgroundColor = "#f5f5f5";
+		//html = html1 + html2 + html3 + html4 + html5 + html6 + html7 + html8;
+		html = html1 + html2 + html3 + html4 + html5 + html6 + html8;
+		html2 = '<?php echo $this->__('Your about to contact')?> : ' + tab[0];
+		document.getElementById("info_contact").style.display = "block";
+		//MAJ du destinaire
+		document.contactForm.destinataire.value    = tab[6];		
+		document.contactForm.nomDestinataire.value = tab[0];		
+	}else{
+		html0 = html = html1 = html2 = document.contactForm.destinataire.value = document.contactForm.nomDestinataire.value = '';
+		document.getElementById("info_contact").style.display = "none";
+		document.getElementById("target_div").style.backgroundColor = "#FFF";
+	}
+	document.getElementById("target_div").innerHTML = html;		
+	document.getElementById("info_contact").innerHTML = html2;
+	document.getElementById("titre_cadre").innerHTML = html0;
+
+	//Debug
+	//console.log("Destinaitre = %s", document.contactForm.destinataire.value);	
+	$(function(){
+		  alert('on rentre');
+	});
+			
+}
+</script>
+	<h1><?php echo Mage::helper('contacts')->__('Contact Us') ?></h1>
+	<form action="<?php echo $this->getFormAction(); ?>" id="contactForm" name="contactForm" method="post">
+	<input type="hidden" value="" name="destinataire" id="destinataire">
+	<input type="hidden" value="" name="nomDestinataire" id="nomDestinataire">
+	    <fieldset class="group-select">
+	    <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+	        <p style="margin-left:10px; font-size: 12px;"><?php echo $this->__('If you need further information'); ?></p>	        
+			<div id="info_contact"></div>
+	        <ul class="formulaire_contact">
+        		<li class="fields">
+	                <div class="field">
+	                    <label for="name"><?php echo $this->__('Contact an hotel')?></label>
+	                    <div class="input-box">
+							<select name="select_hotel" id="select_hotel" onchange="javascript:updateDiv();">
+								<option value="0"></option>
+								<?php for ($i=0;$i<$_countArrProduct;$i++){
+									echo '<option value="'.$i.'">'.$_arrProducts[$i]['name'].'</option>'."\n";
+								}?>
+							</select>
+	                    </div>
+	                </div>	                
+	            </li>
+        		<li>
+	                <div class="input-box">
+	                    <label for="name"><?php echo Mage::helper('contacts')->__('Name') ?> <span class="required">*</span></label><br />
+	                    <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Name') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserName()) ?>" class="required-entry input-text" type="text" />
+	                </div>
+	
+	                <div class="input-box">
+	                    <label for="email"><?php echo Mage::helper('contacts')->__('Email') ?> <span class="required">*</span></label><br />
+	                    <input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Email') ?>" value="<?php echo $this->htmlEscape($this->helper('contacts')->getUserEmail()) ?>" class="required-entry input-text validate-email" type="text" />
+	                </div>
+	
+	                <div class="clear"></div>
+	
+	                <div class="input-box">
+	                    <label for="telephone"><?php echo Mage::helper('contacts')->__('Telephone') ?></label><br />
+	                    <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Telephone') ?>" value="" class="input-text" type="text" />
+	                </div>
+	
+	                <div class="clear"></div>
+	
+	                <div class="input-box">
+	                    <label for="comment"><?php echo $this->__('Message') ?> <span class="required">*</span><span class="txt-hgp-form-message"><br />(<?php echo $this->__('If your application is for a reservation, we thank you indicate your reservation number'); ?>)</span></label><br />
+	                    <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Comment') ?>" class="required-entry input-text" style="height:150px;width:400px;" cols="50" rows="5"></textarea>
+	                </div>
+					<div class="input-box">
+	                    <p id="captcha1">
+	                    <?php  // recaptcha
+					        if( !(Mage::getStoreConfig("fontis_recaptcha/recaptcha/when_loggedin")  && (Mage::getSingleton('customer/session')->isLoggedIn())) )
+					        {
+					            if (Mage::getStoreConfig("fontis_recaptcha/recaptcha/contacts"))
+					                echo $this->getChildHtml('recaptcha_box');
+					        }
+					    ?>
+						</p>
+	                </div>
+                </li>
+	                </ul>
+	                <div class="col-contact-hotel">    
+						<div id="titre_cadre"></div>
+						<div class="coord-hotels" id="target_div"></div>
+					</div>
+	    </fieldset>
+	    <div class="button-set">
+	        <p class="required hgp-form"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+	        <button class="form-button-alt hgp-text-button-search" type="submit"><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></button>
+	    </div>
+	</form>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+<script type="text/javascript">
+    var contactForm = new VarienForm('contactForm', true);
+</script>

@@ -1,0 +1,40 @@
+*{background:none!important;min-height:0!important;text-align:left!important}
+body{background:#fff;font-size:9pt;margin:15px}
+a,a:hover{color:#2976C9!important}
+td{border-color:#ccc!important}
+hr{visibility:visible;height:1px;margin:20px 0}
+.head{text-align:left}
+.head *,.page-head *,.page-head-alt *{display:block!important;float:none}
+.content,.box{padding:5px 0!important}
+h1#logo,.this-is-a-demo,.quick-access{float:none}
+.quick-access{float:none;display:none}
+.side-col{float:none!important}
+.col-main{width:auto!important;float:none!important;margin:0!important}
+.footer{margin-top:2em;border-top:1px solid #ccc}
+.footer .informational{display:none;border:0}
+.base-mini .head *{padding:0}
+ul.more-views{margin-bottom:10px}
+.checkout-progress{margin:10px 0!important;padding:0}
+.checkout-progress *{display:inline!important;padding:0 10px 0 0 !important}
+.listing-type-list .listing-item{border-top:1px dashed #ddd;padding:10px 0}
+.login-box td{border-bottom:0}
+.grand-total{background:none!important;color:#2f2f2f}
+p.grand-total{padding-right:0}
+.account-side{border:0;width:auto!important}
+.account-side .box{display:block!important}
+.account-box .head h4{background:none;padding-left:0}
+.account-box .product-images{width:auto}
+table.data-table{width:90%!important}
+body.page-popup .data-table td,body.page-popup .data-table th{border-right:1px solid #D9DDE3!important;border-bottom:1px solid #D9DDE3!important;border-color:#bbb}
+body.page-popup .data-table th.last,body.page-popup .data-table td.last{border-right:0!important}
+body.page-popup .data-table tfoot td{border-bottom:none!important}
+.page-popup h1#logo{display:block;margin-bottom:10px}
+.a-right{text-align:right!important}
+th,td,.count{color:#2f2f2f!important}
+.button-set,.form-button,.pager,.view-by,#nav,.side-col .box,#track1,.add-to-box{display:none}
+.col3-set *,.col4-set *,.product-info{float:none!important;width:auto!important}
+.actions,.ratings,.rating-box{display:none!important}
+.header,.header-top-container,.footer-container{border:0}
+h1#logo,.account-box .product-details{margin:0}
+.step-count,ul.more-views *{display:inline!important}
+.one-page-checkout .active .step-count,.shipment-count{color:#2f2f2f}

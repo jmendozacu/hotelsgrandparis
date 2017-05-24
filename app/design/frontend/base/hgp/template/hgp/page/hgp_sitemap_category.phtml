@@ -1,0 +1,120 @@
+<?php 
+$_hgpConfig    = Hgp_Lib_Tools::loadConfig('categorie');
+$_idCategorie  = 0;
+if ($_hgpConfig) $_idCategorie = $_hgpConfig->hotel;
+
+$_helper       = $this->helper('catalog/output');
+$_category     = Mage::getModel('catalog/category')->load($_idCategorie);
+$_arrList      = $_category->getProductCollection();
+$_count        = $_arrList->getSize();
+$bug = true;
+?>
+<div id="all_footer_categories">
+	<?php if(!$bug){?>
+	<ul class="all_footer_categories_ul">
+	<?php 	
+		if($_count): 
+			foreach($_arrList->getAllIds() as $productId)
+			{
+				$_product = Mage::getModel('catalog/product')->load($productId);
+				$nom_hotel = $_product->getName().' '.$_product->getAttributeText('ville').' '.$_product->getAttributeText('arrondissement');
+				print "<li class='all_footer_categories_li'><a class='all_footer_categories_a' href='".$_product->getProductUrl()."' title='".$_product->getName()."'>".$nom_hotel."</a>&#124;</li>";		
+				
+			}?>				
+	</ul>
+	<?php else:?>
+	    <div class="note-msg">
+	        <?php echo $this->__('There are no %s available.', $this->getItemsTitle()); ?>
+	    </div>
+	<?php endif;
+	} else { ?>
+			
+				<div class="bloc_quartier">
+					<div class="nom_quartier">
+						<a href='<?php echo $this->getUrl('');?>hotel-opera-paris.html' title='<?php echo $this->__('Hotels Paris Opera, Hotels Paris Madeleine & Hotels Paris St Lazare')?>'><?php echo $this->__('Hôtels Opéra, Madeleine et Saint Lazare')?></a>
+					</div>
+						<div class="list-hotel-footer">
+							<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>ouest-hotel-paris.html' title='<?php echo $this->__('Title Ouest Hotel')?>'><?php echo $this->__('Ouest Hotel2')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('8th')?></a> &#124; 
+							<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-opera-opal-paris.html' title='<?php echo $this->__('Title Opera Opal')?>'><?php echo $this->__('Hotel Opal')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('8th')?></a> &#124; 
+							<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-opera-diamond-paris.html' title='<?php echo $this->__('Title Opera Diamond')?>'><?php echo $this->__('Hotel Opéra Diamond')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('8th')?></a> &#124;
+							<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-opera-faubourg-paris.html' title='<?php echo $this->__('Title Opera Faubourg')?>'><?php echo $this->__('Hotel Jules')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('9th')?></a>
+						</div>	
+					</div>	
+							
+							
+						<div class="bloc_quartier">
+							<div class="nom_quartier">
+							<a href='<?php echo $this->getUrl('');?>hotel-champs-elysees-paris.html' title='<?php echo $this->__('Hotels Paris Champs Elysees &amp; Hotels Paris Arc de Triomphe')?>'><?php echo $this->__('Hôtels Champs-Elysées')?></a>
+							</div>
+							<div class="list-hotel-footer">
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-mac-mahon-paris.html' title='<?php echo $this->__('Title Mac Mahon')?>'><?php echo $this->__('Hotel Mac Mahon')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('17th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-elysee-secret-paris.html' title='<?php echo $this->__('Title Elysee Secret')?>'><?php echo $this->__('Hotel Elysee Secret')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('8th')?></a> &#124;
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-beauchamps-paris.html' title='<?php echo $this->__('Title Beauchamps')?>'><?php echo $this->__('Hotel Beauchamps')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('8th')?></a>
+							</div>		
+						</div>
+					
+					
+						<div class="bloc_quartier">
+							<div class="nom_quartier">
+							<a href='<?php echo $this->getUrl('');?>hotel-montparnasse-saint-germain.html' title='<?php echo $this->__('Hotels Paris St Germain des Pres & Hotels Paris Montparnasse')?>'><?php echo $this->__('Hôtels Saint Germain des Prés et Montparnasse')?></a>
+							</div>
+								<div class="list-hotel-footer">
+									<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>holiday-inn-paris-gare-montparnasse.html' title='<?php echo $this->__('Title HiM')?>'><?php echo $this->__('Holiday Inn Paris Gare Montparnasse')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('14th')?></a> &#124; 
+									<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-bretagne-montparnasse.html' title='<?php echo $this->__('Title Bretagne')?>'><?php echo $this->__('BEST WESTERN Bretagne Montparnasse')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('14th')?></a> &#124; 
+									<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-sevres-montparnasse.html' title='<?php echo $this->__('Title Sevres')?>'><?php echo $this->__('Hotel Sevres Montparnasse')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('15th')?></a>
+								</div>
+						</div>		
+								
+					<div class="bloc_quartier">			
+						<div class="nom_quartier">
+						<a href='<?php echo $this->getUrl('');?>hotel-louvre-paris.html' title='<?php echo $this->__('Hotels Paris Louvre, Hotels Paris Marais & Hotels Paris Beaubourg')?>'><?php echo $this->__('Hôtels Louvre & Marais')?></a>
+						</div>
+							<div class="list-hotel-footer">
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-louvre-saint-honore.html' title='<?php echo $this->__('Title Louvre')?>'><?php echo $this->__('Hotel Louvre Saint Honore')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('1st')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-ducs-de-bourgogne-paris.html' title='<?php echo $this->__('Title Ducs')?>'><?php echo $this->__('Hotel aux Ducs de Bourgogne2')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('1st')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-marais-grands-boulevards.html' title='<?php echo $this->__('Title MGB')?>'><?php echo $this->__('Hotel France Europe2')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('3rd')?></a>
+							</div>
+						</div>
+						
+					<div class="bloc_quartier">	
+						<div class="nom_quartier">
+						<a href='<?php echo $this->getUrl('');?>hotel-gare-lyon-paris.html' title='<?php echo $this->__('Hotels Paris Gare de Lyon, Hotels Paris Nation, Hotels Vincennes')?>'><?php echo $this->__('Hôtels Gare de Lyon, & Nation Paris')?></a>
+						</div>
+							<div class="list-hotel-footer">
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>61-paris-nation-hotel.html' title='<?php echo $this->__('Title 61PNH')?>'><?php echo $this->__('61 Paris Nation Hotel')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('12th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-saint-louis-vincennes.html' title='<?php echo $this->__('Title Saint Louis')?>'><?php echo $this->__('Hotel Saint-Louis2')?>&nbsp;<?php echo $this->__('Vincennes')?></a> 
+							</div>
+					</div>
+					
+					<div class="bloc_quartier">
+						<div class="nom_quartier">
+						<a href='<?php echo $this->getUrl('');?>hotel-wagram-paris.html' title='<?php echo $this->__('Hotels Paris Wagram & Hotels Paris Batignolles')?>'><?php echo $this->__('Hôtels Wagram & Batignolles')?></a>
+						</div>
+							<div class="list-hotel-footer">
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>opera-batignolles.html' title='<?php echo $this->__('Title Batignolles')?>'><?php echo $this->__('Hotel Square des Batignolles2')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('17th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>hotel-de-neuville-paris.html' title='<?php echo $this->__('Title Neuville')?>'><?php echo $this->__('Hotel de Neuville')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('17th')?></a>
+							</div>
+	 				</div>
+					
+					<div class="bloc_quartier">
+						<div class="nom_quartier">
+						<a href='<?php echo $this->getUrl('');?>hotel-gare-du-nord.html' title='<?php echo $this->__('Hotels Gare du Nord & Gare de lest')?>'><?php echo $this->__('Hotels Gare du Nord & Gare de lest')?></a>
+						</div>
+							<div class="list-hotel-footer">
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>mercure-paris-terminus-nord.html' title='<?php echo $this->__('Title Mercure')?>'><?php echo $this->__('Mercure Paris Terminus Nord')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('10th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>best-western-premier-faubourg-88-paris.html' title='<?php echo $this->__('Title Faubourg 88')?>'><?php echo $this->__('BEST WESTERN PREMIER Faubourg 88')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('10th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>holiday-inn-paris-gare-de-l-est.html' title='<?php echo $this->__('Title Hi Est')?>'><?php echo $this->__('Holiday Inn Paris Gare de lest')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('10th')?></a> &#124; 
+								<a class='all_footer_categories_a' href='<?php echo $this->getUrl('');?>best-western-aulivia-opera.html' title='<?php echo $this->__('Title Aulivia')?>'><?php echo $this->__('Aulivia Opéra')?>&nbsp;<?php echo $this->__('Paris'). ' ' . $this->__('10th')?></a>
+							</div>
+	 				</div>
+					
+					
+											
+					
+					
+					
+	<?php }?>
+	<div class="clear"></div>
+</div>
+
+	

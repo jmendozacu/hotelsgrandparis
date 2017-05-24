@@ -1,0 +1,386 @@
+############################################
+## uncomment these lines for CGI mode
+## make sure to specify the correct cgi php binary file name
+## it might be /cgi-bin/php-cgi
+
+#    Action php5-cgi /cgi-bin/php5-cgi
+#    AddHandler php5-cgi .php
+
+############################################
+## GoDaddy specific options
+
+#   Options -MultiViews
+
+## you might also need to add this line to php.ini
+##     cgi.fix_pathinfo = 1
+## if it still doesn't work, rename php.ini to php5.ini
+
+############################################
+## this line is specific for 1and1 hosting
+
+    #AddType x-mapp-php5 .php
+    #AddHandler x-mapp-php5 .php
+
+############################################
+## default index file
+
+    DirectoryIndex index.php
+
+<IfModule mod_php5.c>
+
+############################################
+## adjust memory limit
+
+#    php_value memory_limit 64M
+    php_value memory_limit 256M
+    php_value max_execution_time 18000
+
+############################################
+## disable magic quotes for php request vars
+
+    php_flag magic_quotes_gpc off
+
+############################################
+## disable automatic session start
+## before autoload was initialized
+
+    php_flag session.auto_start off
+
+############################################
+## enable resulting html compression
+
+    #php_flag zlib.output_compression on
+
+###########################################
+# disable user agent verification to not break multiple image upload
+
+    php_flag suhosin.session.cryptua off
+
+###########################################
+# turn off compatibility with PHP4 when dealing with objects
+
+    php_flag zend.ze1_compatibility_mode Off
+
+</IfModule>
+
+<IfModule mod_security.c>
+###########################################
+# disable POST processing to not break multiple image upload
+
+    SecFilterEngine Off
+    SecFilterScanPOST Off
+</IfModule>
+
+<IfModule mod_deflate.c>
+
+############################################
+## enable apache served files compression
+## http://developer.yahoo.com/performance/rules.html#gzip
+
+    # Insert filter on all content
+    ###SetOutputFilter DEFLATE
+    # Insert filter on selected content types only
+    #AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+
+    # Netscape 4.x has some problems...
+    #BrowserMatch ^Mozilla/4 gzip-only-text/html
+
+    # Netscape 4.06-4.08 have some more problems
+    #BrowserMatch ^Mozilla/4\.0[678] no-gzip
+
+    # MSIE masquerades as Netscape, but it is fine
+    #BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+    # Don't compress images
+    #SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+    # Make sure proxies don't deliver the wrong content
+    #Header append Vary User-Agent env=!dont-vary
+
+</IfModule>
+
+<IfModule mod_ssl.c>
+
+############################################
+## make HTTPS env vars available for CGI mode
+
+    SSLOptions StdEnvVars
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+############################################
+## enable rewrites
+
+    Options +FollowSymLinks
+    RewriteEngine on
+
+############################################
+## you can put here your magento root folder
+## path relative to web root
+
+    #RewriteBase /hotelsgrandparis/
+    RewriteBase /
+	
+############################################
+## Redirection 301
+    
+    Redirect permanent /hotel-2-etoiles-paris.html /hotel-3-etoiles-paris.html	
+    Redirect permanent /fr/hotel-2-etoiles-paris.html /fr/hotel-3-etoiles-paris.html	
+
+############################################
+## workaround for HTTP authorization
+## in CGI environment
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+############################################
+## always send 404 on missing files in these folders
+
+    RewriteCond %{REQUEST_URI} !^/(media|skin|js)/
+
+############################################
+## never rewrite for existing files, directories and links
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+############################################
+## Redirection 301
+		
+    Redirect permanent /map /map.html
+    Redirect permanent /fr/map /fr/map.html
+	
+	Redirect permanent /fr/carte.html /fr/map.html
+    Redirect permanent /fr/qui-sommes-nous.html /fr/about-us.html
+    Redirect permanent /fr/partenariat.html /fr/partnership.html
+    Redirect permanent /fr/conditions-generales.html /fr/terms.html
+    Redirect permanent /fr/carte.html /fr/map.html
+    Redirect permanent /fr/hotel-elysees-park.html /fr/hotel-elysee-secret-paris.html
+    Redirect permanent /fr/residence-mac-mahon-paris.html /fr/hotel-mac-mahon-paris.html
+    
+    Redirect permanent /carte.html /map.html
+    Redirect permanent /qui-sommes-nous.html /about-us.html
+    Redirect permanent /partenariat.html /partnership.html
+    Redirect permanent /conditions-generales.html /terms.html
+    Redirect permanent /carte.html /map.html
+    Redirect permanent /hotel-elysees-park.html /hotel-elysee-secret-paris.html
+    Redirect permanent /residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+    
+    Redirect permanent /fr/hotel/hotel-champs-elysees-paris/residence-mac-mahon-paris.html /fr/hotel-mac-mahon-paris.html
+    Redirect permanent /fr/hotel/paris-hotel-gare-de-lyon.html /fr/hotel-gare-lyon-paris.html
+    Redirect permanent /fr/hotel/hotel-eiffel-kennedy.html /fr/quartiers-paris-arrondissement.html
+    Redirect permanent /hotel/residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	
+	#Correction Holiday Inn
+    Redirect permanent /holiday-inn-paris-gare-montparnasse-34.html /holiday-inn-paris-gare-montparnasse.html
+    Redirect permanent /fr/holiday-inn-paris-gare-montparnasse-34.html /fr/holiday-inn-paris-gare-montparnasse.html
+	
+	#Correction HOTEL DES CHAMPS ELYSEES
+    Redirect permanent /fr/hotel-des-champs-elysees-paris.html /fr/hotel-champs-elysees-paris.html
+    Redirect permanent /hotel-des-champs-elysees-paris.html /hotel-champs-elysees-paris.html
+	
+	#Correction OPERA MARIGNY
+    Redirect permanent /fr/hotel-opera-marigny.html http://www.bookinnfrance.com/fr/opera-marigny-paris.html
+    Redirect permanent /hotel-opera-marigny.html http://www.bookinnfrance.com/opera-marigny-paris.html   
+	
+	#Correction HOTEL MERCEDES Le 22/03/2013
+	Redirect /fr/hotel-mercedes-paris.html /fr/hotel-wagram-paris.html
+    Redirect /hotel-mercedes-paris.html /hotel-wagram-paris.html
+	
+	#Correction BEST WESTERN AURORE
+    Redirect permanent /fr/hotel-aurore-paris.html http://www.bookinnfrance.com/fr/aurore-paris.html
+    Redirect permanent /hotel-aurore-paris.html http://www.bookinnfrance.com/aurore-paris.html
+	
+	# Correction Royal Opera
+	Redirect permanent /Royal-Opera /fr/hotel-royal-opera.html
+	
+	# Correction le 27/02/2012 Pierre (Web master tools)
+	Redirect permanent /hotel/hotel-opera-paris/hotel-opera-marigny.html /hotel-opera-marigny.html
+	Redirect permanent /hotel/hotel-champs-elysees-paris/hotel-opera-marigny.html /hotel-opera-marigny.html
+	Redirect permanent /hotel/hotel-gare-lyon-paris/hotel-aurore-paris.html /hotel-aurore-paris.html
+	Redirect permanent /hotel/hotel-champs-elysees-paris/hotel-des-champs-elysees-paris.html /hotel-des-champs-elysees-paris.html
+	Redirect permanent /fr/hotel/hotel-opera-paris/hotel-opera-marigny.html /fr/hotel-opera-marigny.html
+	Redirect permanent /fr/hotel/hotel-champs-elysees-paris/hotel-opera-marigny.html /fr/hotel-opera-marigny.html
+	Redirect permanent /fr/hotel/hotel-gare-lyon-paris/hotel-aurore-paris.html /fr/hotel-aurore-paris.html
+	Redirect permanent /fr/hotel/hotel-champs-elysees-paris/hotel-des-champs-elysees-paris.html /fr/hotel-des-champs-elysees-paris.html
+	
+	Redirect permanent /hotel/hotel.html /hotel.html
+	Redirect permanent /hotel/hotel-opera-marigny.html /hotel-opera-marigny.html
+	Redirect permanent /hotel/hotel-des-champs-elysees-paris.html /hotel-des-champs-elysees-paris.html
+	Redirect permanent /hotel/hotel-aurore-paris.html /hotel-aurore-paris.html
+	Redirect permanent /fr/hotel/hotel.html /fr/hotel.html
+	Redirect permanent /fr/hotel/hotel-aurore-paris.html /fr/hotel-aurore-paris.html
+	Redirect permanent /fr/hotel/hotel-des-champs-elysees-paris.html /fr/hotel-des-champs-elysees-paris.html
+	Redirect permanent /fr/hotel/hotel-opera-marigny.html /fr/hotel-opera-marigny.html
+	
+	#Corrections 404
+	Redirect permanent /hotel/paris-hotel-gare-de-lyon.html /hotel-gare-lyon-paris.html
+	Redirect permanent /hotel/hotel-champs-elysees-paris/residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	Redirect permanent /fr/residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	Redirect permanent /hotel/hotel-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	Redirect permanent /residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	Redirect permanent /hotel/residence-mac-mahon-paris.html /hotel-mac-mahon-paris.html
+	Redirect permanent /fr/hotel/hotel-champs-elysees-paris/residence-mac-mahon-paris.html /fr/hotel-mac-mahon-paris.html
+	Redirect permanent /fr/residence-mac-mahon-paris.html /fr/hotel-mac-mahon-paris.html
+	Redirect permanent /fr/hotel/residence-mac-mahon-paris.html /fr/hotel-mac-mahon-paris.html
+	Redirect permanent /hotel/hotel-gare-lyon-paris/paris-hotel-gare-de-lyon.html /hotel-gare-lyon-paris.html
+	
+	#Corrections le 19/03/2012 Pierre (Web master tools)
+	RedirectMatch (\/fr\/fr\/)(.*) /fr/$2
+	Redirect permanent /fr/hotel-ducs-de-bourgogne /hotel-ducs-de-bourgogne-paris.html
+	Redirect permanent /fr/hotel-opera-diamond.htmlEnjoy /hotel-opera-diamond-paris.html
+	Redirect permanent /fr/quartiers-paris-arrondissement.h.. /quartiers-paris-arrondissement.html
+	Redirect permanent /hotel-opera-dia /hotel-opera-diamond-paris.html
+	
+	#Corrections le 28/05/2012 Pierre (Web master tools)
+	Redirect permanent /opera-batignolles /opera-batignolles.html
+	Redirect permanent /Wallace-Paris /hotel-wallace-paris.html
+	Redirect permanent /St-Germain /hotel-aramis-saint-germain.html
+	Redirect permanent /Luxury-Hotel /hotel-de-luxe-paris.html
+	Redirect permanent /Romantic-Hotel /hotel-romantique-paris.html
+	Redirect permanent /Small-Hotel /hotel-de-charme-paris.html
+	
+	# Correction le 05/06/2012 Pierre (Web master tools)
+	Redirect permanent /Sydney-Opera /hotel-sydney-opera-paris.html
+	Redirect permanent /3-Etoiles /fr/hotel-3-etoiles-paris.html
+	Redirect permanent /Hotel-Boutique /boutique-hotel-paris.html
+	Redirect permanent /Hotel-Bretagne /hotel-bretagne-montparnasse.html
+	Redirect permanent /Hotel-Discount /budget-hotels-in-paris.html
+	Redirect permanent /quartiers-paris /quartiers-paris-arrondissement.html
+	Redirect permanent /3-Star-Hotels /hotel-3-etoiles-paris.html
+	Redirect permanent /Hotel-Nation /61-paris-nation-hotel.html
+	Redirect permanent /Hotel-Paris-8 /hotel-paris-8eme-arrondissement.html
+	Redirect permanent /Louvre-Hotel /hotel-louvre-saint-honore.html
+	Redirect permanent /Charming-Hotel /hotel-romantique-paris.html
+	Redirect permanent /Budget-Hotel /budget-hotels-in-paris.html
+	Redirect permanent /fr/hotel-aramis /fr/hotel-aramis-saint-germain.html
+	Redirect permanent /hotel-saint-louis-vincennes /hotel-saint-louis-vincennes.html
+	Redirect permanent /hotel-mercedes /hotel-mercedes-paris.html
+	Redirect permanent /hotel-aramis /hotel-aramis-saint-germain.html
+	
+############################################	
+	
+	
+############################################
+## rewrite everything else to index.php
+
+    RewriteRule .* index.php [L]
+
+</IfModule>
+
+
+############################################
+## Prevent character encoding issues from server overrides
+## If you still have problems, use the second line instead
+
+    AddDefaultCharset Off
+    #AddDefaultCharset UTF-8
+
+<IfModule mod_expires.c>
+
+############################################
+## Optimisation performances
+##	Brice POTE le 02/11/2010
+# BEGIN Expire headers
+# MOD_DEFLATE COMPRESSION
+	SetOutputFilter DEFLATE
+	AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript application/x-httpd-php
+	#Pour les navigateurs incompatibles
+	BrowserMatch ^Mozilla/4 gzip-only-text/html
+	BrowserMatch ^Mozilla/4\.0[678] no-gzip
+	BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+	BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+	#ne pas mettre en cache si ces fichiers le sont d?j?
+	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+	#les proxies doivent donner le bon contenu
+	Header append Vary User-Agent env=!dont-vary
+	 
+	# BEGIN Expire headers
+	<IfModule mod_expires.c>
+	 ExpiresActive On
+	 ExpiresDefault "access plus 7200 seconds"
+	 ExpiresByType image/jpg "access plus 2592000 seconds"
+	 ExpiresByType image/jpeg "access plus 2592000 seconds"
+	 ExpiresByType image/png "access plus 2592000 seconds"
+	 ExpiresByType image/gif "access plus 2592000 seconds"
+	 AddType image/x-icon .ico
+	 ExpiresByType image/ico "access plus 2592000 seconds"
+	 ExpiresByType image/icon "access plus 2592000 seconds"
+	 ExpiresByType image/x-icon "access plus 2592000 seconds"
+	 ExpiresByType text/css "access plus 2592000 seconds"
+	 ExpiresByType text/javascript "access plus 2592000 seconds"
+	 ExpiresByType text/html "access plus 7200 seconds"
+	 ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+	 ExpiresByType application/javascript A259200
+	 ExpiresByType application/x-javascript "access plus 2592000 seconds"
+	 ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+	</IfModule>
+	# END Expire headers
+	 
+	# BEGIN Cache-Control Headers
+	<IfModule mod_headers.c>
+	 <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+		Header set Cache-Control "max-age=2592000, public"
+	 </FilesMatch>
+	 <FilesMatch "\\.(css)$">
+		Header set Cache-Control "max-age=2592000, public"
+	 </FilesMatch>
+	 <FilesMatch "\\.(js)$">
+		Header set Cache-Control "max-age=2592000, private"
+	 </FilesMatch>
+	<filesMatch "\\.(html|htm)$">
+		Header set Cache-Control "max-age=7200, public"
+	</filesMatch>
+	# Disable caching for scripts and other dynamic files
+	<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+		Header unset Cache-Control
+	</FilesMatch>
+	</IfModule>
+	# END Cache-Control Headers
+	 
+	# KILL THEM ETAGS
+	Header unset ETag
+	FileETag none
+	 
+	# protect the htaccess file
+	<files .htaccess>
+		order allow,deny
+		deny from all
+	</files>
+	 
+	# protection de la lecture des repertoires
+	Options -Indexes
+## Fin Optimisation
+############################################
+
+############################################
+## Add default Expires header
+## http://developer.yahoo.com/performance/rules.html#expires
+
+    ExpiresDefault "access plus 1 year"
+
+</IfModule>
+
+############################################
+## By default allow all access
+
+    Order allow,deny
+    Allow from all
+	
+    #order deny,allow
+    #deny from all
+    #allow from 127.0.0.1 80.13.107.252 78.247.103.74 81.255.33.133 85.68.66.58 93.22.205.245 188.130.67.218 88.166.112.8 88.161.244.241 88.173.79.144 88.166.113.233
+
+############################################
+## If running in cluster environment, uncomment this
+## http://developer.yahoo.com/performance/rules.html#etags
+
+    #FileETag none
+
+#########################################################
+## Developper mode pour LOCALHOST et DEBIANDEV et PREPROD
+
+	#SetEnv MAGE_IS_DEVELOPER_MODE

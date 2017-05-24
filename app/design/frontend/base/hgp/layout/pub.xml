@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+	</default>
+	<pub_index_index>
+		<reference name="content">
+			<block type="pub/pub" name="pub"
+				template="hgp/pub/pub.phtml" />
+		</reference>
+	</pub_index_index>
+</layout> 

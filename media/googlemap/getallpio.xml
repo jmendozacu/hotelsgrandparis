@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+	<document>
+		<name>Paris-inn</name>
+		<description><![CDATA[Hôtel Paris]]></description>
+		<Placemark>
+			<id><![CDATA[15]]></id>
+			<name><![CDATA[Alexandrie]]></name>
+			<adresse><![CDATA[19, rue d'Austerlitz 75012 Paris]]></adresse>
+
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Alexandrie<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/alexandrie/l01_alexandrie.jpg" /></div><div class="txt">L’hôtel Alexandrie, près de la Gare de Lyon, vous permet de rejoindre aisément votre lieu de rendez-vous ou d’agrément.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([15,-1],[105,0]);">Le Panthéon</a><br/>> <a href="javascript:googlemapAPI.iti([15,-1],[106,0]);">Place de la Bastille</a><br/>> <a href="javascript:googlemapAPI.iti([15,-1],[170,0]);">Château de Vincennes</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-alexandrie-description-15.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLTonic');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/alexandrie/l01_alexandrie.jpg" width="72"/></div><div class="txt"><div class="title">Alexandrie<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Alexandrie, près de la Gare de Lyon, vous permet de rejoindre aisément votre lieu de rendez-vous ou d’agrément.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Alexandrie***</div>L’hôtel Alexandrie, près de la Gare de Lyon, vous permet de rejoindre aisément votre lieu de rendez-vous ou d’agrément.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.847397,2.371210</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[16]]></id>
+			<name><![CDATA[Best Western Aurore]]></name>
+			<adresse><![CDATA[13, rue Traversière    75012 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western Aurore<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/aurore/l01_aurore.jpg" /></div><div class="txt">L’hôtel Best Western Aurore, situé près de la Gare de Lyon, est le point de départ idéal pour vos escapades parisiennes.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([16,-1],[167,0]);">Centre Georges Pompidou</a><br/>> <a href="javascript:googlemapAPI.iti([16,-1],[170,0]);">Château de Vincennes</a><br/>> <a href="javascript:googlemapAPI.iti([16,-1],[25,4]);">Musée Picasso</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-aurore-description-16.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLAurore');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/aurore/l01_aurore.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Aurore<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Aurore, situé près de la Gare de Lyon, est le point de départ idéal pour vos escapades parisiennes.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Aurore***</div>L’hôtel Best Western Aurore, situé près de la Gare de Lyon, est le point de départ idéal pour vos escapades parisiennes.</div>]]></onlytext>
+			<type>-1</type>
+
+			<stars>3</stars>
+			<Point><coordinates>48.845760,2.370672</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[6]]></id>
+			<name><![CDATA[Best Western Ducs de Bourgogne]]></name>
+			<adresse><![CDATA[19, rue du Pont Neuf  75001 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+
+			<description><![CDATA[<div class="title">Best Western Ducs de Bourgogne<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/bourgogne/l01_bourgogne.jpg" /></div><div class="txt">L’hôtel Best Western Ducs de Bourgogne bénéficie d’un emplacement exceptionnel en plein cœur du Paris historique.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([6,-1],[168,0]);">Cathédrale Notre-Dame</a><br/>> <a href="javascript:googlemapAPI.iti([6,-1],[103,0]);">Tour Eiffel</a><br/>> <a href="javascript:googlemapAPI.iti([6,-1],[167,0]);">Centre Georges Pompidou</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-ducs-de-bourgogne-description-6.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLDDBourgogne');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/bourgogne/l01_bourgogne.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Ducs de Bourgogne<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Ducs de Bourgogne bénéficie d’un emplacement exceptionnel en plein cœur du Paris historique.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Ducs de Bourgogne***</div>L’hôtel Best Western Ducs de Bourgogne bénéficie d’un emplacement exceptionnel en plein cœur du Paris historique.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.859997,2.344042</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[8]]></id>
+			<name><![CDATA[Best Western France Europe]]></name>
+			<adresse><![CDATA[112, boulevard Sébastopol   75003 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western France Europe<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/france/l01_france.jpg" /></div><div class="txt">L’Hôtel Best Western France Europe est situé dans le quartier du Marais et à quelques minutes de Notre-Dame de Paris.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([8,-1],[168,0]);">Cathédrale Notre-Dame</a><br/>> <a href="javascript:googlemapAPI.iti([8,-1],[99,0]);">Basilique du Sacré-Cœur</a><br/>> <a href="javascript:googlemapAPI.iti([8,-1],[107,0]);">L'Opera Garnier</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-france-europe-description-8.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLFEurope');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/france/l01_france.jpg" width="72"/></div><div class="txt"><div class="title">Best Western France Europe<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’Hôtel Best Western France Europe est situé dans le quartier du Marais et à quelques minutes de Notre-Dame de Paris.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western France Europe***</div>L’Hôtel Best Western France Europe est situé dans le quartier du Marais et à quelques minutes de Notre-Dame de Paris.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+
+			<Point><coordinates>48.868805,2.353977</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[13]]></id>
+			<name><![CDATA[Gare de Lyon]]></name>
+			<adresse><![CDATA[1bis, rue d'Austerlitz 75012 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Gare de Lyon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/lyon/l01_lyon.jpg" /></div><div class="txt">L’hôtel Paris Gare de Lyon est situé à la sortie de la Gare de Lyon, à quelques minutes des sites prestigieux de Paris.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([13,-1],[105,0]);">Le Panthéon</a><br/>> <a href="javascript:googlemapAPI.iti([13,-1],[106,0]);">Place de la Bastille</a><br/>> <a href="javascript:googlemapAPI.iti([13,-1],[176,0]);">Bibliothèque nationale de France?</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-gare-de-lyon-description-13.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLGDLyon');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/lyon/l01_lyon.jpg" width="72"/></div><div class="txt"><div class="title">Gare de Lyon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Paris Gare de Lyon est situé à la sortie de la Gare de Lyon, à quelques minutes des sites prestigieux de Paris.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Gare de Lyon**</div>L’hôtel Paris Gare de Lyon est situé à la sortie de la Gare de Lyon, à quelques minutes des sites prestigieux de Paris.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>2</stars>
+			<Point><coordinates>48.846577,2.369898</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[7]]></id>
+
+			<name><![CDATA[Best Western Premier Louvre Saint-Honoré]]></name>
+			<adresse><![CDATA[141, rue Saint-Honoré   75001 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western Premier Louvre Saint-Honoré<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/louvre/junior-suite.jpg" /></div><div class="txt">L’hôtel Best Western Louvre Saint Honoré est situé en plein cœur de Paris à proximité immédiate des sites historiques.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([7,-1],[168,0]);">Cathédrale Notre-Dame</a><br/>> <a href="javascript:googlemapAPI.iti([7,-1],[103,0]);">Tour Eiffel</a><br/>> <a href="javascript:googlemapAPI.iti([7,-1],[167,0]);">Centre Georges Pompidou</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-premier-louvre-saint-honore-description-7.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLSTLouvre');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/louvre/junior-suite.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Premier Louvre Saint-Honoré<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Louvre Saint Honoré est situé en plein cœur de Paris à proximité immédiate des sites historiques.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Premier Louvre Saint-Honoré****</div>L’hôtel Best Western Louvre Saint Honoré est situé en plein cœur de Paris à proximité immédiate des sites historiques.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+
+			<Point><coordinates>48.861786,2.340785</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[9]]></id>
+			<name><![CDATA[Mac Mahon]]></name>
+			<adresse><![CDATA[3, avenue Mac Mahon  75017 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Mac Mahon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mac/macmahon-facade8.jpg" /></div><div class="txt">L’hôtel Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([9,-1],[175,0]);">Chapelle Notre Dame de la Médaille Miraculeuse</a><br/>> <a href="javascript:googlemapAPI.iti([9,-1],[103,0]);">Tour Eiffel</a><br/>> <a href="javascript:googlemapAPI.iti([9,-1],[177,0]);">Grande Arche de la Défense</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-mac-mahon-description-9.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRMMahon');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mac/macmahon-facade8.jpg" width="72"/></div><div class="txt"><div class="title">Mac Mahon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Mac Mahon***</div>L’hôtel Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.875366,2.294777</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[5]]></id>
+
+			<name><![CDATA[Opéra Marigny]]></name>
+			<adresse><![CDATA[11, rue de l'Arcade   75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Opéra Marigny<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/operamarigny/marigny_chambre02.jpg" /></div><div class="txt">L’hôtel Marigny, totalement rénové en 2008, vous accueille dans un cadre exceptionnel à proximité de la Madeleine et de l’Opéra Garnier.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([5,-1],[95,0]);">Château de Versailles</a><br/>> <a href="javascript:googlemapAPI.iti([5,-1],[171,4]);">Musée du Louvre</a><br/>> <a href="javascript:googlemapAPI.iti([5,-1],[93,4]);">Cité des sciences et de l'industrie</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-opera-marigny-description-5.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLMarigny');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/operamarigny/marigny_chambre02.jpg" width="72"/></div><div class="txt"><div class="title">Opéra Marigny<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Marigny, totalement rénové en 2008, vous accueille dans un cadre exceptionnel à proximité de la Madeleine et de l’Opéra Garnier.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Opéra Marigny****</div>L’hôtel Marigny, totalement rénové en 2008, vous accueille dans un cadre exceptionnel à proximité de la Madeleine et de l’Opéra Garnier.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+
+			<Point><coordinates>48.871685,2.323612</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[4]]></id>
+			<name><![CDATA[Mathis Elysées]]></name>
+			<adresse><![CDATA[3, rue de Ponthieu    75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Mathis Elysées<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mathis/r01_mathis.jpg" /></div><div class="txt">A quelques mètres des Champs Elysées, l'hôtel Mathis Elysées est un établissement à la décoration unique.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([4,-1],[168,0]);">Cathédrale Notre-Dame</a><br/>> <a href="javascript:googlemapAPI.iti([4,-1],[100,0]);">Arc de Triomphe</a><br/>> <a href="javascript:googlemapAPI.iti([4,-1],[30,4]);">Musée Notre-Dame de Paris</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-mathis-elysees-description-4.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLMathis');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mathis/r01_mathis.jpg" width="72"/></div><div class="txt"><div class="title">Mathis Elysées<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>A quelques mètres des Champs Elysées, l'hôtel Mathis Elysées est un établissement à la décoration unique.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Mathis Elysées****</div>A quelques mètres des Champs Elysées, l'hôtel Mathis Elysées est un établissement à la décoration unique.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+			<Point><coordinates>48.870060,2.311467</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[10]]></id>
+
+			<name><![CDATA[Best Western Mercedes]]></name>
+			<adresse><![CDATA[128, avenue de Wagram  75017 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western Mercedes<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mercedes/l01_mercedes.jpg" /></div><div class="txt">L’hôtel Best Western Mercedes cultive depuis toujours l’art de recevoir selon la tradition française.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([10,-1],[99,0]);">Basilique du Sacré-Cœur</a><br/>> <a href="javascript:googlemapAPI.iti([10,-1],[177,0]);">Grande Arche de la Défense</a><br/>> <a href="javascript:googlemapAPI.iti([10,-1],[100,0]);">Arc de Triomphe</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-mercedes-description-10.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPMercedes');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mercedes/l01_mercedes.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Mercedes<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Mercedes cultive depuis toujours l’art de recevoir selon la tradition française.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Mercedes***</div>L’hôtel Best Western Mercedes cultive depuis toujours l’art de recevoir selon la tradition française.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+
+			<Point><coordinates>48.884953,2.303395</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[12]]></id>
+			<name><![CDATA[Best Western de Neuville]]></name>
+			<adresse><![CDATA[3, rue Verniquet      75017 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western de Neuville<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/neuville/neuville-facade-01.jpg" /></div><div class="txt">L’hôtel Best Western de Neuville est un ancien hôtel particulier à la décoration feutrée qui fera de votre séjour un moment d’exception.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([12,-1],[99,0]);">Basilique du Sacré-Cœur</a><br/>> <a href="javascript:googlemapAPI.iti([12,-1],[177,0]);">Grande Arche de la Défense</a><br/>> <a href="javascript:googlemapAPI.iti([12,-1],[100,0]);">Arc de Triomphe</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-de-neuville-description-12.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLDeneuville');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/neuville/neuville-facade-01.jpg" width="72"/></div><div class="txt"><div class="title">Best Western de Neuville<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western de Neuville est un ancien hôtel particulier à la décoration feutrée qui fera de votre séjour un moment d’exception.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western de Neuville***</div>L’hôtel Best Western de Neuville est un ancien hôtel particulier à la décoration feutrée qui fera de votre séjour un moment d’exception.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.886944,2.300608</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[3]]></id>
+
+			<name><![CDATA[Best Western Premier Opal]]></name>
+			<adresse><![CDATA[19 rue Tronchet     75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western Premier Opal<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/opal/l01_opal.jpg" /></div><div class="txt">L'hôtel Best Western Premier Opal, véritable bijou entièrement rénové en 2008, vous éblouira par son cadre étincelant.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([3,-1],[101,0]);">Les Invalides</a><br/>> <a href="javascript:googlemapAPI.iti([3,-1],[95,0]);">Château de Versailles</a><br/>> <a href="javascript:googlemapAPI.iti([3,-1],[172,4]);">Musée d'Orsay</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-premier-opal-description-3.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLOpal');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/opal/l01_opal.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Premier Opal<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L'hôtel Best Western Premier Opal, véritable bijou entièrement rénové en 2008, vous éblouira par son cadre étincelant.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Premier Opal****</div>L'hôtel Best Western Premier Opal, véritable bijou entièrement rénové en 2008, vous éblouira par son cadre étincelant.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+
+			<Point><coordinates>48.872147,2.325999</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[2]]></id>
+			<name><![CDATA[Opéra Diamond]]></name>
+			<adresse><![CDATA[4, rue de la Pépinière 75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Opéra Diamond<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/operadiamond/salon-0017.jpg" /></div><div class="txt">Véritable temple de la séduction, l’hôtel Opéra Diamond vous accueille dans un cadre unique où se conjuguent chic, volupté et sensualité.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([2,-1],[13,0]);">Pyramide du Louvre</a><br/>> <a href="javascript:googlemapAPI.iti([2,-1],[107,0]);">L'Opera Garnier</a><br/>> <a href="javascript:googlemapAPI.iti([2,-1],[102,0]);">Place de la Concorde</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-opera-diamond-description-2.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLODiamond');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/operadiamond/salon-0017.jpg" width="72"/></div><div class="txt"><div class="title">Opéra Diamond<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>Véritable temple de la séduction, l’hôtel Opéra Diamond vous accueille dans un cadre unique où se conjuguent chic, volupté et sensualité.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(2);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Opéra Diamond****</div>Véritable temple de la séduction, l’hôtel Opéra Diamond vous accueille dans un cadre unique où se conjuguent chic, volupté et sensualité.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+			<Point><coordinates>48.875153,2.323346</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[17]]></id>
+
+			<name><![CDATA[Saint-Louis]]></name>
+			<adresse><![CDATA[2 bis, rue Robert Giraudineau   94300 Vincennes]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Saint-Louis<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/saintlouis/l01_saintlouis.jpg" /></div><div class="txt">L’hôtel Best Western Saint Louis, au décor raffiné, propose le calme de la campagne à quelques minutes du cœur de Paris.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([17,-1],[170,0]);">Château de Vincennes</a><br/>> <a href="javascript:googlemapAPI.iti([17,-1],[6,1]);">L'Espace Événements du Parc Floral de Paris</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-saint-louis-description-17.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLStlouis');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/saintlouis/l01_saintlouis.jpg" width="72"/></div><div class="txt"><div class="title">Saint-Louis<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Saint Louis, au décor raffiné, propose le calme de la campagne à quelques minutes du cœur de Paris.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(17);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Saint-Louis***</div>L’hôtel Best Western Saint Louis, au décor raffiné, propose le calme de la campagne à quelques minutes du cœur de Paris.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+
+			<Point><coordinates>48.845024,2.435121</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[19]]></id>
+			<name><![CDATA[Champs Elysées]]></name>
+			<adresse><![CDATA[2 rue d’Artois 75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Champs Elysées<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/champselysees/chambre-balneo-02a.jpg" /></div><div class="txt">L’Hôtel des Champs Elysées, bénéficie d’une situation privilégiée au coeur de Paris à deux pas de la plus belle avenue du monde.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([19,-1],[100,0]);">Arc de Triomphe</a><br/>> <a href="javascript:googlemapAPI.iti([19,-1],[102,0]);">Place de la Concorde</a><br/>> <a href="javascript:googlemapAPI.iti([19,-1],[171,4]);">Musée du Louvre</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-champs-elysees-description-19.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLChamps');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/champselysees/chambre-balneo-02a.jpg" width="72"/></div><div class="txt"><div class="title">Champs Elysées<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’Hôtel des Champs Elysées, bénéficie d’une situation privilégiée au coeur de Paris à deux pas de la plus belle avenue du monde.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(19);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Champs Elysées****</div>L’Hôtel des Champs Elysées, bénéficie d’une situation privilégiée au coeur de Paris à deux pas de la plus belle avenue du monde.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>4</stars>
+			<Point><coordinates>48.872177,2.308960</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[18]]></id>
+
+			<name><![CDATA[Best Western Bretagne Montparnasse]]></name>
+			<adresse><![CDATA[33 rue Raymond Losserand 75014 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Best Western Bretagne Montparnasse<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/bretagne/bm-salon-05.jpg" /></div><div class="txt">L’hôtel Best Western Bretagne Montparnasse vous accueille à deux pas de la gare Montparnasse et de Saint-Germain-des-Prés<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([18,-1],[175,0]);">Chapelle Notre Dame de la Médaille Miraculeuse</a><br/>> <a href="javascript:googlemapAPI.iti([18,-1],[101,0]);">Les Invalides</a><br/>> <a href="javascript:googlemapAPI.iti([18,-1],[191,2]);">La Tour Montparnasse</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-best-western-bretagne-montparnasse-description-18.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLBretagne');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/bretagne/bm-salon-05.jpg" width="72"/></div><div class="txt"><div class="title">Best Western Bretagne Montparnasse<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Best Western Bretagne Montparnasse vous accueille à deux pas de la gare Montparnasse et de Saint-Germain-des-Prés<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(18);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Best Western Bretagne Montparnasse***</div>L’hôtel Best Western Bretagne Montparnasse vous accueille à deux pas de la gare Montparnasse et de Saint-Germain-des-Prés</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+
+			<Point><coordinates>48.835449,2.320991</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[21]]></id>
+			<name><![CDATA[Eiffel Kennedy]]></name>
+			<adresse><![CDATA[12 rue de Boulainvilliers 75016 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Eiffel Kennedy<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/eiffelkennedy/eiffel-kennedy-chambre-646-9.jpg" /></div><div class="txt">L’hôtel Eiffel Kennedy est idéalement situé à seulement quelques minutes à pieds de la Tour Eiffel.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([21,-1],[13,0]);">Pyramide du Louvre</a><br/>> <a href="javascript:googlemapAPI.iti([21,-1],[103,0]);">Tour Eiffel</a><br/>> <a href="javascript:googlemapAPI.iti([21,-1],[48,4]);">Musée du Quai Branly</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-eiffel-kennedy-description-21.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('FRPHCHTLEiffel');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/eiffelkennedy/eiffel-kennedy-chambre-646-9.jpg" width="72"/></div><div class="txt"><div class="title">Eiffel Kennedy<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Eiffel Kennedy est idéalement situé à seulement quelques minutes à pieds de la Tour Eiffel.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(21);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Eiffel Kennedy***</div>L’hôtel Eiffel Kennedy est idéalement situé à seulement quelques minutes à pieds de la Tour Eiffel.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.852978,2.275929</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[23]]></id>
+
+			<name><![CDATA[Résidence Mac Mahon]]></name>
+			<adresse><![CDATA[3, avenue Mac Mahon 75017 Paris]]></adresse>
+			<hotel_open><![CDATA[0]]></hotel_open>
+			<description><![CDATA[<div class="title">Résidence Mac Mahon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mac/macmahon-facade1.jpg" /></div><div class="txt">La Résidence Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link"></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-residence-mac-mahon-description-23.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('.');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/mac/macmahon-facade1.jpg" width="72"/></div><div class="txt"><div class="title">Résidence Mac Mahon<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>La Résidence Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(23);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Résidence Mac Mahon***</div>La Résidence Mac Mahon est idéalement situé au pied de l’Arc de Triomphe et à quelques mètres seulement des Champs Elysées.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+
+			<Point><coordinates>48.875378,2.294760</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[22]]></id>
+			<name><![CDATA[Elysée Park]]></name>
+			<adresse><![CDATA[5 rue de Ponthieu 75008 Paris]]></adresse>
+			<hotel_open><![CDATA[1]]></hotel_open>
+			<description><![CDATA[<div class="title">Elysée Park<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br /><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/elyseepark/elysee-park-03-05-040.jpg" /></div><div class="txt">L’hôtel Elysée Park bénéficie d’un emplacement exceptionnel à quelques pas des Champs Elysées.<br/><div class="avisiter">A visiter proche de cet hôtel</div><div class="link">> <a href="javascript:googlemapAPI.iti([22,-1],[202,1]);">Espace Champerret</a><br/>> <a href="javascript:googlemapAPI.iti([22,-1],[5,1]);">Paris Expo Porte de Versailles</a><br/>> <a href="javascript:googlemapAPI.iti([22,-1],[100,0]);">Arc de Triomphe</a><br/></div></div></div><div style="clear:both;font-size:1px;">&nbsp;</div><div><table class="tabbuttonblue"><tr><td class="tabtxt"><a href="fr-hotel-paris-elysee-park-description-22.html">Découvrez cet hôtel</a></td></td><td class="tabtxt"><a href="javascript:fastresa.reserveHotel('SVFRHTLEPark');">Réservez cet hôtel</a></td></td></tr></table></div><div style="clear:both;font-size:1px;">&nbsp;</div>]]></description>
+
+			<shortdesc><![CDATA[<div style='width:370px;height:95px;'><div class="container"><div class="img"><img src="data/galeries/hotels/96x98/elyseepark/elysee-park-03-05-040.jpg" width="72"/></div><div class="txt"><div class="title">Elysée Park<img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /><img src="skins/img/stars.gif" /></div><br/>L’hôtel Elysée Park bénéficie d’un emplacement exceptionnel à quelques pas des Champs Elysées.<br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(22);">Zoom</a><br/></div></div></div>]]></shortdesc>
+<onlytext><![CDATA[
+<div class="txt"><div class="title">Elysée Park***</div>L’hôtel Elysée Park bénéficie d’un emplacement exceptionnel à quelques pas des Champs Elysées.</div>]]></onlytext>
+			<type>-1</type>
+			<stars>3</stars>
+			<Point><coordinates>48.870148,2.311210</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[100]]></id>
+
+			<name><![CDATA[Arc de Triomphe]]></name>
+			<adresse><![CDATA[Place Charles-de-Gaulle 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Arc de Triomphe</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/arc.jpg" /></div><div class="txt">Véritable symbole national, l’Arc de Triomphe est situé dans l’axe reliant le Louvre à la Grande Arche de la Défense.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/></div></div>]]></description>
+<linkedhotels>9,10,12</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Arc de Triomphe</div>En haut des Champs-Elysées, l’Arc de Triomphe de l’Etoile est le plus illustre symbole de notre histoire nationale.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_arc_triomphe.png</icon>
+			<Point><coordinates>48.87364214427213, 2.2961533069610596</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[99]]></id>
+			<name><![CDATA[Basilique du Sacré-Cœur]]></name>
+			<adresse><![CDATA[Parvis du Sacré-Cœur 75018 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Basilique du Sacré-Cœur</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Montmartre.jpg" /></div><div class="txt">La basilique du Sacré-Cœur, érigée à la fin du XIXe siècle, est un édifice religieux majeur situé sur la butte Montmartre.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+<linkedhotels>12,10,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Basilique du Sacré-Cœur</div>La basilique du Sacré-Cœur, érigée à la fin du XIXe siècle, est un édifice religieux majeur situé sur la butte Montmartre au nord de Paris.</div>]]></onlytext>
+			<type>0</type>
+
+			<icon>data/places/icons/icon_sacre_coeur.png</icon>
+			<Point><coordinates>48.886191,  2.343318</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[176]]></id>
+			<name><![CDATA[Bibliothèque nationale de France?]]></name>
+			<adresse><![CDATA[11 Quai François Mauriac 75013 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Bibliothèque nationale de France?</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/biblio.jpg" /></div><div class="txt">La Bibliothèque nationale de France est la plus importante bibliothèque de France avec plus de 13 millions de livres.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Bibliothèque nationale de France?</div>La Bibliothèque nationale de France (BnF) est l'institution en charge de la collecte du dépôt légal, elle est à ce titre la plus importante bibliothèque de France.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_biblio.png</icon>
+			<Point><coordinates>48.83376,  2.377705</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[168]]></id>
+
+			<name><![CDATA[Cathédrale Notre-Dame]]></name>
+			<adresse><![CDATA[6 place du Parvis-Notre-Dame  75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Cathédrale Notre-Dame</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/notredame.jpg" /></div><div class="txt">Notre Dame de Paris est une des plus remarquables cathédrales qu'ait produite l'architecture gothique en France.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Cathédrale Notre-Dame</div>Chef-d’œuvre de l’architecture gothique, la cathédrale Notre-Dame de Paris a été construite entre les XIIe et XIVe siècles (1163-1345).</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_notre_dame.png</icon>
+			<Point><coordinates>48.853265,  2.348034</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[167]]></id>
+			<name><![CDATA[Centre Georges Pompidou]]></name>
+			<adresse><![CDATA[Place Georges Pompidou 75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Centre Georges Pompidou</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Beaubourg.jpg" /></div><div class="txt">Le Centre Beaubourg est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>8,6,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Centre Georges Pompidou</div>Le Centre Beaubourg, installé au cœur de la capitale, est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.</div>]]></onlytext>
+			<type>0</type>
+
+			<icon>data/places/icons/icon_pompidou.png</icon>
+			<Point><coordinates>48.860179,  2.350931</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[175]]></id>
+			<name><![CDATA[Chapelle Notre Dame de la Médaille Miraculeuse]]></name>
+			<adresse><![CDATA[140 rue du Bac 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Chapelle Notre Dame de la Médaille Miraculeuse</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/ChapelleMiraculeuse.jpg" /></div><div class="txt">La Chapelle Notre Dame de la médaille miraculeuse est le lieu de l’apparition présumée de la Sainte Vierge.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+
+<linkedhotels>7,6,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Chapelle Notre Dame de la Médaille Miraculeuse</div>La Chapelle Notre Dame de la Médaille Miraculeuse est située rue du Bac à Paris. Ce sont les lieux de l’apparition présumée de la Sainte Vierge à Sainte Catherine Labouré. </div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_chapelle.png</icon>
+			<Point><coordinates>48.850962,  2.323833</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[97]]></id>
+
+			<name><![CDATA[Château de Fontainebleau]]></name>
+			<adresse><![CDATA[Place du Général-de-Gaulle 77300 Fontainebleau]]></adresse>
+			<description><![CDATA[<div class="title">Château de Fontainebleau</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/ChateauFontainebleau.jpg" /></div><div class="txt">De style Renaissance, le Château de Fontainebleau est inscrit sur la liste du patrimoine mondial de l'UNESCO.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Château de Fontainebleau</div>Le Château de Fontainebleau de style Renaissance a été la demeure des souverains de France depuis François Ier jusqu'à Napoléon III.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_vincennes.png</icon>
+			<Point><coordinates>48.402366,  2.696776</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[95]]></id>
+			<name><![CDATA[Château de Versailles]]></name>
+			<adresse><![CDATA[Avenue de Paris 78000 Versailles]]></adresse>
+			<description><![CDATA[<div class="title">Château de Versailles</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/chateauVersailles.jpg" /></div><div class="txt">Le château de Versailles, résidence des plusieurs rois de France, est un témoin exceptionnel de l'art français.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+<linkedhotels>9,4,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Château de Versailles</div>Le château de Versailles, témoin exceptionnel de l'art français des XVIIe et XVIIIe siècles situé au sud-ouest de Paris, fut la résidence de plusieurs rois de France.</div>]]></onlytext>
+			<type>0</type>
+
+			<icon>data/places/icons/icon_vincennes.png</icon>
+			<Point><coordinates>48.803978,  2.123351</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[170]]></id>
+			<name><![CDATA[Château de Vincennes]]></name>
+			<adresse><![CDATA[Avenue de Paris 94300 Vincennes]]></adresse>
+			<description><![CDATA[<div class="title">Château de Vincennes</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/chateauVincennes.jpg" /></div><div class="txt">Depuis sa construction au XIVe siècle, le château de Vincennes est l’un des plus importants de l’histoire de France.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(17);">Saint-Louis***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/></div></div>]]></description>
+
+<linkedhotels>17,15,16</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Château de Vincennes</div>Le château de Vincennes est le plus important château fort royal français subsistant. Il fut érigé du XIVe siècle au XVIIe siècle sur la commune de Vincennes.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_vincennes.png</icon>
+			<Point><coordinates>48.840684077049694, 2.4369049072265625</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[229]]></id>
+
+			<name><![CDATA[Expo Rivalités à Venise - Musée du Louvre]]></name>
+			<adresse><![CDATA[rue de l’Amiral de Coligny 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Expo Rivalités à Venise - Musée du Louvre</div><br /><div class="container"><div class="img"><img src="data/now-in-paris/expo-titien-tintoret-veronese-96x86.jpg" /></div><div class="txt">Expo Rivalités à Venise - Musée du Louvre – Hall Napoléon -  les plus grands peintres du XVIe siècle<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+<linkedhotels>7,6,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Expo Rivalités à Venise - Musée du Louvre</div>Du 17 septembre 2009 au 4 janvier 2010 - Musée du Louvre – Hall Napoléon <br>
+Rivalités à Venise : les plus grands peintres du XVIe siècle Titien, Tintoret, Véronèse ….</div>]]></onlytext>
+			<type>0</type>
+			<icon></icon>
+			<Point><coordinates>48.8598389, 2.3402789</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[177]]></id>
+			<name><![CDATA[Grande Arche de la Défense]]></name>
+			<adresse><![CDATA[1 Parvis de la Défense  92044 Paris La Défense]]></adresse>
+			<description><![CDATA[<div class="title">Grande Arche de la Défense</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/GrandeArche.jpg" /></div><div class="txt">La Grande Arche de la Défense est un monument situé dans le quartier d'affaires de La Défense à l'ouest de Paris.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Grande Arche de la Défense</div>La Grande Arche de la Défense inaugurée en 1989 est un monument situé dans le quartier d'affaires de La Défense à l'ouest de Paris.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_arche.png</icon>
+
+			<Point><coordinates>48.892535,  2.236794</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[107]]></id>
+			<name><![CDATA[L'Opera Garnier]]></name>
+			<adresse><![CDATA[Place de l'Opéra 75009 Paris]]></adresse>
+			<description><![CDATA[<div class="title">L'Opera Garnier</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/garnier.jpg" /></div><div class="txt">L’Opéra Garnier, temple de l'art lyrique et chorégraphique, chef d'œuvre architectural connu dans le monde entier.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+<linkedhotels>3,5,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">L'Opera Garnier</div>L’Opéra Garnier, temple de l'art lyrique et chorégraphique, est un chef d'œuvre architectural inauguré en 1875 et connu dans le monde entier.</div>]]></onlytext>
+
+			<type>0</type>
+			<icon>data/places/icons/icon_opera.png</icon>
+			<Point><coordinates>48.871094,  2.332104</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[104]]></id>
+			<name><![CDATA[La Sainte Chapelle]]></name>
+
+			<adresse><![CDATA[4 boulevard du Palais 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">La Sainte Chapelle</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/SainteChapelle.jpg" /></div><div class="txt">La Sainte Chapelle fut édifiée sur l'île de la Cité à la demande de Saint-Louis pour abriter plusieurs reliques saintes.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">La Sainte Chapelle</div>La Sainte-Chapelle fut édifiée sur l'île de la Cité à Paris, à la demande de Saint-Louis afin d'abriter les diverses reliques saintes qu'il avait acquises.
+</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_sainte_chapelle.png</icon>
+			<Point><coordinates>48.854853,  2.345444</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[105]]></id>
+			<name><![CDATA[Le Panthéon]]></name>
+			<adresse><![CDATA[Place du Panthéon 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Le Panthéon</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Pantheon.jpg" /></div><div class="txt">Le Panthéon est un monument de style néo-classique situé sur la montagne Sainte-Geneviève, au cœur du quartier latin.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>16,6,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Le Panthéon</div>Ensemble magistral de l’architecture du 18ème siècle, le Panthéon est un monument de style néo-classique situé sur la montagne Sainte-Geneviève au cœur du quartier latin.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_pantheon.png</icon>
+
+			<Point><coordinates>48.845727,  2.345657</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[101]]></id>
+			<name><![CDATA[Les Invalides]]></name>
+			<adresse><![CDATA[Esplanade des Invalides 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Les Invalides</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/invalides.jpg" /></div><div class="txt">Les Invalides, dont la construction fut ordonnée par Louis XIV, accueille plusieurs musées et une nécropole militaire.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>4,5,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Les Invalides</div>Louis XIV, sensible au sort des militaires qui l'ont servi lors de ses nombreuses campagnes, décide de construire l'hôtel royal des Invalides en 1670.</div>]]></onlytext>
+
+			<type>0</type>
+			<icon>data/places/icons/icon_invalide.png</icon>
+			<Point><coordinates>48.859909,  2.312008</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[106]]></id>
+			<name><![CDATA[Place de la Bastille]]></name>
+
+			<adresse><![CDATA[Place de la Bastille 75011 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Place de la Bastille</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/bastille.jpg" /></div><div class="txt">La place de la Bastille, lieu symbolique de la Révolution française, où la prison fut prise d’assaut le 14 juillet 1789.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Place de la Bastille</div>La place de la Bastille est le lieu symbolique de la Révolution française, où la prison fut prise d’assaut le 14 juillet 1789. Elle accueille par ailleurs l’Opéra Bastille.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_bastille.png</icon>
+			<Point><coordinates>48.85316678889399, 2.3691415786743164</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[102]]></id>
+			<name><![CDATA[Place de la Concorde]]></name>
+			<adresse><![CDATA[Place de la Concorde 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Place de la Concorde</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/concorde.jpg" /></div><div class="txt">La Place de la Concorde, plus grande place de Paris, sépare le jardin des Tuileries du début des Champs Elysées.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>4,5,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Place de la Concorde</div>La place a été conçue en 1755 comme un octogone bordé par les Champs-Élysées et le jardin des Tuileries. Les fontaines sont inspirées de celles de Saint-Pierre de Rome.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_concorde.png</icon>
+
+			<Point><coordinates>48.86556169650549, 2.321162223815918</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[13]]></id>
+			<name><![CDATA[Pyramide du Louvre]]></name>
+			<adresse><![CDATA[rue de l’Amiral de Coligny 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Pyramide du Louvre</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeLouvre.jpg" /></div><div class="txt">La Pyramide du Louvre est une pyramide de verre et de métal, située au milieu de la cour Napoléon du Musée du Louvre.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>7,3,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Pyramide du Louvre</div>La Pyramide du Louvre est une pyramide de verre et de métal, située au milieu de la cour Napoléon du Musée du Louvre où se situe le hall d’accueil.</div>]]></onlytext>
+
+			<type>0</type>
+			<icon>data/places/icons/icon_louvre.png</icon>
+			<Point><coordinates>48.86211740600377, 2.3313331604003906</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[103]]></id>
+			<name><![CDATA[Tour Eiffel]]></name>
+
+			<adresse><![CDATA[Champ de Mars 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Tour Eiffel</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/eiffel.jpg" /></div><div class="txt">La Tour Eiffel, symbole de la France et de sa capitale, fut construite à l’occasion de l'exposition universelle de 1889.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Tour Eiffel</div>Symbole et monument incontournable de la capitale érigé à l’occasion de l’Exposition Universelle de 1889, la Tour Eiffel culmine à 324 mètres de hauteur.</div>]]></onlytext>
+			<type>0</type>
+			<icon>data/places/icons/icon_tour_effeil.png</icon>
+			<Point><coordinates>48.85830582465931, 2.29464054107666</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[8]]></id>
+			<name><![CDATA[Centre des Congrès de la Cité des sciences et de l'industrie]]></name>
+			<adresse><![CDATA[30, avenue Corentin-Cariou 75930 Paris Cedex 19]]></adresse>
+			<description><![CDATA[<div class="title">Centre des Congrès de la Cité des sciences et de l'industrie</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/CiteDesSciences.jpg" /></div><div class="txt">Au cœur de la Cité des sciences et de l’industrie, les espaces du Centre des congrès offrent modernité et originalité.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+<linkedhotels>8,3,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Centre des Congrès de la Cité des sciences et de l'industrie</div>Au cœur de la Cité des sciences et de l’industrie, les espaces du Centre des congrès offrent modernité et originalité.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+
+			<Point><coordinates>48.897042,  2.385173</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[202]]></id>
+			<name><![CDATA[Espace Champerret]]></name>
+			<adresse><![CDATA[Avenue de la Porte de Champerret  75017 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Espace Champerret</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/picto_congres.jpg" /></div><div class="txt">Ce site est parfaitement adapté aux salons grand public de taille moyenne et aux salons professionnels de petite taille.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/></div></div>]]></description>
+<linkedhotels>10,12,9</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Espace Champerret</div>Ce site est parfaitement adapté aux salons grand public de taille moyenne et aux salons professionnels de petite taille.</div>]]></onlytext>
+
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.886225,  2.28748</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[228]]></id>
+			<name><![CDATA[Exposition Gustave Eiffel - Le Magicien du fer]]></name>
+			<adresse><![CDATA[5 rue de Lobaud 75004 Paris]]></adresse>
+
+			<description><![CDATA[<div class="title">Exposition Gustave Eiffel - Le Magicien du fer</div><br /><div class="container"><div class="img"><img src=" data/now-in-paris/gustave-eiffel-96x88.gif" /></div><div class="txt">Exposition Gustave Eiffel - Le Magicien du fer<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>6,8,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Exposition Gustave Eiffel - Le Magicien du fer</div>A l’ occasion des 120 ans de la Tour Eiffel, la Mairie de Paris met à l’honneur son concepteur. Cette exposition gratuite retrace les multiples créations de ce génie du fer comme des édifices publics et autres viaducs….Bien évidement la Dame de Fer est particulièrement mise en avant !!!</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.8563377, 2.3534181</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[6]]></id>
+
+			<name><![CDATA[L'Espace Événements du Parc Floral de Paris]]></name>
+			<adresse><![CDATA[Esplanade du Château de Vincennes 75012 Paris]]></adresse>
+			<description><![CDATA[<div class="title">L'Espace Événements du Parc Floral de Paris</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/ParcFloral.jpg" /></div><div class="txt">Sur 22000 m2, l’espace Evènements offre une modularité exceptionnelle dans le cadre naturel du Parc Floral de Paris.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(17);">Saint-Louis***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/></div></div>]]></description>
+<linkedhotels>17,15,16</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">L'Espace Événements du Parc Floral de Paris</div>Sur 22000 m2, l’espace Evènements offre une modularité exceptionnelle dans le cadre naturel du Parc Floral de Paris.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.839583,  2.438729</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[1]]></id>
+			<name><![CDATA[Palais des Congrès de Paris Porte Maillot]]></name>
+			<adresse><![CDATA[2, place de la Porte-Maillot 75017 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Palais des Congrès de Paris Porte Maillot</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/PalaisCongres.jpg" /></div><div class="txt">Lieu emblématique, le Palais des Congrès de Paris se situe au cœur de l'activité parisienne depuis plus de 30 ans.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/></div></div>]]></description>
+<linkedhotels>9,10,12</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Palais des Congrès de Paris Porte Maillot</div>Lieu emblématique, le Palais des Congrès de Paris se situe au cœur de l'activité parisienne depuis plus de 30 ans.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+
+			<Point><coordinates>48.878502,  2.283198</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[12]]></id>
+			<name><![CDATA[Palais des Congrès de Versailles]]></name>
+			<adresse><![CDATA[10 rue de la Chancellerie 78000 Versailles]]></adresse>
+			<description><![CDATA[<div class="title">Palais des Congrès de Versailles</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/picto_congres.jpg" /></div><div class="txt">Faire circuler les idées : tel est l’objectif du Palais des Congrès de Versailles, situé à proximité immédiate du château.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+<linkedhotels>9,4,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Palais des Congrès de Versailles</div>Faire circuler les idées : tel est l’objectif du Palais des Congrès de Versailles, situé à proximité immédiate du château.</div>]]></onlytext>
+
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.802681,  2.123804</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[10]]></id>
+			<name><![CDATA[Parc d'Expositions de Paris Le Bourget]]></name>
+			<adresse><![CDATA[ 93350 Le Bourget]]></adresse>
+
+			<description><![CDATA[<div class="title">Parc d'Expositions de Paris Le Bourget</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/picto_congres.jpg" /></div><div class="txt">Le Parc d’expositions de Paris-Le Bourget est situé à proximité immédiate de l’aéroport d’affaires du Bourget.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Parc d'Expositions de Paris Le Bourget</div>Le Parc d’expositions de Paris-Le Bourget est situé à proximité immédiate de l’aéroport d’affaires du Bourget</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.930913,  2.426327</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[7]]></id>
+
+			<name><![CDATA[Paris Expo Carrousel du Louvre]]></name>
+			<adresse><![CDATA[99, rue de Rivoli 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Paris Expo Carrousel du Louvre</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/carrouselle.jpg" /></div><div class="txt">Agencés en 4 salles élégantes et fonctionnelles, ses 7100 m2 sont prévus pour accueillir des manifestations de prestige.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>7,3,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris Expo Carrousel du Louvre</div>Agencés en 4 salles élégantes et fonctionnelles, ses 7100 m2 sont prévus pour accueillir des manifestations de prestige.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.860418,  2.342332</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[2]]></id>
+			<name><![CDATA[Paris Expo CNIT La Défense]]></name>
+			<adresse><![CDATA[Parvis de la Défense 92053 Paris La Défense]]></adresse>
+			<description><![CDATA[<div class="title">Paris Expo CNIT La Défense</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/ExpoCNIT.jpg" /></div><div class="txt">Ce centre de congrès et d'exposition totalisant 43 000 m2 conjugue innovation et performance technologique.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris Expo CNIT La Défense</div>Ce centre de congrès et d'exposition totalisant 43 000 m2 conjugue innovation et performance technologique.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+
+			<Point><coordinates>48.892535,  2.236794</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[3]]></id>
+			<name><![CDATA[Paris Expo Cœur Défense]]></name>
+			<adresse><![CDATA[Parvis de la Défense 92032 Paris La Défense]]></adresse>
+			<description><![CDATA[<div class="title">Paris Expo Cœur Défense</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/CoeurDefense.jpg" /></div><div class="txt">Cet ensemble immobilier abrite un centre de conférence de 3300 m² composé d'un amphithéâtre et de salles de réunion.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris Expo Cœur Défense</div>Cet ensemble immobilier abrite un centre de conférence de 3300 m² composé d'un amphithéâtre et de salles de réunion.</div>]]></onlytext>
+
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.892535,  2.236794</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[4]]></id>
+			<name><![CDATA[Paris Expo Espace Grande Arche La Défense]]></name>
+			<adresse><![CDATA[Parvis de la Défense 92044 Paris La Défense]]></adresse>
+
+			<description><![CDATA[<div class="title">Paris Expo Espace Grande Arche La Défense</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/GrandeArche.jpg" /></div><div class="txt">Au pied de la Grande Arche de la Défense, ses 9 500 m2 sont destinés aux évènements et salons de taille moyenne.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris Expo Espace Grande Arche La Défense</div>Au pied de la Grande Arche de la Défense, ses 9 500 m² sont destinés aux évènements et salons de taille moyenne.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.892535,  2.236794</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[5]]></id>
+
+			<name><![CDATA[Paris Expo Porte de Versailles]]></name>
+			<adresse><![CDATA[Place de la Porte de Versailles 75014 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Paris Expo Porte de Versailles</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/picto_congres.jpg" /></div><div class="txt">Constitué de 8 halls d'exposition pour 220 000 m2, Paris Expo Porte de Versailles se place au 1er rang des parcs français.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/></div></div>]]></description>
+<linkedhotels>7,16,15</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris Expo Porte de Versailles</div>Constitué de 8 halls d'exposition pour 220 000 m², Paris Expo Porte de Versailles se place au 1er rang des parcs français.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+			<Point><coordinates>48.832212,  2.287954</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[9]]></id>
+			<name><![CDATA[Paris-Nord II Villepinte]]></name>
+			<adresse><![CDATA[Allée des Erables 93430 Villepinte]]></adresse>
+			<description><![CDATA[<div class="title">Paris-Nord II Villepinte</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/picto_congres.jpg" /></div><div class="txt">Le parc bien pensé : le parc d’expositions Paris-Nord Villepinte est situé à 5 minutes de l’aéroport Roissy CDG.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Paris-Nord II Villepinte</div>Le parc bien pensé : le parc d’expositions Paris-Nord Villepinte est situé à 5 minutes de l’aéroport Roissy CDG.</div>]]></onlytext>
+			<type>1</type>
+			<icon></icon>
+
+			<Point><coordinates>48.973938,  2.499993</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[197]]></id>
+			<name><![CDATA[Arènes de Lutèce]]></name>
+			<adresse><![CDATA[49 rue Monge 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Arènes de Lutèce</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/arene.jpg" /></div><div class="txt">Les arènes de Lutèce, construites au 1er siècle, sont un amphithéâtre romain qui pouvait accueillir 17000 spectateurs.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Arènes de Lutèce</div>Les arènes de Lutèce, construites au 1er siècle, sont un amphithéâtre romain. Il s'agit d'un complexe hybride de type "amphithéâtre à scène" ou "amphithéâtre-théâtre". </div>]]></onlytext>
+
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.845162,  2.352168</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[183]]></id>
+			<name><![CDATA[Centre Georges Pompidou]]></name>
+			<adresse><![CDATA[Place Georges Pompidou 75004 Paris]]></adresse>
+
+			<description><![CDATA[<div class="title">Centre Georges Pompidou</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Beaubourg.jpg" /></div><div class="txt">Le Centre Beaubourg est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>8,6,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Centre Georges Pompidou</div>Le Centre Beaubourg, situé entre le quartier des Halles et le Marais, est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.860179,  2.350931</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[169]]></id>
+
+			<name><![CDATA[Cité des sciences et de l'industrie]]></name>
+			<adresse><![CDATA[30, avenue Corentin-Cariou 75019 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Cité des sciences et de l'industrie</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/CiteDesSciences.jpg" /></div><div class="txt">La Cité des Sciences est à la fois un musée, un lieu de spectacles et une médiathèque dédiée aux sciences et techniques.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+<linkedhotels>8,3,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Cité des sciences et de l'industrie</div>La Cité des Sciences est à la fois un musée, un lieu de spectacles et une médiathèque dédiée aux sciences et techniques. </div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.897042,  2.385173</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[184]]></id>
+			<name><![CDATA[Grands Magasins]]></name>
+			<adresse><![CDATA[boulevard Haussmann 75009 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Grands Magasins</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/grandMagasins.jpg" /></div><div class="txt">Les grands magasins sont apparus au début du XIXe siècle. Émile Zola les qualifia de "cathédrales du commerce".<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+<linkedhotels>3,5,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Grands Magasins</div>Les grands magasins sont apparus au début du XIXe siècle. Ils font suite aux magasins de nouveautés, apparus dans la deuxième partie du XVIIIe siècle.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+
+			<Point><coordinates>48.872864,  2.333737</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[200]]></id>
+			<name><![CDATA[Ile Saint Louis]]></name>
+			<adresse><![CDATA[ 75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Ile Saint Louis</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/ilesaintlouis.jpg" /></div><div class="txt">L'île Saint-Louis, remarquable par ses hôtels particuliers du XVIIe siècle, est située au cœur du Paris historique.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Ile Saint Louis</div>L'île Saint-Louis est située en plein cœur de Paris derrière la cathédrale Notre-Dame de Paris. Cette ile est remarquable par ses hôtels particuliers du XVIIe siècle.</div>]]></onlytext>
+
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.851581,  2.35671</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[37]]></id>
+			<name><![CDATA[Institut du Monde Arabe]]></name>
+			<adresse><![CDATA[1, rue des Fossés Saint Bernard 75005 Paris]]></adresse>
+
+			<description><![CDATA[<div class="title">Institut du Monde Arabe</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/mondearabe.jpg" /></div><div class="txt">L'Institut du monde arabe, situé au cœur du Paris historique, est un institut culturel parisien dédié au monde arabe.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Institut du Monde Arabe</div>L'Institut du monde arabe est un institut culturel parisien dédié au monde arabe. Il est situé au cœur de Paris entre le quai Saint-Bernard et le campus de Jussieu.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.84929,  2.355993</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[189]]></id>
+
+			<name><![CDATA[Jardin des Tuileries]]></name>
+			<adresse><![CDATA[Quai des Tuileries 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Jardin des Tuileries</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/jardinTuilleries.jpg" /></div><div class="txt">Le jardin des Tuileries, planté par Catherine de Médicis en 1564, est le plus important jardin à la française de Paris.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Jardin des Tuileries</div>Le jardin des Tuileries est le plus important et le plus ancien jardin à la française de Paris. Il s'étend de la Concorde au Louvre et de la Seine à la rue de Rivoli.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.862298,  2.325576</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[190]]></id>
+			<name><![CDATA[Jardin du Luxembourg]]></name>
+			<adresse><![CDATA[40 rue de Vaugirard 75006 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Jardin du Luxembourg</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/jardinLuxembourg.jpg" /></div><div class="txt">Le jardin du Luxembourg, créé en 1612 par Marie de Médicis, s’étend sur 23 hectares au cœur du quartier Latin.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Jardin du Luxembourg</div>Le jardin du Luxembourg, créé en 1612 par Marie de Médicis, est un jardin privé ouvert au public. Situé dans le VIe arrondissement de Paris, il s'étend sur 23 hectares.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+
+			<Point><coordinates>48.849135,  2.334908</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[191]]></id>
+			<name><![CDATA[La Tour Montparnasse]]></name>
+			<adresse><![CDATA[33 avenue Maine 75015 Paris]]></adresse>
+			<description><![CDATA[<div class="title">La Tour Montparnasse</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/TourMontparnasse.jpg" /></div><div class="txt">La tour Montparnasse offre le plus beau panorama de Paris depuis la terrasse du 56e étage située à 196 m de hauteur.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/></div></div>]]></description>
+<linkedhotels>7,16,15</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">La Tour Montparnasse</div>La tour Montparnasse est un immeuble de bureaux de grande hauteur construit dans le sud-ouest de Paris. A sa construction en 1970, cet immeuble était le plus haut d'Europe.</div>]]></onlytext>
+
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.842671,  2.320761</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[188]]></id>
+			<name><![CDATA[Le Marais]]></name>
+			<adresse><![CDATA[Rue du Temple 75003 Paris]]></adresse>
+
+			<description><![CDATA[<div class="title">Le Marais</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Marais.jpg" /></div><div class="txt">Le Marais est un quartier à la mode situé dans une partie des IIIe et IVe arrondissements de Paris, sur la rive droite.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>8,16,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Le Marais</div>Le Marais est situé dans une partie des IIIe et IVe arrondissements de Paris. Ancien quartier de la noblesse, il a conservé un grand nombre d'hôtels particuliers.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.862382,  2.357443</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[182]]></id>
+
+			<name><![CDATA[Les Champs-Elysées]]></name>
+			<adresse><![CDATA[Avenue des Champs-Elysées 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Les Champs-Elysées</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/champsElysees.jpg" /></div><div class="txt">L’avenue des Champs-Élysées, axe historique de l'ouest parisien, est la plus grande et plus célèbre avenue de Paris.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/></div></div>]]></description>
+<linkedhotels>9,10,12</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Les Champs-Elysées</div>L’avenue des Champs-Élysées est la plus grande et plus célèbre avenue de la ville de Paris. Elle est même considérée comme la plus belle avenue du monde.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.869801,  2.307586</coordinates></Point>
+		</Placemark>
+
+		<Placemark>
+			<id><![CDATA[232]]></id>
+			<name><![CDATA[Noël Gourmand - Galeries Lafayette]]></name>
+			<adresse><![CDATA[40 boulevard Haussmann 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Noël Gourmand - Galeries Lafayette</div><br /><div class="container"><div class="img"><img src="data/now-in-paris/noel-gourmand-2009-96x86.jpg" /></div><div class="txt"><br/><div class="avisiter">Nos hôtels les plus proches</div></div></div>]]></description>
+<linkedhotels></linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Noël Gourmand - Galeries Lafayette</div>
+A partir du 4 novembre 2009, venez découvrir le Noël Gourmand aux Galeries Lafayette ! 
+</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.873031, 2.332603</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[186]]></id>
+			<name><![CDATA[Palais de la Découverte]]></name>
+			<adresse><![CDATA[Avenue Franklin Roosevelt 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Palais de la Découverte</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/palaisDec.jpg" /></div><div class="txt">Le Palais de la découverte est un musée et centre culturel scientifique, dédié aux progrès scientifiques et techniques.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>4,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Palais de la Découverte</div>Le Palais de la découverte est un musée et centre culturel scientifique, dont l'ambition est de montrer que l’homme moderne peut appréhender les nouveaux défis du monde.</div>]]></onlytext>
+			<type>2</type>
+
+			<icon></icon>
+			<Point><coordinates>48.86899,  2.310106</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[199]]></id>
+			<name><![CDATA[Parc Monceau]]></name>
+			<adresse><![CDATA[Boulevard de Courcelles 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Parc Monceau</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/monceau.jpg" /></div><div class="txt">A l’origine propriété du duc de Chartres, le parc Monceau est un jardin d'agrément situé dans le VIIIe arrondissement.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/></div></div>]]></description>
+
+<linkedhotels>10,12,9</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Parc Monceau</div>A l’origine propriété du duc de Chartres, le parc Monceau est un jardin d'agrément situé dans le VIIIe arrondissement. C’est sans doute l’un des plus beaux de Paris.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.88038073363411, 2.308931350708008</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[193]]></id>
+			<name><![CDATA[Parc Montsouris]]></name>
+
+			<adresse><![CDATA[Boulevard Jourdan 75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Parc Montsouris</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/montsouris.jpg" /></div><div class="txt">Le parc Montsouris, parc à l'anglaise construit en 1860 et situé dans le 14e arrondissement, s'étend sur 15 hectares.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Parc Montsouris</div>Le parc Montsouris est un jardin public situé dans le 14e arrondissement de Paris. Ce parc à l'anglaise aménagé à la fin du XIXe siècle s'étend sur 15 hectares.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.822185,  2.338007</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[192]]></id>
+			<name><![CDATA[Père-Lachaise]]></name>
+			<adresse><![CDATA[16 rue du Repos  75020 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Père-Lachaise</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/PereLachaise.jpg" /></div><div class="txt">Conçu en 1903, le cimetière du Père-Lachaise est la nécropole la plus prestigieuse et la plus visitée de la capitale.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Père-Lachaise</div>Le cimetière du Père-Lachaise est la nécropole la plus prestigieuse et la plus visitée de la capitale. Un million de personnes y ont été inhumées à ce jour.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.859375,  2.390959</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[187]]></id>
+			<name><![CDATA[Place des Vosges]]></name>
+			<adresse><![CDATA[Place des Vosges 75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Place des Vosges</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/PlagedesVosges.jpg" /></div><div class="txt">La place des Vosges se trouve dans le quartier du Marais. Conçue sur un plan carré, son centre est occupé par un square.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/></div></div>]]></description>
+<linkedhotels>8,16,15</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Place des Vosges</div>La place des Vosges se trouve dans le quartier du Marais. Conçue sur un plan quasi carré, elle est bordée de remarquables immeubles d'habitation de deux étages.</div>]]></onlytext>
+			<type>2</type>
+
+			<icon></icon>
+			<Point><coordinates>48.855789,  2.364701</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[201]]></id>
+			<name><![CDATA[Puces Saint-Ouen]]></name>
+			<adresse><![CDATA[Rue René Binet 75018 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Puces Saint-Ouen</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/pucesaintouen.jpg" /></div><div class="txt">Le marché aux puces de Saint-Ouen est la plus importante concentration d'antiquaires et de brocanteurs du monde.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+
+<linkedhotels>12,10,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Puces Saint-Ouen</div>Le marché aux puces de Saint-Ouen est la plus importante concentration d'antiquaires et de brocanteurs du monde. Il se tient tous les samedis, dimanches et lundis.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.899222,  2.340138</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[196]]></id>
+			<name><![CDATA[Quartier latin]]></name>
+
+			<adresse><![CDATA[9 Rue Champollion 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Quartier latin</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/quartierlatin.jpg" /></div><div class="txt">Le Quartier latin se situe dans les 5e et 6e arrondissements de Paris avec pour cœur historique la Sorbonne, c’est l'un des quartiers de Paris les plus connus au monde.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Quartier latin</div>Le Quartier latin se situe dans les 5e et 6e arrondissements de Paris avec pour cœur historique la Sorbonne, c’est l'un des quartiers de Paris les plus connus au monde.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.853421,  2.33306</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[198]]></id>
+			<name><![CDATA[Quartier Mouffetard]]></name>
+			<adresse><![CDATA[Place Monge 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Quartier Mouffetard</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/mouffetard.jpg" /></div><div class="txt">La rue Mouffetard est une rue très pittoresque du 5e arrondissement qui se termine sur la place de la Contrescarpe.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Quartier Mouffetard</div>La rue Mouffetard est une rue très pittoresque du 5e arrondissement de Paris. Il s'agit d'une des rues les plus anciennes de Paris, datant des Romains au Ier siècle.</div>]]></onlytext>
+			<type>2</type>
+			<icon></icon>
+			<Point><coordinates>48.842696,  2.351904</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[185]]></id>
+			<name><![CDATA[Saint-Germain des Prés]]></name>
+			<adresse><![CDATA[Place Saint-Germain des Prés 75006 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Saint-Germain des Prés</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/saintGermain.jpg" /></div><div class="txt">Saint-Germain-des-Prés est un quartier de Paris situé sur la rive gauche de la Seine et autour de l'église du même nom.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>7,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Saint-Germain des Prés</div>Saint-Germain des Prés est un quartier de Paris situé sur la rive gauche de la Seine et autour de l'église du même nom, dans le 6e arrondissement.</div>]]></onlytext>
+			<type>2</type>
+
+			<icon></icon>
+			<Point><coordinates>48.85389,  2.333371</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[93]]></id>
+			<name><![CDATA[Cité des sciences et de l'industrie]]></name>
+			<adresse><![CDATA[30 avenue Corentin-Cariou 75019 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Cité des sciences et de l'industrie</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/CiteDesSciences.jpg" /></div><div class="txt">La Cité des Sciences est à la fois un musée, un lieu de spectacles et une médiathèque dédiée aux sciences et techniques.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+
+<linkedhotels>8,3,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Cité des sciences et de l'industrie</div>La Cité des Sciences est un établissement public, à la fois musée, lieu de spectacles et médiathèque dédiée à la recherche et aux sciences et techniques.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.897042,  2.385173</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[20]]></id>
+			<name><![CDATA[Galeries Nationales du Jeu de Paume]]></name>
+
+			<adresse><![CDATA[Place de la Concorde 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Galeries Nationales du Jeu de Paume</div><br /><div class="container"><div class="txt"><br/><div class="avisiter">Nos hôtels les plus proches</div></div></div>]]></description>
+<linkedhotels></linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Galeries Nationales du Jeu de Paume</div></div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.865594,  2.320718</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[173]]></id>
+			<name><![CDATA[Institut du Monde Arabe]]></name>
+			<adresse><![CDATA[1, rue des Fossés Saint Bernard 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Institut du Monde Arabe</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/mondearabe.jpg" /></div><div class="txt">L'Institut du monde arabe, situé au cœur du Paris historique, est un institut culturel parisien dédié au monde arabe.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Institut du Monde Arabe</div>L'Institut du monde arabe est un institut culturel parisien dédié au monde arabe. Il est situé au cœur de Paris entre le quai Saint-Bernard et le campus de Jussieu.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.84929,  2.355993</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[56]]></id>
+			<name><![CDATA[Le Grand monde d’Andy Warhol]]></name>
+			<adresse><![CDATA[3 avenue du Général Eisenhower  75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Le Grand monde d’Andy Warhol</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/96x98.jpg" /></div><div class="txt">Séjournez dans l’un de nos hôtels parisiens lors de votre visite de l’exposition Le Grand monde d’Andy Warhol.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>4,3,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Le Grand monde d’Andy Warhol</div>Deux cent cinquante œuvres - parmi le millier de portraits peints depuis le début des années soixante - sont présentées aux côtés de grands thèmes qui permettent d'ouvrir l'exposition sur une vision rétrospective.</div>]]></onlytext>
+			<type>4</type>
+
+			<icon></icon>
+			<Point><coordinates>48.8672557,  2.3118761</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[90]]></id>
+			<name><![CDATA[Le Sacré-Coeur de Montmartre]]></name>
+			<adresse><![CDATA[Parvis du Sacré Cœur 75018 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Le Sacré-Coeur de Montmartre</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Montmartre.jpg" /></div><div class="txt">La basilique du Sacré-Cœur, érigée à la fin du XIXe siècle, est un édifice religieux majeur situé sur la butte Montmartre.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/></div></div>]]></description>
+
+<linkedhotels>12,10,8</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Le Sacré-Coeur de Montmartre</div>En forme de croix grecque et ornée de quatre coupoles, la basilique renferme des décorations de grande valeur telles que sculptures en marbre, vitraux et mosaïques.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.886191,  2.343318</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[49]]></id>
+			<name><![CDATA[Les égouts de Paris]]></name>
+
+			<adresse><![CDATA[93, quai d'Orsay 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Les égouts de Paris</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/egout.jpg" /></div><div class="txt">Une section du réseau des égouts est ouverte au public au pont de l'Alma. Elle accueille près de 95000 visiteurs par an.<br/><div class="avisiter">Nos hôtels les plus proches</div></div></div>]]></description>
+<linkedhotels></linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Les égouts de Paris</div>Une section du réseau des égouts est ouverte au public au pont de l'Alma. Ce "musée des égouts" accueille près de 95 000 visiteurs par an.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.862639,  2.31085</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[40]]></id>
+			<name><![CDATA[Musée Bible et Terre Sainte]]></name>
+			<adresse><![CDATA[21, rue d'Assas 75006 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Bible et Terre Sainte</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeBible.jpg" /></div><div class="txt">Le Musée Bible et Terre Sainte possède une très riche collection d’objets illustrant la vie quotidienne en Palestine.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Bible et Terre Sainte</div>Le Musée "Bible et Terre Sainte" possède une très riche collection d’objets qui illustre la vie quotidienne en Palestine au cours des âges.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.848172,  2.329295</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[178]]></id>
+			<name><![CDATA[Musée Carnavalet]]></name>
+			<adresse><![CDATA[23 rue de Sévigné 75003 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Carnavalet</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/carnavalet.jpg" /></div><div class="txt">Le musée Carnavalet dans le quartier du Marais est dédié à l'Histoire de Paris des origines de la ville à nos jours.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/></div></div>]]></description>
+<linkedhotels>6,8,16</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Carnavalet</div>Le musée Carnavalet est consacré à l'Histoire de Paris, des origines de la ville à nos jours. Situé dans le quartier du Marais, il présente des collections exceptionnelles.</div>]]></onlytext>
+			<type>4</type>
+
+			<icon></icon>
+			<Point><coordinates>48.857071,  2.362978</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[172]]></id>
+			<name><![CDATA[Musée d'Orsay]]></name>
+			<adresse><![CDATA[1 rue de la Légion d'Honneur  75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée d'Orsay</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeOrsay.jpg" /></div><div class="txt">Le musée d'Orsay présente, dans toute sa diversité, la création artistique du monde occidental de 1848 à 1914.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+
+<linkedhotels>4,5,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée d'Orsay</div>Le musée d'Orsay, aménagé dans l’ancienne gare d'Orsay et inauguré en 1986 présente, dans toute sa diversité, la création artistique du monde occidental de 1848 à 1914.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.86059,  2.325082</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[52]]></id>
+			<name><![CDATA[Musée de l'armée]]></name>
+
+			<adresse><![CDATA[129 rue de Grenelle  75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée de l'armée</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/museeArme.jpg" /></div><div class="txt">Pour conserver la trace des traditions de l'armée, un Musée historique de l'Armée est créé en 1896 au sein des Invalides.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(5);">Opéra Marigny****</a><br/></div></div>]]></description>
+<linkedhotels>4,6,5</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée de l'armée</div>Pour conserver la trace des traditions de l'armée, ses trophées et les objets de la vie quotidienne des soldats, un musée historique de l'Armée est créé en 1896.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.85844,  2.311844</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[17]]></id>
+			<name><![CDATA[Musée de l'Orangerie]]></name>
+			<adresse><![CDATA[Jardin des Tuileries 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée de l'Orangerie</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeOrangerie.jpg" /></div><div class="txt">Le Musée de l’Orangerie présente des peintures impressionnistes et post-impressionnistes de Monet, Cézanne, Matisse, etc.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée de l'Orangerie</div>Le Musée de l’Orangerie est un musée de peintures impressionnistes et post-impressionnistes situé dans l'ancienne orangerie du palais des Tuileries à Paris.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.864589,  2.324655</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[171]]></id>
+			<name><![CDATA[Musée du Louvre]]></name>
+			<adresse><![CDATA[rue de l’Amiral de Coligny 75001 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée du Louvre</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeLouvre.jpg" /></div><div class="txt">Le musée du Louvre, ancien palais royal, est l'un des plus importants musées du monde, en surface et en fréquentation.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>7,3,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée du Louvre</div>Le musée du Louvre est le plus grand musée parisien par sa surface et l'un des plus importants du monde. Situé au cœur de Paris, le bâtiment est un ancien palais royal.</div>]]></onlytext>
+			<type>4</type>
+
+			<icon></icon>
+			<Point><coordinates>48.859839,  2.340279</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[48]]></id>
+			<name><![CDATA[Musée du Quai Branly]]></name>
+			<adresse><![CDATA[37, quai Branly 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée du Quai Branly</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/quaibranly.jpg" /></div><div class="txt">Le musée du quai Branly réunit les collections du musée de l'Homme et celles du musée des arts d’Afrique et d'Océanie.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+
+<linkedhotels>4,9,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée du Quai Branly</div>Le musée du quai Branly ou musée des arts et civilisations d'Afrique, d'Asie, d'Océanie et des Amériques est situé quai Branly sur la rive droite de la Seine.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.86161,  2.297782</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[64]]></id>
+			<name><![CDATA[Musée Grévin]]></name>
+
+			<adresse><![CDATA[10, boulevard Montmartre  75009 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Grévin</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/museeGrevin.jpg" /></div><div class="txt">Le Musée Grévin est un musée de cire dans lequel sont regroupées des reproductions en cire de personnages célèbres.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(2);">Opéra Diamond****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+<linkedhotels>8,2,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Grévin</div>Le Musée Grévin est un musée de cire privé situé dans le IXe arrondissement de Paris, et dans lequel sont regroupées des reproductions en cire de personnages célèbres.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.871648,  2.342003</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[180]]></id>
+			<name><![CDATA[Musée Guimet]]></name>
+			<adresse><![CDATA[6 place d'Iéna 75016 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Guimet</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeArtsAsiatiques.jpg" /></div><div class="txt">Le musée National des Arts Asiatiques présente l’une des plus riches collections des civilisations asiatiques en Europe.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Guimet</div>Le musée National des Arts Asiatiques Guimet présente l’une des plus riches collections des civilisations asiatiques en Europe : la Corée, la Chine ou encore le Japon... </div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.864776,  2.293749</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[28]]></id>
+			<name><![CDATA[Musée national d'Art Moderne]]></name>
+			<adresse><![CDATA[Place Georges Pompidou 75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée national d'Art Moderne</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/Beaubourg.jpg" /></div><div class="txt">Le Centre Beaubourg est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/></div></div>]]></description>
+<linkedhotels>8,6,7</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée national d'Art Moderne</div>Le Centre Beaubourg, situé entre le quartier des Halles et le Marais, est une institution culturelle originale entièrement vouée à la création moderne et contemporaine.</div>]]></onlytext>
+			<type>4</type>
+
+			<icon></icon>
+			<Point><coordinates>48.860179,  2.350931</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[30]]></id>
+			<name><![CDATA[Musée Notre-Dame de Paris]]></name>
+			<adresse><![CDATA[10, rue du Cloître de Notre Dame  75004 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Notre-Dame de Paris</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/notredame.jpg" /></div><div class="txt">Le musée de la Crypte archéologique présente les vestiges découverts lors des fouilles réalisées sur ces lieux.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Notre-Dame de Paris</div>La Crypte archéologique de Notre-Dame de Paris a été aménagée pour protéger et permettre la visite des vestiges découverts lors des fouilles réalisées à partir de 1965.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.852969123136674, 2.3498940467834472</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[25]]></id>
+			<name><![CDATA[Musée Picasso]]></name>
+
+			<adresse><![CDATA[5, rue de Thorigny  75003 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Picasso</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseePicasso.jpg" /></div><div class="txt">L’hôtel Salé, situé dans le quartier du Marais, renferme la plus riche collection mondiale d'œuvres de l’artiste.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/></div></div>]]></description>
+<linkedhotels>6,8,16</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Picasso</div>L’hôtel Salé, situé dans le quartier du Marais, abrite le musée Picasso qui renferme la plus riche collection mondiale d'œuvres de l’artiste et couvre toutes ses périodes. </div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.859686,  2.36274</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[51]]></id>
+			<name><![CDATA[Musée Rodin]]></name>
+			<adresse><![CDATA[79, rue de Varenne 75007 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Musée Rodin</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeRodin.jpg" /></div><div class="txt">Le musée Rodin situé rue de la Varenne sur la rive gauche de Paris assure la conservation de l’œuvre dAuguste Rodin.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>7,4,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Musée Rodin</div>Le musée Rodin assure la conservation et la diffusion de l’œuvre d’Auguste Rodin à travers ses deux sites de la rue de Varenne à Paris et de Meudon (Hauts-de-Seine).</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.85472,  2.320843</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[35]]></id>
+			<name><![CDATA[Muséum National d'Histoire Naturelle]]></name>
+			<adresse><![CDATA[57, rue Cuvier 75005 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Muséum National d'Histoire Naturelle</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/MuseeHistoireNature.jpg" /></div><div class="txt">Le musée national d'histoire naturelle est un établissement de recherche et de diffusion de la culture naturaliste.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Muséum National d'Histoire Naturelle</div>Le Musée national d'histoire naturelle est un établissement public de recherche et de diffusion de la culture naturaliste situé sur la rive gauche de la Seine à Paris.</div>]]></onlytext>
+			<type>4</type>
+
+			<icon></icon>
+			<Point><coordinates>48.844804,  2.356986</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[60]]></id>
+			<name><![CDATA[Palais de la Découverte]]></name>
+			<adresse><![CDATA[Avenue Franklin Roosevelt 75008 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Palais de la Découverte</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/petitPalais.jpg" /></div><div class="txt">Le Palais de la découverte est un musée et centre culturel scientifique, dédié aux progrès scientifiques et techniques.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/></div></div>]]></description>
+
+<linkedhotels>4,6,3</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Palais de la Découverte</div>Le Palais de la découverte est un musée et centre culturel scientifique, dont l'ambition est de montrer que l’homme moderne peut appréhender les nouveaux défis du monde.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.86899,  2.310106</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[181]]></id>
+			<name><![CDATA[Palais de Tokyo]]></name>
+
+			<adresse><![CDATA[13 avenue du Président Wilson 75016 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Palais de Tokyo</div><br /><div class="container"><div class="img"><img src="data/galeries/lieux/96x98/PalaisdeTokyo.jpg" /></div><div class="txt">Le Palais de Tokyo est consacré à la création contemporaine: peinture, sculpture, design, mode, vidéo, cinéma, danse.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(9);">Mac Mahon***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/></div></div>]]></description>
+<linkedhotels>9,4,6</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Palais de Tokyo</div>Le Palais de Tokyo est un lieu consacré à la création contemporaine sous toutes ses formes : peinture, sculpture, design, mode, vidéo, cinéma, littérature, danse.</div>]]></onlytext>
+			<type>4</type>
+			<icon></icon>
+			<Point><coordinates>48.864741,  2.294975</coordinates></Point>
+		</Placemark>
+		<Placemark>
+
+			<id><![CDATA[208]]></id>
+			<name><![CDATA[Gare d'Austerlitz]]></name>
+			<adresse><![CDATA[85 quai d'Austerlitz 75013 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Gare d'Austerlitz</div><br /><div class="container"><div class="txt">Sud-ouest de la France, Espagne. RER ligne C. Métro lignes 5 et 10.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare d'Austerlitz</div></div>]]></onlytext>
+			<type>5</type>
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.840844,  2.369328</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[206]]></id>
+			<name><![CDATA[Gare de l'Est]]></name>
+			<adresse><![CDATA[Place du 11 novembre 1918 75010 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Gare de l'Est</div><br /><div class="container"><div class="txt">TGV Est de la France, Luxembourg et Allemagne. Orient Express. Métro lignes 4, 5 et 7.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>8,12,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare de l'Est</div></div>]]></onlytext>
+			<type>5</type>
+
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.875984,  2.359112</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[204]]></id>
+			<name><![CDATA[Gare de Lyon]]></name>
+			<adresse><![CDATA[Place Louis-Armand 75012 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Gare de Lyon</div><br /><div class="container"><div class="txt">TGV Sud-est de la France, Suisse, Italie. RER lignes A et D. Métro lignes 1 et 14.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare de Lyon</div></div>]]></onlytext>
+			<type>5</type>
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.84537251921467, 2.3740339279174805</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[205]]></id>
+
+			<name><![CDATA[Gare du Nord]]></name>
+			<adresse><![CDATA[18 Rue de Dunkerque 75010 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Gare du Nord</div><br /><div class="container"><div class="txt">Eurostar, Thalys. TGV Nord Pas-de-Calais. RER lignes B, D et E. Métro lignes 2, 4, 5 et 7.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(8);">Best Western France Europe***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(12);">Best Western de Neuville***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(10);">Best Western Mercedes***</a><br/></div></div>]]></description>
+<linkedhotels>8,12,10</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare du Nord</div></div>]]></onlytext>
+			<type>5</type>
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.880119,  2.354197</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[207]]></id>
+			<name><![CDATA[Gare Montparnasse]]></name>
+			<adresse><![CDATA[11 boulevard de Vaugirard 75015 Paris]]></adresse>
+			<description><![CDATA[<div class="title">Gare Montparnasse</div><br /><div class="container"><div class="txt">TGV Atlantique Ouest et Sud-ouest. Métro lignes 4, 6, 12 et 13.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(22);">Elysée Park***</a><br/></div></div>]]></description>
+<linkedhotels>7,6,22</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare Montparnasse</div></div>]]></onlytext>
+			<type>5</type>
+
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.841674,  2.319397</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[212]]></id>
+			<name><![CDATA[Gare Saint-Lazare]]></name>
+			<adresse><![CDATA[ 75008 ]]></adresse>
+			<description><![CDATA[<div class="title">Gare Saint-Lazare</div><br /><div class="container"><div class="txt">SNCF grandes lignes Normandie. RER lignes A et E. Métro lignes 3, 9, 12, 13 et 14.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(2);">Opéra Diamond****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(3);">Best Western Premier Opal****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(22);">Elysée Park***</a><br/></div></div>]]></description>
+
+<linkedhotels>2,3,22</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Gare Saint-Lazare</div></div>]]></onlytext>
+			<type>5</type>
+			<icon>data/places/icons/icon_gares.png</icon>
+			<Point><coordinates>48.875056,  2.328867</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[210]]></id>
+
+			<name><![CDATA[Aéroport d'Orly]]></name>
+			<adresse><![CDATA[ 94396  Orly]]></adresse>
+			<description><![CDATA[<div class="title">Aéroport d'Orly</div><br /><div class="container"><div class="txt">Vols nationaux, Europe et Maghreb. Relié à Paris par RER lignes B et C, Orlyval et bus Air France.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Aéroport d'Orly</div></div>]]></onlytext>
+			<type>6</type>
+			<icon>data/places/icons/icon_aeroport.png</icon>
+			<Point><coordinates>48.726128,  2.364111</coordinates></Point>
+
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[209]]></id>
+			<name><![CDATA[Aéroport de Roissy]]></name>
+			<adresse><![CDATA[BP 20101 95711 Roissy Charles de Gaulle]]></adresse>
+			<description><![CDATA[<div class="title">Aéroport de Roissy</div><br /><div class="container"><div class="txt">Vols internationaux. Relié à Paris par RER ligne B et bus Air France, interconnexion TGV.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(6);">Best Western Ducs de Bourgogne***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(7);">Best Western Premier Louvre Saint-Honoré****</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(4);">Mathis Elysées****</a><br/></div></div>]]></description>
+<linkedhotels>6,7,4</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Aéroport de Roissy</div></div>]]></onlytext>
+			<type>6</type>
+
+			<icon>data/places/icons/icon_aeroport.png</icon>
+			<Point><coordinates>49.01312,  2.54877</coordinates></Point>
+		</Placemark>
+		<Placemark>
+			<id><![CDATA[211]]></id>
+			<name><![CDATA[Stade de France]]></name>
+			<adresse><![CDATA[ 93216 Saint-Denis la Plaine]]></adresse>
+			<description><![CDATA[<div class="title">Stade de France</div><br /><div class="container"><div class="txt">Plus grand stade de France avec 80000 places. Relié à Paris par RER lignes B et D, et Métro ligne 13.<br/><div class="avisiter">Nos hôtels les plus proches</div>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(16);">Best Western Aurore***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(15);">Alexandrie***</a><br/>> <a href="javascript:googlemapAPI.gotoCoordsFichezoomed(13);">Gare de Lyon**</a><br/></div></div>]]></description>
+
+<linkedhotels>16,15,13</linkedhotels><onlytext><![CDATA[
+<div class="txt"><div class="title">Stade de France</div></div>]]></onlytext>
+			<type>6</type>
+			<icon>data/places/icons/icon_stade.png</icon>
+			<Point><coordinates>48.924022,  2.360215</coordinates></Point>
+		</Placemark>
+	</document>
+</kml>

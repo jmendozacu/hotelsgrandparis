@@ -1,0 +1,252 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+$storeId = Mage::app()->getStore()->getId(); 
+$_arrBookingEngine = Hgp_Lib_Tools::getBookingEngine($storeId);
+$_helper = $this->helper('catalog/output');
+$_No = $this->__('No');
+$_Yes = $this->__('Yes');
+//$obj = new Hgp_Taches_Model_Observer();
+//$obj->dailyMinMeanPricesUpdate('* * * * *');
+//exit('traitement termine');
+?>
+<?php $_productCollection=$this->getLoadedProductCollection() ?>
+<?php if(!$_productCollection->count()): ?>
+<div class="note-msg">
+    <?php echo $this->__('There are no products matching the selection.') ?>
+</div>
+<?php else: ?>
+
+<?php echo $this->getToolbarHtml() ?>
+<?php // List mode ?>
+<?php if($this->getMode()!='grid'): ?>
+<?php $_iterator = 0; ?>
+<div class="listing-type-list catalog-listing">
+
+<?php foreach ($_productCollection as $_product): ?>
+    <?php 
+    $_nb_etoile = Hgp_Lib_Tools::getNbStarsFromProductCollection($_product);
+    $step = 0;
+    $extension_Track = ($storeId == 2) ? 'Fr':'En';
+    //Zend_Debug::dump(preg_replace("#\.html#", "", $_product->getUrl_key()));exit;
+?>
+    <div class="listing-item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
+        <?php // Product Image ?>
+        <div class="product-image">
+            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getSmallImageLabel()) ?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(267, 142); ?>" width="267" height="142" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" />
+            </a>
+        </div>
+
+        <?php // Product description ?>
+        <div class="product-shop">
+            <h2><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape(Hgp_Lib_Tools::continueAffichage($_product->getName(), 31))?></a></h2>
+            <p class="stars_fhe"><?php echo (Hgp_Lib_Tools::drawStars($_nb_etoile));?></p>
+            <hr />
+        	<?php if (trim(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'affiliation')) != '') {?>
+            	<h3 class="hgp_affiliation"><?php echo nl2br(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'affiliation')) ?></h3>
+				<hr />
+            <?php } ?>
+        	<?php if($_product->getRatingSummary()): ?>
+            <?php echo $this->getReviewsSummaryHtml($_product) ?>
+            <?php endif; ?>
+            <?php //echo $this->getPriceHtml($_product, true); ?>
+            <?php if (Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'localisation')) {?>
+	            <div class="hgp_localisation">
+	            	<?php echo nl2br(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'localisation')) ?>
+	            </div>
+				<hr />
+            <?php } ?>
+            <div class="description_list" style="text-align: justify;">
+           		 <?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?>
+            </div>
+            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="link_list"><small>&nbsp;<?php echo $this->__('Learn More') ?></small></a>
+			<?php if (Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'availpro_id')) {?>
+				
+				<?php if ($_product->getMoteur_externe() == null || $_product->getBooking_engine() == '395') { //Availpro?>
+					<a href="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/dateselection?lang=<?php echo $_arrBookingEngine['BookingLangage'];?>&amp;property=<?php echo ($this->htmlEscape(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'availpro_id'))); ?>" class="btn_availpro_list" title="<?php echo $this->__('Book this hotel')?>" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);javascript:ouvre(this.href);return false;" target="_blank"><?php echo $this->__('Book_list') ?></a>	
+				<?php } else {?>
+		            <?php if ($_product->getBooking_engine() == '394') { //Fastbooking?>
+					    <a href="javascript:void(0);" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);hhotelSearchPriceDateTrack('<?php echo $_product->getAvailpro_id()?>', '<?php echo Hgp_Lib_Tools::getFBLanguage($storeId)?>', '', 'HGP', '', '', '', '');return false;" class="btn_availpro_list" title="<?php echo $this->__('Book this hotel')?>" target="_blank"><?php echo $this->__('Book_list') ?></a>	
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '393') { //BookAssist
+		                $_arrBookingEngineHotelId = trim($_product->getAvailpro_id());
+    		            
+    		            if ($_arrBookingEngineHotelId == '10410'){
+    		                $rootd = "http://reservation.bookinnfrance.com";
+    		                $dirBookAssist = '/';
+    		            }
+    		            
+    		            if ($_arrBookingEngineHotelId == '1798'){
+    		                $rootd = "http://www.61-paris-nation-hotel.com";
+    		                if ($storeId == 2){
+    		                    $dirBookAssist = '/fr/reservations-hotel-paris.php';
+    		                } else {
+    		                    $dirBookAssist = '/en/book-paris-hotel.php';
+    		                }
+    		            }elseif($_arrBookingEngineHotelId == '1800'){
+							$rootd = "http://www.paris-hotel-mathis.com";
+							if ($storeId == 2){
+								$dirBookAssist = '/fr/reservations-online';
+							} else {
+								$dirBookAssist = '/en/online-bookings/';
+							}
+						}elseif($_arrBookingEngineHotelId == '1729'){
+						    $rootd = "http://www.bestwestern-opera-batignolles.com";
+						    if ($storeId == 2){
+						        $dirBookAssist = '/fr/reservation.html';
+						    } else {
+						        $dirBookAssist = '/booking.html';
+						    }
+						}elseif($_arrBookingEngineHotelId == '2267'){
+						    $rootd = "http://www.bestwestern-bourgogne.com";
+						    if ($storeId == 2){
+						        $dirBookAssist = '/fr/reservation.html';
+						    } else {
+						        $dirBookAssist = '/booking.html';
+						    }
+						}
+    		            	 
+    		            $linkBookAssist = $rootd.$dirBookAssist;
+                    ?>
+                        <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);javascript:ouvreGrand(this.href);return false" href="<?php echo $linkBookAssist?>" class="btn_availpro_list resasSynxis target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '396') { //Synxis
+		            		$langLink = ($storeId == 2) ? 'fr-FR':'en-US';?>
+		                <a class="btn_availpro_list resasSynxis target" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreGrand(this.href);return false" href="https://gc.synxis.com/rez.aspx?Hotel=<?php echo $_product->getAvailpro_id()?>&Chain=5301&locale=<?php echo $langLink;?>"  title="<?php echo $this->__('Book this hotel')?>" target="_blank"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '398') { // Reserve It
+		            		$langLink = ($storeId == 2) ? 'FR':'EN';
+                    		$linkReserveIt = 'http://hotel.reservit.com/reservit/reserhotel.php?hotelid=' . $_product->getAvailpro_id()  . '&amp;lang=' . $langLink;
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreGrand(this.href);return false" href="<?php echo $linkReserveIt?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '399') { // Pas de Calais
+		            		$langLink = ($storeId == 2) ? 'fr':'en';
+                    		$linkPDC = 'http://www.hotelpasdecalais.com/frameset.php?frame=reservation&amp;l=' . $langLink;
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreGrand(this.href);return false" href="<?php echo $linkPDC?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '397') { // Holiday Inn
+		            		$langLink = ($storeId == 2) ? '/fr/fr':'/us/en/';
+                    		$linkPDC = 'http://www.ihg.com/holidayinn/hotels/' . $langLink . '/paris/' . strtolower($_product->getAvailpro_id()) . '/hoteldetail';
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreFullScreen(this.href);return false" href="<?php echo $linkPDC?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '420') { // Mercure
+		            		$langLink = ($storeId == 2) ? '/fr/':'/gb/';
+                    		$linkPDC = 'http://www.mercure.com/identification/identify.action?search.destination=' . trim($_product->getAvailpro_id());
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreFullScreen(this.href);return false" href="<?php echo $linkPDC?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '417') { // WorldHotel
+				            date_default_timezone_set('Europe/Paris');
+				            $dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+				            $today = $dateDuJour->toString('yyyy-MM-dd');
+				            $demain = $dateDuJour->addDay(1)->toString('yyyy-MM-dd');
+                    	
+                    		$langLink = ($storeId == 2) ? 'FR':'EN';
+                    		$linkPDC = 'https://www.yourreservation.net/tb3/index.cfm?bf=' . $_product->getAvailpro_id() .'&adults=2&rooms=undefined&arrivalDate=' . $today . '&departureDate=' . $demain . '&lng=' . $langLink;
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreFullScreen(this.href);return false" href="<?php echo $linkPDC?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+		            <?php if ($_product->getBooking_engine() == '419') { // Best Western
+				            date_default_timezone_set('Europe/Paris');
+				            $dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+				            //$today = $dateDuJour->toString('yyyy-MM-dd');
+				            $_today = $dateDuJour->toString('dd-MM-yyyy');
+				            $_demain = $dateDuJour->addDay(1)->toString('dd-MM-yyyy');
+				            $today = preg_replace("#-#", "%2F", $_today);
+				            $demain = preg_replace("#-#", "%2F", $_demain);
+				            $urlSite = $_product->getUrl_landing_page();
+                    		$langLink = ($storeId == 2) ? 'fr-FR':'en-US';
+                    		$aPage = ($storeId == 2) ? 'fr/reservation.html':'booking.html';
+                    		$linkPDC = $urlSite . $aPage . '?roomStay=1&iframe=yes&primarylangid=' . $langLink .  '&lang=' . substr($langLink, 0, 2) . '&RequestedCurrencyCode=EUR&HotelCode=' . $_product->getAvailpro_id() . '&sob=A15&ChainCode=BW&duration=1&countrycode=&DateRangeStart=' . $today . '&DateRangeEnd=' . $demain . '&roomQuantity=1&adultQuantity_1=2&childQuantity_1=0';
+                    	?>
+		                <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Liste-<?php echo $extension_Track?>', 1]);ouvreFullScreen(this.href);return false" href="<?php echo $linkPDC?>" class="btn_availpro_list resasReserveIt target" title="<?php echo $this->__('Book this hotel')?>"><?php echo $this->__('Book_list') ?></a>
+				    <?php }?>
+				<?php }?>
+			<?php } ?>
+			
+			
+			<div class="clear"></div>
+        </div>
+    </div>
+	<div class="clear"></div>
+<?php endforeach; ?>
+</div>
+
+<?php else: ?>
+
+<?php // Grid Mode ?>
+<div class="listing-type-grid catalog-listing">
+<?php $_collectionSize = $_productCollection->count() ?>
+    <?php $_columnCount = $this->getColumnCount(); ?>
+    <?php $i=0; foreach ($_productCollection as $_product): ?>
+        <?php if($i++%$_columnCount==0): ?>
+        <ol class="grid-row">
+        <?php endif; ?>
+            <li class="item">
+                <p class="product-image">
+                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
+                        <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135, 135); ?>" width="135" height="135" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" />
+                    </a>
+                </p>
+                <h5><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h5>
+                <?php if($_product->getRatingSummary()): ?>
+                <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php endif; ?>
+                <?php echo $this->getPriceHtml($_product, true) ?>
+                <?php if($_product->isSaleable()): ?>
+                    <button type="button" class="form-button" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><?php echo $this->__('Add to Cart') ?></span></button>
+                <?php else: ?>
+                <div class="out-of-stock"><?php echo $this->__('Out of stock') ?></div>
+                <?php endif; ?>
+                <p class="add-to">
+                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                    <a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-cart"><?php echo $this->__('Add to Wishlist') ?></a>
+                    <?php endif; ?>
+                    <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?><br/>
+                    <a href="<?php echo $_compareUrl ?>"><?php echo $this->__('Add to Compare') ?></a>
+                    <?php endif; ?>
+                </p>
+            </li>
+        <?php if($i%$_columnCount==0 || $i==$_collectionSize): ?>
+        </ol>
+        <?php endif; ?>
+    <?php endforeach ?>
+    <script type="text/javascript">decorateGeneric($$('.grid-row'), ['last', 'odd', 'even']);</script>
+    	
+</div>
+<?php endif; ?>
+<?php echo $this->getToolbarHtml() ?>
+<?php endif; ?>

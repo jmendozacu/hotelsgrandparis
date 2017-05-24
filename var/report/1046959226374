@@ -1,0 +1,8 @@
+a:5:{i:0;s:313:"Error in file: "/var/www/hotelsgrandparis/app/code/core/Mage/Paypal/data/paypal_setup/data-upgrade-1.6.0.2-1.6.0.3.php" - SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'paypal_reversed' for key 'PRIMARY', query was: INSERT INTO `sales_order_status` (`status`,`label`) VALUES (?, ?), (?, ?)";i:1;s:876:"#0 /var/www/hotelsgrandparis/app/code/core/Mage/Core/Model/Resource/Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /var/www/hotelsgrandparis/app/code/core/Mage/Core/Model/Resource/Setup.php(407): Mage_Core_Model_Resource_Setup->_modifyResourceDb('data-upgrade', '1.6.0.2', '1.6.0.6')
+#2 /var/www/hotelsgrandparis/app/code/core/Mage/Core/Model/Resource/Setup.php(286): Mage_Core_Model_Resource_Setup->_upgradeData('1.6.0.2', '1.6.0.6')
+#3 /var/www/hotelsgrandparis/app/code/core/Mage/Core/Model/Resource/Setup.php(269): Mage_Core_Model_Resource_Setup->applyDataUpdates()
+#4 /var/www/hotelsgrandparis/app/code/core/Mage/Core/Model/App.php(362): Mage_Core_Model_Resource_Setup::applyAllDataUpdates()
+#5 /var/www/hotelsgrandparis/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#6 /var/www/hotelsgrandparis/index.php(83): Mage::run('', 'store')
+#7 {main}";s:3:"url";s:1:"/";s:11:"script_name";s:10:"/index.php";s:4:"skin";s:7:"default";}

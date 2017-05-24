@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Hgp_Contacts>
+            <version>0.1.0</version>
+        </Hgp_Contacts>
+    </modules>
+    
+    <global>
+        <rewrite>
+            <hgp_contacts_index>
+                <from><![CDATA[#^/contacts/index/#]]></from>
+                <to>/contacts/index/post/</to>
+            </hgp_contacts_index>
+        </rewrite>
+    </global>
+    
+    <frontend>
+        <routers>
+            <hgp_contacts>
+                <use>standard</use>
+                <args>
+                    <module>Hgp_Contacts</module>
+                    <frontName>contacts</frontName>
+                </args>
+            </hgp_contacts>
+        </routers>
+    </frontend>
+</config>

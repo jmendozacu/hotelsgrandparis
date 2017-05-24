@@ -1,0 +1,119 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Mage
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+//echo Mage::getVersion();
+?>
+<title><?php echo $this->getTitle() ?></title>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<?php echo $this->getChildHtml() ?>
+<link rel="icon" href="<?php echo $this->getSkinUrl('favicon.ico') ?>" type="image/x-icon" />
+
+<?php
+/**
+ * Toutes les URLs du site sont en canonical a cause du multilangue
+ */
+ 
+$_paramId = $this->getRequest()->getParam('id', 0);
+$_pageId = $this->getRequest()->getParam('page_id', 0);
+
+$_HGP_Product = (Mage::registry('product')) ? Mage::registry('product'): false;
+$_HGP_Category = (Mage::registry('current_category')) ? Mage::registry('current_category'): false;
+$_HGP_Cms_Url = ($_pageId) ? Mage::helper('cms/page')->getPageUrl($_pageId): false;
+
+/**
+ * Toutes les URLs du site sont en canonical a cause du multilangue
+ */
+if(($_pageId) && ($_HGP_Cms_Url != '')){ // CMS
+
+	echo '<link rel="canonical" href="'.$_HGP_Cms_Url.'" />' . "\n\n";
+}
+
+$storeId = Mage::app()->getStore()->getId();
+
+if(($_HGP_Product) && ($_paramId > 0)){ // Produit
+	
+	$urlHrefLang = $_HGP_Product->getProductUrl();
+}
+elseif(($_HGP_Category) && ($_paramId > 0)){ // Category
+	
+	$urlHrefLang = $_HGP_Category->getUrl();
+}
+if(($_pageId) && ($_HGP_Cms_Url != '')){ // CMS
+	
+	$urlHrefLang = $_HGP_Cms_Url;
+}
+//Traitement de l'Url
+//echo Hgp_Lib_Tools::getAlternateLangUrl($storeId, trim($_SERVER['REQUEST_URI']));
+
+//Ajout des nouvelles balises Headers pour le SEO 
+/*
+ * Nouvelles balises langues
+ */
+
+/*$altLang = (2 == $storeId) ? 'en':'fr';
+$storeUrl = (2 == $storeId) ?  Mage::app()->getStore(1)->getUrl() : Mage::app()->getStore(2)->getUrl() ;*/
+
+/*
+ * Balises vidéos
+ */
+
+if((false != $_HGP_Product) && ((int)$_HGP_Product->getHave_video() == 1)){
+	
+	$urlMedia  = Mage::getUrl ('media') . 'googlemap/';
+	$urlVideo  = Mage::getUrl ('media') . 'videos/';
+	
+	echo "<meta name=\"title\" content=\"" . $_HGP_Product->getName(). "\" />" . "\n"
+         ."<meta name=\"description\" content=\"" . $this->__('video') ." " . $this->getTitle() . "\" />" . "\n"
+         . "<link rel=\"image_src\" href=\"" . $urlVideo . $_HGP_Product->getSku() . ".jpg" . "\" />" . "\n"
+         . "<link rel=\"video_src\" href=\"" . $urlVideo . $_HGP_Product->getSku() . ".flv' . \"/>" . "\n"
+         . "<meta name=\"video_height\" content=\"245\" />" . "\n"
+         . "<meta name=\"video_width\" content=\"600\" />" . "\n"
+         . "<meta name=\"video_type\" content=\"application/x-shockwave-flash\" />" . "\n";
+}
+?>
+
+
+<link href="<?php echo Mage::getBaseUrl() ?>favicon.gif" rel="icon" type="image/gif" />
+<link href="<?php echo Mage::getBaseUrl() ?>favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<?php echo $this->getCssJsHtml() ?>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl() ?>js/jquery/script.js" ></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl() ?>js/fastbooking/fbparam.js" ></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl() ?>js/fastbooking/fblib.js" ></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl() ?>js/fastbooking/calendar.js" ></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl() ?>js/script_bookingengine.js" ></script>
+
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>

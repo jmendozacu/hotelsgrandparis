@@ -1,0 +1,62 @@
+<?php
+$storeId = Mage::app()->getStore()->getId();
+//$_nbItem = 3;
+
+//Objet Category
+$_category = Mage::getModel('catalog/category');
+$_product  = Mage::getModel('catalog/product');
+
+$mediaPath  = Mage::getUrl ('media') . 'quartiers/';
+$_arrCategories = array();
+
+//Categorie Paris Opera, Madeleine, Saint Lazare hotels => 10
+$_category->load(10);
+$_collection1 = $_category->getProductCollection();
+$_arrCategories[1] = $_category->getName() . '|' . $_category->getUrl();
+
+//Categorie Paris Champs Elysees, Arc de Triomphe hotels => 18
+$_category->load(18);
+$_collection2 = $_category->getProductCollection();
+$_arrCategories[2] = $_category->getName() . '|' . $_category->getUrl();
+
+//Paris Saint Germain des Pres, Montparnasse hotels => 12
+$_category->load(12);
+$_collection3 = $_category->getProductCollection();
+$_arrCategories[3] = $_category->getName() . '|' . $_category->getUrl();
+
+//Paris Gare de Lyon Hotels, Vincennes hotels => 17
+$_category->load(17);
+$_collection4 = $_category->getProductCollection();
+$_arrCategories[4] = $_category->getName() . '|' . $_category->getUrl();
+
+//Paris Louvre, Marais, Beaubourg hotels => 19
+$_category->load(19);
+$_collection5 = $_category->getProductCollection();
+$_arrCategories[5] = $_category->getName() . '|' . $_category->getUrl();
+
+//Paris Wagram, Batignolles, Porte Maillot hotels => 16
+$_category->load(16);
+$_collection6 = $_category->getProductCollection();
+$_arrCategories[6] = $_category->getName() . '|' . $_category->getUrl();
+
+//Affectation des listes dynamiques
+for($i=1;$i<=6;$i++){
+	$_col       = "_collection$i";
+	$_res       = "result$i";
+	$_resShort  = "resultShort$i";
+	foreach (${$_col} as $_product){
+		${$_res}[] = $_product->getId();		
+	}
+}
+
+?>
+<div id="other_districts">
+	<dl class="other_districts-links">
+		<dt><?php echo $this->__('See another district');?></dt>	
+		<?php for($i=1;$i<=6;$i++){
+			$_categorie = explode('|', $_arrCategories[$i]);?>				
+			<dd><a title='<?php echo $_categorie[0]; ?>' href="<?php echo $_categorie[1]; ?>"><?php echo $_categorie[0]; ?></a></dd>
+		<?php } ?>
+	</dl>
+	<p class="hgp-see-hotels"><a title='<?php echo $this->__('Hotels in Paris City Centre') ?>' href="<?php echo (Mage::getModel('catalog/category')->load(Hgp_Lib_Tools::getParamConfig('categorie', 'hotel'))->getUrl());?>" class="link">&gt;&nbsp;<?php echo $this->__('See all hotels in Paris'); ?></a></p>
+</div>

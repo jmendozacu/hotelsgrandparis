@@ -1,0 +1,26 @@
+	<?php 
+	// On recupere dynamiquement l'id du store courant
+	$storeId = Mage::app()->getStore()->getId(); 
+	//$storeId = 2;
+	
+	$_objPresentation   = Mage::getModel('presentation/presentation');
+	
+	$_unobjPresentation = $_objPresentation
+	               ->getCollection()
+	               ->addFilter('hgp_presentation_store_fk', $storeId)
+	               ->getLastItem();
+	
+	if ($_unobjPresentation){
+
+	?>
+	<div id="hgppresentation">
+	<h2><?php echo ($_unobjPresentation->hgp_presentation_title);?></h2>
+	<p><?php echo (($_unobjPresentation->hgp_presentation_contenu));?></p>
+	<a class="link" href="<?php echo ($_unobjPresentation->hgp_presentation_url)?>">&gt;&nbsp;<?php echo ( $_unobjPresentation->hgp_presentation_link_label)?></a>
+	<p class="teaser"><?php echo (($_unobjPresentation->hgp_presentation_teaser));?></p>
+	</div>
+	<?php 
+	} else {
+	?>
+	<p>&nbsp;</p>
+	<?php }?>

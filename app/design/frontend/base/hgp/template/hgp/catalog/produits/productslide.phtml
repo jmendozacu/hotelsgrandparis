@@ -1,0 +1,88 @@
+<div id="hgpproductslide">
+	<div id="slide_gauche">&nbsp;</div>	
+	<?php 
+	$_arraySlide = Mage::getModel('homeslide/homeslide')->getItems();
+	if ($_arraySlide){
+	
+	/*
+	 * Emplacement des fichiers
+	 */
+	$ds = '/';
+	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds .'homeslide' . $ds;								
+	$_urlInterface  = $_moduleBaseUrl . 'images' . $ds;
+	$_urlPhoto      = $_moduleBaseUrl . 'photos' . $ds;
+	$_urlThumbs     = $_moduleBaseUrl . 'thumbnails' . $ds;
+	
+	$_moduleBaseDir =  Mage::getBaseDir('media') . DS .'homeslide' . DS;
+	$_pathInterface = $_moduleBaseDir . 'images' . DS;
+	$_pathPhoto     = $_moduleBaseDir . 'photos' . DS;
+	$_pathThumbs    = $_moduleBaseDir . 'thumbnails' . DS;
+	
+	$moduleBaseJs   = Mage::getUrl('skin') . 'frontend/hgp/default/js/homeslide/';
+	?>
+	<div id="slide_centre">
+	<h1 class="nodisplay">Hotels Grand Paris</h1>
+	<h2 class="nodisplay">H&ocirc;teliers ind&eacute;pendants</h2>
+	<ul id="slideshow">
+		<?php 
+		$count = count($_arraySlide);
+		for($i=0; $i<$count; $i++){
+		$data = $_arraySlide[$i];
+		?>
+		<li>
+			<h3><?php echo ($this->htmlEscape($data['hgp_homeslide_h3']))?></h3>
+			<span><?php echo ($this->htmlEscape($_urlPhoto. $data['hgp_homeslide_img']))?></span>
+			<p><?php echo ($this->htmlEscape($data['hgp_homeslide_p']))?></p>
+			<a href="<?php echo ($this->htmlEscape($data['hgp_homeslide_a']))?>"><img src="<?php echo ($this->htmlEscape($_urlThumbs . $data['hgp_homeslide_tbs']))?>" alt="<?php echo ($this->htmlEscape($data['hgp_homeslide_h3']))?>" title="<?php echo ($this->htmlEscape($data['hgp_homeslide_h3']))?>" /></a>
+		</li>
+		<?php }?>
+	</ul>
+	<div id="wrapper">
+		<div id="fullsize">
+			<div id="imgprev" class="imgnav" title="Previous Image"></div>
+			<div id="imglink"></div>
+			<div id="imgnext" class="imgnav" title="Next Image"></div>
+			<div id="image"></div>
+			<div id="information">
+				<h3></h3>
+				<p></p>
+			</div>
+		</div>
+		<div id="thumbnails">
+			<div id="slideleft" title="Slide Left"></div>
+			<div id="slidearea">
+				<div id="slider"></div>
+			</div>
+			<div id="slideright" title="Slide Right"></div>
+			<p class="clearboth">&nbsp;</p>
+		</div>
+		<p class="clearboth">&nbsp;</p>
+	</div>
+	<script type="text/javascript" src="<?php echo ($moduleBaseJs. 'compressed.js')?>"></script>
+	<script type="text/javascript">
+		sgl('slideshow').style.display='none';
+		sgl('wrapper').style.display='block';
+		var slideshow=new TINY.slideshow("slideshow");
+		window.onload=function(){
+			slideshow.auto=true;
+			slideshow.speed=5;
+			slideshow.link="linkhover";
+			slideshow.info="information";
+			slideshow.thumbs="slider";
+			slideshow.left="slideleft";
+			slideshow.right="slideright";
+			slideshow.scrollSpeed=4;
+			slideshow.spacing=5;
+			slideshow.active="#000";
+			slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+		}
+	</script>
+	<?php 
+	} else {
+	?>
+	<p>&nbsp;</p>
+	<?php }?>
+	</div>
+	<div id="slide_droit">&nbsp;</div>
+	<p class="clearboth">&nbsp;</p>
+</div>

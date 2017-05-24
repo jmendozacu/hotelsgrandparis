@@ -1,0 +1,26 @@
+#hgp-top-links{clear:both;width:624px;height:33px;background:#fff url(../images/fond_nav_gauche.jpg) no-repeat 0 0;margin:-60px 0 0 110px}
+#hgp-top-links ul{float:right;width:497px;height:33px;line-height:35px;background-color:#e7e8e8}
+#hgp-top-links li{background:transparent url(../images/menu_separateur.gif) no-repeat 100% 0;padding-left:5px}
+#hgp-top-links li.li_last{background:none;padding-left:5px}
+#hgp-top-links a{color:#4c4c4b;font-size:14px;text-decoration:none;font-weight:400}
+#hgp-top-links a:hover{text-decoration:underline}
+#nav{font-size:1.1em;padding:0 20px}
+#nav li{position:relative;text-align:left;float:left}
+#nav li.over{z-index:999}
+#nav a,#nav a:hover{display:block;line-height:1.3em;text-decoration:none}
+#nav span{display:block;cursor:pointer;white-space:nowrap}
+#nav li ul span{white-space:normal}
+#nav a{float:left;color:#a7c6dd;font-weight:700;padding:5px 12px 6px 8px}
+#nav ul li,#nav ul li.active{float:none;padding-bottom:1px;background:#ecf3f6 url(../images/nav_divider.gif) repeat-x 0 100%;margin:0}
+#nav ul li.last{background:#ecf3f6;padding-bottom:0}
+#nav ul a,#nav ul a:hover{float:none;background:none;padding:0}
+#nav ul li a{font-weight:400!important;background:#ecf3f6}
+#nav ul{position:absolute;width:15em;top:25px;left:-10000px;border:1px solid #899ba5}
+#nav li.over > ul{left:0}
+#nav li.over > ul li.over > ul{left:100px}
+#nav li.over ul ul{left:-10000px}
+#nav ul li a:hover{background:#d5e4eb}
+#nav ul li a,#nav ul li a:hover{color:#2f2f2f!important}
+#nav ul span,#nav ul li.last li span{padding:3px 15px 4px}
+#nav ul ul{top:5px}
+#nav li.active a,#nav li.over a,#nav a:hover{color:#d96708}

@@ -1,0 +1,344 @@
+<?php 
+// On recupere dynamiquement l'id du store courant
+$storeId = Mage::app()->getStore()->getId();
+
+//Separateur de fichier
+$ds = '/';
+
+//nbItem de la boucle
+$nbItems = 8;
+
+//Base des medias
+$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds;
+
+//Booking Engine
+$_arrBookingEngine = Hgp_Lib_Tools::getBookingEngine($storeId);
+
+//Initialisation des variables
+$_arrProducts1 = $_arrProducts2 = $_arrProducts3 = $_arrProducts4 = $_arrProducts5 = $_arrProducts6 = $_arrProducts7 = $_arrProducts8 = array();
+
+//Pour le layout
+$_helper = $this->helper('catalog/output');
+
+//Objet Category
+$_category = Mage::getModel('catalog/category');
+
+//URL du formulaire 
+$_action_form = "http://www.secure-hotel-booking.com/Hotels-Grand-Paris/".$_arrBookingEngine['BookingCode']."/search";
+
+//Categorie Hotel => 6
+$_category->load(6);
+$_collection1 = $_category->getProductCollection();
+
+//Categorie Paris Opera, Madeleine, Saint Lazare hotels => 10
+$_category->load(10);
+$_collection2 = $_category->getProductCollection();
+
+//Categorie Paris Champs Elysees, Arc de Triomphe hotels => 18
+$_category->load(18);
+$_collection3 = $_category->getProductCollection();
+
+//Paris Saint Germain des Pres, Montparnasse hotels => 12
+$_category->load(12);
+$_collection4 = $_category->getProductCollection();
+
+//Paris Gare de Lyon Hotels, Vincennes hotels => 17
+$_category->load(17);
+$_collection5 = $_category->getProductCollection();
+
+//Paris Louvre, Marais, Beaubourg hotels => 19
+$_category->load(19);
+$_collection6 = $_category->getProductCollection();
+
+//Paris Wagram, Batignolles, Porte Maillot hotels => 16
+$_category->load(16);
+$_collection7 = $_category->getProductCollection();
+
+//Paris Passy, Auteuil hotels => 9
+$_category->load(9);
+$_collection8 = $_category->getProductCollection();
+
+// Traitement par iterations de nbItems
+for($j=1;$j<=$nbItems;$j++){
+	
+	//Affectation des listes dynamiques
+	$_col  = "_collection$j";
+	$_resT  = "result$j";
+	foreach (${$_col} as $_product){
+		${$_resT}[] = $_product->getId();
+	} 
+	
+	//Construction des select en dynamique
+	$_res  = "result$j";
+	$_Pdt  = "_arrProducts$j";
+	$_cPdt = "_countArrProduct$j";
+	
+	foreach (${$_res} as $_product_id){ 
+	 
+	    $_product = Mage::getModel('catalog/product');
+	    $_product->load($_product_id);
+	    ${$_Pdt}[0] = array(
+	    						'id' => 0, 
+	    						'name' => ($j == 1) ? $this->__('All'):$this->__('Choose your hotel'),
+	    						'nb_etoile' => 0,
+	    						'availpro_id' => 0
+	    					);
+		${$_Pdt}[] = array(
+	    						'id' => $_product_id, 
+	    						'name' => $_helper->productAttribute($_product, $_product->getName(), 'name'),
+	    						'nb_etoile' => $_product->getAttributeText('nb_etoile'),
+	    						'availpro_id' => $_helper->productAttribute($_product, $_product->getAvailpro_id(), 'availpro_id')
+	    					);
+	}
+	${$_cPdt} = count(${$_Pdt});
+}
+?>
+<script type="text/javascript">
+
+//************************************************
+//TABLEAU DES HOTELS	
+arrHotel = new Array();
+arrQuartier = new Array();
+
+<?php 
+	  $separateur = "|";
+	  
+	  // Traitement par iterations de nbItems
+	  for($j=1;$j<=$nbItems;$j++){
+	  
+	  	$k = $j-1;
+	  	$_hotels   = "arrHotel[$k]";
+	   	$_produits = "_arrProducts$j";
+	    $_compteur = "_countArrProduct$j";
+	    
+	  //------------------------------------------------------------------
+	  echo $_hotels . ' = new Array('."\n";     
+	  
+	  for($i=0;$i<${$_compteur};$i++){
+	    
+	  	$nbStars = (Hgp_Lib_Tools::drawStarsHomeTxt(${$_produits}[$i]['nb_etoile']) != '') ? Hgp_Lib_Tools::drawStarsHomeTxt(${$_produits}[$i]['nb_etoile']): "-1";
+	  	$_nbStars = ($nbStars == "-1") ? '.':$nbStars; 
+	  	if ($i != (${$_compteur}-1)){
+	      	echo '"'.${$_produits}[$i]['availpro_id'].$separateur.
+	  				 ${$_produits}[$i]['name'].$separateur.
+		    	 	 $_nbStars.'"'.','."\n";
+	    } else {
+	    	echo '"'.${$_produits}[$i]['availpro_id'].$separateur.
+	    			 ${$_produits}[$i]['name'].$separateur.
+		    	     $_nbStars.'"'."\n";
+	    }	    
+	  }
+	  
+	  echo ");\n\n";	  
+	  echo 'console.log("Valeur'.$j.'", '.$_hotels.');'."\n\n";
+	  }  
+	 
+?>
+
+arrQuartier = new Array(
+						"",
+						"<?php echo $this->__('Paris Opera, Madeleine, Saint Lazare hotels')?>",
+						"<?php echo $this->__('Paris Champs Elysees, Arc de Triomphe hotels')?>",
+						"<?php echo $this->__('Paris Saint Germain des Pres, Montparnasse hotels')?>",
+						"<?php echo $this->__('Paris Gare de Lyon Hotels, Vincennes hotels')?>",
+						"<?php echo $this->__('Paris Louvre, Marais, Beaubourg hotels')?>",
+						"<?php echo $this->__('Paris Wagram, Batignolles, Porte Maillot hotels')?>",
+						"<?php echo $this->__('Paris Passy, Auteuil hotels')?>"
+					  );
+
+//************************************************
+//AFFICHE LA LISTE DES HOTELS EN FONCTION DU QUARTIER SELECTIONNE
+
+function ChangeHotel() 
+{
+
+	var aux = 0;
+	var  reg=new  RegExp("[|]+", "g");
+	aux = (document.idForm.quartier.selectedIndex) ? document.idForm.quartier.selectedIndex:0;
+
+	//console.log("AUX vaut ==> %d", aux);
+	//console.log("arrHotel vaut ==> %s", arrHotel);
+
+	if (typeof(arrHotel[aux]) != "undefined") {
+		tailleArr = arrHotel[aux].length;
+	}else{
+		tailleArr = 0;
+	}
+
+	if (aux==0){
+		document.idForm.HotelList.options[0] = new Option('<?php echo $this->__('Select your hotel')?>', 0, true, true);
+		document.idForm.HotelList.length = 0;
+	}		
+	
+	if ((navigator.appVersion.indexOf("MSIE 3") <= 0) && (arrHotel[aux])) {
+		for (var i=0;i<arrHotel[aux].length;i++) {
+			var chaine = arrHotel[aux][i];
+			var tableau=chaine.split(reg);
+
+			if((tableau[2]!= "undefined") && (tableau[2]!= "")){
+				var ligne2 = new Option(tableau[1]+tableau[2], tableau[0]+'|'+tableau[1]+'|'+tableau[2], false, false);
+			}else{
+				var ligne2 = new Option(tableau[1], tableau[0]+'|'+tableau[1]+'|'+tableau[2], false, false);
+			}
+			document.idForm.HotelList.options[i] = ligne2;
+		}
+		document.idForm.HotelList.length = tailleArr;
+	}
+ 
+ UpdateCombo();
+}
+
+//************************************************
+//Affichage du nombre d'adultes
+
+function UpdateCombo() 
+{
+  var values = decoupeValue(hotelCombo.value);
+ 
+  console.log("Values vaut ==> %s", values);
+  updateBookingEngine();
+}
+
+//************************************************
+//Recuperation des values
+
+function decoupeValue(maValeur) 
+{	
+	 var regex        = new  RegExp("[|]+", "g");
+	 return maValeur.split(regex);
+}
+		
+//************************************************
+//Mise a jour du code Booking Engine
+
+function updateBookingEngine()
+{				
+	tableau     = Array();
+	reg         = new  RegExp("[|]+", "g");
+	maNewChaine = hotelCombo.value;
+	tableau     = maNewChaine.split(reg);
+	//console.log("Tableau[0] ==> %s", tableau[0]);
+	var reg     = new  RegExp("[0-9][|]0[|]0[|]0","g");
+	var Respons = '';
+	
+	document.idForm.Respons.value = Respons = (tableau[0] != "undefined") ? tableau[0]:'';
+
+	document.idForm.action = "<?php echo $_action_form ?>";
+	if (Respons>1){
+		document.idForm.action = "<?php echo $_action_form . '?property='?>"+Respons; 
+	}
+	
+	//console.log("Action ==> %s", document.idForm.action);
+	//console.log("Respons ==> %s", decodeURIComponent(document.idForm.Respons.value));
+	//console.log("Quartier ==> %s", decodeURIComponent(document.idForm.quartier.value));	
+	
+	return true;
+}
+
+
+
+//************************************************
+//Initialisation des variables
+
+var hotelCombo = null;
+
+function initBooking()
+{
+	 hotelCombo = document.getElementById("HotelList");
+	 document.idForm.Respons.value = '';
+	 document.idForm.quartier.value = '';
+	 ChangeHotel();           
+}
+
+Event.observe(window, 'load', initBooking);  
+
+//************************************************
+//Alert sur combo Hotels
+
+function informeUser() 
+{ 
+	 if ((document.idForm.quartier.value == 1) && (document.idForm.Respons.value == 0)) {		 	
+		 	validate();
+			return true;
+	 }
+	 
+	 if ((document.idForm.quartier.value > 1) && (document.idForm.Respons.value == 0)) {
+			alert("<?php echo addslashes($this->__('Please select a hotel'))?>");
+			return false;
+	 } 
+	 validate();
+	 return true;
+} 
+
+</script>
+
+    <div>
+		<span class=hgp_h2><?php echo $this->__('Book your hotel'); ?></span>
+		<form action="_" method="post" onsubmit="pageTracker._linkByPost(this);" id="AVP" name="idForm">
+			<input type="hidden" value="<?php echo $_arrBookingEngine['BookingLangage'];?>" name="lang" />
+			<input type="hidden" value="" name="trackingId" />
+			<input type="hidden" value="" name="rate" />
+			<input type="hidden" value="" name="url" />
+			<input type="hidden" value="" name="Respons" />
+			<input type="hidden" value="" name="arrivalDate" id="AVP_arrivalDate" />
+			<input type="hidden" value="" name="nights" id="AVP_nights" />
+		<table id="book" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<td colspan="2"><?php echo $this->__('Select quartier') ?></td>
+				</tr>
+				<tr>
+					<td>	
+						<select name='quartier' class='select-hotels' onchange="ChangeHotel();">
+						<option value='1' selected><?php echo $this->__('All')?></option>					
+						<option value='2'><?php echo $this->__('Paris Opera, Madeleine, Saint Lazare hotels')?></option>					
+						<option value='3'><?php echo $this->__('Paris Champs Elysees, Arc de Triomphe hotels')?></option>					
+						<option value='4'><?php echo $this->__('Paris Saint Germain des Pres, Montparnasse hotels')?></option>					
+						<option value='5'><?php echo $this->__('Paris Gare de Lyon Hotels, Vincennes hotels')?></option>					
+						<option value='6'><?php echo $this->__('Paris Louvre, Marais, Beaubourg hotels')?></option>					
+						<option value='7'><?php echo $this->__('Paris Wagram, Batignolles, Porte Maillot hotels')?></option>					
+						<option value='8'><?php echo $this->__('Paris Passy, Auteuil hotels')?></option>																						
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><?php echo $this->__('Select hotel') ?></td>
+				</tr>
+				<tr>
+					<td>	
+						<select name='HotelList' id='HotelList' class='select-hotels-last' onchange="updateBookingEngine();">
+						<option value="0" selected="selected"><?php echo $this->__('All')?></option>							 				
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="line-date-resa-home"><?php echo $this->__('Arrival Date') ?><select id="AVP_list_days" ></select>&nbsp;<select id="AVP_list_months" onchange="setDays();" ></select></td>
+				</tr>
+				<tr>
+					<td colspan="2"><?php echo $this->__('Nb. of night(s)') ?>&nbsp;&nbsp;<?php if($storeId==2){?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php } ?><select id="AVP_list_nights" ></select></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" class="button_valid_availpro_home"><input type="button" value="<?php echo $this->__('Book_home')?>" onclick="informeUser(); return false;" class="btn_availpro" /></td>
+				</tr>
+			</table>
+		</form>
+			
+		<script type="text/javascript">
+				var months = new Array(
+						"<?php echo $this->__('January'); ?>",
+						"<?php echo $this->__('February'); ?>",
+						"<?php echo $this->__('March'); ?>",
+						"<?php echo $this->__('April'); ?>",
+						"<?php echo $this->__('May'); ?>",
+						"<?php echo $this->__('June'); ?>",
+						"<?php echo $this->__('July'); ?>",
+						"<?php echo $this->__('August'); ?>",
+						"<?php echo $this->__('September'); ?>",
+						"<?php echo $this->__('October'); ?>",
+						"<?php echo $this->__('November'); ?>",
+						"<?php echo $this->__('December'); ?>"
+						);
+				var message='<?php echo $this->__('Date outside the planning'); ?>';
+		</script>
+			
+		<script type="text/javascript" src="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/scripts/base.js"></script>
+   </div>

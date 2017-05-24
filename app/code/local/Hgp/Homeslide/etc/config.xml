@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+<config>
+	<modules>
+		<Hgp_Homeslide>
+			<version>0.1.0</version>
+		</Hgp_Homeslide>
+	</modules>
+	<frontend>
+		<routers>
+			<homeslide>
+				<use>standard</use>
+				<args>
+					<module>Hgp_Homeslide</module>
+					<frontName>homeslide</frontName>
+				</args>
+			</homeslide>
+		</routers>
+		<layout>
+			<updates>
+				<homeslide>
+					<file>homeslide.xml</file>
+				</homeslide>
+			</updates>
+		</layout>
+	</frontend>
+	<admin>
+		<routers>
+			<homeslide>
+				<use>admin</use>
+				<args>
+					<module>Hgp_Homeslide</module>
+					<frontName>homeslide</frontName>
+				</args>
+			</homeslide>
+		</routers>
+	</admin>
+	<adminhtml>
+		<menu>
+			<hgp translate="title">
+				<title>HotelsGrandParis</title>
+				<sort_order>600</sort_order>
+				<children>
+					<homeslide translate="title" module="homeslide">
+						<title>Slideshow Home</title>
+						<sort_order>0</sort_order>
+						<action>homeslide/adminhtml_homeslide</action>
+					</homeslide>
+					<meteo translate="title" module="meteo">
+						<title>Google Meteo</title>
+						<action>meteo/adminhtml_meteo</action>
+					</meteo>
+					<engagement translate="title" module="engagement">
+						<title>Nos Engagements</title>
+						<action>engagement/adminhtml_engagement</action>
+					</engagement>
+					<map translate="title" module="map">
+						<title>Google Map</title>
+						<action>map/adminhtml_map</action>
+					</map>
+					<pub translate="title" module="pub">
+						<title>Encart Publicite</title>
+						<action>pub/adminhtml_pub</action>
+					</pub>
+					<presentation translate="title" module="presentation">
+						<title>HGP Presentation</title>
+						<action>presentation/adminhtml_presentation</action>
+					</presentation>
+					<linksexchange translate="title" module="linksexchange">
+						<title>Echanges de liens</title>
+						<action>linksexchange/adminhtml_linksexchange</action>
+					</linksexchange>
+				</children>
+			</hgp>
+		</menu>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<hgp translate="title">
+							<title>HotelsGrandParis</title>
+							<sort_order>600</sort_order>
+							<children>
+								<homeslide translate="title">
+									<title>Slideshow Home</title>
+									<sort_order>0</sort_order>
+								</homeslide>
+								<meteo translate="title">
+									<title>Google Meteo</title>
+									<sort_order>1</sort_order>
+								</meteo>
+								<engagement translate="title">
+									<title>Nos Engagements</title>
+									<sort_order>2</sort_order>
+								</engagement>
+								<map translate="title">
+									<title>Google Map</title>
+									<sort_order>3</sort_order>
+								</map>
+								<pub translate="title">
+									<title>Encart Publicite</title>
+									<sort_order>4</sort_order>
+								</pub>
+								<presentation translate="title">
+									<title>HGP Presentation</title>
+									<sort_order>5</sort_order>
+								</presentation>
+								<accueil translate="title">
+									<title>HGP Accueil</title>
+									<sort_order>6</sort_order>
+								</accueil>
+								<linksexchange translate="title">
+									<title>Echanges de liens</title>
+									<sort_order>7</sort_order>
+								</linksexchange>
+							</children>
+						</hgp>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<homeslide>
+					<file>homeslide.xml</file>
+				</homeslide>
+			</updates>
+		</layout>
+	</adminhtml>
+	<global>
+		<models>
+			<homeslide>
+				<class>Hgp_Homeslide_Model</class>
+				<resourceModel>homeslide_mysql4</resourceModel>
+			</homeslide>
+			<homeslide_mysql4>
+				<class>Hgp_Homeslide_Model_Mysql4</class>
+				<entities>
+					<homeslide>
+						<table>hgp_homeslide</table>
+					</homeslide>
+				</entities>
+			</homeslide_mysql4>
+		</models>
+		<resources>
+			<homeslide_setup>
+				<setup>
+					<module>Hgp_Homeslide</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</homeslide_setup>
+			<homeslide_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</homeslide_write>
+			<homeslide_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</homeslide_read>
+		</resources>
+		<blocks>
+			<homeslide>
+				<class>Hgp_Homeslide_Block</class>
+			</homeslide>
+		</blocks>
+		<helpers>
+			<homeslide>
+				<class>Hgp_Homeslide_Helper</class>
+			</homeslide>
+		</helpers>
+	</global>
+</config>

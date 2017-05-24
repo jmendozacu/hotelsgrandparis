@@ -1,0 +1,90 @@
+    <?php 
+    $storeId = Mage::app()->getStore()->getId();
+    $currentRoute =  Mage::app()->getFrontController()->getRequest()->getRouteName();
+    
+//     Hgp_Lib_Tools::dump($currentRoute, false);
+    
+    $_paramId = $this->getRequest()->getParam('id', 0);
+    $_pageId = $this->getRequest()->getParam('page_id', 0);
+    
+    $urlPage = $cmsPage = null;
+    
+    $css = 'home';
+    if('catalog' == $currentRoute){ // Produit
+    	$css = 'produit';
+    }
+    elseif('contacts' == $currentRoute){ // Category
+    	$css = 'contacts';
+    }
+    elseif('cms' == $currentRoute){ // CMS
+    
+    	$css = 'cms';
+    	if(in_array($_pageId, array(0, 2, 15))){
+    		$cmsPage = 'home';
+    	}
+    	elseif(in_array($_pageId, array(20, 21))){
+    		$cmsPage = 'quartier';
+    	}
+    	elseif(in_array($_pageId, array(12, 16))){
+    		$cmsPage = 'map';
+    	}
+    	elseif(in_array($_pageId, array(13, 17))){
+    		$cmsPage = 'about-us';
+    	}
+    	elseif(in_array($_pageId, array(7, 18))){
+    		$cmsPage = 'partnership';
+    	}
+    }
+	    
+    ?>
+    <script type="text/javascript">
+	    //<![CDATA[
+		var myCss = '<?php echo $css;?>';
+		var myPage = '<?php echo $cmsPage;?>';
+
+		jQuery('#hgp-top-links li').removeClass('active');	
+		
+		jQuery(function(){						
+
+			if('produit' == myCss){
+				jQuery('#hgp-top-links li.hotel').addClass('active');
+			}
+			else if('home' == myCss){
+					jQuery('#hgp-top-links li.home').addClass('active');
+			}
+			else if('contacts' == myCss){
+					jQuery('#hgp-top-links li.contacts').addClass('active');
+			}
+			else if('cms' == myCss){
+				if('quartier' == myPage){
+					 jQuery('#hgp-top-links li.quartiers-paris-arrondissement').addClass('active');
+				}
+				if('about-us' == myPage){
+					 jQuery('#hgp-top-links li.about-us').addClass('active');
+				}
+				if('partnership' == myPage){
+					 jQuery('#hgp-top-links li.partnership').addClass('active');
+				}
+				if('map' == myPage){
+					 jQuery('#hgp-top-links li.map').addClass('active');
+				}
+				if('home' == myPage){
+					 jQuery('#hgp-top-links li.home').addClass('active');
+				}
+			}
+		});
+	    //]]>
+    </script>
+    
+    <div id="hgp-top-links">
+        <ul>
+			<li class="home"><a href="<?php echo $this->getUrl('');?>" title="<?php echo $this->__('Home - Hotels Grand Paris'); ?>"><?php echo $this->__('Home'); ?></a></li>
+			<li class="hotel"><a href="<?php echo (Mage::getModel('catalog/category')->load(Hgp_Lib_Tools::getParamConfig('categorie', 'hotel'))->getUrl());?>" title="<?php echo $this->__('Hotels in Paris'); ?>"><?php echo $this->__('Hotel'); ?></a></li>
+			<li class="quartiers-paris-arrondissement"><a href="<?php echo $this->getUrl('');?>quartiers-paris-arrondissement.html" title="<?php echo $this->__('Where to Stay in Paris')?>"><?php echo $this->__('Quartiers Paris')?></a></li>
+			<li class="map"><a href="<?php echo $this->getUrl('');?>map.html" title="<?php echo $this->__('Paris Hotels Map'); ?>"><?php echo $this->__('Map'); ?></a></li>
+			<li class="about-us"><a href="<?php echo $this->getUrl('');?>about-us.html" title="<?php echo $this->__('Hotels Grand Paris - About Us'); ?>"><?php echo $this->__('About us'); ?></a></li>
+			<li class="partnership"><a href="<?php echo $this->getUrl('');?>partnership.html" title="<?php echo $this->__('Hotels Grand Paris - Partnership'); ?>"><?php echo $this->__('Partenaireship'); ?></a></li>
+			<li class="contacts li_last"><a href="<?php echo ($this->getUrl('contacts'));?>" title="<?php echo $this->__('Hotels Grand Paris - Contact Us'); ?>"><?php echo $this->__('Contacts'); ?></a></li>
+		</ul>
+		<p class="clearboth">&nbsp;</p>
+   </div>

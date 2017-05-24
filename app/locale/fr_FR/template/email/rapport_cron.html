@@ -1,0 +1,55 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <td align="center">
+      <table width="600" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="font-size:10px;padding-bottom:10px;" width="600" align="center">&nbsp;</td>
+        </tr>
+      </table>
+         
+         <table width="600" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+               <td style="padding-right:30px; background-color: #fff; height: 119px;" height="119" align="left" valign="bottom">
+                  <img src="http://www.hotelsgrandparis.com/newsletters/generales/images/logo-hgp-en.jpg" width="200" height="99" alt="logo HotelsGrandParis"/>
+               </td>
+               <td class="header2" width="400" valign="bottom"><h1 style="font-family:Arial, Helvetica, sans-serif;font-weight:bold; font-size:15px; color:#666;text-align:right;">HotelsGrandParis - Mise &agrave; jour des prix via Availpro</h1></td>
+            </tr>
+         </table>
+         
+       <table width="600" border="0" cellspacing="14" cellpadding="0">
+       <tr>
+                <td class="mainbar" align="left" valign="top" width="100% height="1""><p>&nbsp;</p>
+                </td>
+            </tr>
+            <tr>
+              <td width="100%" height="121" align="left" valign="top" class="mainbar">
+			<p style="line-height: 20px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;color: #666666;margin: 0 0 12px 0;padding-top: 50px;text-align: justify;">	       
+		   <span style="line-height: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;color: #666666;margin: 0 0 12px 0;padding: 0;text-align: justify;"><strong>Bonjour {{var lastname}},</strong></span><br /><br />
+                Le traitement de mise &agrave; jour des prix des h&ocirc;tels vient de se terminer : <br /><br />P&eacute;riode de <strong>{{var nbjours}}</strong> jours : du <strong>{{var datedebut}}</strong> au <strong>{{var datefin}}</strong><br />type de prix : <strong>{{var typeprice}}</strong><br />Type de chambre par d&eacute;faut : <strong>{{var typeroom}}</strong><br />Mode Test : <strong>{{var modetest}}</strong><br />Chambre libre uniquement : <strong>{{var occupancy}}</strong><br /><br /> 
+				<u>Voici le bilan :</u></span></p>
+				</td>
+			</tr>
+			<tr>
+			   <td class="mainbar" align="left" valign="top" width="100%"><p style="text-align:center;font-size:11px;font-family: Arial, Helvetica, sans-serif;font-weight: normal;color: #666666;margin: 0 0 12px 0;border: 1px solid #BEBCB7; padding: 13px 18px; background: #F8F7F5;"><span id="result_box">
+			   <p style="line-height: 5px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;color: #666666;margin: 0 0 12px 0;padding: 0;text-align: left;">	
+					<strong>Hôtels traités</strong> : {{var OK}} <br />
+					<strong>Hôtels non traités</strong> : {{var PasOK}} <br />
+				</p> 
+			</td>
+		</tr>
+		<tr>
+			<td class="mainbar" align="left" valign="top" width="100%">
+			   <p style="line-height: 10px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;color: #666666;margin: 0 0 12px 0;padding: 0;text-align: justify;">Cordialement,<br /><br /><i>Traitement CRON<i></p>
+            </td>
+		</tr>
+			<tr>
+			   <td class="mainbar" align="left" valign="top" width="100%"><p style="text-align:center;font-size:11px;font-family: Arial, Helvetica, sans-serif;font-weight: normal;color: #666666;margin: 0 0 12px 0;border: 1px solid #BEBCB7; padding: 13px 18px; background: #F8F7F5;"><span id="result_box">
+			   <span>D&eacute;tail du traitement<br /><br />
+				{{var detail}}
+			   </span> : 
+			</td>
+		</tr>
+         </table>
+		</td>
+   </tr>
+</table>

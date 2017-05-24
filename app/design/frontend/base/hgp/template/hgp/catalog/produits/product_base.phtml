@@ -1,0 +1,1391 @@
+<?php
+	$_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+
+    $_data = Hgp_Lib_Tools::getProductAttribute('nb_etoile');
+    $_nb_etoile = (int) $_data['value'];   
+    
+	$storeId = Mage::app()->getStore()->getId(); 
+	$langTripAdvisor = ($storeId == 2) ? 'fr':'en_UK';
+	
+	$_arrBookingEngine = Hgp_Lib_Tools::getBookingEngine($storeId);
+	$_No = $this->__('No');
+	$extension_Track = ($storeId == 2) ? 'Fr':'En';
+?>
+<script type="text/javascript">
+    
+	function validate()
+	{
+		window.open('', "popup", "width=1000,height=900,left=30,top=20,scrollbars=yes");
+		document.getElementById('AVP').submit();
+	 	return true;
+	 }
+
+	 function ouvreWorlHotel()
+	 {
+	 }
+<?php if ($storeId == 2): ?>
+jQuery(function($){
+    $.datepicker.regional['fr'] = {
+        closeText: 'Fermer',
+        prevText: '&#x3c;Préc',
+        nextText: 'Suiv&#x3e;',
+        currentText: 'Courant',
+        monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
+        'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+        monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
+        'Jul','Aoû','Sep','Oct','Nov','Déc'],
+        dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+        dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+        dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+        weekHeader: 'Sm',
+        dateFormat: 'dd/mm/yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''};
+    $.datepicker.setDefaults($.datepicker.regional['fr']);
+});
+<?php endif ?>
+</script>
+<div class="product-base">
+	<div class="top-cadre-petit">&nbsp;</div>
+	<span class="white_bkg">
+		<h1 class="nom-produit-hgp"><?php echo $_helper->productAttribute($_product, $this->htmlEscape(Hgp_Lib_Tools::continueAffichage($_product->getName(), 28)), 'name') ?>&nbsp;</h1>
+		<span class="stars_fhe"><?php echo (Hgp_Lib_Tools::drawStars($_nb_etoile, true)); ?></span>
+	</span>
+	<h2 class="invisible"><?php echo $this->htmlEscape($_product->getLocalisation()); ?></h2>
+	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('affiliation')) != $_No) {?>
+	<h3 class="invisible"><?php echo $this->htmlEscape($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('affiliation'))); ?></h3>
+	<?php }else { ?>
+	<h3 class="invisible"><?php echo $this->htmlEscape($_product->getAttributeText('ville')); ?></h3>
+	<?php } ?>
+	<ul class="content-cadre-petit">
+			 	
+	 	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('affiliation')) != $_No) {?>
+	 		<li class="detail-cadre-petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('affiliation'))); ?></li>
+	 	<?php } ?>
+	 	<?php if ((trim(Hgp_Lib_Tools::getProductAttributeValue('arrondissement')) != $_No) && (trim(Hgp_Lib_Tools::getProductAttributeValue('ville')) != $_No)) {?>
+	 		<li class="detail-cadre-petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('ville'). ' '. Hgp_Lib_Tools::getProductAttributeValue('arrondissement'))); ?></li>
+	 	<?php } ?>	 		 	
+	 	<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('localisation')) != $_No) {?>
+	    	<li class="detail-cadre-petit" style="margin-top: 10px;width: 220px;line-height: 12px;"><?php echo $this->__('Location1')?> : <?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('localisation'))); ?></li>	    		
+	    <?php } ?>
+	    <!--  <li class="detail-cadre-petit" style="margin-top: -18px;"><a href="quartier" class="link_cadre_petit" title="Voir le plan">&gt;&nbsp;Voir plan</a> </li> -->    		
+		<li class="hr_style">&nbsp;</li>
+		<?php if ((trim(Hgp_Lib_Tools::getProductAttributeValue('adresse')) != $_No) && (trim(Hgp_Lib_Tools::getProductAttributeValue('code_postal')) != $_No) && (trim(Hgp_Lib_Tools::getProductAttributeValue('ville')) != $_No)) {?>
+			<li class="detail-cadre-petit" style="margin-top: 10px;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('adresse'). ' '. Hgp_Lib_Tools::getProductAttributeValue('code_postal') . ' ' . Hgp_Lib_Tools::getProductAttributeValue('ville'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('telephone')) != $_No) {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">Tel : <?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('telephone'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('fax')) != $_No) {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">Fax : <?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('fax'))); ?></li>
+		<?php } ?>
+		<?php if ((trim(Hgp_Lib_Tools::getProductAttributeValue('site_web')) != 'N/A') && (trim(Hgp_Lib_Tools::getProductAttributeValue('site_web')) != $this->__('No'))) {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">Site : <a onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Site', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);" href="<?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('site_web'))); ?>" target="_blank"><?php echo ($this->htmlEscape(preg_replace("#http:\/\/#", "", Hgp_Lib_Tools::getProductAttributeValue('site_web')))); ?></a></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('email')) != $_No) {?>
+			<li class="detail-cadre-petit" style="margin-top: -3px;">Mail : <span>
+			<script type="text/javascript">
+			<!--
+			emailE=('<?php echo trim($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('email'))); ?>');
+			document.write('<a id="postehgp" href="mailto:'+emailE +'" onclick="_gaq.push([\'_trackEvent\', \'<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>\', \'Email\', \'Fiche-<?php echo $extension_Track?>\', <?php echo '1' ?>]);">' + emailE + '</a>');
+			//--> 
+			</script></span></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('metro')) != $_No) {?>
+			<li class="detail-cadre-petit-metro" style="margin-top: 10px;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('metro'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('rer')) != $_No) {?>
+			<li class="detail-cadre-petit-rer" style="margin-top: 0;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('rer'))); ?></li>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('tramway')) != $_No) {?>
+			<li class="detail-cadre-petit-tramway" style="margin-top: 0;"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('tramway'))); ?></li>
+		<?php } ?>
+		    <!-- AddThis Button BEGIN -->
+			<!--<li class="detail-cadre-petit-sociaux" style="margin-top: 0;"><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4b6c1db302fa64b8"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a></li><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4b6c1db302fa64b8"></script>-->
+			<!-- AddThis Button END -->
+	</ul>
+	<div class="bottom-cadre-petit">&nbsp;</div>	
+	<p>&nbsp;</p>
+
+
+	<div class="top-cadre-petit" style="margin-top:-7px;">&nbsp;</div>
+		<div class="content-cadre-petit-booking">
+		<h4 class="titre_table_cadre_petit"><?php echo $this->__('Book online')?></h4>
+		<?php 
+		    if ($_product->getMoteur_externe() == null || $_product->getBooking_engine() == '395'){
+		    	/** Debut Booking Engine Avilpro */
+		    	
+		    if (trim(Hgp_Lib_Tools::getProductAttributeValue('availpro_id')) != $_No) {?>
+		<form action="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/search?property=<?php echo (Hgp_Lib_Tools::getProductAttributeValue('availpro_id'))?>" onsubmit="pageTracker._linkByPost(this);" method="post" id="AVP" target="popup">
+		<?php } else { ?>
+		<form action="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/search" method="post" onsubmit="_gaq.push(['_linkByPost', this]);" id="AVP" target="popup">
+		<?php } ?>
+			<p><input type="hidden" value="<?php echo $_arrBookingEngine['BookingLangage'];?>" name="lang" /></p>
+			<p><input type="hidden" value="" name="trackingId" /></p>
+			<p><input type="hidden" value="" name="rate" /></p>
+			<p><input type="hidden" value="" name="url" /></p>
+			<p class="p-type-hidden"><input type="hidden" value="" id="arrivalDate" name="arrivalDate" /></p>
+			
+		<table width="250" cellpadding="0" cellspacing="0">
+							<tr>
+								<td colspan="2"><span class="teaser"><?php echo $this->__('Best prices guaranteed !')?></span></td>
+							</tr>
+							<tr>
+								<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+								<td width="95" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<script type="text/javascript">
+							jQuery(function() {																
+								currDate = new Date();
+								var laDate1 = jQuery.datepicker.formatDate('yy-m-dd', currDate);									
+								var laDate2 = jQuery.datepicker.formatDate('<?php echo ($storeId == 2) ? "dd/mm/yy":"mm/dd/yy"; ?>', currDate);	
+								jQuery("#arrivalDate").val(laDate1);							
+								jQuery("#datepicker1").val(laDate2);
+								jQuery("#datepicker1").datepicker({ 
+								    defaultDate: currDate,
+									minDate: 0,
+									altFormat: 'yy-m-d',
+									altField: '#arrivalDate'
+								});																												
+							});
+						</script>
+						<table width="250" cellpadding="0" cellspacing="0" border="0" class="set-date-fiche">
+							<tr>
+								<td width="90"><input type="text" id="datepicker1" onFocus="this.blur()"/></td>
+								<td width="76">
+									<select id="AVP_nights" name="nights">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>										
+								   </select>
+								</td>		
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" class="button_valid_availpro_home"><input type="button" value="<?php echo $this->__('Book_home')?>" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);validate(); return false;" class="btn_availpro" /></td>
+				</tr>
+				<tr><td class="separateur_line_availpro"><a href="http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/rates?lang=<?php echo $_arrBookingEngine['BookingLangage'];?>&amp;property=<?php echo ($this->htmlEscape(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'availpro_id'))); ?>" onclick="javascript:pageTracker._link('http://www.secure-hotel-booking.com/Hotels-Grand-Paris/<?php echo $_arrBookingEngine['BookingCode'];?>/rates?lang=<?php echo $_arrBookingEngine['BookingLangage'];?>&amp;property=<?php echo ($this->htmlEscape(Hgp_Lib_Tools::getAttributeFromProductCollection($_product, 'availpro_id'))); ?>');" title="<?php echo $this->__('Advanced_option')?>" class="advanced_option">&gt;&nbsp;<?php echo $this->__('Advanced_option') ?></a></td></tr>
+			</table>
+		</form>
+		    			<?php 
+		    			/** Fin Booking Engine Avilpro **/
+		    }else {
+		         if ($_product->getBooking_engine() == '394'){//Fastbooking
+		            //echo $this->getChildHtml('fastbookingFiche');
+		            
+		        	/** Début Booking Engine Fastbooking **/
+		        	
+		        	// On recupere dynamiquement l'id du store courant
+		        	$storeId = Mage::app()->getStore()->getId();
+		        	$ds = '/';
+		        	$_moduleBaseUrl =  Mage::getBaseUrl('media') . $ds;
+		        	$_arrBookingEngine = Hgp_Lib_Tools::getBookingEngine($storeId);
+		        	
+		        	?>
+		        	<table width="250" cellpadding="0" cellspacing="0" style="margin-left:6px">
+						<tr>
+							<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+						</tr>
+						<tr>
+							<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+							<td width="86" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+						</tr>
+					</table>
+		        		<!--  movable calendar -->
+		        		<div id="calendar_frame" style="display: none; top:0; left: 0; width: 100%; height: 100%;">
+		        			<div id="iframe"></div>
+		        			<div id="calendar" style="top:0; left:0;">
+		        				<form name="calendar_form" action="" style="margin: 0;">
+		        					<table><tr><td>
+		        					<table class="cal_class">
+		        						<tr>
+		        		
+		        							<th class="cal_th prev_month"><span class="cal_text"><a href="javascript:void(0);" onclick="do_prev_month();"><strong>&#60;&#60;</strong></a></span>&nbsp;</th>
+		        							<th class="cal_th" colspan="5">
+		        								<select name="calendar_month" class="cal_class" onchange="do_month_change();">
+		        									<option value="0"></option>
+		        								</select>
+		        							</th>
+		        							<th class="cal_th prev_month">
+		        								&nbsp;<span class="cal_text"><a href="javascript:void(0);" onclick="do_next_month();"><strong>&#62;&#62;</strong></a></span>
+		        							</th>
+		        		
+		        						</tr>
+		        					</table>
+		        					<div id="cal_days">
+		        					</div>
+		        					</td></tr></table>
+		        				</form>
+		        			</div>
+		        		</div>
+		        		
+		        		<script type="text/javascript">
+		        			var objs_list = new Object();
+		        		
+		        			// initial delta from 
+		        			var g_offset_x = 32;
+		        			var g_offset_y = -16;
+		        			
+		        			//
+		        			// calcPos
+		        			function calcPos(obj) {
+		        				this.x = g_offset_x;
+		        				this.y = g_offset_y;
+		        				if(obj) {
+		        					//obj
+		        					if (obj.offsetParent) {
+		        						this.x += obj.offsetLeft;
+		        						this.y += obj.offsetTop;
+		        						while (obj = obj.offsetParent) {
+		        							this.x += obj.offsetLeft;
+		        							this.y += obj.offsetTop;
+		        						}
+		        					}
+		        				}
+		        			}
+		        		
+		        			//
+		        			// get a property for an element given its id
+		        			function getIdProperty(id, property) {
+		        			
+		        				var styleObject = document.getElementById(id);
+		        				if (styleObject != null)
+		        				{
+		        					styleObject = styleObject.style;
+		        					if(styleObject[property])
+		        						return styleObject[property];
+		        				}
+		        				return null;
+		        			
+		        			}
+		        			
+		        			//
+		        			// set a property to an element given its id
+		        			function setIdProperty( id, property, value )
+		        			{
+		        				var styleObject = document.getElementById(id);
+		        				if (styleObject != null)
+		        				{
+		        					styleObjectStyle = styleObject.style;
+		        					if(styleObjectStyle[property]) {
+		        						styleObjectStyle[property] = value;
+		        					}
+		        				}
+		        			
+		        			}
+		        			
+		        			//
+		        			// show the calc
+		        			function doShowCalc() {
+		        				if(getIdProperty("calc", "display") != 'block')
+		        					setIdProperty("calc", "display", "block");
+		        			}
+		        			
+		        			//
+		        			// hide the calc
+		        			function doHideCalc() {
+		        				if(getIdProperty("calc", "display") == 'block')
+		        					setIdProperty("calc", "display", "none");
+		        			}
+		        			
+		        			//
+		        			// function to display a calc
+		        			function show_text(a_event, a_elt, a_text, a_class) {
+		        				a_point = new calcPos(a_elt);
+		        				delta_y = a_point.y;
+		        				setIdProperty("calc", "top", delta_y + "px");
+		        				delta_x = a_point.x;
+		        				delta_x += a_elt.clientWidth;
+		        				setIdProperty("calc", "left", delta_x + "px");
+		        				if(a_class != undefined) {
+		        					obj = document.getElementById("calc");
+		        					obj.className = a_class;
+		        				}
+		        				
+		        				doShowCalc();
+		        				
+		        				document.getElementById("calc").innerHTML = a_text;
+		        			}
+		        			
+		        			//
+		        			// function to hide a calc
+		        			function hide_text() {
+		        				doHideCalc();
+		        			}
+		        			
+		        			
+		        		</script>
+		        														
+		        		<!-- movable calc -->
+		        		<div id="calc" class="calc_style"></div>
+		        		
+		        	
+		        	    <div  id="hgp-bloc-resa" style="margin-left:6px">	
+		        			<!-- Debut Fast Booking -->
+		        			<form target='dispoprice' name="idForm"  action="" onsubmit='return CheckDate()'>
+		        			<input type='hidden' name='showPromotions' value='3' />
+		        			<input type="hidden" name='langue' value='<?php echo Hgp_Lib_Tools::getFBLanguage($storeId)?>' />
+		        		    <input type='hidden' name='Clusternames' value='<?php echo $_product->getAvailpro_id()?>' />
+		        			<input type='hidden' name='Hotelnames' value='<?php echo $_product->getAvailpro_id()?>' />
+		        			<input type='hidden' name='region' value='' />
+		        			<input type='hidden' name='adulteresa' value='2' />
+		        			<input type='hidden' name='FSTBKNGTrackLink' value='<?php echo $_product->getCode_tracking()?>' />
+		        			<input type='hidden' name='redir' value='<?php echo (trim($_product->getUrl_landing_page()) != '') ? $_product->getUrl_landing_page():''?>' />
+		        			
+		        			<table class="table_resa_home" border="0" style="margin-top:-5px">  
+		        				<tr class="tr_resa_home2">
+		        					<td>					  				
+		        							<!-- MONTH -->
+		        							<select class="select-resa-home" name='frommonth' id='frommonth'>
+		        	
+		        							<option value='1'><?php echo $this->__('Jan')?></option>
+		        							<option value='2'><?php echo $this->__('Feb')?></option>
+		        							<option value='3'><?php echo $this->__('Mar')?></option>
+		        							<option value='4'><?php echo $this->__('Apr')?></option>
+		        							<option value='5'><?php echo $this->__('May')?></option>
+		        							<option value='6'><?php echo $this->__('Jun')?></option>
+		        							<option value='7'><?php echo $this->__('Jul')?></option>
+		        							<option value='8'><?php echo $this->__('Aug')?></option>
+		        							<option value='9'><?php echo $this->__('Sept')?></option>
+		        							<option value='10'><?php echo $this->__('Oct')?></option>
+		        							<option value='11'><?php echo $this->__('Nov')?></option>
+		        							<option value='12'><?php echo $this->__('Dec')?></option>
+		        	
+		        							</select>
+		        							
+		        							<!-- DAY -->
+		        							<select name='fromday' id='fromday'> 
+		        							<?php for ($i=1; $i<=31; $i++){?>
+		        								<option value='<?php echo $i?>'><?php echo $i?></option>
+		        							<?php } ?>
+		        							</select>
+		        							
+		        							
+		        							<!-- YEAR -->
+		        							<select id='year' name='fromyear' onchange='update_departure();'><option value="0"></option></select>	
+		        							<div id="arrivalDate" class="arrivalDateFastBooking">
+                        								<script type="text/javascript">
+                        									jQuery(function() {																
+                        										currDate = new Date();
+                        										<?php if ($storeId == 2){ ?>
+																	var scr_format = 'dd/mm/yy';
+																<?php }else{ ?>	
+																	var scr_format = 'mm/dd/yy';
+																<?php }?>
+                        										function createDate(objDate)
+    															{
+    																var jour = objDate.getDate();
+    																var mois = objDate.getMonth() + 1;
+    																var year = objDate.getFullYear();
+    					
+    																jQuery("#fromday").val(jour);
+    																jQuery("#frommonth").val(mois);
+    																jQuery("#year").val(year);
+    																return true;
+    															}
+                        										var laDate1 = jQuery.datepicker.formatDate(scr_format, currDate);									
+                                								var laDate2 = jQuery.datepicker.formatDate(scr_format, currDate);	
+                        										jQuery("#arrivalDate").val(laDate1);							
+                        										jQuery("#datepicker1").val(laDate2);
+                        										jQuery("#datepicker1").datepicker({ 
+                        										    defaultDate: currDate,
+                        											minDate: 0,
+                        											altField: '#arrivalDate2',
+                        											onClose: function(dateText){
+    																	var dateSelect = jQuery(this).datepicker("getDate");
+    																	createDate(dateSelect);
+    																}
+                        										});
+                        										
+                        									});
+                        								</script>
+                        								<input type="text" id="datepicker1" onFocus="this.blur()" />
+                        					</div>										
+		        					</td>
+		        					<td style="width: 84px;">
+		        	
+		        						<!-- //// NUMBER OF NIGHTS //// -->
+		        							<select class="select-resa-home select_taille3 selectorNight" name='nbdays'>
+		        							<?php for ($i=1; $i<=15; $i++){?>
+		        							<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+		        							<?php } ?>
+		        							</select>&nbsp;&nbsp;
+		        						</td>
+		        						<td style="width: 44px;">&nbsp;</td>
+		        						<td id="set1">&nbsp;</td>
+		        					</tr>							
+		        				<tr> 
+		        					
+		        					<td colspan="3" class="btn_check_dispo">
+		        						<input type="button" name="nom" value="<?php echo $this->__('See available dates')?>" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);hhotelDispoprice(this.form);" />
+		        					</td>
+		        				</tr>
+		        					<!-- <tr>
+		        						<td colspan="2" class="aide"><a class="resa_opt" href="javascript:void(0);return false;" title="<?php echo $this->__('Maximum room occupancy...')?>">&#62; <?php echo $this->__('More than 3 people - read this!')?></a></td>
+		        						<td colspan="2" class="aide"><a class="cancel_opt" href="javascript:ouvre('http://66.70.56.90/00000001/032/023112/presearchv2.phtml?clusterName=frparishcapital&langue=en')">&gt;&nbsp;<?php echo $this->__('Existing reservation')?></a></td>
+		        				</tr>	 -->		
+		        			</table>
+		        			</form>		
+		        			<!-- Fin Fast Booking -->
+		        			
+		        	   </div>
+		        	   
+		        	 <script type="text/javascript">
+		        	    Event.observe(window, 'load', start);      
+		        	</script>
+		        	<?php
+		        	
+		        	/** Fin Booking Engine Fastbooking **/
+		            
+		        	
+		        	
+		        	
+		        }
+		        elseif ($_product->getBooking_engine() == '393'){ // Book Assist
+		        	/** Début Booking Engine BookAssist **/
+		        	
+		        	/**
+		        	 *
+		        	 * Code Book Assist
+		        	 *
+		        	 */
+		        	$_arrBookingEngineHotelId = trim($_product->getAvailpro_id());
+					$blanguage = "en";
+					if($storeId == 2){
+						$blanguage = "fr";
+					} elseif($storeId == 3){
+						$blanguage = "it";
+					} elseif($storeId == 4){
+						$blanguage = "de";
+					} elseif($storeId == 5){
+						$blanguage = "es";
+					}else {
+						$blanguage = "en";
+					}
+				
+				
+					$bbutton = "en";
+					if($storeId == 2){
+						$bbutton = "Reservation";
+					} elseif($storeId == 3){
+						$bbutton = "Prenota Ora";
+					} elseif($storeId == 4){
+						$bbutton = "Buchen";
+					} elseif($storeId == 5){
+						$bbutton = "Obtener la disponlbllldad";
+					}else {
+						$bbutton = "Check Availability";
+					}
+				
+					if ($_arrBookingEngineHotelId == '10410'){
+					    $rootd = "http://reservation.bookinnfrance.com";
+					    $dirBookAssist = '/';
+					}
+
+					if ($_arrBookingEngineHotelId == '1798'){
+					    $rootd = "http://www.61-paris-nation-hotel.com";
+					    if ($storeId == 2){
+					        $dirBookAssist = '/fr/reservations-hotel-paris.php';
+					    } else {
+					        $dirBookAssist = '/en/book-paris-hotel.php';
+					    }
+					}elseif($_arrBookingEngineHotelId == '1800'){
+					    $rootd = "http://www.paris-hotel-mathis.com";
+					    if ($storeId == 2){
+					        $dirBookAssist = '/fr/reservations-online';
+					    } else {
+					        $dirBookAssist = '/en/online-bookings/';
+					    }
+					}elseif($_arrBookingEngineHotelId == '1729'){
+					    $rootd = "http://www.bestwestern-opera-batignolles.com";
+					    if ($storeId == 2){
+					        $dirBookAssist = '/fr/reservation.html';
+					    } else {
+					        $dirBookAssist = '/booking.html';
+					    }
+					}elseif($_arrBookingEngineHotelId == '2267'){
+					    $rootd = "http://www.bestwestern-bourgogne.com";
+					    if ($storeId == 2){
+					        $dirBookAssist = '/fr/reservation.html';
+					    } else {
+					        $dirBookAssist = '/booking.html';
+					    }
+					}
+					
+					date_default_timezone_set('Europe/Paris');
+					$dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+					$demain = $dateDuJour->addDay(1)->toString('yyyy-MM-dd');
+					
+					$dateDuJour2 = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+					$aujourdhui = $dateDuJour2->toString('yyyy-MM-dd');
+					
+					$linkBookAssist = $rootd.$dirBookAssist.'?date_in=' . $aujourdhui . '&date_out=' . $demain .'';
+					$linkBookAssistPromo = $rootd.$dirBookAssist.'booking.php?adults=2&children=0&user_language='.$blanguage.'&hotel_id='.$_arrBookingEngineHotelId.'&guide_id=600';
+					/** Fin du code Book Assist **/
+		        	?>
+		        	
+		        	<!-- Debut Book Assist -->
+		        	<table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+						<tr>
+							<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+						</tr>
+						<tr>
+							<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+							<td width="80" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+						</tr>
+					</table>
+		        				
+		        				<table border="0" class="gd_tableau bookAssist" cellspacing="0">  
+								<tr>
+									<td colspan="2">	
+									
+									 <!--BOOKASSIST FORM STARTS-->
+										<div align="center">
+									    <link href="<?php echo Mage::getBaseUrl()?>skin/frontend/bif/default/css/vertical_nav.css" rel="stylesheet" type="text/css" />
+											<script type="text/javascript">
+												var hotel_id = <?php echo $_arrBookingEngineHotelId?>;						 
+												var guide_id = 600; 						
+												var form_action = '<?php echo $rootd . $dirBookAssist ?>booking.php'; 		
+												var user_language='<?php echo $blanguage ?>'; 	    					
+												var months_ahead= '';				
+												var showCal=false; 					
+												var title=' '; 			
+												var button_text="<?php echo $bbutton ?>";					
+												var showGuests=true;
+												var extraParams = {hotel_name:'<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>'};
+									
+											</script>
+											<script type="text/javascript" src="http://www.bookassist.com/scripts/date-util.js"></script>
+											<script type="text/javascript">
+											<!--
+												document.write('<sc'+'ript type="text/javascript" src="http://www.bookassist.com/scripts/datesmultiyearUTF.jsp'+pStr+'" charset="utf-8"></sc'+'ript>');
+											-->
+											</script>
+											<noscript id="ba_javascript"><p>Your browser does not support JavaScript! Please <a href="http://www.bookassist.com/affiliate/enableJavascript.html" target="blank">click here</a> to view information on enabling it.</p></noscript><!--- This is incase the user does not have JavaScript Enabled  --->
+										    
+										    <div id="arrivalDate" class="sync">
+                        							<script type="text/javascript">
+                        								jQuery(function() {																
+                        									currDate = new Date();
+                        									var alt_format = "yy-mm-dd";
+                        									<?php if ($storeId == 2){ ?>
+                        									var src_format = "dd/mm/yy";
+                        									<?php }else{ ?>	
+                        									var src_format = "mm/dd/yy";
+                        									<?php }?>
+                            								
+                            								//Quelques fonctions bien utiles
+                        									function addDays(myDate,days) 
+                        								 	{
+                        								 	 	return new Date(myDate.getTime() + days*24*60*60*1000);
+                        								 	}
+
+                        									function calculEndDate(objDate, nbJours)
+                        									{
+                        										var _dateEndSelect = jQuery.datepicker.formatDate(alt_format, addDays(objDate, nbJours));
+                        										return _dateEndSelect;
+                        									}
+
+                            								
+                        									//Valeur par defaut
+                        									var laDate1 = jQuery.datepicker.formatDate(alt_format, currDate);									
+                        									var nextDate = addDays(currDate, 1);	
+                        									var laDateFin = jQuery.datepicker.formatDate(alt_format, nextDate);								
+                        									var myUrl = "<?php echo $rootd . $dirBookAssist ?>?date_in=" + laDate1 + "&date_out=" + laDateFin;
+                        							
+                        									//Valeur apres choix de la date
+                        									jQuery("#resasBookAssiste").attr("href", myUrl);
+                            								var laDate2 = jQuery.datepicker.formatDate(src_format, currDate);	
+                        									jQuery("#arrivalDate").val(laDate1);							
+                        									jQuery("#datepicker1").val(laDate2);
+                        									jQuery("#datepicker1").datepicker({ 
+                        									    defaultDate: currDate,
+                        										minDate: 0,
+                        										altFormat: alt_format,
+                        										altField: '#arrivalDate',
+                        										onClose: function(){
+                        											var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery(this).datepicker("getDate"));
+                        											var dateEndSelect   = calculEndDate(jQuery(this).datepicker("getDate"), jQuery('#nbNightBookAssist').val());
+                        											var myUrl = "<?php echo $rootd . $dirBookAssist ?>?date_in=" + dateStartSelect + "&date_out=" + dateEndSelect;
+                        											jQuery("#resasBookAssiste").attr("href", myUrl);
+                        										}
+                        									});
+
+                        									//Valeur apres choix du nb jours
+                        									jQuery('#nbNightBookAssist').change(function(){
+                        										var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery("#datepicker1").datepicker("getDate"));
+                        										var dateEndSelect   = calculEndDate(jQuery("#datepicker1").datepicker("getDate"), jQuery('#nbNightBookAssist').val());
+                        										var myUrl = "<?php echo $rootd . $dirBookAssist ?>?date_in=" + dateStartSelect + "&date_out=" + dateEndSelect;
+                        										jQuery("#resasBookAssiste").attr("href", myUrl);
+                        									});
+                        									
+                        								});
+                        
+                        							</script>
+                        							<input type="text" id="datepicker1" onFocus="this.blur()" />
+													<input type="hidden" id="dateFin" value="" />
+        											<!-- //// NUMBER OF NIGHTS //// -->
+        		        							<select class="select-resa-home select_taille3 selectorNight" name='nbdays' id="nbNightBookAssist">
+        		        							<?php for ($i=1; $i<=15; $i++){?>
+        		        							<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+        		        							<?php } ?>
+        		        							</select>&nbsp;&nbsp;
+                        					</div>
+										<div colspan="3" class="btn_check_dispo">
+										<a id="resasBookAssiste" onclick="javascript:_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);ouvreGrand(this.href);return false" href="<?php echo $linkBookAssist?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+		        					</div>
+								</div>
+								<!--BOOKASSIST FORM ENDS-->					
+							</td>					
+						</tr>	
+					</table>
+		        				
+		        				
+		        <?php
+		        /** Fin Booking Engine Book Assist **/
+		        }
+		        elseif ($_product->getBooking_engine() == '396'){ // Synxis
+		            date_default_timezone_set('Europe/Paris');
+	                $dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+                    $demain = $dateDuJour->addDay(1)->toString('yyyy-MM-dd');
+                    
+                    $dateDuJour2 = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+                    $aujourdhui = $dateDuJour2->toString('yyyy-MM-dd');
+		        ?>
+		            <table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+						<tr>
+							<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+						</tr>
+						<tr>
+							<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+							<td width="98" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+						</tr>
+					</table>
+		            <div id="arrivalDate" class="sync">
+							<script type="text/javascript">
+								jQuery(function() {																
+
+									minDate = new Date("2015","11","10");
+									currDate = new Date();
+									<?php if ($storeId == 2){ ?>
+									var alt_format = "dd-mm-yy";
+									var src_format = "dd/mm/yy";
+									var langue = "fr-FR";
+									<?php }else{ ?>	
+									var alt_format = "mm-dd-yy";
+									var src_format = "mm/dd/yy";
+									var langue = "en-US";
+									<?php }?>
+
+									//Quelques fonctions bien utiles
+									function addDays(myDate,days) 
+								 	{
+								 	 	return new Date(myDate.getTime() + days*24*60*60*1000);
+								 	}
+
+									function calculEndDate(objDate, nbJours)
+									{
+										var _dateEndSelect = jQuery.datepicker.formatDate(alt_format, addDays(objDate, nbJours));
+										return _dateEndSelect;
+									}
+
+									//Valeur par defaut
+									var laDate1 = jQuery.datepicker.formatDate(alt_format, currDate);									
+									var nextDate = addDays(currDate, 1);	
+									var laDateFin = jQuery.datepicker.formatDate(alt_format, nextDate);								
+									var myUrl = "https://gc.synxis.com/rez.aspx?Hotel=<?php echo $_product->getAvailpro_id() ?>&t=be&arrive=" + laDate1 + "&depart=" + laDate1 + "&adult=2&mark=GP&locale=" + langue + "&phpredirect=1";
+							
+									//Valeur apres choix de la date
+									jQuery("#resasBookAssiste").attr("href", myUrl);
+    								var laDate2 = jQuery.datepicker.formatDate(src_format, currDate);	
+									jQuery("#arrivalDate").val(laDate1);							
+									jQuery("#datepicker1").val(laDate2);
+									jQuery("#datepicker1").datepicker({ 
+									    defaultDate: currDate,
+										minDate: minDate,
+										//minDate: 0,
+										altFormat: alt_format,
+										altField: '#arrivalDate',
+										onClose: function(){
+											var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery(this).datepicker("getDate"));
+											var dateEndSelect   = calculEndDate(jQuery(this).datepicker("getDate"), jQuery('#nbNightSynxis').val());
+											var myUrl = "https://gc.synxis.com/rez.aspx?Hotel=<?php echo $_product->getAvailpro_id() ?>&t=be&arrive=" + dateStartSelect + "&depart=" + dateEndSelect + "&adult=2&mark=GP&locale=" + langue + "&phpredirect=1";
+											jQuery("#resasBookAssiste").attr("href", myUrl);
+										}
+									});
+
+									//Valeur apres choix du nb jours
+									jQuery('#nbNightSynxis').change(function(){
+										var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery("#datepicker1").datepicker("getDate"));
+										var dateEndSelect   = calculEndDate(jQuery("#datepicker1").datepicker("getDate"), jQuery('#nbNightSynxis').val());
+										var myUrl = "https://gc.synxis.com/rez.aspx?Hotel=<?php echo $_product->getAvailpro_id() ?>&t=be&arrive=" + dateStartSelect + "&depart=" + dateEndSelect + "&adult=2&mark=GP&locale=" + langue + "&phpredirect=1";
+										jQuery("#resasBookAssiste").attr("href", myUrl);
+									});
+									
+								});
+
+							</script>
+							<input type="text" id="datepicker1" onFocus="this.blur()" />
+							<input type="hidden" id="dateFin" value="" />
+					</div>
+					
+		            <!-- //// NUMBER OF NIGHTS //// -->
+    				<select id="nbNightSynxis" class="select_taille3 selectorNight" name='nbdays'>
+    				<?php for ($i=1; $i<=15; $i++){?>
+    				<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+    				<?php } ?>
+    				</select>
+    				
+    				<div colspan="3" class="btn_check_dispo">
+				   <a id="resasBookAssiste" onclick="javascript:_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);ouvreGrand(this.href);return false" href="https://gc.synxis.com/rez.aspx?Hotel=<?php echo $_product->getAvailpro_id() ?>&t=be&arrive=<?php echo $aujourdhui?>&depart=<?php echo $demain?>&adult=2&mark=GP&locale=en-US&phpredirect=1" target="_blank"><?php echo $this->__('Book_home') ?></a>
+			     </div>
+		  <?php }
+		     	elseif ($_product->getBooking_engine() == '398'){ // Reserve It
+		     	date_default_timezone_set('Europe/Paris');
+		     	$dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		     	$demain = $dateDuJour->addDay(1)->toString('yyyy-MM-d');
+		     
+		     	$dateDuJour2 = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		     	$aujourdhui = $dateDuJour2->toString('yyyy-MM-d');
+		     	?>					
+			     		            <table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+			     						<tr>
+			     							<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+			     						</tr>
+			     						<tr>
+			     							<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+			     							<td width="87" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+			     						</tr>
+			     					</table>
+			     					<input type="hidden" name="arrivalDate" id="arrivalDate" value="<?php echo $aujourdhui?>" />
+			     		            <div id="arrivalDate" class="sync">
+			     							<script type="text/javascript">
+			     								jQuery(function() {																
+			     									currDate = new Date();
+			     									var laDate1 = jQuery.datepicker.formatDate('yy-m-dd', currDate);									
+			     									<?php if ($storeId == 2){ ?>
+			         									var laDate2 = jQuery.datepicker.formatDate('dd/mm/yy', currDate);	
+			         									var laLangue = "FR";
+			         								<?php }else{ ?>							
+			         							        var laDate2 = jQuery.datepicker.formatDate('mm/dd/yy', currDate);
+				         							    var laLangue = "EN";
+			         								<?php }?>
+			         								
+			         								var hotelid="<?php echo $_product->getAvailpro_id() ?>";
+		         									var uneDate = "<?php echo $aujourdhui?>";
+		         									var nbnight = document.getElementById("nights").value;
+		         									var elem = uneDate.split('-');
+			         								var fday = elem[2];
+			         								var fmonth = elem[1];
+			         								var fyear = elem[0];
+			         								var urlFinale = "http://hotel.reservit.com/reservit/reserhotel.php?hotelid=" + hotelid + "&lang=" + laLangue + "&fday=" + fday + "&fmonth=" + fmonth + "&fyear=" + fyear + "&nbnights=" + nbnight +  "&numroom=&nbadt=1&nbchd=0";
+			         										         									
+			         								jQuery("#nights").click(function(){
+			         									nbnight = document.getElementById("nights").value;
+			         									urlFinale = "http://hotel.reservit.com/reservit/reserhotel.php?hotelid=" + hotelid + "&lang=" + laLangue + "&fday=" + fday + "&fmonth=" + fmonth + "&fyear=" + fyear + "&nbnights=" + nbnight +  "&numroom=&nbadt=1&nbchd=0";
+			         									jQuery("#resasBookAssiste").attr("href", urlFinale);
+				     								});	
+				     								
+			         								jQuery("#resasBookAssiste").click(function(){
+			         									nbnight = document.getElementById("nights").value;
+			         									urlFinale = "http://hotel.reservit.com/reservit/reserhotel.php?hotelid=" + hotelid + "&lang=" + laLangue + "&fday=" + fday + "&fmonth=" + fmonth + "&fyear=" + fyear + "&nbnights=" + nbnight +  "&numroom=&nbadt=1&nbchd=0";
+			         									jQuery(this).attr("href", urlFinale);
+				     								});	
+				     								
+			     									jQuery("#arrivalDate").val(laDate1);							
+			     									jQuery("#datepicker1").val(laDate2);
+			     									jQuery("#datepicker1").datepicker({ 
+			     									    defaultDate: currDate,
+			     										minDate: 0,
+			     										altFormat: 'yy-mm-dd',
+			     										altField: '#arrivalDate',
+			     										onClose: function(dateText){
+				         									uneDate = jQuery("#arrivalDate").val();
+				         									elem = uneDate.split('-');
+					         								fday = elem[2];
+					         								fmonth = elem[1];
+					         								fyear = elem[0];
+					         								urlFinale = "http://hotel.reservit.com/reservit/reserhotel.php?hotelid=" + hotelid + "&lang=" + laLangue + "&fday=" + fday + "&fmonth=" + fmonth + "&fyear=" + fyear + "&nbnights=" + nbnight +  "&numroom=&nbadt=1&nbchd=0";
+			     										}
+			     									});
+			     									
+			     								});
+			     							</script>
+			     							<input type="text" id="datepicker1" onFocus="this.blur()" />
+			     							<input type="hidden" id="dateFin" value="" />
+			     					</div>
+			     					
+			     		            <!-- //// NUMBER OF NIGHTS //// -->
+			         				<select id="nights" class="select_taille3 selectorNight" name='nights'>
+			         				<?php for ($i=1; $i<=15; $i++){?>
+			         				<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+			         				<?php } ?>
+			         				</select>
+			         				
+			         				<div colspan="3" class="btn_check_dispo">
+			     				   <a id="resasBookAssiste" href="" target="_blank"><?php echo $this->__('Book_home') ?></a>
+			     			     </div>
+		     		     <?php 
+		     	//Fin Reserve IT
+		     	}
+		     	elseif ($_product->getBooking_engine() == '399'){ // Pas de Calais
+		     		
+		     		$langLink = ($storeId == 2) ? 'fr':'en';
+                    $linkPDC = 'http://www.hotelpasdecalais.com/frameset.php?frame=reservation&l=' . $langLink;
+		     		?>
+		     	
+		     		 <p class="info_bt teaser"><?php echo $this->__('Best prices guaranteed !')?></p>
+		     		
+		     		 <p class="info_bt"><?php echo $this->__('Check availability & rates on Hotel Website.')?></p>
+		     		
+		     		<div colspan="3" class="btn_check_dispo">
+		     		  <a id="resasBookAssiste" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);" href="<?php echo $linkPDC?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+     			     </div>		
+		     	<?php 
+		     	}
+		     	elseif ($_product->getBooking_engine() == '397'){ // Holiday Inn
+		     		
+		     		$langLink = ($storeId == 2) ? '/fr/fr':'/us/en/';
+                    $linkPDC = 'http://www.ihg.com/holidayinn/hotels/' . $langLink . '/paris/' . strtolower($_product->getAvailpro_id()) . '/hoteldetail';
+		     		?>
+		     	
+		     		 <p class="info_bt teaser"><?php echo $this->__('Best prices guaranteed !')?></p>
+		     		
+		     		 <p class="info_bt"><?php echo $this->__('Check availability & rates on Hotel Website.')?></p>
+		     		
+		     		<div colspan="3" class="btn_check_dispo">
+		     		  <a id="resasBookAssiste" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);" href="<?php echo $linkPDC?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+     			     </div>		
+		     	<?php 
+		     	}
+		     	elseif ($_product->getBooking_engine() == '420'){ // Mercure
+		     		
+		     		$langLink = ($storeId == 2) ? '/fr/':'/gb/';
+                    //$linkPDC = 'http://www.ihg.com/holidayinn/hotels/' . $langLink . '/paris/' . strtolower($_product->getAvailpro_id()) . '/hoteldetail';
+                    $linkPDC = 'http://www.mercure.com/identification/identify.action?search.destination=' . trim($_product->getAvailpro_id());
+		     		?>
+		     	
+		     		 <p class="info_bt teaser"><?php echo $this->__('Best prices guaranteed !')?></p>
+		     		
+		     		 <p class="info_bt"><?php echo $this->__('Check availability & rates on Hotel Website.')?></p>
+		     		
+		     		<div colspan="3" class="btn_check_dispo">
+		     		  <a id="resasBookAssiste" onclick="_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);" href="<?php echo $linkPDC?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+     			     </div>		
+		     	<?php 
+		     	}
+		     	elseif ($_product->getBooking_engine() == '417'){ // WorldHotels
+		     		date_default_timezone_set('Europe/Paris');
+		     		$dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		     		$demain = $dateDuJour->addDay(1)->toString('yyyy-MM-dd');
+		     	
+		     		$dateDuJour2 = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		     		$aujourdhui = $dateDuJour2->toString('yyyy-MM-dd');
+		     		$lngBooking = ($storeId == 2) ? 'FR':'EN';
+		     		?>
+		     			            <table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+		     							<tr>
+		     								<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+		     							</tr>
+		     							<tr>
+		     								<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+		     								<td width="98" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+		     							</tr>
+		     						</table>
+		     			            <div id="arrivalDate" class="sync">
+		     								<script type="text/javascript">
+		     									jQuery(function() {																
+		     	
+		     										currDate = new Date();
+		     										var alt_format = "yy-mm-dd";
+		     										<?php if ($storeId == 2){ ?>
+		     										var src_format = "dd/mm/yy";
+		     										var lng = "FR";
+		     										<?php }else{ ?>	
+		     										var src_format = "mm/dd/yy";
+		     										var lng = "EN";
+		     										<?php }?>
+		     	
+		     										//Quelques fonctions bien utiles
+		     										function addDays(myDate,days) 
+		     									 	{
+		     									 	 	return new Date(myDate.getTime() + days*24*60*60*1000);
+		     									 	}
+		     	
+		     										function calculEndDate(objDate, nbJours)
+		     										{
+		     											var _dateEndSelect = jQuery.datepicker.formatDate(alt_format, addDays(objDate, nbJours));
+		     											return _dateEndSelect;
+		     										}
+		     	
+		     										//Valeur par defaut
+		     										var laDate1 = jQuery.datepicker.formatDate(alt_format, currDate);									
+		     										var nextDate = addDays(currDate, 1);	
+		     										var laDateFin = jQuery.datepicker.formatDate(alt_format, nextDate);								
+		     										var myUrl = "https://www.yourreservation.net/tb3/index.cfm?bf=<?php echo $_product->getAvailpro_id() ?>&adults=2&rooms=undefined&arrivalDate=" + laDate1 + "&departureDate=" + laDateFin + "&lng=" + lng;
+		     								
+		     										//Valeur apres choix de la date
+		     										jQuery("#resasBookAssiste").attr("href", myUrl);
+		     	    								var laDate2 = jQuery.datepicker.formatDate(src_format, currDate);	
+		     										jQuery("#arrivalDate").val(laDate1);							
+		     										jQuery("#datepicker1").val(laDate2);
+		     										jQuery("#datepicker1").datepicker({ 
+		     										    defaultDate: currDate,
+		     											minDate: 0,
+		     											altFormat: alt_format,
+		     											altField: '#arrivalDate',
+		     											onClose: function(){
+		     												var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery(this).datepicker("getDate"));
+		     												var dateEndSelect   = calculEndDate(jQuery(this).datepicker("getDate"), jQuery('#nbNightSynxis').val());
+		     												var myUrl = "https://www.yourreservation.net/tb3/index.cfm?bf=<?php echo $_product->getAvailpro_id() ?>&adults=2&rooms=undefined&arrivalDate=" + dateStartSelect + "&departureDate=" + dateEndSelect + "&lng=" + lng;
+		     												jQuery("#resasBookAssiste").attr("href", myUrl);
+		     											}
+		     										});
+		     	
+		     										//Valeur apres choix du nb jours
+		     										jQuery('#nbNightSynxis').change(function(){
+		     											var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery("#datepicker1").datepicker("getDate"));
+		     											var dateEndSelect   = calculEndDate(jQuery("#datepicker1").datepicker("getDate"), jQuery('#nbNightSynxis').val());
+		     											var myUrl = "https://www.yourreservation.net/tb3/index.cfm?bf=<?php echo $_product->getAvailpro_id() ?>&adults=2&rooms=undefined&arrivalDate=" + dateStartSelect + "&departureDate=" + dateEndSelect + "&lng=" + lng;
+		     											jQuery("#resasBookAssiste").attr("href", myUrl);
+		     										});
+		     										
+		     									});
+		     	
+		     								</script>
+		     								<input type="text" id="datepicker1" onFocus="this.blur()" />
+		     								<input type="hidden" id="dateFin" value="" />
+		     						</div>
+		     						
+		     			            <!-- //// NUMBER OF NIGHTS //// -->
+		     	    				<select id="nbNightSynxis" class="select_taille3 selectorNight" name='nbdays'>
+		     	    				<?php for ($i=1; $i<=15; $i++){?>
+		     	    				<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+		     	    				<?php } ?>
+		     	    				</select>
+		     	    				
+		     	    				<div colspan="3" class="btn_check_dispo">
+		     					   <a id="resasBookAssiste" onclick="javascript:_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);ouvreFullScreen(this.href);return false" href="https://www.yourreservation.net/tb3/index.cfm?bf=<?php echo $_product->getAvailpro_id() ?>&adults=2&rooms=undefined&arrivalDate=<?php echo $aujourdhui?>&departureDate=<?php echo $demain?>&lng=<?php echo $lngBooking?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+		     				     </div>
+	<?php }
+		  elseif ($_product->getBooking_engine() == '419'){ // Best Western
+		  	date_default_timezone_set('Europe/Paris');
+		  	$dateDuJour = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		  	$demain = $dateDuJour->addDay(1)->toString('yyyy-MM-dd');
+		  
+		  	$dateDuJour2 = new Zend_Date(null, 'yyyy-MM-dd', 'fr_FR');//Le format est tres important
+		  	$aujourdhui = $dateDuJour2->toString('yyyy-MM-dd');
+		  	$lngBooking = ($storeId == 2) ? 'FR':'EN';
+		  	$urlSite = $_product->getUrl_landing_page();
+		  	?>
+		  		     			            <table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+		  		     							<tr>
+		  		     								<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+		  		     							</tr>
+		  		     							<tr>
+		  		     								<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+		  		     								<td width="98" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+		  		     							</tr>
+		  		     						</table>
+		  		     			            <div id="arrivalDate" class="sync">
+		  		     								<script type="text/javascript">
+		  		     									jQuery(function() {																
+		  		     	
+		  		     										currDate = new Date();
+		  		     										var alt_format = "dd%2Fmm%2Fyy";
+		  		     										<?php if ($storeId == 2){ ?>
+		  		     										var src_format = "dd/mm/yy";
+		  		     										var lng = "fr-FR";
+		  		     										var lngShort = "fr";
+		  		     										var aPage = "fr/reservation.html";
+		  		     										var aDuration = 1;
+		  		     										<?php }else{ ?>	
+		  		     										var src_format = "mm/dd/yy";
+		  		     										var lng = "en-US";
+		  		     										var lngShort = "en";
+		  		     										var aPage = "booking.html";
+		  		     										var aDuration = 1;
+		  		     										<?php }?>
+		  		     	
+		  		     										//Quelques fonctions bien utiles
+		  		     										function addDays(myDate,days) 
+		  		     									 	{
+		  		     									 	 	return new Date(myDate.getTime() + days*24*60*60*1000);
+		  		     									 	}
+		  		     	
+		  		     										function calculEndDate(objDate, nbJours)
+		  		     										{
+		  		     											var _dateEndSelect = jQuery.datepicker.formatDate(alt_format, addDays(objDate, nbJours));
+		  		     											return _dateEndSelect;
+		  		     										}
+		  		     	
+		  		     										//Valeur par defaut
+		  		     										var laDate1 = jQuery.datepicker.formatDate(alt_format, currDate);									
+		  		     										var nextDate = addDays(currDate, 1);	
+		  		     										var laDateFin = jQuery.datepicker.formatDate(alt_format, nextDate);								
+
+		  		     										var myUrl = "<?php echo $urlSite?>" + aPage + "?roomStay=1&iframe=yes&primarylangid=" + lng + "&lang=" + lngShort + "&RequestedCurrencyCode=EUR&HotelCode=" + <?php echo $_product->getAvailpro_id() ?> + "&sob=A15&ChainCode=BW&duration=" + aDuration + "&countrycode=&DateRangeStart="+ laDate1 +"&DateRangeEnd=" + laDateFin + "&roomQuantity=1&adultQuantity_1=2&childQuantity_1=0";
+		  		     										//Valeur apres choix de la date
+		  		     										jQuery("#resasBookAssiste").attr("href", myUrl);
+		  		     	    								var laDate2 = jQuery.datepicker.formatDate(src_format, currDate);	
+		  		     										jQuery("#arrivalDate").val(laDate1);							
+		  		     										jQuery("#datepicker1").val(laDate2);
+		  		     										jQuery("#datepicker1").datepicker({ 
+		  		     										    defaultDate: currDate,
+		  		     											minDate: 0,
+		  		     											altFormat: alt_format,
+		  		     											altField: '#arrivalDate',
+		  		     											onClose: function(){
+		  		     												var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery(this).datepicker("getDate"));
+		  		     												var dateEndSelect   = calculEndDate(jQuery(this).datepicker("getDate"), jQuery('#nbNightSynxis').val());
+		  		     												var aDuration = jQuery('#nbNightSynxis').val();
+		  		     												var myUrl = "<?php echo $urlSite?>" + aPage + "?roomStay=1&iframe=yes&primarylangid=" + lng + "&lang=" + lngShort + "&RequestedCurrencyCode=EUR&HotelCode=" + <?php echo $_product->getAvailpro_id() ?> + "&sob=A15&ChainCode=BW&duration=" + aDuration + "&countrycode=&DateRangeStart="+ dateStartSelect +"&DateRangeEnd=" + dateEndSelect + "&roomQuantity=1&adultQuantity_1=2&childQuantity_1=0";
+		  		     												jQuery("#resasBookAssiste").attr("href", myUrl);
+		  		     											}
+		  		     										});
+		  		     	
+		  		     										//Valeur apres choix du nb jours
+		  		     										jQuery('#nbNightSynxis').change(function(){
+		  		     											var dateStartSelect = jQuery.datepicker.formatDate(alt_format, jQuery("#datepicker1").datepicker("getDate"));
+		  		     											var dateEndSelect   = calculEndDate(jQuery("#datepicker1").datepicker("getDate"), jQuery('#nbNightSynxis').val());
+		  		     											var aDuration = jQuery('#nbNightSynxis').val();
+		  		     											var myUrl = "<?php echo $urlSite?>" + aPage + "?roomStay=1&iframe=yes&primarylangid=" + lng + "&lang=" + lngShort + "&RequestedCurrencyCode=EUR&HotelCode=" + <?php echo $_product->getAvailpro_id() ?> + "&sob=A15&ChainCode=BW&duration=" + aDuration + "&countrycode=&DateRangeStart="+ dateStartSelect +"&DateRangeEnd=" + dateEndSelect + "&roomQuantity=1&adultQuantity_1=2&childQuantity_1=0";
+	  		     												jQuery("#resasBookAssiste").attr("href", myUrl);
+		  		     										});
+		  		     										
+		  		     									});
+		  		     	
+		  		     								</script>
+		  		     								<input type="text" id="datepicker1" onFocus="this.blur()" />
+		  		     								<input type="hidden" id="dateFin" value="" />
+		  		     						</div>
+		  		     						
+		  		     			            <!-- //// NUMBER OF NIGHTS //// -->
+		  		     	    				<select id="nbNightSynxis" class="select_taille3 selectorNight" name='nbdays'>
+		  		     	    				<?php for ($i=1; $i<=15; $i++){?>
+		  		     	    				<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+		  		     	    				<?php } ?>
+		  		     	    				</select>
+		  		     	    				
+		  		     	    				<div colspan="3" class="btn_check_dispo">
+		  		     					   <a id="resasBookAssiste" onclick="javascript:_gaq.push(['_trackEvent', '<?php echo preg_replace("#\.html#", "", $_product->getUrl_key()) ?>', 'Reservation', 'Fiche-<?php echo $extension_Track?>', <?php echo '1'?>]);ouvreFullScreen(this.href);return false" href="https://www.yourreservation.net/tb3/index.cfm?bf=<?php echo $_product->getAvailpro_id() ?>&adults=2&rooms=undefined&arrivalDate=<?php echo $aujourdhui?>&departureDate=<?php echo $demain?>&lng=<?php echo $lngBooking?>" target="_blank"><?php echo $this->__('Book_home') ?></a>
+		  		     				     </div>
+		  	<?php }
+		     	elseif ($_product->getBooking_engine() == '399xxxxx'){ // Pas de Calais AJAX BRICE POTE LE 13/12/2012
+		     		
+		     		date_default_timezone_set('Europe/Paris');
+		     		$dateDuJour = new Zend_Date(null, 'dd/MM/yyyy', 'fr_FR');//Le format est tres important
+		     		$demain = $dateDuJour->addDay(1)->toString('dd/MM/yyyy');
+		     		 
+		     		$dateDuJour2 = new Zend_Date(null, 'dd/MM/yyyy', 'fr_FR');//Le format est tres important
+		     		$aujourdhui = $dateDuJour2->toString('dd/MM/yyyy');
+		     		?>
+		     										<form action="http://www.hotelpasdecalais.com/inc/resa/SQLReservation1.php" method="POST" id="pasdecalais" target="_blank">
+		     				     		            <table width="250" cellpadding="0" cellspacing="0" class="bookAssistTable">
+		     				     						<tr>
+		     				     							<td colspan="2"><span class="teaser"><?php echo $this->__('Best official prices')?></span></td>
+		     				     						</tr>
+		     				     						<tr>
+		     				     							<td width="90" colspan="3"><?php echo $this->__('Arrival Date') ?></td>
+		     				     							<td width="98" colspan="3"><?php echo $this->__('Nb. of night(s)') ?></td>
+		     				     						</tr>
+		     				     					</table>
+		     				     					
+		     				     					<input type="hidden" name="date_arrivee" id="date_arrivee" value="<?php echo $aujourdhui?>" />
+		     				     					<input type="hidden" name="nb_chambre" id="nb_chambre" value="1" />
+		     				     					<input type="hidden" name="nb_pers1" id="nb_pers1" value="2" />
+		     				     					<input type="hidden" name="nb_nuit" id="nb_nuit" value="1" />
+		     				     					
+		     				     					<?php if ($storeId == 2){ ?>
+		     				     					<input type="hidden" name="l" id="l" value="fr" />
+		     				     					<?php }else{ ?>	
+		     				     					<input type="hidden" name="l" id="l" value="en" />
+		     				     					<?php }?>
+		     				     					
+		     				     		            <div id="arrivalDate" class="sync">
+		     				     		            		
+		     				     		            		<script type="text/javascript">
+						     								jQuery(function() {																
+						     									jQuery("#resasBookPDC").hide();
+						     									currDate = new Date();
+						     									var laDate1 = jQuery.datepicker.formatDate('dd/mm/yy', currDate);									
+						     									<?php if ($storeId == 2){ ?>
+						         									var laDate2 = jQuery.datepicker.formatDate('dd/mm/yy', currDate);	
+						         									var laLangue = "FR";
+						         								<?php }else{ ?>							
+						         							        var laDate2 = jQuery.datepicker.formatDate('mm/dd/yy', currDate);
+							         							    var laLangue = "EN";
+						         								<?php }?>
+						         								
+						         								var hotelid="<?php echo $_product->getAvailpro_id() ?>";
+					         									var uneDate = "<?php echo $aujourdhui?>";
+					         									var nbnight = document.getElementById("nights").value;
+						         										         									
+						         								jQuery("#nights").click(function(){
+						         									nbnight = document.getElementById("nights").value;
+							     								});	
+							     								
+						         								jQuery("#resasBookAssiste").click(function(){
+						         									nbnight = document.getElementById("nights").value;
+							     								});	
+							     								
+						         								jQuery("#nights").click(function(){
+						         									page="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'response-pdc.html' ?>?date_debut=" + jQuery("#datepicker1").val() + "&nbnuit=" + jQuery("#nights").val();
+						     										jQuery.ajax({
+						     											url: page,
+						     											dataType: 'html',
+						     											success: function(html) {
+																			var largeur = parseInt((jQuery("#nights").val() * 20));
+						     												jQuery("#infoChambresPDC").css({width:largeur +'px', height:'210px', margin:'15px 0 10px 0'});
+						     												jQuery("#infoChambresPDC").show();
+						     												afficher(html);
+						     												jQuery("#categorie1").show();
+						     												jQuery("#resasBookPDC").show();
+						     											},
+						     											error:function(XMLHttpRequest, textStatus, errorThrows){
+							     											alert('un probleme est survenu');
+						     											}
+						     										});
+							     								});	
+							     								
+						     									jQuery("#arrivalDate").val(laDate1);							
+						     									jQuery("#datepicker1").val(laDate2);
+						     									jQuery("#datepicker1").datepicker({ 
+						     									    defaultDate: currDate,
+						     										minDate: 0,
+						     										altFormat: 'dd/mm/yy',
+						     										altField: '#date_arrivee',
+						     										onClose: function(dateText){
+							         									uneDate = jQuery("#arrivalDate").val();
+							         									jQuery("#arrivalDate").val();
+							         									page="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'response-pdc.html' ?>?date_debut=" + jQuery("#datepicker1").val() + "&nbnuit=" + jQuery("#nights").val();
+							     										jQuery.ajax({
+							     											url: page,
+							     											dataType: 'html',
+							     											success: function(html) {
+																				var largeur = parseInt((jQuery("#nights").val() * 20));
+							     												jQuery("#infoChambresPDC").css({width:largeur +'px', height:'210px', margin:'15px 0 10px 0'});
+							     												jQuery("#infoChambresPDC").show();
+							     												afficher(html);
+							     												jQuery("#categorie1").show();
+							     												jQuery("#resasBookPDC").show();
+							     											},
+							     											error:function(XMLHttpRequest, textStatus, errorThrows){
+								     											alert('un probleme est survenu');
+							     											}
+							     										}); 
+						     										}
+						     									});
+
+						     									jQuery("#pasdecalais").submit(function(){
+																	//alert(jQuery("#date_arrivee").val());
+						     										jQuery("#nb_nuit").val(jQuery("#nights").val());
+								     							});
+
+								     							//Script specifique au Pas de Calais
+						     									jQuery("#categorie1").hide();
+						     									jQuery("#infoChambresPDC").hide();
+						     									jQuery('#pasdecalais').submit(function(){
+						     										//page="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . 'response-pdc.html' ?>?date_debut=" + jQuery("#datepicker1").val() + "&nbnuit=" + jQuery("#nights").val();
+						     										//jQuery.ajax({
+						     										//	url: page,
+						     										//	dataType: 'html',
+						     										//	success: function(html) {
+																	//		var largeur = parseInt((jQuery("#nights").val() * 20));
+						     										//		jQuery("#infoChambresPDC").css({width:largeur +'px', height:'210px', margin:'15px 0 10px 0'});
+						     										//		jQuery("#infoChambresPDC").show();
+						     										//		afficher(html);
+						     										//		jQuery("#categorie1").show();
+						     										//	},
+						     										//	error:function(XMLHttpRequest, textStatus, errorThrows){
+							     									//		alert('un probleme est survenu');
+						     										//	}
+						     										//}); 
+						     										return true;
+						     									});
+						     									
+						     									function afficher(donnees){
+						     										jQuery("#infoChambresPDC").empty();
+						     										jQuery("#infoChambresPDC").html(donnees);
+						     									};	
+
+								     							
+						     									
+						     								});
+						     							</script>
+		     				     							<input type="text" id="datepicker1" onFocus="this.blur()" />
+		     				     							<input type="hidden" id="dateFin" value="" />
+		     				     					</div>
+		     				     					
+		     				     		            <!-- //// NUMBER OF NIGHTS //// -->
+		     				         				<select id="nights" class="select_taille3 selectorNight" name='nights'>
+		     				         				<?php for ($i=1; $i<=15; $i++){?>
+		     				         				<option value='<?php echo $i;?>'<?php if ($i==1) echo ' selected="selected"';?>><?php echo $i?></option>
+		     				         				<?php } ?>
+		     				         				</select>
+		     				         				<hr class="clear" />
+						     						<div id="infoChambresPDC"></div>
+		     				         				<p>
+			     				         				<select id="categorie1" name="categorie1" class="selectorNight" style="width:270px;margin: 20px 0 15px 0">
+															<option selected="selected" value="14">Standard | 2 lits</option>
+															<option value="15">Standard | grand lit</option>
+															<option value="8">Superieure Twin | 2 lits</option>
+															<option value="16">Supérieure Double | Grand lit</option>
+															<option value="4">Double ou Twin Luxe : chambres n°52-24-37 | Grand lit ou 2 lits</option>
+															<option value="13">Double Luxe: chambre n°53 | Grand lit</option>
+															<option value="6">Suite | Grand lit</option>
+														</select>
+		     				         				</p>
+		     				         				<div colspan="3" class="btn_check_dispo">
+		     				     				   <input type="submit" id="resasBookPDC" value="<?php echo $this->__('Book_home') ?>">
+		     				     			     </div>
+		     				     			     </form>
+		     			     		     <?php 
+		     			     	//Fin Pas de Calais
+		     			     	}
+		    }
+		?>
+	</div>
+	<?php if ($_product->getBooking_engine() == '393'){?>
+	    <div class="bottom-cadre-petit bis nation">&nbsp;</div> 
+	<?php } else { ?>
+	    <div class="bottom-cadre-petit bis">&nbsp;</div> 
+	<?php }?>
+	<?php if($_product->getAvis_tripadvisor()!= ''): ?>
+		<div class="top-cadre-petit" style="margin-top: 12px;">&nbsp;</div>
+		<div class="content-cadre-petit-tripadvisor">
+			<iframe style="vertical-align:top; border:0 none;" id="tripadvisor-fiche-hotel" src="http://www.tripadvisor.fr/WidgetEmbed-cdspropertysummary&partnerId=<?php echo Hgp_Lib_Tools::getParamConfig('TripAdvisor', 'partnerId') ?>&display=true&locationId=<?php echo trim((int)$_product->getAvis_tripadvisor())?>&lang=<?php echo $langTripAdvisor?>"
+				width="280" height="120" scrolling="no" frameborder="0"
+				allowtransparency="true" marginheight="0" marginwidth="0" style="vertical-align:top;">
+			</iframe>
+		</div>
+		<div class="bottom-cadre-petit">&nbsp;</div> 
+	<?php endif;?>
+<p>&nbsp;</p>
+	<div class="top-cadre-petit" style="margin-top: -6px;">&nbsp;</div>
+	<table class="table_cadre_petit" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td colspan="2" class="titre_table_cadre_petit"><?php echo $this->__('In brief')?></td>
+		</tr>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('petit_dejeuner')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Breakfast')?> : </td>
+			<td class="value_cadre_petit_orange"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('petit_dejeuner'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('ambiance')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Ambiance')?> : </td>
+			<td class="value_cadre_petit_orange"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('ambiance'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('style')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Style')?> : </td>
+			<td class="value_cadre_petit_orange"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('style'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('prestations2')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Features')?> : </td>
+			<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('prestations2'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('services2')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Services')?> : </td>
+			<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('services2'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('langues_parlees')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Lang. spoken')?> : </td>
+			<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('langues_parlees'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('nb_chambre')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Nb. rooms')?> : </td>
+			<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('nb_chambre'))); ?></td>
+		</tr>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('annee_construction')) != $_No) {?>
+		<tr>
+			<td class="label_cadre_petit"><?php echo $this->__('Manufacture year')?> : </td>
+			<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('annee_construction'))); ?></td>
+		</tr>
+		<?php } ?>
+	</table>
+	<div class="bottom-cadre-petit">&nbsp;</div>
+	<p class="clearP">&nbsp;</p>
+	
+	<div class="top-cadre-petit" style="margin-top: -1px;">&nbsp;</div>
+	<table class="table_cadre_petit" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td colspan="2" class="titre_table_cadre_petit"><?php echo $this->__('Special Conditions')?></td>
+		</tr>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('petit_dejeuner')) != $_No) {?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_petitdej')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Breakfast (prices from)')?> :</td>
+					<?php $prix_dej = ($_product->getCph_petitdej() == '') ? '-' : Hgp_Lib_Tools::getProductAttributeValue('cph_petitdej');?>
+					<td class="value_cadre_petit_orange"><?php echo $prix_dej; ?></td>
+				</tr>
+				<?php } ?>
+		<?php } ?>
+		<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_checkin')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Check-inn')?> :</td>
+					<td class="value_cadre_petit_orange"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('cph_checkin'))); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_checkout')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Check-out')?> :</td>
+					<td class="value_cadre_petit_orange"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('cph_checkout'))); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_reservation')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Booking conditions')?> :</td>
+					<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('cph_reservation'))); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_annulation')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Cancellation Policy')?> :</td>
+					<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('cph_annulation'))); ?></td>
+				</tr>
+				<?php } ?>
+				<?php if (trim(Hgp_Lib_Tools::getProductAttributeValue('cph_paiement')) != $_No) {?>
+				<tr>
+					<td class="label_cadre_petit"><?php echo $this->__('Payment cards accepted')?> :</td>
+					<td class="value_cadre_petit"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getProductAttributeValue('cph_paiement'))); ?></td>
+				</tr>
+				<?php } ?>
+	</table>
+	<div class="bottom-cadre-petit">&nbsp;</div>
+	<p class="clearP" style="margin-top:0;">&nbsp;</p>
+</div>

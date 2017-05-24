@@ -1,0 +1,1 @@
+<?phpclass Hgp_Taches_IndexController extends Mage_Core_Controller_Front_Action{    public function runAction()    {		exit('in');    }}

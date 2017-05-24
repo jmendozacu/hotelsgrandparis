@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Hgp_Taches>
+			<version>1.0</version>
+		</Hgp_Taches>
+	</modules>
+	<global>
+		<blocks>
+			<taches>
+				<class>Hgp_Taches_Block</class>
+			</taches>
+		</blocks>    
+		<models>
+			<taches>
+				<class>Hgp_Taches_Model</class>
+			</taches>
+		</models>
+		<helpers>
+			<taches>
+				<class>Hgp_Taches_Helper</class>
+			</taches>
+		</helpers>
+		<resources>
+			<taches_setup>
+				<setup>
+					<module>Hgp_Taches</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</taches_setup>
+		</resources>
+		<template>
+			<email>
+				<taches_email_email_template translate="label" module="taches">
+					<label>Rapport CRON</label>
+					<file>rapport_cron.html</file>
+					<type>html</type>
+				</taches_email_email_template>
+			</email>
+		</template>
+	</global>
+	<admin>
+		<routers>
+			<meteo>
+				<use>admin</use>
+				<args>
+					<module>Hgp_Taches</module>
+					<frontName>taches</frontName>
+				</args>
+			</meteo>
+		</routers>
+	</admin>    
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<taches translate="title" module="taches">
+											<title>Taches Treatment Cron HGP</title>
+											<sort_order>50</sort_order>
+										</taches>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+    <crontab>
+        <jobs>
+            <taches>
+                <run>
+                	<schedule><cron_expr>10 17 * * *</cron_expr></schedule>                	
+                	<model>taches/observer::dailyMinMeanPricesUpdate</model>
+                </run>
+            </taches>
+        </jobs>
+    </crontab>
+</config>

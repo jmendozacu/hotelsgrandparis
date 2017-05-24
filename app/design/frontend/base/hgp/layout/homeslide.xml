@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+	</default>
+	<reference name="head">
+		<action method="addJs">
+			<script>js/slideshow/compressed.js</script>
+		</action>
+		<action method="addCss">
+			<script>css/slideshow/style.css</script>
+		</action>
+	</reference>
+	<homeslide_index_index>
+		<reference name="content">
+			<block type="homeslide/homeslide" name="homeslide"
+				template="hgp/homeslide/homeslide.phtml" />
+		</reference>
+	</homeslide_index_index>
+</layout> 

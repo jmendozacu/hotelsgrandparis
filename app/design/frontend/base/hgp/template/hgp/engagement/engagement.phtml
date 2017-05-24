@@ -1,0 +1,30 @@
+	<?php 
+	// On recupere dynamiquement l'id du store courant
+	$storeId = Mage::app()->getStore()->getId(); 
+	//$storeId = 2;
+
+	$_objEngagement = Mage::getModel('engagement/engagement');	
+	$_arrayEngagement = $_objEngagement->getItems($storeId);
+	$_titre = $_objEngagement->getTitle($storeId);
+	
+	if ($_arrayEngagement){
+	
+		$count = count($_arrayEngagement);
+		for($i=0; $i<$count; $i++){
+		$data = $_arrayEngagement[$i];
+	?>
+<div id="engagement">
+	<h2 class="hgp_h2"><?php echo ($_titre)?></h2>	
+		<ul class="engagement_detail">		
+			<?php 
+				$count = count($_arrayEngagement);
+				for($i=0; $i<$count; $i++){
+				$data = $_arrayEngagement[$i];
+				?>
+				<li <?php if($i==2) echo ' class="last-line"';?>><?php echo ($this->htmlEscape($data['hgp_engagement_contenu']))?></li>
+				<?php }?>
+			</ul>
+			<?php }} ?>		
+	<hr class="clear" />
+	<p class="notice"><?php echo ($this->htmlEscape(Hgp_Lib_Tools::getParamConfig('engagement', 'notice')->$storeId))?></p>
+</div>

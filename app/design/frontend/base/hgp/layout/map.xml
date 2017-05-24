@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+	</default>
+	<map_index_index>
+		<reference name="content">
+			<block type="map/map" name="map"
+				template="hgp/map/map.phtml" />
+		</reference>
+	</map_index_index>
+</layout> 
